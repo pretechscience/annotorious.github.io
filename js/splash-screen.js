@@ -50,6 +50,8 @@ window.onload = function() {
   anno.addHandler('onMouseOverItem', function() {
     console.log('stopping the demo');
     timeline.stop();
+    if (restartTimer)
+      window.clearTimeout(restartTimer);
   });
 
   anno.addHandler('onMouseOutOfItem', function() {
