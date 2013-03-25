@@ -47,16 +47,18 @@ window.onload = function() {
   timeline.onFinish(function() { timeline.start(); });
 
   var restartTimer;
-  document.getElementById('splash-screen').onmouseover = function() {
+  anno.addHandler('onMouseOverItem', function() {
+    console.log('stopping the demo');
     timeline.stop();
-  }
+  });
 
-  document.getElementById('splash-screen').onmouseout = function() {
+  anno.addHandler('onMouseOutOfItem', function() {
+    console.log('starting the demo');
     if (restartTimer)
       window.clearTimeout(restartTimer);
 
     restartTimer = window.setTimeout(function() { timeline.start(); }, 5000);
-  }
+  });
 }
 
 /**
