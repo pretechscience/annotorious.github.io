@@ -48,18 +48,18 @@ window.onload = function() {
 
   var restartTimer;
   anno.addHandler('onMouseOverItem', function() {
-    console.log('stopping the demo');
+    // console.log('stopping the demo');
     timeline.stop();
     if (restartTimer)
       window.clearTimeout(restartTimer);
   });
 
   anno.addHandler('onMouseOutOfItem', function() {
-    console.log('starting the demo');
+    // console.log('starting the demo');
     if (restartTimer)
       window.clearTimeout(restartTimer);
 
-    restartTimer = window.setTimeout(function() { timeline.start(); }, 5000);
+    restartTimer = window.setTimeout(function() { timeline.start(); }, 15000);
   });
 }
 
