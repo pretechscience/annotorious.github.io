@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Annotorious - Image Annotation for the Web</title>
+    <link href="css/splash.css" rel="stylesheet" type="text/css" />
+    <link href="latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/splash-screen.js"></script>
+    <script type="text/javascript" src="latest/annotorious.min.js"></script>
+  </head>
+
+  <body>
+    <div id="top-half">
+      <div id="logo">
+        <img src="img/h1-logo.png"> Annotorious
+      </div>
+      <div id="splash-screen">
+        <div id="splash-screen-inner">
+          <div class="splash-frame">
+            <img id="splash-image-1" src="img/splash-image-1.jpg">
+            <div class="splash-frame-caption">
+              <h2>Image Annotation for the Web</h2>
+              <p>Add drawing and commenting to images on your Web page.</p>
+              <p>Get started with less than three lines of code.</p>
+            </div>
+          </div><div class="splash-frame">
+            <img id="splash-image-2" src="img/splash-image-2.jpg">
+            <div class="splash-frame-caption">
+              <h2>Scriptable</h2>
+              <p>Build your own annotation mashups with the Annotorious JavaScript API.</p>
+            </div>
+          </div><div class="splash-frame">
+            <img id="splash-image-3" src="img/splash-image-3.jpg">
+            <div class="splash-frame-caption">
+              <h2>Extensible</h2>
+              <p>Extend features & functionality through Plug-Ins. Customize look and feel with CSS.</p>
+            </div>
+          </div><div class="splash-frame">
+            <img id="splash-image-4" src="img/splash-image-4.jpg">
+            <div class="splash-frame-caption">
+              <h2>Open Source</h2>
+              <p>LGPL licensed. Use Annotorious for free in commercial and non-commercial projects.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="splash-scroll-container">
+          <div class="splash-scroll splash-scroll-prev"><a href="#" onclick="shiftBy(-1);">PREV</a></div>
+          <div class="splash-scroll splash-scroll-next"><a href="#" onclick="shiftBy(1);">NEXT</a></div>
+        </div>
+
+        <div id="splash-progress-bar">
+          <a href="#" onclick="shiftTo(0);" class="splash-progress-bullet" id="splash-progress-field-0" style="background-color:#ff9900;">Image 1</a>
+          <a href="#" onclick="shiftTo(1);" class="splash-progress-bullet" id="splash-progress-field-1">Image 2</a>
+          <a href="#" onclick="shiftTo(2);" class="splash-progress-bullet" id="splash-progress-field-2">Image 3</a>
+          <a href="#" onclick="shiftTo(3);" class="splash-progress-bullet" id="splash-progress-field-3">Image 4</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="bottom-half">
+      <div id="navbar-container">
+        <div id="navbar">
+          <ul> 
+            <li><a href="demos.html">Demos</a></li>
+            <li><a href="getting-started.html">Getting Started</a></li>
+            <li><a href="plugins.html">Plug-Ins &amp; Plug-Outs</a></li> 
+            <li><a href="http://github.com/annotorious/annotorious/wiki">Wiki</a></li> 
+            <li><a href="about.html">About</a></li> 
+          </ul>
+        </div>
+      </div>
+
+      <div class="download-link">
+        Get the Latest Release
+        <a class="download-button" href="http://annotorious.github.com/downloads/annotorious-standalone-0.3.zip">Download Annotorious v0.3</a>
+      </div> 
+    </div>
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38067134-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
+
