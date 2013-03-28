@@ -8,12 +8,11 @@
     <script type="text/javascript" src="../latest/annotorious.min.js"></script>
     <script type="text/javascript" src="http://annotorious.github.com/latest/anno-elasticsearch-plugin.js"></script>
     <script>
-      function init() {
-        anno.addPlugin('ElasticSearch', { base_url: 'http://62.218.164.156/annotations/' });
-        
+      function init() {        
         var image = document.getElementById('hallstatt');
         anno.makeAnnotatable(image);
         anno.setActiveSelector(image.src, 'polygon');
+        anno.addPlugin('ElasticSearch', { base_url: 'http://62.218.164.156/annotations/' });
       }
     </script>
   </head>
@@ -44,7 +43,7 @@
 
     <div class="breadcrumbs">
       <div class="breadcrumbs-inner">
-        <a href="../demos.html">Demos</a> &gt; Just the Basics
+        <a href="../demos.html">Demos</a> &gt; Polygon Selection
       </div>
     </div>
     
