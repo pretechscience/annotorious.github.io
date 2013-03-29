@@ -5,7 +5,6 @@
  *
  * THIS PLUGIN IS FOR DEMO PURPOSES ONLY - DON'T USE IN A PRODUCTION
  * ENVIRONMENT.
- * 
  */
 annotorious.plugin.ElasticSearch = function(opt_config_options) {
   /** @private **/
@@ -19,6 +18,10 @@ annotorious.plugin.ElasticSearch.prototype.initPlugin = function(anno) {
   var self = this;
   anno.addHandler('onAnnotationCreated', function(annotation) {
     self._create(annotation);
+  });
+
+  anno.addHandler('onAnnotationUpdated', function(annotation) {
+    self._update(annotation);
   });
 
   anno.addHandler('onAnnotationRemoved', function(annotation) {
@@ -71,6 +74,18 @@ annotorious.plugin.ElasticSearch.prototype._create = function(annotation) {
     var id = response['_id'];
     annotation.id = id;
   });
+}
+
+/**
+ * @private
+ */
+annotorious.plugin.ElasticSearch.prototype._update = function(annotation) {
+  var self = this;
+  jQuery.ajax({
+    url: this._STORE_URI + 'annotation/' + annotation.id,
+    type: 'PUT',
+    data: JSON.stringify(annotation)
+  }); 
 }
 
 /**
