@@ -1,0 +1,17 @@
+.semantic-tag {
+  text-decoration:none;
+  display:inline-block;
+  padding:2px 4px;
+  background-color:#555;
+  color:white;
+  margin:2px 4px;
+  max-width:100%;
+  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size:12px;
+}
+
+.selected {
+  background-color:#2a2;
+}
+
+
