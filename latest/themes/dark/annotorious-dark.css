@@ -182,6 +182,13 @@
   background-position:0 -99px;
 }
 
+.annotorious-popup-field {
+  margin:0px;
+  padding:6px;
+  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size:12px;
+}
+
 .annotorious-editor {
   position:absolute;
   top:0;
@@ -284,4 +291,42 @@
   -moz-box-shadow:inset 0 3px 3px rgba(0,0,0,0.7),0 1px 1px rgba(255,255,255,0.25);
   -webkit-box-shadow:inset 0 3px 3px rgba(0,0,0,0.7),0 1px 1px rgba(255,255,255,0.25);
   box-shadow:inset 0 3px 3px rgba(0,0,0,0.7),0 1px 1px rgba(255,255,255,0.25);
+}
+
+.annotorious-editor-field {
+  margin:0px;
+  padding:6px 12px;
+  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size:12px;	
+}
+
+/** OpenLayers module **/
+.annotorious-ol-boxmarker-outer {
+  border:1px solid #000;
+}
+
+.annotorious-ol-boxmarker-inner {
+  border:1px solid #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.annotorious-ol-hint {
+  line-height: normal;
+  font-family:Arial, Verdana, Sans;
+  font-size:16px;
+  color:#000;
+  background-color:#fff;
+  margin:0px;
+  padding:9px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+
+.annotorious-ol-hint-secondary {
+  background-color:#fff000;
 }

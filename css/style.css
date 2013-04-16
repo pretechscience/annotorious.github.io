@@ -291,8 +291,11 @@ p {
 }
 
 .attribution {
+  padding-top:8px;
   font-size:12px;
+  line-height:18px;
   color:#777;
+  width:640px;
 }
 
 .plugin-list {
