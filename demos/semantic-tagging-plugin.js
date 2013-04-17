@@ -16,13 +16,15 @@ annotorious.plugin.SemanticTagging.prototype.onInitAnnotator = function(annotato
   // Popup extension: show existing tags
   annotator.popup.addField(function(annotation) {
     var popupContainer = document.createElement('div');
-    jQuery.each(annotation.tags, function(idx, tag) {
-      var el = document.createElement('a');
-      el.href = '#';
-      el.className = 'semantic-tag';
-      el.innerHTML = tag.title;
-      popupContainer.appendChild(el);
-    });
+    if (annotation.tags) {
+      jQuery.each(annotation.tags, function(idx, tag) {
+        var el = document.createElement('a');
+        el.href = '#';
+        el.className = 'semantic-tag';
+        el.innerHTML = tag.title;
+        popupContainer.appendChild(el);
+      });
+    }
     return popupContainer;
   });
 
