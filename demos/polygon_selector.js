@@ -104,6 +104,11 @@ PolygonSelector.prototype._attachListeners = function() {
   // this._mouseMoveListener = goog.events.listen(this._canvas, goog.events.EventType.MOUSEMOVE, function(event) {
   this._mouseMoveListener = this._canvas.addEventListener('mousemove', function(event) {
     if (self._enabled) {
+      if (event.offsetX == undefined) {
+        event.offsetX = event.layerX;
+        event.offsetY = event.layerY;
+      }
+
       self._mouse = { x: event.offsetX, y: event.offsetY };
       refresh(self._mouse, isClosable(event.offsetX, event.offsetY));
     }
@@ -111,6 +116,11 @@ PolygonSelector.prototype._attachListeners = function() {
 
   // this._mouseUpListener = goog.events.listen(this._canvas, goog.events.EventType.MOUSEUP, function(event) {
   this._mouseUpListener = this._canvas.addEventListener('mouseup', function(event) {
+    if (event.offsetX == undefined) {
+      event.offsetX = event.layerX;
+      event.offsetY = event.layerY;
+    }
+
     if (isClosable(event.offsetX, event.offsetY)) {
       self._enabled = false;
       refresh(self._anchor);
@@ -246,8 +256,7 @@ PolygonSelector.prototype.drawShape = function(g2d, shape, highlight) {
   g2d.lineWidth = 1.3;
   g2d.strokeStyle = '#000000';
  
-  /*
-  var outline = annotorious.shape.expand(shape, 1.2).geometry.points;
+  var outline = annotorious.geometry.expand(shape, 1.2).geometry.points;
   g2d.beginPath();
   g2d.moveTo(outline[0].x, outline[0].y);
   for (var i=1; i<outline.length; i++) {
@@ -255,7 +264,6 @@ PolygonSelector.prototype.drawShape = function(g2d, shape, highlight) {
   }
   g2d.lineTo(outline[0].x, outline[0].y);
   g2d.stroke();
-  */
 
   // Inner line
   g2d.lineWidth = 1.2;
