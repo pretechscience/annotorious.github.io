@@ -6,8 +6,31 @@
     <link href="../latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" />
     <script src="OpenLayers.js" type="text/javascript"></script>
     <script type="text/javascript" src="../latest/annotorious.min.js"></script>
+    <style>
+      #map-annotate-button {
+        position:absolute;
+        top:3px;
+        right:3px;
+        background-color:#000;
+        color:#fff;
+        padding:3px 8px;
+        z-index:10000;
+        font-size:11px;
+        text-decoration:none;
+      }
+    </style>
     <script>
       anno.addPlugin('ElasticSearch', { base_url: 'http://62.218.164.156/annotations/' });
+
+      function annotate() {
+        var button = document.getElementById('map-annotate-button');
+        button.style.color = '#777';
+
+        anno.activateSelector(function() {
+          // Reset button style
+          button.style.color = '#fff';
+        });
+      }
 
       function init() {           	
         var options = {
@@ -61,10 +84,13 @@
     <div class="content">
       <div class="content-inner">
 	<p>
-	  Warning: this demo is in its earliest stages. Press and hold CTRL while dragging a selection.
+	  Warning: this demo is in its early stages. Click the 'Add Annotation' button to annotate.
 	  <a href="http://groups.google.com/group/annotorious">Feedback appreciated</a>.
 	</p>
-        <div id="map" style="width:640px; height:400px; background-color:#fff;"></div>
+        <div style="position:relative; width:640px; height:400px;">
+          <div id="map" style="width:640px; height:400px; background-color:#fff;"></div>
+          <a id="map-annotate-button" onclick="annotate();" href="#">ADD ANNOTATION</a>
+        </div>
         <p class="attribution">
           Meerwunder vnd seltzame Thier / wie die in den Mitn@auml;chtigen L&auml;ndern / im Meer vnd auff dem
           Landt gefunden werden (from the vignettes on Olaus Magnus's Carta marina), Basel c. 1544. Public Domain. 
