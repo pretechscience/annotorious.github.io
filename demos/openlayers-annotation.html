@@ -4,10 +4,12 @@
     <title>Annotorious - Image Annotation for the Web</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link href="../latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" media="all" href="../css/highlight.css" />
     <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
     <script src="OpenLayers.js" type="text/javascript"></script>
     <script type="text/javascript" src="../latest/annotorious.min.js"></script>
     <script type="text/javascript" src="http://annotorious.github.com/latest/anno-elasticsearch-plugin.js"></script>
+    <script type="text/javascript" src="../js/highlight.js"></script>
     <style>
       #map-annotate-button {
         position:absolute;
@@ -85,6 +87,10 @@
     
     <div class="content">
       <div class="content-inner">
+        <p>
+          Annotate maps and zoomable high-resolution images by combining Annotorious with the <a href="http://openlayers.org">OpenLayers</a>
+          Web map viewer.
+        </p>
         <div style="position:relative; width:640px; height:400px;">
           <div id="map" style="width:640px; height:400px; background-color:#fff;"></div>
           <a id="map-annotate-button" onclick="annotate();" href="#">ADD ANNOTATION</a>
@@ -94,6 +100,54 @@
           Landt gefunden werden (from the vignettes on Olaus Magnus's Carta marina), Basel c. 1544. Public Domain. 
           Sebastian M&uuml;nster (1488-1552). <a href="http://commons.wikimedia.org/wiki/File:M%C3%BCnster_Thier_2.jpg">Wikimedia
           Commons</a>.
+        </p>
+
+        <h2>Getting Started</h2>
+        <p>
+          Set up your OpenLayers map just like you normally would. An example (taken from this very page):
+        </p>
+
+        <pre class="code" lang="javascript">
+var options = 
+  { maxExtent: new OpenLayers.Bounds(0, 0, 1475, 1184),
+    maxResolution: 8,
+    numZoomLevels: 4,
+    units: 'pixels' };
+
+var map = new OpenLayers.Map('map', options);
+var baseLayer = new OpenLayers.Layer.TMS("Baselayer", "map_muenster/",
+  { layername: ".", 
+    serviceVersion: ".", 
+    transitionEffect: "resize", 
+    type:"jpg" });
+
+map.addLayer(baseLayer);
+map.zoomToMaxExtent();</pre>
+
+        <p>
+          Make your map annotatable using the Annotorious JavaScript API.  
+        </p>
+
+        <pre class="code" lang="javascript">anno.makeAnnotatable(map);</pre>
+
+        <p>
+          <strong>Important!</strong> There's a little OpenLayers-specific limitation: since OpenLayers normally uses
+          the mouse (click and drag) to navigate the map, you need to add some extra JavaScript
+          that toggles between normal map navigation and Annotorious. The example below attaches a call to
+          the <em>activateSelector()</em> API method to an HTML button:
+        </p>
+
+        <pre class="code" lang="html">
+&lt;button onclick="anno.activateSelector();" href="#"&gt;
+  ADD ANNOTATION
+&lt;/button&gt;</pre>
+
+        <p>
+          Once the selector is activated, Annotorious takes over the map, and dragging the mouse will create
+          an annotation rather than move the map. Once the annotation has been created, normal map navigation 
+          is resumed automatically. Full documentation of the <em>activateSelector</em> function is
+          <a href="https://github.com/annotorious/annotorious/wiki/JavaScript-API#annoactivateselectoropt_item_url_or_callback-opt_callback">on
+          the Wiki</a>.
         </p>
       </div>
     </div>
@@ -106,6 +160,12 @@
       </div>
     </footer>
     
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+        jQuery('pre.code').highlight({source:0, zebra:1, indent:'space', list:'ol'});
+      });
+    </script>
+	
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-38067134-1']);
