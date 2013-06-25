@@ -306,6 +306,10 @@ p {
   list-style:square;
 }
 
+.plugin-list li {
+  margin-bottom:18px;
+}
+
 footer {
   clear:both;
   width:100%;
