@@ -1,17 +1,45 @@
-.semantic-tag {
+.semtagging-editor-container {
+  min-height:20px;
+  padding:3px 0px;  
+  background-color:#525252;
+  padding:4px 10px;
+}
+
+.semtagging-tag {
+  margin:2px 4px 2px 0px;
+  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size:12px;
+  background-color:#555;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -khtml-border-radius:3px;
+  border-radius:3px;
+  border:1px dotted #ccc;
+  color:#ccc;
   text-decoration:none;
   display:inline-block;
   padding:2px 4px;
-  background-color:#555;
-  color:white;
-  margin:2px 4px;
-  max-width:100%;
-  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
-  font-size:12px;
 }
 
-.selected {
+.semtagging-editor-tag {
+
+}
+
+.semtagging-popup-tag {
+
+}
+
+.semtagging-editor-tag:hover {
+  background-color:#777;
+}
+
+.accepted, .accepted:hover {
   background-color:#2a2;
+  color:#fff;
 }
 
+.rejected, .rejected:hover {
+  background-color:#a22;
+  color:#fff;
+}
 
