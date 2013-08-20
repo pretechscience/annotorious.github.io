@@ -7,18 +7,15 @@
     <link href="http://annotorious.github.com/latest/anno-elasticsearch-plugin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="../latest/annotorious.min.js"></script>
-    <script type="text/javascript" src="polygon_selector.js"></script>
+    <script type="text/javascript" src="../latest/anno-polygon.min.js"></script>
     <script type="text/javascript" src="http://annotorious.github.com/latest/anno-elasticsearch-plugin.js"></script>
     <script>
       anno.addPlugin('ElasticSearch', { base_url: 'http://62.218.164.156/annotations/' });
+      anno.addPlugin('PolygonSelector', { activate: true });
 
       function init() {        
         var image = document.getElementById('hallstatt');
         anno.makeAnnotatable(image);
-
-        var image_src = 'http://www.foo.com/bar';
-        anno.addSelector(image_src, new PolygonSelector());
-        anno.setActiveSelector(image_src, 'polygon');
       }
     </script>
   </head>
