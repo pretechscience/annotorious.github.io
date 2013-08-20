@@ -6,16 +6,9 @@
     <link href="../latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="../latest/annotorious.min.js"></script>
-    <script type="text/javascript" src="fancy_box_selector.js"></script>
+    <script type="text/javascript" src="../latest/anno-fancybox.min.js"></script>
     <script>
-      function init() {        
-        var image = document.getElementById('hallstatt');
-        anno.makeAnnotatable(image);
-
-        var image_src = 'http://www.foo.com/fancybox';
-        anno.addSelector(image_src, new FancyBoxSelector());
-        anno.setActiveSelector(image_src, 'fancybox');
-      }
+      anno.addPlugin('FancyBoxSelector', { activate: true });
     </script>
   </head>
 
