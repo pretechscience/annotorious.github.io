@@ -15,7 +15,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="demos.html">Demos</a></li>
           <li><a href="getting-started.html">Getting Started</a></li>
-          <li class="active"><a href="javascript:void(0);">Plug-Ins &amp; Plug-Outs</a></li>
+          <li class="active"><a href="javascript:void(0);">Plugins</a></li>
           <li><a href="http://github.com/annotorious/annotorious/wiki">Wiki</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -35,38 +35,27 @@
     <div class="content">
       <div class="content-inner">
         <div class="sidebar">
-          <h2>Plug-Ins</h2>
+          <h2>Storage</h2>
           <ul>
-            <li><a href="#parse-plugin">Parse Storage</a></li>
-            <li><a href="#es-plugin">ElasticSearch</a></li>
+            <li><a href="#parse">Parse Storage</a></li>
+            <li><a href="#es">ElasticSearch</a></li>
           </ul>
         
-          <h2>Plug-Outs</h2>
+          <h2>Selectors</h2>
+          <ul>
+            <li><a href="#fancybox">Fancy Box</a></li>
+          </ul>
+
+          <h2>Miscellaneous</h2>
           <ul>
             <!-- li><a href="#wordpress">Wordpress</a></li -->
-            <li><a href="plug-outs/okfn-annotator.html">OKFN Annotator</a></li>
+            <li><a href="#semantic-tagging">Semantic Tagging</a></li>
+            <li><a href="#okfn">OKFN Annotator</a></li>
           </ul>
         </div>
       
         <div class="content-two-column">
-          <h2>Plug-Ins. Plug-Outs. What?</h2>
-          <p>
-            Annotorious is a flexible system that can be extended in all sorts of ways. Extensions
-            to Annotorious are called <strong>plug-ins</strong>, and they embed additional functionality
-            into Annotorious such as <em>tagging</em>, or the ability to connect to different storage backends.
-          </p>
-          <p>
-            Ok. Now here comes the complicated part: Annotorious was also designed to be <em>itself</em> embeddable
-            into other systems. Components that plug Annotorious into another tool or environment (rather than
-            the other way round) are called (for lack of a better word) <strong>plug-outs</strong>.
-            For example, there is a plug-out which seamlessly integrates Annotorious into the <em>Annotator</em>
-            Web annotation system by the Open Knowledge Foundation.
-            <!-- are two plug-outs currently available which seamlessly integrate
-            Annotorious into Wordpress, and one for the <em>Annotator</em> Web annotation system by
-            the Open Knowledge Foundation. -->
-          </p>
-        
-          <h2>Plug-Ins</h2>
+          <h1>Plugins</h1>
           <p>
             To add a plugin, include the plugin script in your page head and register the plugin through
             the Annotorious JavaScript API. <strong>Example:</strong>
@@ -88,53 +77,69 @@
 &lt;/head&gt;</pre>
           
           <p/>
-          
-          <h3>Available Plug-Ins</h3>
-          
-          <ul class="plugin-list">
-            <li>
-              <a name="parse-plugin"><strong>Parse Plugin</strong></a><br/>
-              A cloud storage plugin to store annotations on the <a href="http://parse.com">Parse platform</a>
-              hosting service. Kindly contributed by <a href="https://twitter.com/dommmel">@dommmel</a>.<br/>
-              <a href="https://github.com/dommmel/annotorious-parse-plugin">Read More...</a>
-            </li>
+         
+          <h2>Storage Plugins</h2>
 
-            <li>
-              <a name="es-plugin"><strong>ElasticSearch Storage Plugin</strong></a><br/>
-              A simple plug-in that stores annotations on an <a href="http://www.elasticsearch.org/">ElasticSearch</a>
-              server. Meant primarily as a demo, and as an example for those interested in building their own storage
-              plugins.<br/>
-              <a href="http://github.com/annotorious/annotorious-elasticsearch-plugin">Read More...</a>
-            </li>
-          </ul>
-        
-          <hr/>
-        
-          <h2>Plug-Outs</h2>
           <p>
-            Unlike for plugin-ins, there is no standard plug-out installation procedure. Refer to the individual docs
-            for more information.
+            Storage plugins connect Annotorious to different types of databases or storage backends. You don't 
+            necessarily <em>need</em> a storage plugin to persist your annotations - you could just as well roll your
+            own solution using the JavaScript API - but storage plugins may make your life easier.
           </p>
-          
-          <p/>
-          
-          <h3>Available Plug-Outs</h3>
-          
-          <ul class="plugin-list">
-            <li>
-              <a name="annotator-plugout"><strong>Annotorious for Annotator</strong></a><br/>
-              Adds image annotation functionality to the <a href="http://okfnlabs.org/annotator/">Annotator Web annotation system</a>
-              by the <em>Open Knowledge Foundation</em>.<br/>
-              <a href="plug-outs/okfn-annotator.html">Read More...</a>
-          <p></p>
-            </li>
-          </ul>
-          
-          <!-- a name="wordpress"><h3>Wordpress</h3></a>
-          <p>Image annotation for Wordpress - powered by Annotorious!</p>
-          <p><a href="#">Read More...</a></p -->
-        
+           
+          <div class="plugin">
+            <a name="parse"><strong>Parse.com Storage</strong></a><br/>
+            A cloud storage plugin to store annotations on the <a href="http://parse.com">Parse platform</a>
+            hosting service. Kindly contributed by <a href="https://twitter.com/dommmel">@dommmel</a>.<br/>
+            <a class="bottom-link" href="https://github.com/dommmel/annotorious-parse-plugin">Read More</a>
+            <a class="bottom-link" href="https://github.com/dommmel/annotorious-parse-plugin/archive/master.zip">Download ZIP</a>           
+          </div>
+
+          <div class="plugin">
+            <a name="es"><strong>ElasticSearch Storage</strong></a><br/>
+            A simple plug-in that stores annotations on an <a href="http://www.elasticsearch.org/">ElasticSearch</a>
+            server. Meant primarily as a demo, and as an example for those interested in building their own storage
+            plugins.<br/>
+            <a class="bottom-link" href="http://github.com/annotorious/annotorious-elasticsearch-plugin">Read More</a>
+            <a class="bottom-link" href="https://github.com/annotorious/annotorious-elasticsearch-plugin/archive/master.zip">Download ZIP</a>           
+          </div>
+
           <hr/>
+
+          <h2>Selector Plugins</h2>
+
+          <p>
+            Selector plugins add new drawing/selection tools to Annotorious.
+          </p>       
+
+          <div class="plugin">
+            <a name="fancybox"><strong>Fancy Box</strong></a><br/>
+            Replaces the default box selection tool with a selector that masks out the rest of the image while selecting.<br/>
+            <a class="bottom-link" href="http://github.com/annotorious/annotorious-elasticsearch-plugin">Read More</a> 
+            <a class="bottom-link" href="http://github.com/annotorious/annotorious-elasticsearch-plugin">Download ZIP</a>           
+          </div>
+
+          <hr/>
+
+          <h2>Miscellaneous</h2>
+
+          <div class="plugin">
+            <a name="semantic-tagging"><strong>Semantic Tagging (Beta)</strong></a><br/>
+            Adds <em>Semantic Tagging</em> functionality to Annotorious: while typing an annotation, the 
+            text is sent to a server for <a href="http://en.wikipedia.org/wiki/Named-entity_recognition">Named Entity
+            Recognition</a>. Entities are suggested as possible tags, and the user can add them to the
+            annotation by clicking on them.<br/>
+            <a class="bottom-link" href="demos/semantic-tagging-preview.html">Try the Demo</a>
+          </div>
+
+          <div class="plugin">
+            <a name="okfn"><strong>Annotorious for OKFN Annotator</strong></a><br/>
+            <p>Adds image annotation functionality to the <a href="http://okfnlabs.org/annotator/">Annotator Web
+            annotation system</a> by the <em>Open Knowledge Foundation</em>.</p>
+            <p><strong>Important:</strong> This extension does <strong>not</strong> use the standard Annotorious plugin
+            API (yet). Therefore the setup procedure is different! Read the docs for details.</p>
+            <a class="bottom-link" href="plug-outs/okfn-annotator.html">Read More</a>
+            <a class="bottom-link" href="downloads/annotorious-okfn-plugout-0.3.zip">Download ZIP</a>           
+          </div>
         </div>
       </div>
     </div>

@@ -298,16 +298,25 @@ p {
   width:640px;
 }
 
-.plugin-list {
-  margin-left:20px;
-  margin-bottom:30px;
-  padding-top:20px;
-  padding-left:0px;
-  list-style:square;
+.plugin {
+  background-color:#f4f4f4;
+  padding:10px;
+  margin:10px 0px 20px 0px;
+  border:1px solid #e0e0e0;
 }
 
-.plugin-list li {
-  margin-bottom:18px;
+.plugin .bottom-link {
+  display:inline-block;
+  padding-top:5px;
+  text-decoration:none;  
+  color:#999;
+  border-bottom: 3px solid transparent;
+  margin-right:10px;
+}
+
+.plugin .bottom-link:hover {
+  color:#333;
+  border-color:#ee9900;
 }
 
 footer {
