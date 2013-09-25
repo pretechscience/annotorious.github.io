@@ -546,7 +546,7 @@ function Jb(a) {
   }
   for(var a = 0 <= ">~+".indexOf(a.slice(-1)) ? a + " * " : a + " ", d = [], f = -1, e = -1, h = -1, k = -1, l = -1, q = -1, w = -1, y = "", E = "", Q, A = 0, Ge = a.length, x = m, L = m;y = E, E = a.charAt(A), A < Ge;A++) {
     if("\\" != y) {
-      if(x || (Q = A, x = {Qa:m, va:[], yb:[], W:[], D:m, Mb:m, id:m, oc:function() {
+      if(x || (Q = A, x = {Ra:m, va:[], yb:[], W:[], D:m, Mb:m, id:m, oc:function() {
         return Ib ? this.$d : this.D
       }}, w = A), 0 <= f) {
         if("]" == E) {
@@ -561,8 +561,8 @@ function Jb(a) {
           "=" == E && (h = 0 <= "|~^$*".indexOf(y) ? y : "", L.type = h + E, L.kc = c(f + 1, A - h.length), h = A + 1)
         }
       }else {
-        0 <= e ? ")" == E && (0 <= k && (L.value = c(e + 1, A)), k = e = -1) : "#" == E ? (b(), q = A + 1) : "." == E ? (b(), l = A) : ":" == E ? (b(), k = A) : "[" == E ? (b(), f = A, L = {}) : "(" == E ? (0 <= k && (L = {name:c(k + 1, A), value:m}, x.va.push(L)), e = A) : " " == E && y != E && (b(), 0 <= k && x.va.push({name:c(k + 1, A)}), x.wd = x.va.length || x.yb.length || x.W.length, x.re = x.Qa = c(Q, A), x.$d = x.D = x.Mb ? m : x.D || "*", x.D && (x.D = x.D.toUpperCase()), d.length && d[d.length - 
-        1].Mb && (x.qd = d.pop(), x.Qa = x.qd.Qa + " " + x.Qa), d.push(x), x = m)
+        0 <= e ? ")" == E && (0 <= k && (L.value = c(e + 1, A)), k = e = -1) : "#" == E ? (b(), q = A + 1) : "." == E ? (b(), l = A) : ":" == E ? (b(), k = A) : "[" == E ? (b(), f = A, L = {}) : "(" == E ? (0 <= k && (L = {name:c(k + 1, A), value:m}, x.va.push(L)), e = A) : " " == E && y != E && (b(), 0 <= k && x.va.push({name:c(k + 1, A)}), x.wd = x.va.length || x.yb.length || x.W.length, x.re = x.Ra = c(Q, A), x.$d = x.D = x.Mb ? m : x.D || "*", x.D && (x.D = x.D.toUpperCase()), d.length && d[d.length - 
+        1].Mb && (x.qd = d.pop(), x.Ra = x.qd.Ra + " " + x.Ra), d.push(x), x = m)
       }
     }
   }
@@ -750,7 +750,7 @@ function Xb(a, b) {
 }
 var $b = {};
 function ac(a) {
-  var b = $b[a.Qa];
+  var b = $b[a.Ra];
   if(b) {
     return b
   }
@@ -830,7 +830,7 @@ function ac(a) {
       }
     }
   }
-  return $b[a.Qa] = b
+  return $b[a.Ra] = b
 }
 var cc = {}, dc = {};
 function ec(a) {
@@ -1095,18 +1095,18 @@ r.wa = n;
 r.Vc = n;
 r.init = function(a, b, c, d, f, e) {
   u(a) ? this.vd = j : a && a.handleEvent && u(a.handleEvent) ? this.vd = n : g(Error("Invalid listener argument"));
-  this.Pa = a;
+  this.Qa = a;
   this.Ad = b;
   this.src = c;
   this.type = d;
   this.capture = !!f;
-  this.La = e;
+  this.Ma = e;
   this.Vc = n;
   this.key = ++wc;
   this.wa = n
 };
 r.handleEvent = function(a) {
-  return this.vd ? this.Pa.call(this.La || this.src, a) : this.Pa.handleEvent.call(this.Pa, a)
+  return this.vd ? this.Qa.call(this.Ma || this.src, a) : this.Qa.handleEvent.call(this.Qa, a)
 };
 var xc = {}, N = {}, yc = {}, zc = {};
 function O(a, b, c, d, f) {
@@ -1126,7 +1126,7 @@ function O(a, b, c, d, f) {
     if(h[k]) {
       l = h[k];
       for(e = 0;e < l.length;e++) {
-        if(h = l[e], h.Pa == c && h.La == f) {
+        if(h = l[e], h.Qa == c && h.Ma == f) {
           if(h.wa) {
             break
           }
@@ -1166,7 +1166,7 @@ function Bc(a, b, c, d, f) {
   }else {
     if(d = !!d, a = Cc(a, b, d)) {
       for(e = 0;e < a.length;e++) {
-        if(a[e].Pa == c && a[e].capture == d && a[e].La == f) {
+        if(a[e].Qa == c && a[e].capture == d && a[e].Ma == f) {
           P(a[e].key);
           break
         }
@@ -1333,7 +1333,7 @@ function Ic(a, b, c, d, f, e) {
       f = !!f;
       if(b = Cc(b, c, f)) {
         for(c = 0;c < b.length;c++) {
-          if(!b[c].wa && b[c].Pa == d && b[c].capture == f && b[c].La == e) {
+          if(!b[c].wa && b[c].Qa == d && b[c].capture == f && b[c].Ma == e) {
             b = b[c];
             break a
           }
@@ -1641,8 +1641,8 @@ r.screenX = 0;
 r.screenY = 0;
 r.Dd = 0;
 r.Ed = 0;
-r.Ga = 0;
 r.Ha = 0;
+r.Ia = 0;
 r.bd = j;
 r.qa = n;
 r.pd = 0;
@@ -1678,8 +1678,8 @@ r.ee = function(a) {
     this.screenX = a.screenX;
     this.screenY = a.screenY;
     this.Fc ? (a = this.target, b = a.offsetLeft, c = a.offsetParent, !c && "fixed" == Oc(a, "position") && (c = K(a).documentElement), c ? (G ? (d = gd(c), b += d.left) : db(8) && (d = gd(c), b -= d.left), a = ad(c) ? c.clientWidth - (b + a.offsetWidth) : b) : a = b) : a = this.target.offsetLeft;
-    this.Ga = a;
-    this.Ha = this.target.offsetTop;
+    this.Ha = a;
+    this.Ia = this.target.offsetTop;
     this.xc = Db(rb(this.I));
     this.Wd = ra()
   }else {
@@ -1692,7 +1692,7 @@ r.Ab = function(a, b) {
   if(this.qa) {
     kd(a);
     this.qa = n;
-    var c = md(this, this.Ga), d = nd(this, this.Ha);
+    var c = md(this, this.Ha), d = nd(this, this.Ia);
     this.dispatchEvent(new ld("end", this, a.clientX, a.clientY, a, c, d, b || "touchcancel" == a.type))
   }else {
     this.dispatchEvent("earlycancel")
@@ -1731,10 +1731,10 @@ r.Rd = function(a) {
 function od(a, b, c) {
   var d = Db(rb(a.I)), b = b + (d.x - a.xc.x), c = c + (d.y - a.xc.y);
   a.xc = d;
-  a.Ga += b;
-  a.Ha += c;
-  b = md(a, a.Ga);
-  a = nd(a, a.Ha);
+  a.Ha += b;
+  a.Ia += c;
+  b = md(a, a.Ha);
+  a = nd(a, a.Ia);
   return new J(b, a)
 }
 r.Zd = function(a) {
@@ -1764,8 +1764,8 @@ function ld(a, b, c, d, f, e, h, k) {
   this.clientX = c;
   this.clientY = d;
   this.je = f;
-  this.left = da(e) ? e : b.Ga;
-  this.top = da(h) ? h : b.Ha;
+  this.left = da(e) ? e : b.Ha;
+  this.top = da(h) ? h : b.Ia;
   this.ne = b;
   this.me = !!k
 }
@@ -1783,7 +1783,7 @@ rd.prototype.k = function(a, b) {
   this.Xa[a] || (this.Xa[a] = []);
   this.Xa[a].push(b)
 };
-rd.prototype.Ra = function(a, b) {
+rd.prototype.Sa = function(a, b) {
   var c = this.Xa[a];
   c && C(c, b)
 };
@@ -1963,17 +1963,17 @@ function Id(a, b) {
   a.f = new sd;
   a.Lc = [];
   a.ab = [];
-  a.Ca = [];
+  a.Da = [];
   a.za = [];
   a.Wb = [];
-  a.sb = {Na:n, Ma:n};
-  a.Ua = new sd;
+  a.sb = {Oa:n, Na:n};
+  a.Aa = new sd;
   a.Yb = i;
   a.Sc = b
 }
 function Jd(a, b) {
-  var c = a.Ua.get(b);
-  c || (c = {Na:n, Ma:n}, c.set(b, c));
+  var c = a.Aa.get(b);
+  c || (c = {Oa:n, Na:n}, a.Aa.set(b, c));
   return c
 }
 function Kd(a, b) {
@@ -1981,7 +1981,7 @@ function Kd(a, b) {
   if(!a.f.get(c)) {
     var d = a.zd(b), f = [], e = [];
     B(a.Lc, function(a) {
-      d.k(a.type, a.La)
+      d.k(a.type, a.Ma)
     });
     B(a.ab, function(a) {
       if(a.onInitAnnotator) {
@@ -2000,17 +2000,17 @@ function Kd(a, b) {
     B(e, function(b) {
       C(a.Wb, b)
     });
-    var h = a.Ua.get(c);
-    h ? (h.Na && d.O(), h.Ma && d.Y(), a.Ua.remove(c)) : (a.sb.Na && d.O(), a.sb.Ma && d.Y());
+    var h = a.Aa.get(c);
+    h ? (h.Oa && d.O(), h.Na && d.Y(), a.Aa.remove(c)) : (a.sb.Oa && d.O(), a.sb.Na && d.Y());
     a.Yb && d.$(a.Yb);
     a.f.set(c, d);
-    C(a.Ca, b)
+    C(a.Da, b)
   }
 }
 function Ld(a) {
   var b, c;
-  for(c = a.Ca.length;0 < c;c--) {
-    for(var d = b = a.Ca[c - 1], f = d.offsetTop, e = d.offsetLeft, h = d.offsetWidth, k = d.offsetHeight;d.offsetParent;) {
+  for(c = a.Da.length;0 < c;c--) {
+    for(var d = b = a.Da[c - 1], f = d.offsetTop, e = d.offsetLeft, h = d.offsetWidth, k = d.offsetHeight;d.offsetParent;) {
       d = d.offsetParent, f += d.offsetTop, e += d.offsetLeft
     }
     f < window.pageYOffset + window.innerHeight && (e < window.pageXOffset + window.innerWidth && f + k > window.pageYOffset && e + h > window.pageXOffset) && Kd(a, b)
@@ -2019,24 +2019,24 @@ function Ld(a) {
 function Md(a, b, c) {
   if(b) {
     var d = a.f.get(b);
-    d ? c ? d.xa() : d.Y() : Jd(a, b).Ma = c
+    d ? c ? d.xa() : d.Y() : Jd(a, b).Na = c
   }else {
     B(W(a.f), function(a) {
       c ? a.xa() : a.Y()
-    }), a.sb.Ma = c, B(W(a.Ua), function(a) {
-      a.Ma = c
+    }), a.sb.Na = c, B(W(a.Aa), function(a) {
+      a.Na = c
     })
   }
 }
 function Nd(a, b, c) {
   if(b) {
     var d = a.f.get(b);
-    d ? c ? d.aa() : d.O() : Jd(a, b).Na = c
+    d ? c ? d.aa() : d.O() : Jd(a, b).Oa = c
   }else {
     B(W(a.f), function(a) {
       c ? a.aa() : a.O()
-    }), a.sb.Na = c, B(W(a.Ua), function(a) {
-      a.Na = c
+    }), a.sb.Oa = c, B(W(a.Aa), function(a) {
+      a.Oa = c
     })
   }
 }
@@ -2058,7 +2058,7 @@ r.k = function(a, b) {
   B(W(this.f), function(c) {
     c.k(a, b)
   });
-  this.Lc.push({type:a, La:b})
+  this.Lc.push({type:a, Ma:b})
 };
 r.xb = function(a) {
   this.ab.push(a);
@@ -2069,7 +2069,7 @@ r.xb = function(a) {
   })
 };
 function Od(a, b) {
-  return ud(a.f.S, b) ? j : Ea(a.Ca, function(c) {
+  return ud(a.f.S, b) ? j : Ea(a.Da, function(c) {
     return a.nc(c) == b
   }) != m
 }
@@ -2123,10 +2123,10 @@ r.r = function(a) {
   }
 };
 r.init = function() {
-  this.Sc && Ha(this.Ca, this.Sc());
+  this.Sc && Ha(this.Da, this.Sc());
   Ld(this);
   var a = this, b = O(window, "scroll", function() {
-    0 < a.Ca.length ? Ld(a) : P(b)
+    0 < a.Da.length ? Ld(a) : P(b)
   })
 };
 r.uc = function(a) {
@@ -2594,7 +2594,7 @@ r.B = m;
 r.la = m;
 r.ta = m;
 r.gb = m;
-r.Fa = m;
+r.Ga = m;
 r.ge = n;
 r.c = p("B");
 r.Cb = function() {
@@ -2613,7 +2613,7 @@ r.ib = function(a) {
       this.jb = rb(a)
     }
     this.Yc(a);
-    this.Ia()
+    this.Ja()
   }else {
     g(Error("Invalid element to decorate"))
   }
@@ -2622,9 +2622,9 @@ r.fb = ba(j);
 r.Yc = function(a) {
   this.B = a
 };
-r.Ia = function() {
+r.Ja = function() {
   function a(a) {
-    !a.Z && a.c() && a.Ia()
+    !a.Z && a.c() && a.Ja()
   }
   this.Z = j;
   this.gb && B(this.gb, a, i)
@@ -2638,16 +2638,16 @@ r.Bb = function() {
   this.Z = n
 };
 r.nb = p("B");
-r.Sa = function(a) {
+r.Ta = function(a) {
   this.Z && g(Error("Component already rendered"));
   this.la = a
 };
 r.removeChild = function(a, b) {
   if(a) {
     var c = t(a) ? a : a.Eb || (a.Eb = ":" + (a.Sd.Yd++).toString(36)), d;
-    this.Fa && c ? (d = this.Fa, d = (c in d ? d[c] : i) || m) : d = m;
+    this.Ga && c ? (d = this.Ga, d = (c in d ? d[c] : i) || m) : d = m;
     a = d;
-    c && a && (d = this.Fa, c in d && delete d[c], C(this.gb, a), b && (a.Bb(), a.B && yb(a.B)), c = a, c == m && g(Error("Unable to set parent component")), c.ta = m, ve.G.Dc.call(c, m))
+    c && a && (d = this.Ga, c in d && delete d[c], C(this.gb, a), b && (a.Bb(), a.B && yb(a.B)), c = a, c == m && g(Error("Unable to set parent component")), c.ta = m, ve.G.Dc.call(c, m))
   }
   a || g(Error("Child is not in parent component"));
   return a
@@ -2675,10 +2675,10 @@ r.fb = ba(j);
 r.ib = function(a, b) {
   if(b.id) {
     var c = b.id;
-    if(a.ta && a.ta.Fa) {
-      var d = a.ta.Fa, f = a.Eb;
+    if(a.ta && a.ta.Ga) {
+      var d = a.ta.Ga, f = a.Eb;
       f in d && delete d[f];
-      d = a.ta.Fa;
+      d = a.ta.Ga;
       c in d && g(Error('The object already contains the key "' + c + '"'));
       d[c] = a
     }
@@ -2718,10 +2718,10 @@ r.ib = function(a, b) {
   if(!l || !q || f || c) {
     b.className = d.join(" ")
   }
-  a.isEnabled() || this.Ta(b, 1, j);
-  a.t & 8 && this.Ta(b, 8, j);
-  a.P & 16 && this.Ta(b, 16, !!(a.t & 16));
-  a.P & 64 && this.Ta(b, 64, !!(a.t & 64));
+  a.isEnabled() || this.Ua(b, 1, j);
+  a.t & 8 && this.Ua(b, 8, j);
+  a.P & 16 && this.Ua(b, 16, !!(a.t & 16));
+  a.P & 64 && this.Ua(b, 64, !!(a.t & 64));
   return b
 };
 r.Pb = function(a, b) {
@@ -2742,16 +2742,16 @@ r.Pb = function(a, b) {
     }
   }
 };
-r.Sa = function(a, b) {
+r.Ta = function(a, b) {
   this.kb(a, this.ob() + "-rtl", b)
 };
 r.ud = function(a) {
   var b;
-  return a.P & 32 && (b = a.Ja()) ? Cb(b) : n
+  return a.P & 32 && (b = a.Ka()) ? Cb(b) : n
 };
 r.Cc = function(a, b) {
   var c;
-  if(a.P & 32 && (c = a.Ja())) {
+  if(a.P & 32 && (c = a.Ka())) {
     if(!b && a.t & 32) {
       try {
         c.blur()
@@ -2768,10 +2768,10 @@ r.L = function(a, b, c) {
     var f;
     this.zb || Be(this);
     (f = this.zb[b]) && this.kb(a, f, c);
-    this.Ta(d, b, c)
+    this.Ua(d, b, c)
   }
 };
-r.Ta = function(a, b, c) {
+r.Ua = function(a, b, c) {
   ze || (ze = {1:"disabled", 8:"selected", 16:"checked", 64:"expanded"});
   (b = ze[b]) && a.setAttribute("aria-" + b, c)
 };
@@ -2802,7 +2802,7 @@ r.ma = function(a, b) {
     }
   }
 };
-r.Ja = function(a) {
+r.Ka = function(a) {
   return a.c()
 };
 r.ob = ba("goog-control");
@@ -2850,8 +2850,8 @@ function De(a) {
   a.Z && n != a.qc && Ee(a, n);
   a.qc = n
 }
-r.Ja = function() {
-  return this.C.Ja(this)
+r.Ka = function() {
+  return this.C.Ka(this)
 };
 r.kb = function(a, b) {
   b ? a && (this.X ? Fa(this.X, a) || this.X.push(a) : this.X = [a], this.C.kb(this, a, j)) : a && this.X && (C(this.X, a), 0 == this.X.length && (this.X = m), this.C.kb(this, a, n))
@@ -2869,13 +2869,13 @@ r.Yc = function(a) {
   this.ic || this.C.Pb(a, n);
   this.Rb = "none" != a.style.display
 };
-r.Ia = function() {
-  X.G.Ia.call(this);
+r.Ja = function() {
+  X.G.Ja.call(this);
   var a = this.C;
   this.la == m && (this.la = ad(this.Z ? this.B : this.jb.I.body));
-  this.la && a.Sa(this.c(), j);
+  this.la && a.Ta(this.c(), j);
   this.isEnabled() && a.Cc(this, this.Rb);
-  if(this.P & -2 && (this.qc && Ee(this, j), this.P & 32 && (a = this.Ja()))) {
+  if(this.P & -2 && (this.qc && Ee(this, j), this.P & 32 && (a = this.Ka()))) {
     var b = this.sc || (this.sc = new ne);
     oe(b, a);
     R(R(R(this.Cb(), b, "key", this.Pd), a, "focus", this.Nd), a, "blur", this.gd)
@@ -2894,10 +2894,10 @@ r.ma = function(a) {
   this.C.ma(this.c(), a);
   this.hb = a
 };
-r.Sa = function(a) {
-  X.G.Sa.call(this, a);
+r.Ta = function(a) {
+  X.G.Ta.call(this, a);
   var b = this.c();
-  b && this.C.Sa(b, a)
+  b && this.C.Ta(b, a)
 };
 r.Pb = function(a) {
   this.ic = a;
@@ -2932,7 +2932,7 @@ r.kd = function(a) {
 };
 r.Db = ea;
 r.jd = function(a) {
-  this.isEnabled() && (Y(this, 2) && Fe(this, j), uc(a) && (Y(this, 4) && this.setActive(j), this.C.ud(this) && this.Ja().focus()));
+  this.isEnabled() && (Y(this, 2) && Fe(this, j), uc(a) && (Y(this, 4) && this.setActive(j), this.C.ud(this) && this.Ka().focus()));
   !this.ic && uc(a) && a.preventDefault()
 };
 r.md = function(a) {
@@ -2988,7 +2988,7 @@ r.ib = function(a, b) {
 r.fb = function(a) {
   return"TEXTAREA" == a.tagName
 };
-r.Sa = ea;
+r.Ta = ea;
 r.ud = function(a) {
   return a.isEnabled()
 };
@@ -2999,7 +2999,7 @@ r.L = function(a, b, c) {
     a.disabled = c
   }
 };
-r.Ta = ea;
+r.Ua = ea;
 r.ma = function(a, b) {
   a && (a.value = b)
 };
@@ -3013,7 +3013,7 @@ function Me(a, b, c) {
 v(Me, X);
 var Ne = G || H;
 r = Me.prototype;
-r.Oa = n;
+r.Pa = n;
 r.ha = 0;
 r.Vd = 0;
 r.xd = 0;
@@ -3036,16 +3036,16 @@ function Qe(a) {
 }
 r.ma = function(a) {
   Me.G.ma.call(this, a);
-  this.c() && this.Ka()
+  this.c() && this.La()
 };
-r.Ia = function() {
-  Me.G.Ia.call(this);
+r.Ja = function() {
+  Me.G.Ja.call(this);
   var a = this.c();
   S(a, {overflowY:"hidden", overflowX:"auto", boxSizing:"border-box", MsBoxSizing:"border-box", WebkitBoxSizing:"border-box", MozBoxSizing:"border-box"});
   this.qb = dd(a, "padding");
   this.Uc = gd(a);
-  R(R(R(R(this.Cb(), a, "scroll", this.Ka), a, "focus", this.Ka), a, "keyup", this.Ka), a, "mouseup", this.Xd);
-  this.c() && this.Ka()
+  R(R(R(R(this.Cb(), a, "scroll", this.La), a, "focus", this.La), a, "keyup", this.La), a, "mouseup", this.Xd);
+  this.c() && this.La()
 };
 function Re(a) {
   if(!a.od) {
@@ -3081,10 +3081,10 @@ function Te(a) {
   var b = a.value.match(/\n/g) || [];
   a.rows = b.length + 1
 }
-r.Ka = function() {
-  if(!this.Oa) {
+r.La = function() {
+  if(!this.Pa) {
     var a = n;
-    this.Oa = j;
+    this.Pa = j;
     var b = this.c(), c = this.ha;
     if(b.scrollHeight) {
       var d = n, f = n, e = Re(this), h = b.offsetHeight, k = Pe(this), l = Qe(this);
@@ -3093,8 +3093,8 @@ r.Ka = function() {
     }else {
       Te(this)
     }
-    this.Oa = n;
-    a && (a = this.c(), this.Oa || (this.Oa = j, b = n, a.value || (a.value = " ", b = j), (f = a.scrollHeight) ? (e = Re(this), d = Pe(this), h = Qe(this), !(d && e <= d) && !(h && e >= h) && (h = this.qb, a.style.paddingBottom = h.bottom + 1 + "px", Re(this) == e && (a.style.paddingBottom = h.bottom + f + "px", a.scrollTop = 0, f = Re(this) - f, f >= d ? Se(this, f) : Se(this, d)), a.style.paddingBottom = h.bottom + "px")) : Te(this), b && (a.value = ""), this.Oa = n));
+    this.Pa = n;
+    a && (a = this.c(), this.Pa || (this.Pa = j, b = n, a.value || (a.value = " ", b = j), (f = a.scrollHeight) ? (e = Re(this), d = Pe(this), h = Qe(this), !(d && e <= d) && !(h && e >= h) && (h = this.qb, a.style.paddingBottom = h.bottom + 1 + "px", Re(this) == e && (a.style.paddingBottom = h.bottom + f + "px", a.scrollTop = 0, f = Re(this) - f, f >= d ? Se(this, f) : Se(this, d)), a.style.paddingBottom = h.bottom + "px")) : Te(this), b && (a.value = ""), this.Pa = n));
     c != this.ha && this.dispatchEvent("resize")
   }
 };
@@ -3120,13 +3120,13 @@ function Ze() {
 }
 ;function $e(a) {
   function b() {
-    var a = d.Ea;
-    a.c() && a.Ka()
+    var a = d.Fa;
+    a.c() && a.La()
   }
   this.element = Pd(Ze);
   this.d = a;
   this.Jd = a.getItem();
-  this.Ea = new Me("");
+  this.Fa = new Me("");
   this.Hd = M(".annotorious-editor-button-cancel", this.element)[0];
   this.Kc = M(".annotorious-editor-button-save", this.element)[0];
   var c;
@@ -3150,7 +3150,7 @@ function Ze() {
   });
   V(this.element, n);
   a.element.appendChild(this.element);
-  this.Ea.ib(M(".annotorious-editor-text", this.element)[0]);
+  this.Fa.ib(M(".annotorious-editor-text", this.element)[0]);
   var f = this.element;
   c = document.createElement("div");
   S(c, "position", "absolute");
@@ -3176,9 +3176,9 @@ r.hc = function(a) {
   a.parentNode && a.parentNode.insertBefore(b, a)
 };
 r.open = function(a) {
-  (this.tb = this.Qc = a) && this.Ea.ma(String(a.text));
+  (this.tb = this.Qc = a) && this.Fa.ma(String(a.text));
   V(this.element, j);
-  this.Ea.c().focus();
+  this.Fa.c().focus();
   B(this.Wa, function(b) {
     var c = b.mc(a);
     t(c) ? b.A.innerHTML = c : Ab(c) && (xb(b.A), b.A.appendChild(c))
@@ -3186,14 +3186,14 @@ r.open = function(a) {
 };
 r.close = function() {
   V(this.element, n);
-  this.Ea.ma("")
+  this.Fa.ma("")
 };
 r.setPosition = function(a) {
   Pc(this.element, a.x, a.y)
 };
 r.ed = function() {
   var a;
-  a = this.Ea.c().value;
+  a = this.Fa.c().value;
   var b = new Rd;
   (new Sd).parse(new ie(b, function(a) {
     return a
@@ -3236,8 +3236,8 @@ af.prototype.Ub = function() {
 af.prototype.ub = function() {
   P(this.Pc);
   P(this.Oc);
-  this.d.Ra("onMouseOverItem", this.fc);
-  this.d.Ra("onMouseOutOfItem", this.ec)
+  this.d.Sa("onMouseOverItem", this.fc);
+  this.d.Sa("onMouseOutOfItem", this.ec)
 };
 af.prototype.show = function() {
   window.clearTimeout(this.ac);
@@ -3558,7 +3558,7 @@ function bf(a) {
   this.ca = a;
   this.Rc = {padding:a.style.padding, margin:a.style.margin};
   this.v = new rd;
-  this.Da = [];
+  this.Ea = [];
   this.gc = j;
   this.element = vb("div", "annotorious-annotationlayer");
   S(this.element, "position", "relative");
@@ -3581,8 +3581,8 @@ function bf(a) {
   this.popup = b ? b : new df(this);
   f = new rf;
   f.init(this.g, this);
-  this.Da.push(f);
-  this.Aa = f;
+  this.Ea.push(f);
+  this.Ba = f;
   this.editor = new $e(this);
   this.l = new ff(this.ea, this);
   this.Ya = new af(this, this.element);
@@ -3602,7 +3602,7 @@ function bf(a) {
   O(k, mf, function(a) {
     a = qf(a, k);
     h.l.r(i);
-    h.gc ? (V(h.g, j), h.Aa.startSelection(a.x, a.y)) : (a = h.l.mb(a.x, a.y), 0 < a.length && h.l.r(a[0]))
+    h.gc ? (V(h.g, j), h.Ba.startSelection(a.x, a.y)) : (a = h.l.mb(a.x, a.y), 0 < a.length && h.l.r(a[0]))
   });
   this.v.k("onSelectionCompleted", function(a) {
     a = a.viewportBounds;
@@ -3611,7 +3611,7 @@ function bf(a) {
   });
   this.v.k("onSelectionCanceled", function() {
     ef && V(h.g, n);
-    h.Aa.stopSelection()
+    h.Ba.stopSelection()
   })
 }
 r = tf.prototype;
@@ -3624,7 +3624,7 @@ r.k = function(a, b) {
 };
 r.Tc = function(a) {
   a.init(this, this.g);
-  this.Da.push(a)
+  this.Ea.push(a)
 };
 r.R = function() {
   var a = this.ca;
@@ -3634,7 +3634,7 @@ r.R = function() {
 };
 r.ad = function(a) {
   this.l.w(a);
-  var b = Ea(this.Da, function(b) {
+  var b = Ea(this.Ea, function(b) {
     return b.getSupportedShapeType() == a.shapes[0].type
   });
   if(b) {
@@ -3657,14 +3657,14 @@ r.lb = function(a) {
   var b = Yc(this.ca);
   return{x:a.x * b.width, y:a.y * b.height}
 };
-r.ra = p("Aa");
+r.ra = p("Ba");
 r.J = function() {
   return this.l.J()
 };
 r.mb = function(a, b) {
   return Ga(this.l.mb(a, b))
 };
-r.sa = p("Da");
+r.sa = p("Ea");
 r.getItem = function() {
   return{src:uf(this.ca)}
 };
@@ -3685,16 +3685,16 @@ r.r = function(a) {
 r.w = function(a) {
   this.l.w(a)
 };
-r.Ra = function(a, b) {
-  this.v.Ra(a, b)
+r.Sa = function(a, b) {
+  this.v.Sa(a, b)
 };
 r.ce = function(a) {
-  (this.Aa = Ea(this.Da, function(b) {
+  (this.Ba = Ea(this.Ea, function(b) {
     return b.getName() == a
   })) || console.log('WARNING: selector "' + a + '" not available')
 };
 r.$ = function(a) {
-  B(this.Da, function(b) {
+  B(this.Ea, function(b) {
     b.$(a)
   });
   jf(this.l)
@@ -3708,7 +3708,7 @@ r.aa = function() {
 };
 r.stopSelection = function(a) {
   ef && V(this.g, n);
-  this.Aa.stopSelection();
+  this.Ba.stopSelection();
   a && this.l.z(a)
 };
 r.Qb = function(a) {
@@ -3747,14 +3747,14 @@ function wf(a) {
   this.da.addLayer(this.Vb);
   var c = this;
   this.da.events.register("move", this.da, function() {
-    c.Ba && yf(c)
+    c.Ca && yf(c)
   });
   b.k("beforePopupHide", function() {
-    c.bc == c.Ba ? c.Q.clearHideTimer() : zf(c, c.bc, c.Ba)
+    c.bc == c.Ca ? c.Q.clearHideTimer() : zf(c, c.bc, c.Ca)
   })
 }
 function yf(a) {
-  var b = a.Ba.Ib.div, c = $c(b), d = Uc(b, a.da.div), b = d.y, d = d.x, f = c.width, e = c.height, c = $c(a.Q.element), b = {y:b + e + 5};
+  var b = a.Ca.Ib.div, c = $c(b), d = Uc(b, a.da.div), b = d.y, d = d.x, f = c.width, e = c.height, c = $c(a.Q.element), b = {y:b + e + 5};
   d + c.width > a.Za.width ? (mb(a.Q.element, "top-left", "top-right"), b.x = d + f - c.width) : (mb(a.Q.element, "top-right", "top-left"), b.x = d);
   0 > b.x && (b.x = 0);
   b.x + c.width > a.Za.width && (b.x = a.Za.width - c.width);
@@ -3762,7 +3762,7 @@ function yf(a) {
   a.Q.setPosition(b)
 }
 function zf(a, b, c) {
-  b ? (Uc(b.Ib.div, a.da.div), za("height"), S(b.rd, "border-color", "#fff000"), a.Ba = b, a.Q.setAnnotation(b.oa), yf(a), a.Q.show()) : delete a.Ba;
+  b ? (Uc(b.Ib.div, a.da.div), za("height"), S(b.rd, "border-color", "#fff000"), a.Ca = b, a.Q.setAnnotation(b.oa), yf(a), a.Q.show()) : delete a.Ca;
   c && S(c.rd, "border-color", "#fff")
 }
 xf.prototype.z = function(a) {
@@ -3774,7 +3774,7 @@ xf.prototype.z = function(a) {
   b.div.appendChild(c);
   var d = {oa:a, Ib:b, rd:c}, f = this;
   O(c, "mouseover", function() {
-    f.Ba || zf(f, d);
+    f.Ca || zf(f, d);
     f.bc = d
   });
   O(c, "mouseout", function() {
@@ -3904,8 +3904,8 @@ r.r = function(a) {
 r.w = function(a) {
   this.l.w(a)
 };
-r.Ra = function(a, b) {
-  this.v.Ra(a, b)
+r.Sa = function(a, b) {
+  this.v.Sa(a, b)
 };
 r.rb = aa();
 r.stopSelection = function(a) {
