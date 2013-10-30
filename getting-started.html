@@ -77,6 +77,26 @@
 &lt;/body&gt;</pre>
 
           <p/>
+          
+          <h2>A Note to jQuery Users</h2>
+          <p>
+		    Some versions of Annotorious conflict with jQuery. When using Annotorious and
+		    jQuery on the same page, you should put jQuery into
+            <a href="http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/">no-conflict 
+            mode</a>, and either assign a new variable
+		    name to jQuery's <code>$</code> alias or, alternatively, wrap your jQuery code into a function
+		    where you can use the <code>$</code> alias in the local scope, like so:
+		  </p>
+		  
+		  <pre class="code" lang="javascript">
+jQuery.noConflict();
+ 
+jQuery(document).ready(function($) {
+    // You can use the locally-scoped $ in here as an alias to jQuery.
+    $('div').hide();
+});</pre>	
+
+          <p/>
 
           <h2>And Next?</h2>
           <p>
