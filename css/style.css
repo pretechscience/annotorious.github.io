@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Yellowtail);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
 body {
   padding:0px;
@@ -28,9 +29,9 @@ h2 {
 }
 
 .api-docs h2 {
-  font-family:"arial", "calibri";
-  font-size:17px;
-  font-style:italic;
+  font-family: 'Inconsolata', sans-serif;
+  font-size:18px;
+  text-shadow: 1px 1px 1px #999;
 }
 
 p {
