@@ -60,21 +60,20 @@
           <h1>API Reference</h1>
           
           <h2><a name="activateSelector">anno.activateSelector(opt_item_url_or_callback, opt_callback)</a></h2>
-          <p>Manually actives the selector. The selector can be activated on a specific item or 
-          globally, on all items (which serves mainly as a shortcut for pages where there is 
-          only one annotatable item). The function can take a callback function as parameter, 
-          which will be called when the selector is deactivated again.</p>
+          <p>Manually activates the selector on a specific item or globally. (The latter serves primarily as a
+          shortcut for pages where there is only one annotatable item). Can take a callback function
+          as parameter, which will be called when the selector is de-activated again.</p>
 
-          <p><strong>NOTE:</strong> this method is currently only relevant for the OpenLayers
-          module (and will be deprecated in release 1.0). Feel free to ignore in case you are
-          only using the standard image annotation features of Annotorious.</p>
+          <p><strong>NOTE:</strong> this method is currently relevant for the OpenLayers
+          module <strong>only</strong>. Feel free to ignore in case you are only using the standard image 
+          annotation features of Annotorious.</p>
           
           <h2><a name="addAnnotation">anno.addAnnotation(annotation, opt_replace)</a></h2>
           
-          <p>Adds a new annotation, or replaces an existing annotation with a new annotation. 
-          (In the latter case, the parameter <em>opt_replace</em> must be the existing annotation.)</p>
+          <p>Adds a new annotation, or replaces an existing one. In the latter case, the parameter
+          <code>opt_replace</code> is the annotation to replace.</p>
           
-          <p>Create the new annotation as an object literal, according to the following example:</p>
+          <p>Annotations are object literals, according to the following example:</p>
 
           <pre class="code" lang="javascript">
 var myAnnotation = {
@@ -95,20 +94,19 @@ var myAnnotation = {
 }</pre> 
           <strong>Some notes on annotation shapes:</strong>
           <ul>
-            <li>Although the <em>shapes</em> field requires an array of shapes, Annotorious currently uses
+            <li>Although the <code>shapes</code> field requires an array of shapes, Annotorious currently uses
             the first shape in the array <strong>only</strong>. All other shapes are disregarded. (The array 
             is there for future use, and for reasons of compatibility with other annotation systems.)</li>
             
-            <li>Currently, <em>rect</em> (rectangle) is the only supported shape type.</li>
+            <li>Currently, <code>rect</code> (rectangle) is the only supported shape type.</li>
             
             <li>Per default, Annotorious uses a normalized coordinate system. The example above represents
             a rectangle that starts at a horizontal (vertical) distance of 10% of the image's width (height); 
             has a width of 40% of the image's width; and a height of 30% of the image's height.</li>
           </ul>
 
-
-          <p><strong>Using pixel coordinates:</strong> optionally, you can also express geometry coordinates
-          in pixel units. See below for an example:</p>
+          <p><strong>Using pixel coordinates:</strong> you can also use pixel coordinates for geometry.
+          Example:</p>
 
           <pre class="code" lang="javascript">
 var myAnnotation = {
@@ -131,13 +129,13 @@ var myAnnotation = {
     }]
 }</pre>
 
-          <p><strong>Making annotations 'ready-only':</strong> in most cases, you probably don't want users
-          to be able to delete or edit the annotations you have added via the API. You can easily make them 
+          <p><strong>Making annotations 'ready-only':</strong> in many cases, you won't want users
+          to delete or edit the annotations you have added via the API. You can easily make them 
           'read-only' by adding an additional field to the object literal:</p>
 
-          <pre class="code" lang="javascript">editable : false</pre>
+          <p><code>editable: false</code></pre>
 
-          <p>If this field is set to false, there will be no <em>delete</em> icon in the annotation popup.</p>
+          <p>If the field is set to false, there will be no <em>delete</em> icon in the annotation popup.</p>
           
           <h2><a name="addHandler">anno.addHandler(type, handler)</a></h2>
           
@@ -148,22 +146,22 @@ var myAnnotation = {
 anno.addHandler('onAnnotationCreated', function(annotation) {
     console.log(annotation.text);
 });</pre> 
-          Annotorious issues the following events:
+          You can register for the following events:
           <ul>
-            <li><strong>onMouseOverItem(event)</strong> - fired when the mouse enters an annotatable item</li>
-            <li><strong>onMouseOutOfItem(event)</strong> - fired when the mouse leaves an annotatable item</li>
-            <li><strong>onMouseOverAnnotation(event)</strong> - fired when the mouse enters an annotation</li>
-            <li><strong>onMouseOutOfAnnotation(event)</strong> - fired when the mouse leaves an annotation</li>
-            <li><strong>onSelectionStarted(event)</strong> - fired when the user starts a selection</li>
-            <li><strong>onSelectionCanceled(event)</strong> - fired when the user cancels a selection (not available on all selection tools)</li>
-            <li><strong>onSelectionCompleted(event)</strong> - fired when the user completes a selection</li>
-            <li><strong>onSelectionChanged(event)</strong> - fired when the user changed a selection</li>
-            <li><strong>beforePopupHide(popup)</strong> - fired just before the annotation info popup window hides</li>
-            <li><strong>beforeAnnotationRemoved(annotation)</strong> - fired before an annotation is removed (Note: it is possible
-              to prevent annotation removal by returning <em>false</em> from the handler function!)</li>
-            <li><strong>onAnnotationRemoved(annotation)</strong> - fired when an annotation is removed from an item</li>
-            <li><strong>onAnnotationCreated(annotation)</strong> - fired when an annotation was created</li>
-            <li><strong>onAnnotationUpdated(annotation)</strong> - fired when an existing annotation was edited/updated</li>
+            <li><code>onMouseOverItem(event)</code> - fired when the mouse enters an annotatable item</li>
+            <li><code>onMouseOutOfItem(event)</code> - fired when the mouse leaves an annotatable item</li>
+            <li><code>onMouseOverAnnotation(event)</code> - fired when the mouse enters an annotation</li>
+            <li><code>onMouseOutOfAnnotation(event)</code> - fired when the mouse leaves an annotation</li>
+            <li><code>onSelectionStarted(event)</code> - fired when the user starts a selection</li>
+            <li><code>onSelectionCanceled(event)</code> - fired when the user cancels a selection (not available on all selection tools)</li>
+            <li><code>onSelectionCompleted(event)</code> - fired when the user completes a selection</li>
+            <li><code>onSelectionChanged(event)</code> - fired when the user changed a selection</li>
+            <li><code>beforePopupHide(popup)</code> - fired just before the annotation info popup window hides</li>
+            <li><code>beforeAnnotationRemoved(annotation)</code> - fired before an annotation is removed (Note: it is possible
+              to prevent annotation removal by returning <code>false</code> from the handler function!)</li>
+            <li><code>onAnnotationRemoved(annotation)</code> - fired when an annotation is removed from an item</li>
+            <li><code>onAnnotationCreated(annotation)</code> - fired when an annotation was created</li>
+            <li><code>onAnnotationUpdated(annotation)</code> - fired when an existing annotation was edited/updated</li>
           </ul>
           
           <h2><a name="addPlugin">anno.addPlugin(pluginName, opt_config_options)</a></h2>
@@ -173,15 +171,14 @@ anno.addHandler('onAnnotationCreated', function(annotation) {
           <h2><a name="destroy">anno.destroy(opt_item_url)</a></h2>
           
           <p>Destroys annotation functionality on a specific item, or on all items on the page. Note that
-          this method differs from <a href="#reset">anno.reset</a> insofar as <em>destroy</em> does not 
-          re-evaluate the <code>annotatable</code> CSS attributes. What is destroyed, stays destroyed. (Until
-          re-enabled through <a href="makeAnnotatable">anno.makeAnnotatable</a>).</p>
+          this method differs from <a href="#reset"><code>anno.reset</code></a> insofar as <code>destroy</code>
+          does not re-evaluate the <code>annotatable</code> CSS attributes. What is destroyed, stays destroyed - until
+          re-enabled through <a href="makeAnnotatable"><code>anno.makeAnnotatable</code></a>.</p>
           
           <h2><a name="getAnnotations">anno.getAnnotations(opt_item_url)</a></h2>
           
-          <p>Returns the current annotations. If <em>opt_item_url</em> is provided, the method 
-          will return annotations only for this item. If omitted, the method will return all annotations,
-          on all annotatable items on the page.</p>
+          <p>Returns an array of annotations. If <code>opt_item_url</code> is provided, only annotations 
+          for this item will be returned. Otherwise all annotations on the page will be returned.</p>
           
           <h2><a name="hideAnnotations">anno.hideAnnotations(opt_item_url)</a></h2>
           
@@ -190,12 +187,10 @@ anno.addHandler('onAnnotationCreated', function(annotation) {
           <h2><a name="hideSelectionWidget">anno.hideSelectionWidget(opt_item_url)</a></h2>
           
           <p>Disables the selection widget (the small tooltip in the upper left corner which says &quot;Click and
-          Drag to Annotate&quot;), thus preventing users from creating new annotations alltogether. The typical 
-          use case for this is 'read-only' annotated images. I.e. if you want to add some pre-defined annotations using
-          <a href="#addAnnotation">anno.addAnnotation</a> without the user being able to add or change anything.</p>
+          Drag to Annotate&quot;), thus preventing users from creating new annotations. Typically, you will want
+          to use this in conjunction with 'read-only' annotated images, so users can see existing annotations, 
+          but are not able to add any new ones.</p>
 
-          <p>The selection widget can be hidden on a specific item or globally, on all annotatable items on the page.</p>
-          
           <h2><a name="highlightAnnotation">anno.highlightAnnotation(annotation)</a></h2>
           
           Highlights the specified annotation, just as if the mouse pointer was hovering over it. The annotation
@@ -205,29 +200,29 @@ anno.addHandler('onAnnotationCreated', function(annotation) {
             <li>The user moves the mouse into, and out of the annotation</li>
             <li>The user moves the mouse over another annotation</li>
             <li>The highlight is removed by calling this method with an empty parameter
-              (<em>anno.highlightAnnotation()</em> or <em>anno.highlightAnnotation(undefined)</em>)</li>
-            <li>Another annotation is highlighted via <em>anno.highlightAnnotation</em></li> 
+              (<code>anno.highlightAnnotation()</code> or <code>anno.highlightAnnotation(undefined)</code>)</li>
+            <li>Another annotation is highlighted via <code>anno.highlightAnnotation</code></li> 
           </ul>
           
           <h2><a name="makeAnnotatable">anno.makeAnnotatable(item)</a></h2>
           
-          <p>Makes an item on the screen annotatable (if there is a module available supporting the item format). 
+          <p>Makes an item annotatable (if there is a module available supporting the item format). 
           You can use this method as an alternative to CSS-based activation. It works just the same way, and is 
           simply there for convenience, and for item formats that technically don't support CSS-based activation
           (such as zoomable images).</p>
           
           <h2><a name="removeAll">anno.removeAll(opt_item_url)</a></h2>
           
-          <p>Removes all annotations. If the optional parameter <em>opt_item_url</em> is set, only the annotations
+          <p>Removes all annotations. If the optional parameter <code>opt_item_url</code> is set, only the annotations
           on the specified item will be removed. Otherwise all annotations on all items on the page will be removed.</p>
           
           <h2><a name="removeAnnotation">anno.removeAnnotation(annotation)</a></h2>
           
-          <p>Removes an annotation from the page.</p>
+          <p>Removes an annotation.</p>
           
           <h2><a name="reset">anno.reset()</a></h2>
           
-          <p>Performs a 'hard reset' on Annotorious. This means all annotation features will be removed, and 
+          <p>Performs a 'hard reset' on Annotorious. This means that all annotation features will be removed, and 
           the page will be re-scanned for items with the 'annotatable' CSS class. (Note: this method could be
           handy in case you are working with JavaScript image carousels. Just make sure the images have 'annotatable' 
           set, then reset Annotorious after each page flip.)</p>
@@ -237,20 +232,21 @@ anno.addHandler('onAnnotationCreated', function(annotation) {
           Sets global properties on Annotorious. Currently supported property values are:
           
           <ul>
-            <li><strong>outline</strong>: outline color for annotation and selection shapes</li> 
-            <li><strong>stroke</strong>: stroke color for annotation and selection shapes</li>
-            <li><strong>fill</strong>: fill color for annotation and selection shapes</li>
-            <li><strong>hi_stroke</strong>: stroke color for highlighted annotation shapes</li>
-            <li><strong>hi_fill</strong> fill color for highlighted annotation shapes</li>
+            <li><code>outline</code>: outline color for annotation and selection shapes</li> 
+            <li><code>stroke</code>: stroke color for annotation and selection shapes</li>
+            <li><code>fill</code>: fill color for annotation and selection shapes</li>
+            <li><code>hi_stroke</code>: stroke color for highlighted annotation shapes</li>
+            <li><code>hi_fill</code> fill color for highlighted annotation shapes</li>
           </ul>
           
           <h2><a name="showAnnotations">anno.showAnnotations(opt_item_url)</a></h2>
           
-          <p>Shows existing annotations on all, or a specific item (if they were hidden using <a href="#hideAnnotations">anno.hideAnnotations</a>).</p>
+          <p>Shows existing annotations on all, or a specific item (if they were hidden 
+          using <a href="#hideAnnotations"><code>anno.hideAnnotations</code></a>).</p>
           
           <h2><a name="showSelectionWidget">anno.showSelectionWidget(opt_item_url)</a></h2>
           
-          <p>Enables the selection widget (the small tooltip in the upper left corner which says &quot;Click and
+          <p>Enables the selection widget (the small tooltip in the upper left corner that says &quot;Click and
           Drag to Annotate&quot;), thus enabling users to creating new annotations. (Per default, the selection 
           widget is enabled.)</p>
         </div>

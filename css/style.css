@@ -34,6 +34,14 @@ h2 {
   text-shadow: 1px 1px 1px #999;
 }
 
+code {
+  padding:0;
+  margin:0;
+  font-family: 'Inconsolata', sans-serif;
+  font-size:15px;
+  font-weight:bold;  
+}
+
 p {
   margin:0px;
   padding:0px 0px 20px 0px;
@@ -186,13 +194,6 @@ p {
 .content-two-column {
   float:left;
   margin-right:320px;
-}
-
-.content code {
-  font-family:monospace;
-  font-weight:bold;
-  font-size:16px;
-  padding:0px 5px;
 }
 
 .content h2 {
