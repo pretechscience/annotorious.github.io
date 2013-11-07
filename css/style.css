@@ -27,6 +27,12 @@ h2 {
   font-size:24px;
 }
 
+.api-docs h2 {
+  font-family:"arial", "calibri";
+  font-size:17px;
+  font-style:italic;
+}
+
 p {
   margin:0px;
   padding:0px 0px 20px 0px;
@@ -51,6 +57,10 @@ p {
 
 .navbar li {
   display:inline;
+}
+
+.api-docs li {
+  padding-bottom:5px;
 }
 
 .navbar li a {
