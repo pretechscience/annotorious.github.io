@@ -5,13 +5,14 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link href="../latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" />
     <link href="semantic-tagging-plugin.css" rel="stylesheet" type="text/css" />
-    <link href="http://annotorious.github.com/latest/anno-elasticsearch-plugin.css" rel="stylesheet" type="text/css" />
+    <link href="../latest/anno-parse-plugin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
     <script type="text/javascript" src="../latest/annotorious.min.js"></script>
     <script type="text/javascript" src="semantic-tagging-plugin.js"></script>
-    <script type="text/javascript" src="http://annotorious.github.com/latest/anno-elasticsearch-plugin.js"></script>
+    <script type="text/javascript" src="../latest/anno-parse-plugin.js"></script>
     <script>
-      anno.addPlugin('ElasticSearch', { base_url: 'http://62.218.164.156/annotations/' });
+      anno.addPlugin('Parse', { app_id: 'Uj3ItN35fRhtchRb00mTpIsT83JWBROFbvfwKhgn', js_key: 'wYODTTgXaPLsORyCf7HCOJrThjZvh1dm8p4Wa20P' });
       anno.addPlugin('SemanticTagging', { endpoint_url: 'http://samos.mminf.univie.ac.at:8080/wikipediaminer' });
     </script>
   </head>
