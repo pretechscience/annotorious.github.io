@@ -170,7 +170,8 @@ anno.addHandler('onAnnotationCreated', function(annotation) {
           
           <h2><a name="destroy">anno.destroy(opt_item_url)</a></h2>
           
-          <p>Destroys annotation functionality on a specific item, or on all items on the page. Note that
+          <p>Destroys annotation functionality. If opt_item_url is provided, only this item will be affected.
+          Otherwise annotation functionality will be destroyed on all items on the page. Note that
           this method differs from <a href="#reset"><code>anno.reset</code></a> insofar as <code>destroy</code>
           does not re-evaluate the <code>annotatable</code> CSS attributes. What is destroyed, stays destroyed - until
           re-enabled through <a href="makeAnnotatable"><code>anno.makeAnnotatable</code></a>.</p>
