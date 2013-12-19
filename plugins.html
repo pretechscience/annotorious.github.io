@@ -15,7 +15,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="demos.html">Demos</a></li>
           <li><a href="getting-started.html">Getting Started</a></li>
-          <li class="active"><a href="javascript:void(0);">Plugins &amp; Integration</a></li>
+          <li class="active"><a href="javascript:void(0);">Plugins &amp; Useful Stuff</a></li>
           <li><a href="api.html">API</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -34,14 +34,7 @@
 
     <div class="content">
       <div class="content-inner">
-        <div class="sidebar">
-          <!--h2>3rd Party Integration</h2>
-          <ul>
-            <li><a href="#okfn">OKFN Annotator</a></li>
-            <li><a href="#pybossa">PyBossa &amp; Crowdcrafting</a></li>
-            <li><a href="#wordpress">Wordpress</a></li>
-          </ul-->
-          
+        <div class="sidebar">          
           <h2>Storage Plugins</h2>
           <ul>
             <li><a href="#parse">Parse Storage</a></li>
@@ -57,14 +50,16 @@
           <ul>
             <li><a href="#semantic-tagging">Semantic Tagging</a></li>
           </ul>
+          
+          <h2>Other Useful Stuff</h2>
+          <ul>
+            <li><a href="#okfn">OKFN Annotator Integration</a></li>
+            <li><a href="#pybossa">PyBossa Template</a></li>
+            <!-- li><a href="#wordpress">Wordpress</a></li -->
+          </ul>
         </div>
       
         <div class="content-two-column">
-          <!-- h1>Integrating with Other Tools</h1>
-          <p>
-            
-          </p-->
-          
           <h1>Plugins</h1>
           <p>
             To add a plugin, include the plugin script in your page head and register the plugin through
@@ -140,15 +135,28 @@
             annotation by clicking on them.<br/>
             <a class="bottom-link" href="demos/semantic-tagging-preview.html">Try the Demo</a>
           </div>
+          
+          <hr/>
+          
+          <h1>Other Useful Stuff</h1>
 
           <div class="plugin">
-            <a name="okfn"><strong>Annotorious for OKFN Annotator</strong></a><br/>
-            <p>Adds image annotation functionality to the <a href="http://okfnlabs.org/annotator/">Annotator Web
-            annotation system</a> by the <em>Open Knowledge Foundation</em>.</p>
-            <p><strong>Important:</strong> This extension does <strong>not</strong> use the standard Annotorious plugin
-            API (yet). Therefore the setup procedure is different! Read the docs for details.</p>
+            <a name="okfn"><strong>Integration between Annotorious and OKFN Annotator</strong></a><br/>
+            <p>This extension integrates Annotorious into the <a href="http://okfnlabs.org/annotator/">Annotator Web
+            annotation system</a> by the <em>Open Knowledge Foundation</em>. Technically, this is <strong>not</strong> 
+            realized as an Annotorious Plugin, so bear in mind that the setup procedure is different! Read the
+            docs for details.</p>
             <a class="bottom-link" href="plug-outs/okfn-annotator.html">Read More</a>
             <a class="bottom-link" href="downloads/annotorious-okfn-plugout-0.3.zip">Download ZIP</a>           
+          </div>
+          
+          <div class="plugin">
+            <a name="pybossa"><strong>PyBossa Template for Picture Tagging with Annotorious</strong></a><br/>
+            <p>An Annotorious-powered template for the open-source crowdsourcing framework 
+            <a href="http://daniellombrana.es/pybossa.html">PyBossa</a> that allows you to tag picture collections.</p>
+            <a class="bottom-link" href="http://daniellombrana.es/taggingpictures.html">Read More</a>
+            <a class="bottom-link" href="http://crowdcrafting.org/app/taggingpictures/">Try on Crowdcrafting.org</a>
+            <a class="bottom-link" href="http://github.com/PyBossa/app-tagging-pictures">Source Code</a>           
           </div>
         </div>
       </div>
