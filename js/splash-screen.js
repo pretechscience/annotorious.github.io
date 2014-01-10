@@ -129,7 +129,7 @@ function createAnnotations() {
     }, {
       src: document.getElementById("splash-image-4").src,
       editable: false,
-      text: "We're licensed under the terms of the <a href='http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License'>GNU</a> LGPL!",
+      text: "We're licensed under the terms of the <a href='http://opensource.org/licenses/MIT'>MIT License</a>!",
       shapes: [{
         type: "rect",
         geometry: {
