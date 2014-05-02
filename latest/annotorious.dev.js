@@ -191,18 +191,18 @@ function $goog$string$toCamelCase$$($str$$42$$) {
   return $JSCompiler_alias_TRUE$$
 };
 function $goog$array$find$$($arr$$27$$, $f$$13$$) {
-  var $i$$20_l$$inline_64$$;
+  var $i$$20_l$$inline_68$$;
   a: {
-    $i$$20_l$$inline_64$$ = $arr$$27$$.length;
-    for(var $arr2$$inline_65$$ = $goog$isString$$($arr$$27$$) ? $arr$$27$$.split("") : $arr$$27$$, $i$$inline_66$$ = 0;$i$$inline_66$$ < $i$$20_l$$inline_64$$;$i$$inline_66$$++) {
-      if($i$$inline_66$$ in $arr2$$inline_65$$ && $f$$13$$.call($JSCompiler_alias_VOID$$, $arr2$$inline_65$$[$i$$inline_66$$], $i$$inline_66$$, $arr$$27$$)) {
-        $i$$20_l$$inline_64$$ = $i$$inline_66$$;
+    $i$$20_l$$inline_68$$ = $arr$$27$$.length;
+    for(var $arr2$$inline_69$$ = $goog$isString$$($arr$$27$$) ? $arr$$27$$.split("") : $arr$$27$$, $i$$inline_70$$ = 0;$i$$inline_70$$ < $i$$20_l$$inline_68$$;$i$$inline_70$$++) {
+      if($i$$inline_70$$ in $arr2$$inline_69$$ && $f$$13$$.call($JSCompiler_alias_VOID$$, $arr2$$inline_69$$[$i$$inline_70$$], $i$$inline_70$$, $arr$$27$$)) {
+        $i$$20_l$$inline_68$$ = $i$$inline_70$$;
         break a
       }
     }
-    $i$$20_l$$inline_64$$ = -1
+    $i$$20_l$$inline_68$$ = -1
   }
-  return 0 > $i$$20_l$$inline_64$$ ? $JSCompiler_alias_NULL$$ : $goog$isString$$($arr$$27$$) ? $arr$$27$$.charAt($i$$20_l$$inline_64$$) : $arr$$27$$[$i$$20_l$$inline_64$$]
+  return 0 > $i$$20_l$$inline_68$$ ? $JSCompiler_alias_NULL$$ : $goog$isString$$($arr$$27$$) ? $arr$$27$$.charAt($i$$20_l$$inline_68$$) : $arr$$27$$[$i$$20_l$$inline_68$$]
 }
 function $goog$array$contains$$($arr$$31$$, $obj$$25$$) {
   return 0 <= $goog$array$indexOf$$($arr$$31$$, $obj$$25$$)
@@ -251,55 +251,55 @@ function $goog$userAgent$getNavigator$$() {
   return $goog$global$$.navigator
 }
 $goog$userAgent$detectedGecko_$$ = $goog$userAgent$detectedWebkit_$$ = $goog$userAgent$detectedIe_$$ = $goog$userAgent$detectedOpera_$$ = $JSCompiler_alias_FALSE$$;
-var $ua$$inline_71$$;
-if($ua$$inline_71$$ = $goog$userAgent$getUserAgentString$$()) {
-  var $navigator$$inline_72$$ = $goog$userAgent$getNavigator$$();
-  $goog$userAgent$detectedOpera_$$ = 0 == $ua$$inline_71$$.indexOf("Opera");
-  $goog$userAgent$detectedIe_$$ = !$goog$userAgent$detectedOpera_$$ && -1 != $ua$$inline_71$$.indexOf("MSIE");
-  $goog$userAgent$detectedWebkit_$$ = !$goog$userAgent$detectedOpera_$$ && -1 != $ua$$inline_71$$.indexOf("WebKit");
-  $goog$userAgent$detectedGecko_$$ = !$goog$userAgent$detectedOpera_$$ && !$goog$userAgent$detectedWebkit_$$ && "Gecko" == $navigator$$inline_72$$.product
+var $ua$$inline_75$$;
+if($ua$$inline_75$$ = $goog$userAgent$getUserAgentString$$()) {
+  var $navigator$$inline_76$$ = $goog$userAgent$getNavigator$$();
+  $goog$userAgent$detectedOpera_$$ = 0 == $ua$$inline_75$$.indexOf("Opera");
+  $goog$userAgent$detectedIe_$$ = !$goog$userAgent$detectedOpera_$$ && -1 != $ua$$inline_75$$.indexOf("MSIE");
+  $goog$userAgent$detectedWebkit_$$ = !$goog$userAgent$detectedOpera_$$ && -1 != $ua$$inline_75$$.indexOf("WebKit");
+  $goog$userAgent$detectedGecko_$$ = !$goog$userAgent$detectedOpera_$$ && !$goog$userAgent$detectedWebkit_$$ && "Gecko" == $navigator$$inline_76$$.product
 }
-var $goog$userAgent$OPERA$$ = $goog$userAgent$detectedOpera_$$, $goog$userAgent$IE$$ = $goog$userAgent$detectedIe_$$, $goog$userAgent$GECKO$$ = $goog$userAgent$detectedGecko_$$, $goog$userAgent$WEBKIT$$ = $goog$userAgent$detectedWebkit_$$, $navigator$$inline_74$$ = $goog$userAgent$getNavigator$$();
-$goog$userAgent$detectedMac_$$ = -1 != ($navigator$$inline_74$$ && $navigator$$inline_74$$.platform || "").indexOf("Mac");
+var $goog$userAgent$OPERA$$ = $goog$userAgent$detectedOpera_$$, $goog$userAgent$IE$$ = $goog$userAgent$detectedIe_$$, $goog$userAgent$GECKO$$ = $goog$userAgent$detectedGecko_$$, $goog$userAgent$WEBKIT$$ = $goog$userAgent$detectedWebkit_$$, $navigator$$inline_78$$ = $goog$userAgent$getNavigator$$();
+$goog$userAgent$detectedMac_$$ = -1 != ($navigator$$inline_78$$ && $navigator$$inline_78$$.platform || "").indexOf("Mac");
 var $goog$userAgent$X11$$ = !!$goog$userAgent$getNavigator$$() && -1 != ($goog$userAgent$getNavigator$$().appVersion || "").indexOf("X11"), $goog$userAgent$VERSION$$;
 a: {
-  var $version$$inline_77$$ = "", $re$$inline_78$$;
+  var $version$$inline_81$$ = "", $re$$inline_82$$;
   if($goog$userAgent$OPERA$$ && $goog$global$$.opera) {
-    var $operaVersion$$inline_79$$ = $goog$global$$.opera.version, $version$$inline_77$$ = "function" == typeof $operaVersion$$inline_79$$ ? $operaVersion$$inline_79$$() : $operaVersion$$inline_79$$
+    var $operaVersion$$inline_83$$ = $goog$global$$.opera.version, $version$$inline_81$$ = "function" == typeof $operaVersion$$inline_83$$ ? $operaVersion$$inline_83$$() : $operaVersion$$inline_83$$
   }else {
-    if($goog$userAgent$GECKO$$ ? $re$$inline_78$$ = /rv\:([^\);]+)(\)|;)/ : $goog$userAgent$IE$$ ? $re$$inline_78$$ = /MSIE\s+([^\);]+)(\)|;)/ : $goog$userAgent$WEBKIT$$ && ($re$$inline_78$$ = /WebKit\/(\S+)/), $re$$inline_78$$) {
-      var $arr$$inline_80$$ = $re$$inline_78$$.exec($goog$userAgent$getUserAgentString$$()), $version$$inline_77$$ = $arr$$inline_80$$ ? $arr$$inline_80$$[1] : ""
+    if($goog$userAgent$GECKO$$ ? $re$$inline_82$$ = /rv\:([^\);]+)(\)|;)/ : $goog$userAgent$IE$$ ? $re$$inline_82$$ = /MSIE\s+([^\);]+)(\)|;)/ : $goog$userAgent$WEBKIT$$ && ($re$$inline_82$$ = /WebKit\/(\S+)/), $re$$inline_82$$) {
+      var $arr$$inline_84$$ = $re$$inline_82$$.exec($goog$userAgent$getUserAgentString$$()), $version$$inline_81$$ = $arr$$inline_84$$ ? $arr$$inline_84$$[1] : ""
     }
   }
   if($goog$userAgent$IE$$) {
-    var $docMode$$inline_81$$, $doc$$inline_802$$ = $goog$global$$.document;
-    $docMode$$inline_81$$ = $doc$$inline_802$$ ? $doc$$inline_802$$.documentMode : $JSCompiler_alias_VOID$$;
-    if($docMode$$inline_81$$ > parseFloat($version$$inline_77$$)) {
-      $goog$userAgent$VERSION$$ = String($docMode$$inline_81$$);
+    var $docMode$$inline_85$$, $doc$$inline_809$$ = $goog$global$$.document;
+    $docMode$$inline_85$$ = $doc$$inline_809$$ ? $doc$$inline_809$$.documentMode : $JSCompiler_alias_VOID$$;
+    if($docMode$$inline_85$$ > parseFloat($version$$inline_81$$)) {
+      $goog$userAgent$VERSION$$ = String($docMode$$inline_85$$);
       break a
     }
   }
-  $goog$userAgent$VERSION$$ = $version$$inline_77$$
+  $goog$userAgent$VERSION$$ = $version$$inline_81$$
 }
 var $goog$userAgent$isVersionCache_$$ = {};
 function $goog$userAgent$isVersion$$($version$$8$$) {
-  var $JSCompiler_temp$$55_order$$inline_85$$;
-  if(!($JSCompiler_temp$$55_order$$inline_85$$ = $goog$userAgent$isVersionCache_$$[$version$$8$$])) {
-    $JSCompiler_temp$$55_order$$inline_85$$ = 0;
-    for(var $v1Subs$$inline_86$$ = $goog$string$trim$$(String($goog$userAgent$VERSION$$)).split("."), $v2Subs$$inline_87$$ = $goog$string$trim$$(String($version$$8$$)).split("."), $subCount$$inline_88$$ = Math.max($v1Subs$$inline_86$$.length, $v2Subs$$inline_87$$.length), $subIdx$$inline_89$$ = 0;0 == $JSCompiler_temp$$55_order$$inline_85$$ && $subIdx$$inline_89$$ < $subCount$$inline_88$$;$subIdx$$inline_89$$++) {
-      var $v1Sub$$inline_90$$ = $v1Subs$$inline_86$$[$subIdx$$inline_89$$] || "", $v2Sub$$inline_91$$ = $v2Subs$$inline_87$$[$subIdx$$inline_89$$] || "", $v1CompParser$$inline_92$$ = RegExp("(\\d*)(\\D*)", "g"), $v2CompParser$$inline_93$$ = RegExp("(\\d*)(\\D*)", "g");
+  var $JSCompiler_temp$$59_order$$inline_89$$;
+  if(!($JSCompiler_temp$$59_order$$inline_89$$ = $goog$userAgent$isVersionCache_$$[$version$$8$$])) {
+    $JSCompiler_temp$$59_order$$inline_89$$ = 0;
+    for(var $v1Subs$$inline_90$$ = $goog$string$trim$$(String($goog$userAgent$VERSION$$)).split("."), $v2Subs$$inline_91$$ = $goog$string$trim$$(String($version$$8$$)).split("."), $subCount$$inline_92$$ = Math.max($v1Subs$$inline_90$$.length, $v2Subs$$inline_91$$.length), $subIdx$$inline_93$$ = 0;0 == $JSCompiler_temp$$59_order$$inline_89$$ && $subIdx$$inline_93$$ < $subCount$$inline_92$$;$subIdx$$inline_93$$++) {
+      var $v1Sub$$inline_94$$ = $v1Subs$$inline_90$$[$subIdx$$inline_93$$] || "", $v2Sub$$inline_95$$ = $v2Subs$$inline_91$$[$subIdx$$inline_93$$] || "", $v1CompParser$$inline_96$$ = RegExp("(\\d*)(\\D*)", "g"), $v2CompParser$$inline_97$$ = RegExp("(\\d*)(\\D*)", "g");
       do {
-        var $v1Comp$$inline_94$$ = $v1CompParser$$inline_92$$.exec($v1Sub$$inline_90$$) || ["", "", ""], $v2Comp$$inline_95$$ = $v2CompParser$$inline_93$$.exec($v2Sub$$inline_91$$) || ["", "", ""];
-        if(0 == $v1Comp$$inline_94$$[0].length && 0 == $v2Comp$$inline_95$$[0].length) {
+        var $v1Comp$$inline_98$$ = $v1CompParser$$inline_96$$.exec($v1Sub$$inline_94$$) || ["", "", ""], $v2Comp$$inline_99$$ = $v2CompParser$$inline_97$$.exec($v2Sub$$inline_95$$) || ["", "", ""];
+        if(0 == $v1Comp$$inline_98$$[0].length && 0 == $v2Comp$$inline_99$$[0].length) {
           break
         }
-        $JSCompiler_temp$$55_order$$inline_85$$ = ((0 == $v1Comp$$inline_94$$[1].length ? 0 : parseInt($v1Comp$$inline_94$$[1], 10)) < (0 == $v2Comp$$inline_95$$[1].length ? 0 : parseInt($v2Comp$$inline_95$$[1], 10)) ? -1 : (0 == $v1Comp$$inline_94$$[1].length ? 0 : parseInt($v1Comp$$inline_94$$[1], 10)) > (0 == $v2Comp$$inline_95$$[1].length ? 0 : parseInt($v2Comp$$inline_95$$[1], 10)) ? 1 : 0) || ((0 == $v1Comp$$inline_94$$[2].length) < (0 == $v2Comp$$inline_95$$[2].length) ? -1 : (0 == $v1Comp$$inline_94$$[2].length) > 
-        (0 == $v2Comp$$inline_95$$[2].length) ? 1 : 0) || ($v1Comp$$inline_94$$[2] < $v2Comp$$inline_95$$[2] ? -1 : $v1Comp$$inline_94$$[2] > $v2Comp$$inline_95$$[2] ? 1 : 0)
-      }while(0 == $JSCompiler_temp$$55_order$$inline_85$$)
+        $JSCompiler_temp$$59_order$$inline_89$$ = ((0 == $v1Comp$$inline_98$$[1].length ? 0 : parseInt($v1Comp$$inline_98$$[1], 10)) < (0 == $v2Comp$$inline_99$$[1].length ? 0 : parseInt($v2Comp$$inline_99$$[1], 10)) ? -1 : (0 == $v1Comp$$inline_98$$[1].length ? 0 : parseInt($v1Comp$$inline_98$$[1], 10)) > (0 == $v2Comp$$inline_99$$[1].length ? 0 : parseInt($v2Comp$$inline_99$$[1], 10)) ? 1 : 0) || ((0 == $v1Comp$$inline_98$$[2].length) < (0 == $v2Comp$$inline_99$$[2].length) ? -1 : (0 == $v1Comp$$inline_98$$[2].length) > 
+        (0 == $v2Comp$$inline_99$$[2].length) ? 1 : 0) || ($v1Comp$$inline_98$$[2] < $v2Comp$$inline_99$$[2] ? -1 : $v1Comp$$inline_98$$[2] > $v2Comp$$inline_99$$[2] ? 1 : 0)
+      }while(0 == $JSCompiler_temp$$59_order$$inline_89$$)
     }
-    $JSCompiler_temp$$55_order$$inline_85$$ = $goog$userAgent$isVersionCache_$$[$version$$8$$] = 0 <= $JSCompiler_temp$$55_order$$inline_85$$
+    $JSCompiler_temp$$59_order$$inline_89$$ = $goog$userAgent$isVersionCache_$$[$version$$8$$] = 0 <= $JSCompiler_temp$$59_order$$inline_89$$
   }
-  return $JSCompiler_temp$$55_order$$inline_85$$
+  return $JSCompiler_temp$$59_order$$inline_89$$
 }
 var $goog$userAgent$isDocumentModeCache_$$ = {};
 function $goog$userAgent$isDocumentMode$$($documentMode$$) {
@@ -386,24 +386,24 @@ function $goog$dom$setProperties$$($element$$16$$, $properties$$) {
 }
 var $goog$dom$DIRECT_ATTRIBUTE_MAP_$$ = {cellpadding:"cellPadding", cellspacing:"cellSpacing", colspan:"colSpan", frameborder:"frameBorder", height:"height", maxlength:"maxLength", role:"role", rowspan:"rowSpan", type:"type", usemap:"useMap", valign:"vAlign", width:"width"};
 function $goog$dom$createDom$$($tagName$$2$$, $opt_attributes$$, $var_args$$54$$) {
-  var $args$$inline_101$$ = arguments, $doc$$inline_102$$ = document, $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$ = $args$$inline_101$$[0], $attributes$$inline_104$$ = $args$$inline_101$$[1];
-  if(!$goog$dom$BrowserFeature$CAN_ADD_NAME_OR_TYPE_ATTRIBUTES$$ && $attributes$$inline_104$$ && ($attributes$$inline_104$$.name || $attributes$$inline_104$$.type)) {
-    $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$ = ["<", $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$];
-    $attributes$$inline_104$$.name && $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$.push(' name="', $goog$string$htmlEscape$$($attributes$$inline_104$$.name), '"');
-    if($attributes$$inline_104$$.type) {
-      $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$.push(' type="', $goog$string$htmlEscape$$($attributes$$inline_104$$.type), '"');
-      var $clone$$inline_106$$ = {};
-      $goog$object$extend$$($clone$$inline_106$$, $attributes$$inline_104$$);
-      delete $clone$$inline_106$$.type;
-      $attributes$$inline_104$$ = $clone$$inline_106$$
+  var $args$$inline_105$$ = arguments, $doc$$inline_106$$ = document, $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$ = $args$$inline_105$$[0], $attributes$$inline_108$$ = $args$$inline_105$$[1];
+  if(!$goog$dom$BrowserFeature$CAN_ADD_NAME_OR_TYPE_ATTRIBUTES$$ && $attributes$$inline_108$$ && ($attributes$$inline_108$$.name || $attributes$$inline_108$$.type)) {
+    $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$ = ["<", $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$];
+    $attributes$$inline_108$$.name && $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$.push(' name="', $goog$string$htmlEscape$$($attributes$$inline_108$$.name), '"');
+    if($attributes$$inline_108$$.type) {
+      $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$.push(' type="', $goog$string$htmlEscape$$($attributes$$inline_108$$.type), '"');
+      var $clone$$inline_110$$ = {};
+      $goog$object$extend$$($clone$$inline_110$$, $attributes$$inline_108$$);
+      delete $clone$$inline_110$$.type;
+      $attributes$$inline_108$$ = $clone$$inline_110$$
     }
-    $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$.push(">");
-    $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$ = $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$.join("")
+    $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$.push(">");
+    $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$ = $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$.join("")
   }
-  $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$ = $doc$$inline_102$$.createElement($element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$);
-  $attributes$$inline_104$$ && ($goog$isString$$($attributes$$inline_104$$) ? $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$.className = $attributes$$inline_104$$ : $goog$isArray$$($attributes$$inline_104$$) ? $goog$dom$classes$add$$.apply($JSCompiler_alias_NULL$$, [$element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$].concat($attributes$$inline_104$$)) : $goog$dom$setProperties$$($element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$, $attributes$$inline_104$$));
-  2 < $args$$inline_101$$.length && $goog$dom$append_$$($doc$$inline_102$$, $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$, $args$$inline_101$$, 2);
-  return $element$$inline_107_tagName$$inline_103_tagNameArr$$inline_105$$
+  $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$ = $doc$$inline_106$$.createElement($element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$);
+  $attributes$$inline_108$$ && ($goog$isString$$($attributes$$inline_108$$) ? $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$.className = $attributes$$inline_108$$ : $goog$isArray$$($attributes$$inline_108$$) ? $goog$dom$classes$add$$.apply($JSCompiler_alias_NULL$$, [$element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$].concat($attributes$$inline_108$$)) : $goog$dom$setProperties$$($element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$, $attributes$$inline_108$$));
+  2 < $args$$inline_105$$.length && $goog$dom$append_$$($doc$$inline_106$$, $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$, $args$$inline_105$$, 2);
+  return $element$$inline_111_tagName$$inline_107_tagNameArr$$inline_109$$
 }
 function $goog$dom$append_$$($doc$$12$$, $parent$$6$$, $args$$7$$, $i$$51_startIndex$$) {
   function $childHandler$$($child$$1$$) {
@@ -412,21 +412,21 @@ function $goog$dom$append_$$($doc$$12$$, $parent$$6$$, $args$$7$$, $i$$51_startI
   for(;$i$$51_startIndex$$ < $args$$7$$.length;$i$$51_startIndex$$++) {
     var $arg$$5$$ = $args$$7$$[$i$$51_startIndex$$];
     if($goog$isArrayLike$$($arg$$5$$) && !($goog$isObject$$($arg$$5$$) && 0 < $arg$$5$$.nodeType)) {
-      var $JSCompiler_inline_result$$7$$;
+      var $JSCompiler_inline_result$$11$$;
       a: {
         if($arg$$5$$ && "number" == typeof $arg$$5$$.length) {
           if($goog$isObject$$($arg$$5$$)) {
-            $JSCompiler_inline_result$$7$$ = "function" == typeof $arg$$5$$.item || "string" == typeof $arg$$5$$.item;
+            $JSCompiler_inline_result$$11$$ = "function" == typeof $arg$$5$$.item || "string" == typeof $arg$$5$$.item;
             break a
           }
           if($goog$isFunction$$($arg$$5$$)) {
-            $JSCompiler_inline_result$$7$$ = "function" == typeof $arg$$5$$.item;
+            $JSCompiler_inline_result$$11$$ = "function" == typeof $arg$$5$$.item;
             break a
           }
         }
-        $JSCompiler_inline_result$$7$$ = $JSCompiler_alias_FALSE$$
+        $JSCompiler_inline_result$$11$$ = $JSCompiler_alias_FALSE$$
       }
-      $goog$array$forEach$$($JSCompiler_inline_result$$7$$ ? $goog$array$toArray$$($arg$$5$$) : $arg$$5$$, $childHandler$$)
+      $goog$array$forEach$$($JSCompiler_inline_result$$11$$ ? $goog$array$toArray$$($arg$$5$$) : $arg$$5$$, $childHandler$$)
     }else {
       $childHandler$$($arg$$5$$)
     }
@@ -477,9 +477,9 @@ $JSCompiler_prototypeAlias$$.createElement = function $$JSCompiler_prototypeAlia
 $JSCompiler_prototypeAlias$$.createTextNode = function $$JSCompiler_prototypeAlias$$$createTextNode$($content$$1$$) {
   return this.$document_$.createTextNode($content$$1$$)
 };
-function $JSCompiler_StaticMethods_getDocumentScroll$$($JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_112$$) {
-  var $doc$$inline_111_win$$inline_113$$ = $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_112$$.$document_$, $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_112$$ = !$goog$userAgent$WEBKIT$$ ? $doc$$inline_111_win$$inline_113$$.documentElement : $doc$$inline_111_win$$inline_113$$.body, $doc$$inline_111_win$$inline_113$$ = $doc$$inline_111_win$$inline_113$$.parentWindow || $doc$$inline_111_win$$inline_113$$.defaultView;
-  return new $goog$math$Coordinate$$($doc$$inline_111_win$$inline_113$$.pageXOffset || $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_112$$.scrollLeft, $doc$$inline_111_win$$inline_113$$.pageYOffset || $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_112$$.scrollTop)
+function $JSCompiler_StaticMethods_getDocumentScroll$$($JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_116$$) {
+  var $doc$$inline_115_win$$inline_117$$ = $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_116$$.$document_$, $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_116$$ = !$goog$userAgent$WEBKIT$$ ? $doc$$inline_115_win$$inline_117$$.documentElement : $doc$$inline_115_win$$inline_117$$.body, $doc$$inline_115_win$$inline_117$$ = $doc$$inline_115_win$$inline_117$$.parentWindow || $doc$$inline_115_win$$inline_117$$.defaultView;
+  return new $goog$math$Coordinate$$($doc$$inline_115_win$$inline_117$$.pageXOffset || $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_116$$.scrollLeft, $doc$$inline_115_win$$inline_117$$.pageYOffset || $JSCompiler_StaticMethods_getDocumentScroll$self_el$$inline_116$$.scrollTop)
 }
 $JSCompiler_prototypeAlias$$.appendChild = function $$JSCompiler_prototypeAlias$$$appendChild$($parent$$7$$, $child$$2$$) {
   $parent$$7$$.appendChild($child$$2$$)
@@ -523,450 +523,450 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-function $getArr$$inline_117$$($i$$inline_155$$, $opt_arr$$inline_156$$) {
-  var $r$$inline_157$$ = $opt_arr$$inline_156$$ || [];
-  $i$$inline_155$$ && $r$$inline_157$$.push($i$$inline_155$$);
-  return $r$$inline_157$$
+function $getArr$$inline_121$$($i$$inline_159$$, $opt_arr$$inline_160$$) {
+  var $r$$inline_161$$ = $opt_arr$$inline_160$$ || [];
+  $i$$inline_159$$ && $r$$inline_161$$.push($i$$inline_159$$);
+  return $r$$inline_161$$
 }
-var $cssCaseBug$$inline_118$$ = $goog$userAgent$WEBKIT$$ && "BackCompat" == document.compatMode, $childNodesName$$inline_119$$ = document.firstChild.children ? "children" : "childNodes", $caseSensitive$$inline_120$$ = $JSCompiler_alias_FALSE$$;
-function $getQueryParts$$inline_121$$($query$$inline_158$$) {
-  function $endAll$$inline_178$$() {
-    0 <= $inId$$inline_166$$ && ($currentPart$$inline_173$$.id = $ts$$inline_159$$($inId$$inline_166$$, $x$$inline_171$$).replace(/\\/g, ""), $inId$$inline_166$$ = -1);
-    if(0 <= $inTag$$inline_167$$) {
-      var $tv$$inline_805$$ = $inTag$$inline_167$$ == $x$$inline_171$$ ? $JSCompiler_alias_NULL$$ : $ts$$inline_159$$($inTag$$inline_167$$, $x$$inline_171$$);
-      0 > ">~+".indexOf($tv$$inline_805$$) ? $currentPart$$inline_173$$.$tag$ = $tv$$inline_805$$ : $currentPart$$inline_173$$.$oper$ = $tv$$inline_805$$;
-      $inTag$$inline_167$$ = -1
+var $cssCaseBug$$inline_122$$ = $goog$userAgent$WEBKIT$$ && "BackCompat" == document.compatMode, $childNodesName$$inline_123$$ = document.firstChild.children ? "children" : "childNodes", $caseSensitive$$inline_124$$ = $JSCompiler_alias_FALSE$$;
+function $getQueryParts$$inline_125$$($query$$inline_162$$) {
+  function $endAll$$inline_182$$() {
+    0 <= $inId$$inline_170$$ && ($currentPart$$inline_177$$.id = $ts$$inline_163$$($inId$$inline_170$$, $x$$inline_175$$).replace(/\\/g, ""), $inId$$inline_170$$ = -1);
+    if(0 <= $inTag$$inline_171$$) {
+      var $tv$$inline_812$$ = $inTag$$inline_171$$ == $x$$inline_175$$ ? $JSCompiler_alias_NULL$$ : $ts$$inline_163$$($inTag$$inline_171$$, $x$$inline_175$$);
+      0 > ">~+".indexOf($tv$$inline_812$$) ? $currentPart$$inline_177$$.$tag$ = $tv$$inline_812$$ : $currentPart$$inline_177$$.$oper$ = $tv$$inline_812$$;
+      $inTag$$inline_171$$ = -1
     }
-    0 <= $inClass$$inline_165$$ && ($currentPart$$inline_173$$.$classes$.push($ts$$inline_159$$($inClass$$inline_165$$ + 1, $x$$inline_171$$).replace(/\\/g, "")), $inClass$$inline_165$$ = -1)
+    0 <= $inClass$$inline_169$$ && ($currentPart$$inline_177$$.$classes$.push($ts$$inline_163$$($inClass$$inline_169$$ + 1, $x$$inline_175$$).replace(/\\/g, "")), $inClass$$inline_169$$ = -1)
   }
-  function $ts$$inline_159$$($s$$inline_182$$, $e$$inline_183$$) {
-    return $goog$string$trim$$($query$$inline_158$$.slice($s$$inline_182$$, $e$$inline_183$$))
+  function $ts$$inline_163$$($s$$inline_186$$, $e$$inline_187$$) {
+    return $goog$string$trim$$($query$$inline_162$$.slice($s$$inline_186$$, $e$$inline_187$$))
   }
-  for(var $query$$inline_158$$ = 0 <= ">~+".indexOf($query$$inline_158$$.slice(-1)) ? $query$$inline_158$$ + " * " : $query$$inline_158$$ + " ", $queryParts$$inline_160$$ = [], $cmf$$inline_180_inBrackets$$inline_161$$ = -1, $inParens$$inline_162$$ = -1, $addToCc$$inline_181_inMatchFor$$inline_163$$ = -1, $inPseudo$$inline_164$$ = -1, $inClass$$inline_165$$ = -1, $inId$$inline_166$$ = -1, $inTag$$inline_167$$ = -1, $lc$$inline_168$$ = "", $cc$$inline_169$$ = "", $pStart$$inline_170$$, $x$$inline_171$$ = 
-  0, $ql$$inline_172$$ = $query$$inline_158$$.length, $currentPart$$inline_173$$ = $JSCompiler_alias_NULL$$, $cp$$inline_174$$ = $JSCompiler_alias_NULL$$;$lc$$inline_168$$ = $cc$$inline_169$$, $cc$$inline_169$$ = $query$$inline_158$$.charAt($x$$inline_171$$), $x$$inline_171$$ < $ql$$inline_172$$;$x$$inline_171$$++) {
-    if("\\" != $lc$$inline_168$$) {
-      if($currentPart$$inline_173$$ || ($pStart$$inline_170$$ = $x$$inline_171$$, $currentPart$$inline_173$$ = {$query$:$JSCompiler_alias_NULL$$, $pseudos$:[], $attrs$:[], $classes$:[], $tag$:$JSCompiler_alias_NULL$$, $oper$:$JSCompiler_alias_NULL$$, id:$JSCompiler_alias_NULL$$, $getTag$:function $$currentPart$$inline_173$$$$getTag$$() {
-        return $caseSensitive$$inline_120$$ ? this.$otag$ : this.$tag$
-      }}, $inTag$$inline_167$$ = $x$$inline_171$$), 0 <= $cmf$$inline_180_inBrackets$$inline_161$$) {
-        if("]" == $cc$$inline_169$$) {
-          $cp$$inline_174$$.$attr$ ? $cp$$inline_174$$.$matchFor$ = $ts$$inline_159$$($addToCc$$inline_181_inMatchFor$$inline_163$$ || $cmf$$inline_180_inBrackets$$inline_161$$ + 1, $x$$inline_171$$) : $cp$$inline_174$$.$attr$ = $ts$$inline_159$$($cmf$$inline_180_inBrackets$$inline_161$$ + 1, $x$$inline_171$$);
-          if(($cmf$$inline_180_inBrackets$$inline_161$$ = $cp$$inline_174$$.$matchFor$) && ('"' == $cmf$$inline_180_inBrackets$$inline_161$$.charAt(0) || "'" == $cmf$$inline_180_inBrackets$$inline_161$$.charAt(0))) {
-            $cp$$inline_174$$.$matchFor$ = $cmf$$inline_180_inBrackets$$inline_161$$.slice(1, -1)
+  for(var $query$$inline_162$$ = 0 <= ">~+".indexOf($query$$inline_162$$.slice(-1)) ? $query$$inline_162$$ + " * " : $query$$inline_162$$ + " ", $queryParts$$inline_164$$ = [], $cmf$$inline_184_inBrackets$$inline_165$$ = -1, $inParens$$inline_166$$ = -1, $addToCc$$inline_185_inMatchFor$$inline_167$$ = -1, $inPseudo$$inline_168$$ = -1, $inClass$$inline_169$$ = -1, $inId$$inline_170$$ = -1, $inTag$$inline_171$$ = -1, $lc$$inline_172$$ = "", $cc$$inline_173$$ = "", $pStart$$inline_174$$, $x$$inline_175$$ = 
+  0, $ql$$inline_176$$ = $query$$inline_162$$.length, $currentPart$$inline_177$$ = $JSCompiler_alias_NULL$$, $cp$$inline_178$$ = $JSCompiler_alias_NULL$$;$lc$$inline_172$$ = $cc$$inline_173$$, $cc$$inline_173$$ = $query$$inline_162$$.charAt($x$$inline_175$$), $x$$inline_175$$ < $ql$$inline_176$$;$x$$inline_175$$++) {
+    if("\\" != $lc$$inline_172$$) {
+      if($currentPart$$inline_177$$ || ($pStart$$inline_174$$ = $x$$inline_175$$, $currentPart$$inline_177$$ = {$query$:$JSCompiler_alias_NULL$$, $pseudos$:[], $attrs$:[], $classes$:[], $tag$:$JSCompiler_alias_NULL$$, $oper$:$JSCompiler_alias_NULL$$, id:$JSCompiler_alias_NULL$$, $getTag$:function $$currentPart$$inline_177$$$$getTag$$() {
+        return $caseSensitive$$inline_124$$ ? this.$otag$ : this.$tag$
+      }}, $inTag$$inline_171$$ = $x$$inline_175$$), 0 <= $cmf$$inline_184_inBrackets$$inline_165$$) {
+        if("]" == $cc$$inline_173$$) {
+          $cp$$inline_178$$.$attr$ ? $cp$$inline_178$$.$matchFor$ = $ts$$inline_163$$($addToCc$$inline_185_inMatchFor$$inline_167$$ || $cmf$$inline_184_inBrackets$$inline_165$$ + 1, $x$$inline_175$$) : $cp$$inline_178$$.$attr$ = $ts$$inline_163$$($cmf$$inline_184_inBrackets$$inline_165$$ + 1, $x$$inline_175$$);
+          if(($cmf$$inline_184_inBrackets$$inline_165$$ = $cp$$inline_178$$.$matchFor$) && ('"' == $cmf$$inline_184_inBrackets$$inline_165$$.charAt(0) || "'" == $cmf$$inline_184_inBrackets$$inline_165$$.charAt(0))) {
+            $cp$$inline_178$$.$matchFor$ = $cmf$$inline_184_inBrackets$$inline_165$$.slice(1, -1)
           }
-          $currentPart$$inline_173$$.$attrs$.push($cp$$inline_174$$);
-          $cp$$inline_174$$ = $JSCompiler_alias_NULL$$;
-          $cmf$$inline_180_inBrackets$$inline_161$$ = $addToCc$$inline_181_inMatchFor$$inline_163$$ = -1
+          $currentPart$$inline_177$$.$attrs$.push($cp$$inline_178$$);
+          $cp$$inline_178$$ = $JSCompiler_alias_NULL$$;
+          $cmf$$inline_184_inBrackets$$inline_165$$ = $addToCc$$inline_185_inMatchFor$$inline_167$$ = -1
         }else {
-          "=" == $cc$$inline_169$$ && ($addToCc$$inline_181_inMatchFor$$inline_163$$ = 0 <= "|~^$*".indexOf($lc$$inline_168$$) ? $lc$$inline_168$$ : "", $cp$$inline_174$$.type = $addToCc$$inline_181_inMatchFor$$inline_163$$ + $cc$$inline_169$$, $cp$$inline_174$$.$attr$ = $ts$$inline_159$$($cmf$$inline_180_inBrackets$$inline_161$$ + 1, $x$$inline_171$$ - $addToCc$$inline_181_inMatchFor$$inline_163$$.length), $addToCc$$inline_181_inMatchFor$$inline_163$$ = $x$$inline_171$$ + 1)
+          "=" == $cc$$inline_173$$ && ($addToCc$$inline_185_inMatchFor$$inline_167$$ = 0 <= "|~^$*".indexOf($lc$$inline_172$$) ? $lc$$inline_172$$ : "", $cp$$inline_178$$.type = $addToCc$$inline_185_inMatchFor$$inline_167$$ + $cc$$inline_173$$, $cp$$inline_178$$.$attr$ = $ts$$inline_163$$($cmf$$inline_184_inBrackets$$inline_165$$ + 1, $x$$inline_175$$ - $addToCc$$inline_185_inMatchFor$$inline_167$$.length), $addToCc$$inline_185_inMatchFor$$inline_167$$ = $x$$inline_175$$ + 1)
         }
       }else {
-        0 <= $inParens$$inline_162$$ ? ")" == $cc$$inline_169$$ && (0 <= $inPseudo$$inline_164$$ && ($cp$$inline_174$$.value = $ts$$inline_159$$($inParens$$inline_162$$ + 1, $x$$inline_171$$)), $inPseudo$$inline_164$$ = $inParens$$inline_162$$ = -1) : "#" == $cc$$inline_169$$ ? ($endAll$$inline_178$$(), $inId$$inline_166$$ = $x$$inline_171$$ + 1) : "." == $cc$$inline_169$$ ? ($endAll$$inline_178$$(), $inClass$$inline_165$$ = $x$$inline_171$$) : ":" == $cc$$inline_169$$ ? ($endAll$$inline_178$$(), 
-        $inPseudo$$inline_164$$ = $x$$inline_171$$) : "[" == $cc$$inline_169$$ ? ($endAll$$inline_178$$(), $cmf$$inline_180_inBrackets$$inline_161$$ = $x$$inline_171$$, $cp$$inline_174$$ = {}) : "(" == $cc$$inline_169$$ ? (0 <= $inPseudo$$inline_164$$ && ($cp$$inline_174$$ = {name:$ts$$inline_159$$($inPseudo$$inline_164$$ + 1, $x$$inline_171$$), value:$JSCompiler_alias_NULL$$}, $currentPart$$inline_173$$.$pseudos$.push($cp$$inline_174$$)), $inParens$$inline_162$$ = $x$$inline_171$$) : " " == $cc$$inline_169$$ && 
-        $lc$$inline_168$$ != $cc$$inline_169$$ && ($endAll$$inline_178$$(), 0 <= $inPseudo$$inline_164$$ && $currentPart$$inline_173$$.$pseudos$.push({name:$ts$$inline_159$$($inPseudo$$inline_164$$ + 1, $x$$inline_171$$)}), $currentPart$$inline_173$$.$loops$ = $currentPart$$inline_173$$.$pseudos$.length || $currentPart$$inline_173$$.$attrs$.length || $currentPart$$inline_173$$.$classes$.length, $currentPart$$inline_173$$.$oquery$ = $currentPart$$inline_173$$.$query$ = $ts$$inline_159$$($pStart$$inline_170$$, 
-        $x$$inline_171$$), $currentPart$$inline_173$$.$otag$ = $currentPart$$inline_173$$.$tag$ = $currentPart$$inline_173$$.$oper$ ? $JSCompiler_alias_NULL$$ : $currentPart$$inline_173$$.$tag$ || "*", $currentPart$$inline_173$$.$tag$ && ($currentPart$$inline_173$$.$tag$ = $currentPart$$inline_173$$.$tag$.toUpperCase()), $queryParts$$inline_160$$.length && $queryParts$$inline_160$$[$queryParts$$inline_160$$.length - 1].$oper$ && ($currentPart$$inline_173$$.$infixOper$ = $queryParts$$inline_160$$.pop(), 
-        $currentPart$$inline_173$$.$query$ = $currentPart$$inline_173$$.$infixOper$.$query$ + " " + $currentPart$$inline_173$$.$query$), $queryParts$$inline_160$$.push($currentPart$$inline_173$$), $currentPart$$inline_173$$ = $JSCompiler_alias_NULL$$)
+        0 <= $inParens$$inline_166$$ ? ")" == $cc$$inline_173$$ && (0 <= $inPseudo$$inline_168$$ && ($cp$$inline_178$$.value = $ts$$inline_163$$($inParens$$inline_166$$ + 1, $x$$inline_175$$)), $inPseudo$$inline_168$$ = $inParens$$inline_166$$ = -1) : "#" == $cc$$inline_173$$ ? ($endAll$$inline_182$$(), $inId$$inline_170$$ = $x$$inline_175$$ + 1) : "." == $cc$$inline_173$$ ? ($endAll$$inline_182$$(), $inClass$$inline_169$$ = $x$$inline_175$$) : ":" == $cc$$inline_173$$ ? ($endAll$$inline_182$$(), 
+        $inPseudo$$inline_168$$ = $x$$inline_175$$) : "[" == $cc$$inline_173$$ ? ($endAll$$inline_182$$(), $cmf$$inline_184_inBrackets$$inline_165$$ = $x$$inline_175$$, $cp$$inline_178$$ = {}) : "(" == $cc$$inline_173$$ ? (0 <= $inPseudo$$inline_168$$ && ($cp$$inline_178$$ = {name:$ts$$inline_163$$($inPseudo$$inline_168$$ + 1, $x$$inline_175$$), value:$JSCompiler_alias_NULL$$}, $currentPart$$inline_177$$.$pseudos$.push($cp$$inline_178$$)), $inParens$$inline_166$$ = $x$$inline_175$$) : " " == $cc$$inline_173$$ && 
+        $lc$$inline_172$$ != $cc$$inline_173$$ && ($endAll$$inline_182$$(), 0 <= $inPseudo$$inline_168$$ && $currentPart$$inline_177$$.$pseudos$.push({name:$ts$$inline_163$$($inPseudo$$inline_168$$ + 1, $x$$inline_175$$)}), $currentPart$$inline_177$$.$loops$ = $currentPart$$inline_177$$.$pseudos$.length || $currentPart$$inline_177$$.$attrs$.length || $currentPart$$inline_177$$.$classes$.length, $currentPart$$inline_177$$.$oquery$ = $currentPart$$inline_177$$.$query$ = $ts$$inline_163$$($pStart$$inline_174$$, 
+        $x$$inline_175$$), $currentPart$$inline_177$$.$otag$ = $currentPart$$inline_177$$.$tag$ = $currentPart$$inline_177$$.$oper$ ? $JSCompiler_alias_NULL$$ : $currentPart$$inline_177$$.$tag$ || "*", $currentPart$$inline_177$$.$tag$ && ($currentPart$$inline_177$$.$tag$ = $currentPart$$inline_177$$.$tag$.toUpperCase()), $queryParts$$inline_164$$.length && $queryParts$$inline_164$$[$queryParts$$inline_164$$.length - 1].$oper$ && ($currentPart$$inline_177$$.$infixOper$ = $queryParts$$inline_164$$.pop(), 
+        $currentPart$$inline_177$$.$query$ = $currentPart$$inline_177$$.$infixOper$.$query$ + " " + $currentPart$$inline_177$$.$query$), $queryParts$$inline_164$$.push($currentPart$$inline_177$$), $currentPart$$inline_177$$ = $JSCompiler_alias_NULL$$)
       }
     }
   }
-  return $queryParts$$inline_160$$
+  return $queryParts$$inline_164$$
 }
-function $agree$$inline_122$$($first$$inline_185$$, $second$$inline_186$$) {
-  return!$first$$inline_185$$ ? $second$$inline_186$$ : !$second$$inline_186$$ ? $first$$inline_185$$ : function() {
-    return $first$$inline_185$$.apply(window, arguments) && $second$$inline_186$$.apply(window, arguments)
+function $agree$$inline_126$$($first$$inline_189$$, $second$$inline_190$$) {
+  return!$first$$inline_189$$ ? $second$$inline_190$$ : !$second$$inline_190$$ ? $first$$inline_189$$ : function() {
+    return $first$$inline_189$$.apply(window, arguments) && $second$$inline_190$$.apply(window, arguments)
   }
 }
-function $isElement$$inline_123$$($n$$inline_187$$) {
-  return 1 == $n$$inline_187$$.nodeType
+function $isElement$$inline_127$$($n$$inline_191$$) {
+  return 1 == $n$$inline_191$$.nodeType
 }
-function $getAttr$$inline_124$$($elem$$inline_188$$, $attr$$inline_189$$) {
-  return!$elem$$inline_188$$ ? "" : "class" == $attr$$inline_189$$ ? $elem$$inline_188$$.className || "" : "for" == $attr$$inline_189$$ ? $elem$$inline_188$$.htmlFor || "" : "style" == $attr$$inline_189$$ ? $elem$$inline_188$$.style.cssText || "" : ($caseSensitive$$inline_120$$ ? $elem$$inline_188$$.getAttribute($attr$$inline_189$$) : $elem$$inline_188$$.getAttribute($attr$$inline_189$$, 2)) || ""
+function $getAttr$$inline_128$$($elem$$inline_192$$, $attr$$inline_193$$) {
+  return!$elem$$inline_192$$ ? "" : "class" == $attr$$inline_193$$ ? $elem$$inline_192$$.className || "" : "for" == $attr$$inline_193$$ ? $elem$$inline_192$$.htmlFor || "" : "style" == $attr$$inline_193$$ ? $elem$$inline_192$$.style.cssText || "" : ($caseSensitive$$inline_124$$ ? $elem$$inline_192$$.getAttribute($attr$$inline_193$$) : $elem$$inline_192$$.getAttribute($attr$$inline_193$$, 2)) || ""
 }
-var $attrs$$inline_125$$ = {"*=":function($attr$$inline_190$$, $value$$inline_191$$) {
-  return function($elem$$inline_192$$) {
-    return 0 <= $getAttr$$inline_124$$($elem$$inline_192$$, $attr$$inline_190$$).indexOf($value$$inline_191$$)
+var $attrs$$inline_129$$ = {"*=":function($attr$$inline_194$$, $value$$inline_195$$) {
+  return function($elem$$inline_196$$) {
+    return 0 <= $getAttr$$inline_128$$($elem$$inline_196$$, $attr$$inline_194$$).indexOf($value$$inline_195$$)
   }
-}, "^=":function($attr$$inline_193$$, $value$$inline_194$$) {
-  return function($elem$$inline_195$$) {
-    return 0 == $getAttr$$inline_124$$($elem$$inline_195$$, $attr$$inline_193$$).indexOf($value$$inline_194$$)
+}, "^=":function($attr$$inline_197$$, $value$$inline_198$$) {
+  return function($elem$$inline_199$$) {
+    return 0 == $getAttr$$inline_128$$($elem$$inline_199$$, $attr$$inline_197$$).indexOf($value$$inline_198$$)
   }
-}, "$=":function($attr$$inline_196$$, $value$$inline_197$$) {
-  return function($ea$$inline_199_elem$$inline_198$$) {
-    $ea$$inline_199_elem$$inline_198$$ = " " + $getAttr$$inline_124$$($ea$$inline_199_elem$$inline_198$$, $attr$$inline_196$$);
-    return $ea$$inline_199_elem$$inline_198$$.lastIndexOf($value$$inline_197$$) == $ea$$inline_199_elem$$inline_198$$.length - $value$$inline_197$$.length
+}, "$=":function($attr$$inline_200$$, $value$$inline_201$$) {
+  return function($ea$$inline_203_elem$$inline_202$$) {
+    $ea$$inline_203_elem$$inline_202$$ = " " + $getAttr$$inline_128$$($ea$$inline_203_elem$$inline_202$$, $attr$$inline_200$$);
+    return $ea$$inline_203_elem$$inline_202$$.lastIndexOf($value$$inline_201$$) == $ea$$inline_203_elem$$inline_202$$.length - $value$$inline_201$$.length
   }
-}, "~=":function($attr$$inline_200$$, $value$$inline_201$$) {
-  var $tval$$inline_202$$ = " " + $value$$inline_201$$ + " ";
-  return function($elem$$inline_203$$) {
-    return 0 <= (" " + $getAttr$$inline_124$$($elem$$inline_203$$, $attr$$inline_200$$) + " ").indexOf($tval$$inline_202$$)
+}, "~=":function($attr$$inline_204$$, $value$$inline_205$$) {
+  var $tval$$inline_206$$ = " " + $value$$inline_205$$ + " ";
+  return function($elem$$inline_207$$) {
+    return 0 <= (" " + $getAttr$$inline_128$$($elem$$inline_207$$, $attr$$inline_204$$) + " ").indexOf($tval$$inline_206$$)
   }
-}, "|=":function($attr$$inline_204$$, $value$$inline_205$$) {
-  $value$$inline_205$$ = " " + $value$$inline_205$$;
-  return function($ea$$inline_207_elem$$inline_206$$) {
-    $ea$$inline_207_elem$$inline_206$$ = " " + $getAttr$$inline_124$$($ea$$inline_207_elem$$inline_206$$, $attr$$inline_204$$);
-    return $ea$$inline_207_elem$$inline_206$$ == $value$$inline_205$$ || 0 == $ea$$inline_207_elem$$inline_206$$.indexOf($value$$inline_205$$ + "-")
+}, "|=":function($attr$$inline_208$$, $value$$inline_209$$) {
+  $value$$inline_209$$ = " " + $value$$inline_209$$;
+  return function($ea$$inline_211_elem$$inline_210$$) {
+    $ea$$inline_211_elem$$inline_210$$ = " " + $getAttr$$inline_128$$($ea$$inline_211_elem$$inline_210$$, $attr$$inline_208$$);
+    return $ea$$inline_211_elem$$inline_210$$ == $value$$inline_209$$ || 0 == $ea$$inline_211_elem$$inline_210$$.indexOf($value$$inline_209$$ + "-")
   }
-}, "=":function($attr$$inline_208$$, $value$$inline_209$$) {
-  return function($elem$$inline_210$$) {
-    return $getAttr$$inline_124$$($elem$$inline_210$$, $attr$$inline_208$$) == $value$$inline_209$$
+}, "=":function($attr$$inline_212$$, $value$$inline_213$$) {
+  return function($elem$$inline_214$$) {
+    return $getAttr$$inline_128$$($elem$$inline_214$$, $attr$$inline_212$$) == $value$$inline_213$$
   }
-}}, $noNextElementSibling$$inline_126$$ = "undefined" == typeof document.firstChild.nextElementSibling, $nSibling$$inline_127$$ = !$noNextElementSibling$$inline_126$$ ? "nextElementSibling" : "nextSibling", $pSibling$$inline_128$$ = !$noNextElementSibling$$inline_126$$ ? "previousElementSibling" : "previousSibling", $simpleNodeTest$$inline_129$$ = $noNextElementSibling$$inline_126$$ ? $isElement$$inline_123$$ : $goog$functions$TRUE$$;
-function $_lookLeft$$inline_130$$($node$$inline_211$$) {
-  for(;$node$$inline_211$$ = $node$$inline_211$$[$pSibling$$inline_128$$];) {
-    if($simpleNodeTest$$inline_129$$($node$$inline_211$$)) {
+}}, $noNextElementSibling$$inline_130$$ = "undefined" == typeof document.firstChild.nextElementSibling, $nSibling$$inline_131$$ = !$noNextElementSibling$$inline_130$$ ? "nextElementSibling" : "nextSibling", $pSibling$$inline_132$$ = !$noNextElementSibling$$inline_130$$ ? "previousElementSibling" : "previousSibling", $simpleNodeTest$$inline_133$$ = $noNextElementSibling$$inline_130$$ ? $isElement$$inline_127$$ : $goog$functions$TRUE$$;
+function $_lookLeft$$inline_134$$($node$$inline_215$$) {
+  for(;$node$$inline_215$$ = $node$$inline_215$$[$pSibling$$inline_132$$];) {
+    if($simpleNodeTest$$inline_133$$($node$$inline_215$$)) {
       return $JSCompiler_alias_FALSE$$
     }
   }
   return $JSCompiler_alias_TRUE$$
 }
-function $_lookRight$$inline_131$$($node$$inline_212$$) {
-  for(;$node$$inline_212$$ = $node$$inline_212$$[$nSibling$$inline_127$$];) {
-    if($simpleNodeTest$$inline_129$$($node$$inline_212$$)) {
+function $_lookRight$$inline_135$$($node$$inline_216$$) {
+  for(;$node$$inline_216$$ = $node$$inline_216$$[$nSibling$$inline_131$$];) {
+    if($simpleNodeTest$$inline_133$$($node$$inline_216$$)) {
       return $JSCompiler_alias_FALSE$$
     }
   }
   return $JSCompiler_alias_TRUE$$
 }
-function $getNodeIndex$$inline_132$$($node$$inline_213$$) {
-  var $root$$inline_214_te$$inline_220$$ = $node$$inline_213$$.parentNode, $i$$inline_215$$ = 0, $l$$inline_219_tret$$inline_216$$ = $root$$inline_214_te$$inline_220$$[$childNodesName$$inline_119$$], $ci$$inline_217$$ = $node$$inline_213$$._i || -1, $cl$$inline_218$$ = $root$$inline_214_te$$inline_220$$._l || -1;
-  if(!$l$$inline_219_tret$$inline_216$$) {
+function $getNodeIndex$$inline_136$$($node$$inline_217$$) {
+  var $root$$inline_218_te$$inline_224$$ = $node$$inline_217$$.parentNode, $i$$inline_219$$ = 0, $l$$inline_223_tret$$inline_220$$ = $root$$inline_218_te$$inline_224$$[$childNodesName$$inline_123$$], $ci$$inline_221$$ = $node$$inline_217$$._i || -1, $cl$$inline_222$$ = $root$$inline_218_te$$inline_224$$._l || -1;
+  if(!$l$$inline_223_tret$$inline_220$$) {
     return-1
   }
-  $l$$inline_219_tret$$inline_216$$ = $l$$inline_219_tret$$inline_216$$.length;
-  if($cl$$inline_218$$ == $l$$inline_219_tret$$inline_216$$ && 0 <= $ci$$inline_217$$ && 0 <= $cl$$inline_218$$) {
-    return $ci$$inline_217$$
+  $l$$inline_223_tret$$inline_220$$ = $l$$inline_223_tret$$inline_220$$.length;
+  if($cl$$inline_222$$ == $l$$inline_223_tret$$inline_220$$ && 0 <= $ci$$inline_221$$ && 0 <= $cl$$inline_222$$) {
+    return $ci$$inline_221$$
   }
-  $root$$inline_214_te$$inline_220$$._l = $l$$inline_219_tret$$inline_216$$;
-  $ci$$inline_217$$ = -1;
-  for($root$$inline_214_te$$inline_220$$ = $root$$inline_214_te$$inline_220$$.firstElementChild || $root$$inline_214_te$$inline_220$$.firstChild;$root$$inline_214_te$$inline_220$$;$root$$inline_214_te$$inline_220$$ = $root$$inline_214_te$$inline_220$$[$nSibling$$inline_127$$]) {
-    $simpleNodeTest$$inline_129$$($root$$inline_214_te$$inline_220$$) && ($root$$inline_214_te$$inline_220$$._i = ++$i$$inline_215$$, $node$$inline_213$$ === $root$$inline_214_te$$inline_220$$ && ($ci$$inline_217$$ = $i$$inline_215$$))
+  $root$$inline_218_te$$inline_224$$._l = $l$$inline_223_tret$$inline_220$$;
+  $ci$$inline_221$$ = -1;
+  for($root$$inline_218_te$$inline_224$$ = $root$$inline_218_te$$inline_224$$.firstElementChild || $root$$inline_218_te$$inline_224$$.firstChild;$root$$inline_218_te$$inline_224$$;$root$$inline_218_te$$inline_224$$ = $root$$inline_218_te$$inline_224$$[$nSibling$$inline_131$$]) {
+    $simpleNodeTest$$inline_133$$($root$$inline_218_te$$inline_224$$) && ($root$$inline_218_te$$inline_224$$._i = ++$i$$inline_219$$, $node$$inline_217$$ === $root$$inline_218_te$$inline_224$$ && ($ci$$inline_221$$ = $i$$inline_219$$))
   }
-  return $ci$$inline_217$$
+  return $ci$$inline_221$$
 }
-function $isEven$$inline_133$$($elem$$inline_221$$) {
-  return!($getNodeIndex$$inline_132$$($elem$$inline_221$$) % 2)
+function $isEven$$inline_137$$($elem$$inline_225$$) {
+  return!($getNodeIndex$$inline_136$$($elem$$inline_225$$) % 2)
 }
-function $isOdd$$inline_134$$($elem$$inline_222$$) {
-  return $getNodeIndex$$inline_132$$($elem$$inline_222$$) % 2
+function $isOdd$$inline_138$$($elem$$inline_226$$) {
+  return $getNodeIndex$$inline_136$$($elem$$inline_226$$) % 2
 }
-var $pseudos$$inline_135$$ = {checked:function() {
-  return function($elem$$inline_223$$) {
-    return $elem$$inline_223$$.checked || $elem$$inline_223$$.attributes.checked
+var $pseudos$$inline_139$$ = {checked:function() {
+  return function($elem$$inline_227$$) {
+    return $elem$$inline_227$$.checked || $elem$$inline_227$$.attributes.checked
   }
 }, "first-child":function() {
-  return $_lookLeft$$inline_130$$
+  return $_lookLeft$$inline_134$$
 }, "last-child":function() {
-  return $_lookRight$$inline_131$$
+  return $_lookRight$$inline_135$$
 }, "only-child":function() {
-  return function($node$$inline_224$$) {
-    return!$_lookLeft$$inline_130$$($node$$inline_224$$) || !$_lookRight$$inline_131$$($node$$inline_224$$) ? $JSCompiler_alias_FALSE$$ : $JSCompiler_alias_TRUE$$
+  return function($node$$inline_228$$) {
+    return!$_lookLeft$$inline_134$$($node$$inline_228$$) || !$_lookRight$$inline_135$$($node$$inline_228$$) ? $JSCompiler_alias_FALSE$$ : $JSCompiler_alias_TRUE$$
   }
 }, empty:function() {
-  return function($elem$$inline_225_x$$inline_227$$) {
-    for(var $cn$$inline_226$$ = $elem$$inline_225_x$$inline_227$$.childNodes, $elem$$inline_225_x$$inline_227$$ = $elem$$inline_225_x$$inline_227$$.childNodes.length - 1;0 <= $elem$$inline_225_x$$inline_227$$;$elem$$inline_225_x$$inline_227$$--) {
-      var $nt$$inline_228$$ = $cn$$inline_226$$[$elem$$inline_225_x$$inline_227$$].nodeType;
-      if(1 === $nt$$inline_228$$ || 3 == $nt$$inline_228$$) {
+  return function($elem$$inline_229_x$$inline_231$$) {
+    for(var $cn$$inline_230$$ = $elem$$inline_229_x$$inline_231$$.childNodes, $elem$$inline_229_x$$inline_231$$ = $elem$$inline_229_x$$inline_231$$.childNodes.length - 1;0 <= $elem$$inline_229_x$$inline_231$$;$elem$$inline_229_x$$inline_231$$--) {
+      var $nt$$inline_232$$ = $cn$$inline_230$$[$elem$$inline_229_x$$inline_231$$].nodeType;
+      if(1 === $nt$$inline_232$$ || 3 == $nt$$inline_232$$) {
         return $JSCompiler_alias_FALSE$$
       }
     }
     return $JSCompiler_alias_TRUE$$
   }
-}, contains:function($name$$inline_229$$, $condition$$inline_230$$) {
-  var $cz$$inline_231$$ = $condition$$inline_230$$.charAt(0);
-  if('"' == $cz$$inline_231$$ || "'" == $cz$$inline_231$$) {
-    $condition$$inline_230$$ = $condition$$inline_230$$.slice(1, -1)
+}, contains:function($name$$inline_233$$, $condition$$inline_234$$) {
+  var $cz$$inline_235$$ = $condition$$inline_234$$.charAt(0);
+  if('"' == $cz$$inline_235$$ || "'" == $cz$$inline_235$$) {
+    $condition$$inline_234$$ = $condition$$inline_234$$.slice(1, -1)
   }
-  return function($elem$$inline_232$$) {
-    return 0 <= $elem$$inline_232$$.innerHTML.indexOf($condition$$inline_230$$)
+  return function($elem$$inline_236$$) {
+    return 0 <= $elem$$inline_236$$.innerHTML.indexOf($condition$$inline_234$$)
   }
-}, not:function($name$$inline_233$$, $condition$$inline_234$$) {
-  var $p$$inline_235$$ = $getQueryParts$$inline_121$$($condition$$inline_234$$)[0], $ignores$$inline_236$$ = {$el$:1};
-  "*" != $p$$inline_235$$.$tag$ && ($ignores$$inline_236$$.$tag$ = 1);
-  $p$$inline_235$$.$classes$.length || ($ignores$$inline_236$$.$classes$ = 1);
-  var $ntf$$inline_237$$ = $getSimpleFilterFunc$$inline_137$$($p$$inline_235$$, $ignores$$inline_236$$);
-  return function($elem$$inline_238$$) {
-    return!$ntf$$inline_237$$($elem$$inline_238$$)
+}, not:function($name$$inline_237$$, $condition$$inline_238$$) {
+  var $p$$inline_239$$ = $getQueryParts$$inline_125$$($condition$$inline_238$$)[0], $ignores$$inline_240$$ = {$el$:1};
+  "*" != $p$$inline_239$$.$tag$ && ($ignores$$inline_240$$.$tag$ = 1);
+  $p$$inline_239$$.$classes$.length || ($ignores$$inline_240$$.$classes$ = 1);
+  var $ntf$$inline_241$$ = $getSimpleFilterFunc$$inline_141$$($p$$inline_239$$, $ignores$$inline_240$$);
+  return function($elem$$inline_242$$) {
+    return!$ntf$$inline_241$$($elem$$inline_242$$)
   }
-}, "nth-child":function($name$$inline_239$$, $condition$$inline_240$$) {
-  if("odd" == $condition$$inline_240$$) {
-    return $isOdd$$inline_134$$
+}, "nth-child":function($name$$inline_243$$, $condition$$inline_244$$) {
+  if("odd" == $condition$$inline_244$$) {
+    return $isOdd$$inline_138$$
   }
-  if("even" == $condition$$inline_240$$) {
-    return $isEven$$inline_133$$
+  if("even" == $condition$$inline_244$$) {
+    return $isEven$$inline_137$$
   }
-  if(-1 != $condition$$inline_240$$.indexOf("n")) {
-    var $tparts$$inline_242$$ = $condition$$inline_240$$.split("n", 2), $pred$$inline_243$$ = $tparts$$inline_242$$[0] ? "-" == $tparts$$inline_242$$[0] ? -1 : parseInt($tparts$$inline_242$$[0], 10) : 1, $idx$$inline_244$$ = $tparts$$inline_242$$[1] ? parseInt($tparts$$inline_242$$[1], 10) : 0, $lb$$inline_245$$ = 0, $ub$$inline_246$$ = -1;
-    0 < $pred$$inline_243$$ ? 0 > $idx$$inline_244$$ ? $idx$$inline_244$$ = $idx$$inline_244$$ % $pred$$inline_243$$ && $pred$$inline_243$$ + $idx$$inline_244$$ % $pred$$inline_243$$ : 0 < $idx$$inline_244$$ && ($idx$$inline_244$$ >= $pred$$inline_243$$ && ($lb$$inline_245$$ = $idx$$inline_244$$ - $idx$$inline_244$$ % $pred$$inline_243$$), $idx$$inline_244$$ %= $pred$$inline_243$$) : 0 > $pred$$inline_243$$ && ($pred$$inline_243$$ *= -1, 0 < $idx$$inline_244$$ && ($ub$$inline_246$$ = $idx$$inline_244$$, 
-    $idx$$inline_244$$ %= $pred$$inline_243$$));
-    if(0 < $pred$$inline_243$$) {
-      return function($elem$$inline_249_i$$inline_250$$) {
-        $elem$$inline_249_i$$inline_250$$ = $getNodeIndex$$inline_132$$($elem$$inline_249_i$$inline_250$$);
-        return $elem$$inline_249_i$$inline_250$$ >= $lb$$inline_245$$ && (0 > $ub$$inline_246$$ || $elem$$inline_249_i$$inline_250$$ <= $ub$$inline_246$$) && $elem$$inline_249_i$$inline_250$$ % $pred$$inline_243$$ == $idx$$inline_244$$
+  if(-1 != $condition$$inline_244$$.indexOf("n")) {
+    var $tparts$$inline_246$$ = $condition$$inline_244$$.split("n", 2), $pred$$inline_247$$ = $tparts$$inline_246$$[0] ? "-" == $tparts$$inline_246$$[0] ? -1 : parseInt($tparts$$inline_246$$[0], 10) : 1, $idx$$inline_248$$ = $tparts$$inline_246$$[1] ? parseInt($tparts$$inline_246$$[1], 10) : 0, $lb$$inline_249$$ = 0, $ub$$inline_250$$ = -1;
+    0 < $pred$$inline_247$$ ? 0 > $idx$$inline_248$$ ? $idx$$inline_248$$ = $idx$$inline_248$$ % $pred$$inline_247$$ && $pred$$inline_247$$ + $idx$$inline_248$$ % $pred$$inline_247$$ : 0 < $idx$$inline_248$$ && ($idx$$inline_248$$ >= $pred$$inline_247$$ && ($lb$$inline_249$$ = $idx$$inline_248$$ - $idx$$inline_248$$ % $pred$$inline_247$$), $idx$$inline_248$$ %= $pred$$inline_247$$) : 0 > $pred$$inline_247$$ && ($pred$$inline_247$$ *= -1, 0 < $idx$$inline_248$$ && ($ub$$inline_250$$ = $idx$$inline_248$$, 
+    $idx$$inline_248$$ %= $pred$$inline_247$$));
+    if(0 < $pred$$inline_247$$) {
+      return function($elem$$inline_253_i$$inline_254$$) {
+        $elem$$inline_253_i$$inline_254$$ = $getNodeIndex$$inline_136$$($elem$$inline_253_i$$inline_254$$);
+        return $elem$$inline_253_i$$inline_254$$ >= $lb$$inline_249$$ && (0 > $ub$$inline_250$$ || $elem$$inline_253_i$$inline_254$$ <= $ub$$inline_250$$) && $elem$$inline_253_i$$inline_254$$ % $pred$$inline_247$$ == $idx$$inline_248$$
       }
     }
-    $condition$$inline_240$$ = $idx$$inline_244$$
+    $condition$$inline_244$$ = $idx$$inline_248$$
   }
-  var $ncount$$inline_247$$ = parseInt($condition$$inline_240$$, 10);
-  return function($elem$$inline_251$$) {
-    return $getNodeIndex$$inline_132$$($elem$$inline_251$$) == $ncount$$inline_247$$
+  var $ncount$$inline_251$$ = parseInt($condition$$inline_244$$, 10);
+  return function($elem$$inline_255$$) {
+    return $getNodeIndex$$inline_136$$($elem$$inline_255$$) == $ncount$$inline_251$$
   }
-}}, $defaultGetter$$inline_136$$ = $goog$userAgent$IE$$ ? function($cond$$inline_252$$) {
-  var $clc$$inline_253$$ = $cond$$inline_252$$.toLowerCase();
-  "class" == $clc$$inline_253$$ && ($cond$$inline_252$$ = "className");
-  return function($elem$$inline_254$$) {
-    return $caseSensitive$$inline_120$$ ? $elem$$inline_254$$.getAttribute($cond$$inline_252$$) : $elem$$inline_254$$[$cond$$inline_252$$] || $elem$$inline_254$$[$clc$$inline_253$$]
+}}, $defaultGetter$$inline_140$$ = $goog$userAgent$IE$$ ? function($cond$$inline_256$$) {
+  var $clc$$inline_257$$ = $cond$$inline_256$$.toLowerCase();
+  "class" == $clc$$inline_257$$ && ($cond$$inline_256$$ = "className");
+  return function($elem$$inline_258$$) {
+    return $caseSensitive$$inline_124$$ ? $elem$$inline_258$$.getAttribute($cond$$inline_256$$) : $elem$$inline_258$$[$cond$$inline_256$$] || $elem$$inline_258$$[$clc$$inline_257$$]
   }
-} : function($cond$$inline_255$$) {
-  return function($elem$$inline_256$$) {
-    return $elem$$inline_256$$ && $elem$$inline_256$$.getAttribute && $elem$$inline_256$$.hasAttribute($cond$$inline_255$$)
+} : function($cond$$inline_259$$) {
+  return function($elem$$inline_260$$) {
+    return $elem$$inline_260$$ && $elem$$inline_260$$.getAttribute && $elem$$inline_260$$.hasAttribute($cond$$inline_259$$)
   }
 };
-function $getSimpleFilterFunc$$inline_137$$($query$$inline_257$$, $ignores$$inline_258$$) {
-  if(!$query$$inline_257$$) {
+function $getSimpleFilterFunc$$inline_141$$($query$$inline_261$$, $ignores$$inline_262$$) {
+  if(!$query$$inline_261$$) {
     return $goog$functions$TRUE$$
   }
-  var $ignores$$inline_258$$ = $ignores$$inline_258$$ || {}, $ff$$inline_259$$ = $JSCompiler_alias_NULL$$;
-  $ignores$$inline_258$$.$el$ || ($ff$$inline_259$$ = $agree$$inline_122$$($ff$$inline_259$$, $isElement$$inline_123$$));
-  $ignores$$inline_258$$.$tag$ || "*" != $query$$inline_257$$.$tag$ && ($ff$$inline_259$$ = $agree$$inline_122$$($ff$$inline_259$$, function($elem$$inline_260$$) {
-    return $elem$$inline_260$$ && $elem$$inline_260$$.tagName == $query$$inline_257$$.$getTag$()
+  var $ignores$$inline_262$$ = $ignores$$inline_262$$ || {}, $ff$$inline_263$$ = $JSCompiler_alias_NULL$$;
+  $ignores$$inline_262$$.$el$ || ($ff$$inline_263$$ = $agree$$inline_126$$($ff$$inline_263$$, $isElement$$inline_127$$));
+  $ignores$$inline_262$$.$tag$ || "*" != $query$$inline_261$$.$tag$ && ($ff$$inline_263$$ = $agree$$inline_126$$($ff$$inline_263$$, function($elem$$inline_264$$) {
+    return $elem$$inline_264$$ && $elem$$inline_264$$.tagName == $query$$inline_261$$.$getTag$()
   }));
-  $ignores$$inline_258$$.$classes$ || $goog$array$forEach$$($query$$inline_257$$.$classes$, function($cname$$inline_261$$, $idx$$inline_262$$) {
-    var $re$$inline_263$$ = RegExp("(?:^|\\s)" + $cname$$inline_261$$ + "(?:\\s|$)");
-    $ff$$inline_259$$ = $agree$$inline_122$$($ff$$inline_259$$, function($elem$$inline_264$$) {
-      return $re$$inline_263$$.test($elem$$inline_264$$.className)
+  $ignores$$inline_262$$.$classes$ || $goog$array$forEach$$($query$$inline_261$$.$classes$, function($cname$$inline_265$$, $idx$$inline_266$$) {
+    var $re$$inline_267$$ = RegExp("(?:^|\\s)" + $cname$$inline_265$$ + "(?:\\s|$)");
+    $ff$$inline_263$$ = $agree$$inline_126$$($ff$$inline_263$$, function($elem$$inline_268$$) {
+      return $re$$inline_267$$.test($elem$$inline_268$$.className)
     });
-    $ff$$inline_259$$.count = $idx$$inline_262$$
+    $ff$$inline_263$$.count = $idx$$inline_266$$
   });
-  $ignores$$inline_258$$.$pseudos$ || $goog$array$forEach$$($query$$inline_257$$.$pseudos$, function($pseudo$$inline_265$$) {
-    var $pn$$inline_266$$ = $pseudo$$inline_265$$.name;
-    $pseudos$$inline_135$$[$pn$$inline_266$$] && ($ff$$inline_259$$ = $agree$$inline_122$$($ff$$inline_259$$, $pseudos$$inline_135$$[$pn$$inline_266$$]($pn$$inline_266$$, $pseudo$$inline_265$$.value)))
+  $ignores$$inline_262$$.$pseudos$ || $goog$array$forEach$$($query$$inline_261$$.$pseudos$, function($pseudo$$inline_269$$) {
+    var $pn$$inline_270$$ = $pseudo$$inline_269$$.name;
+    $pseudos$$inline_139$$[$pn$$inline_270$$] && ($ff$$inline_263$$ = $agree$$inline_126$$($ff$$inline_263$$, $pseudos$$inline_139$$[$pn$$inline_270$$]($pn$$inline_270$$, $pseudo$$inline_269$$.value)))
   });
-  $ignores$$inline_258$$.$attrs$ || $goog$array$forEach$$($query$$inline_257$$.$attrs$, function($attr$$inline_267$$) {
-    var $matcher$$inline_268$$, $a$$inline_269$$ = $attr$$inline_267$$.$attr$;
-    $attr$$inline_267$$.type && $attrs$$inline_125$$[$attr$$inline_267$$.type] ? $matcher$$inline_268$$ = $attrs$$inline_125$$[$attr$$inline_267$$.type]($a$$inline_269$$, $attr$$inline_267$$.$matchFor$) : $a$$inline_269$$.length && ($matcher$$inline_268$$ = $defaultGetter$$inline_136$$($a$$inline_269$$));
-    $matcher$$inline_268$$ && ($ff$$inline_259$$ = $agree$$inline_122$$($ff$$inline_259$$, $matcher$$inline_268$$))
+  $ignores$$inline_262$$.$attrs$ || $goog$array$forEach$$($query$$inline_261$$.$attrs$, function($attr$$inline_271$$) {
+    var $matcher$$inline_272$$, $a$$inline_273$$ = $attr$$inline_271$$.$attr$;
+    $attr$$inline_271$$.type && $attrs$$inline_129$$[$attr$$inline_271$$.type] ? $matcher$$inline_272$$ = $attrs$$inline_129$$[$attr$$inline_271$$.type]($a$$inline_273$$, $attr$$inline_271$$.$matchFor$) : $a$$inline_273$$.length && ($matcher$$inline_272$$ = $defaultGetter$$inline_140$$($a$$inline_273$$));
+    $matcher$$inline_272$$ && ($ff$$inline_263$$ = $agree$$inline_126$$($ff$$inline_263$$, $matcher$$inline_272$$))
   });
-  $ignores$$inline_258$$.id || $query$$inline_257$$.id && ($ff$$inline_259$$ = $agree$$inline_122$$($ff$$inline_259$$, function($elem$$inline_270$$) {
-    return!!$elem$$inline_270$$ && $elem$$inline_270$$.id == $query$$inline_257$$.id
+  $ignores$$inline_262$$.id || $query$$inline_261$$.id && ($ff$$inline_263$$ = $agree$$inline_126$$($ff$$inline_263$$, function($elem$$inline_274$$) {
+    return!!$elem$$inline_274$$ && $elem$$inline_274$$.id == $query$$inline_261$$.id
   }));
-  $ff$$inline_259$$ || "default" in $ignores$$inline_258$$ || ($ff$$inline_259$$ = $goog$functions$TRUE$$);
-  return $ff$$inline_259$$
+  $ff$$inline_263$$ || "default" in $ignores$$inline_262$$ || ($ff$$inline_263$$ = $goog$functions$TRUE$$);
+  return $ff$$inline_263$$
 }
-var $_getElementsFuncCache$$inline_142$$ = {};
-function $getElementsFunc$$inline_143$$($query$$inline_290$$) {
-  var $retFunc$$inline_291$$ = $_getElementsFuncCache$$inline_142$$[$query$$inline_290$$.$query$];
-  if($retFunc$$inline_291$$) {
-    return $retFunc$$inline_291$$
+var $_getElementsFuncCache$$inline_146$$ = {};
+function $getElementsFunc$$inline_147$$($query$$inline_294$$) {
+  var $retFunc$$inline_295$$ = $_getElementsFuncCache$$inline_146$$[$query$$inline_294$$.$query$];
+  if($retFunc$$inline_295$$) {
+    return $retFunc$$inline_295$$
   }
-  var $io$$inline_292_oper$$inline_293$$ = $query$$inline_290$$.$infixOper$, $io$$inline_292_oper$$inline_293$$ = $io$$inline_292_oper$$inline_293$$ ? $io$$inline_292_oper$$inline_293$$.$oper$ : "", $filterFunc$$inline_294$$ = $getSimpleFilterFunc$$inline_137$$($query$$inline_290$$, {$el$:1}), $wildcardTag$$inline_295$$ = "*" == $query$$inline_290$$.$tag$, $ecs$$inline_296_skipFilters$$inline_297$$ = document.getElementsByClassName;
-  if($io$$inline_292_oper$$inline_293$$) {
-    if($ecs$$inline_296_skipFilters$$inline_297$$ = {$el$:1}, $wildcardTag$$inline_295$$ && ($ecs$$inline_296_skipFilters$$inline_297$$.$tag$ = 1), $filterFunc$$inline_294$$ = $getSimpleFilterFunc$$inline_137$$($query$$inline_290$$, $ecs$$inline_296_skipFilters$$inline_297$$), "+" == $io$$inline_292_oper$$inline_293$$) {
-      var $filterFunc$$inline_809$$ = $filterFunc$$inline_294$$, $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($node$$inline_810$$, $ret$$inline_811$$, $bag$$inline_812$$) {
-        for(;$node$$inline_810$$ = $node$$inline_810$$[$nSibling$$inline_127$$];) {
-          if(!$noNextElementSibling$$inline_126$$ || $isElement$$inline_123$$($node$$inline_810$$)) {
-            (!$bag$$inline_812$$ || $_isUnique$$inline_152$$($node$$inline_810$$, $bag$$inline_812$$)) && $filterFunc$$inline_809$$($node$$inline_810$$) && $ret$$inline_811$$.push($node$$inline_810$$);
+  var $io$$inline_296_oper$$inline_297$$ = $query$$inline_294$$.$infixOper$, $io$$inline_296_oper$$inline_297$$ = $io$$inline_296_oper$$inline_297$$ ? $io$$inline_296_oper$$inline_297$$.$oper$ : "", $filterFunc$$inline_298$$ = $getSimpleFilterFunc$$inline_141$$($query$$inline_294$$, {$el$:1}), $wildcardTag$$inline_299$$ = "*" == $query$$inline_294$$.$tag$, $ecs$$inline_300_skipFilters$$inline_301$$ = document.getElementsByClassName;
+  if($io$$inline_296_oper$$inline_297$$) {
+    if($ecs$$inline_300_skipFilters$$inline_301$$ = {$el$:1}, $wildcardTag$$inline_299$$ && ($ecs$$inline_300_skipFilters$$inline_301$$.$tag$ = 1), $filterFunc$$inline_298$$ = $getSimpleFilterFunc$$inline_141$$($query$$inline_294$$, $ecs$$inline_300_skipFilters$$inline_301$$), "+" == $io$$inline_296_oper$$inline_297$$) {
+      var $filterFunc$$inline_816$$ = $filterFunc$$inline_298$$, $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($node$$inline_817$$, $ret$$inline_818$$, $bag$$inline_819$$) {
+        for(;$node$$inline_817$$ = $node$$inline_817$$[$nSibling$$inline_131$$];) {
+          if(!$noNextElementSibling$$inline_130$$ || $isElement$$inline_127$$($node$$inline_817$$)) {
+            (!$bag$$inline_819$$ || $_isUnique$$inline_156$$($node$$inline_817$$, $bag$$inline_819$$)) && $filterFunc$$inline_816$$($node$$inline_817$$) && $ret$$inline_818$$.push($node$$inline_817$$);
             break
           }
         }
-        return $ret$$inline_811$$
+        return $ret$$inline_818$$
       }
     }else {
-      if("~" == $io$$inline_292_oper$$inline_293$$) {
-        var $filterFunc$$inline_814$$ = $filterFunc$$inline_294$$, $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($root$$inline_815_te$$inline_818$$, $ret$$inline_816$$, $bag$$inline_817$$) {
-          for($root$$inline_815_te$$inline_818$$ = $root$$inline_815_te$$inline_818$$[$nSibling$$inline_127$$];$root$$inline_815_te$$inline_818$$;) {
-            if($simpleNodeTest$$inline_129$$($root$$inline_815_te$$inline_818$$)) {
-              if($bag$$inline_817$$ && !$_isUnique$$inline_152$$($root$$inline_815_te$$inline_818$$, $bag$$inline_817$$)) {
+      if("~" == $io$$inline_296_oper$$inline_297$$) {
+        var $filterFunc$$inline_821$$ = $filterFunc$$inline_298$$, $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($root$$inline_822_te$$inline_825$$, $ret$$inline_823$$, $bag$$inline_824$$) {
+          for($root$$inline_822_te$$inline_825$$ = $root$$inline_822_te$$inline_825$$[$nSibling$$inline_131$$];$root$$inline_822_te$$inline_825$$;) {
+            if($simpleNodeTest$$inline_133$$($root$$inline_822_te$$inline_825$$)) {
+              if($bag$$inline_824$$ && !$_isUnique$$inline_156$$($root$$inline_822_te$$inline_825$$, $bag$$inline_824$$)) {
                 break
               }
-              $filterFunc$$inline_814$$($root$$inline_815_te$$inline_818$$) && $ret$$inline_816$$.push($root$$inline_815_te$$inline_818$$)
+              $filterFunc$$inline_821$$($root$$inline_822_te$$inline_825$$) && $ret$$inline_823$$.push($root$$inline_822_te$$inline_825$$)
             }
-            $root$$inline_815_te$$inline_818$$ = $root$$inline_815_te$$inline_818$$[$nSibling$$inline_127$$]
+            $root$$inline_822_te$$inline_825$$ = $root$$inline_822_te$$inline_825$$[$nSibling$$inline_131$$]
           }
-          return $ret$$inline_816$$
+          return $ret$$inline_823$$
         }
       }else {
-        if(">" == $io$$inline_292_oper$$inline_293$$) {
-          var $filterFunc$$inline_820$$ = $filterFunc$$inline_294$$, $filterFunc$$inline_820$$ = $filterFunc$$inline_820$$ || $goog$functions$TRUE$$, $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($root$$inline_821_te$$inline_824$$, $ret$$inline_822$$, $bag$$inline_823$$) {
-            for(var $x$$inline_825$$ = 0, $tret$$inline_826$$ = $root$$inline_821_te$$inline_824$$[$childNodesName$$inline_119$$];$root$$inline_821_te$$inline_824$$ = $tret$$inline_826$$[$x$$inline_825$$++];) {
-              $simpleNodeTest$$inline_129$$($root$$inline_821_te$$inline_824$$) && ((!$bag$$inline_823$$ || $_isUnique$$inline_152$$($root$$inline_821_te$$inline_824$$, $bag$$inline_823$$)) && $filterFunc$$inline_820$$($root$$inline_821_te$$inline_824$$, $x$$inline_825$$)) && $ret$$inline_822$$.push($root$$inline_821_te$$inline_824$$)
+        if(">" == $io$$inline_296_oper$$inline_297$$) {
+          var $filterFunc$$inline_827$$ = $filterFunc$$inline_298$$, $filterFunc$$inline_827$$ = $filterFunc$$inline_827$$ || $goog$functions$TRUE$$, $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($root$$inline_828_te$$inline_831$$, $ret$$inline_829$$, $bag$$inline_830$$) {
+            for(var $x$$inline_832$$ = 0, $tret$$inline_833$$ = $root$$inline_828_te$$inline_831$$[$childNodesName$$inline_123$$];$root$$inline_828_te$$inline_831$$ = $tret$$inline_833$$[$x$$inline_832$$++];) {
+              $simpleNodeTest$$inline_133$$($root$$inline_828_te$$inline_831$$) && ((!$bag$$inline_830$$ || $_isUnique$$inline_156$$($root$$inline_828_te$$inline_831$$, $bag$$inline_830$$)) && $filterFunc$$inline_827$$($root$$inline_828_te$$inline_831$$, $x$$inline_832$$)) && $ret$$inline_829$$.push($root$$inline_828_te$$inline_831$$)
             }
-            return $ret$$inline_822$$
+            return $ret$$inline_829$$
           }
         }
       }
     }
   }else {
-    if($query$$inline_290$$.id) {
-      $filterFunc$$inline_294$$ = !$query$$inline_290$$.$loops$ && $wildcardTag$$inline_295$$ ? $goog$functions$TRUE$$ : $getSimpleFilterFunc$$inline_137$$($query$$inline_290$$, {$el$:1, id:1}), $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($root$$inline_299$$, $arr$$inline_300$$) {
-        var $te$$inline_301$$ = $goog$dom$getDomHelper$$($root$$inline_299$$).$getElement$($query$$inline_290$$.id), $JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$;
-        if($JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ = $te$$inline_301$$ && $filterFunc$$inline_294$$($te$$inline_301$$)) {
-          if(!($JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ = 9 == $root$$inline_299$$.nodeType)) {
-            for($JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ = $te$$inline_301$$.parentNode;$JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ && $JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ != $root$$inline_299$$;) {
-              $JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ = $JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$.parentNode
+    if($query$$inline_294$$.id) {
+      $filterFunc$$inline_298$$ = !$query$$inline_294$$.$loops$ && $wildcardTag$$inline_299$$ ? $goog$functions$TRUE$$ : $getSimpleFilterFunc$$inline_141$$($query$$inline_294$$, {$el$:1, id:1}), $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($root$$inline_303$$, $arr$$inline_304$$) {
+        var $te$$inline_305$$ = $goog$dom$getDomHelper$$($root$$inline_303$$).$getElement$($query$$inline_294$$.id), $JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$;
+        if($JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ = $te$$inline_305$$ && $filterFunc$$inline_298$$($te$$inline_305$$)) {
+          if(!($JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ = 9 == $root$$inline_303$$.nodeType)) {
+            for($JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ = $te$$inline_305$$.parentNode;$JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ && $JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ != $root$$inline_303$$;) {
+              $JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ = $JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$.parentNode
             }
-            $JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$ = !!$JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$
+            $JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$ = !!$JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$
           }
         }
-        if($JSCompiler_temp$$792_JSCompiler_temp$$793_pn$$inline_830$$) {
-          return $getArr$$inline_117$$($te$$inline_301$$, $arr$$inline_300$$)
+        if($JSCompiler_temp$$799_JSCompiler_temp$$800_pn$$inline_837$$) {
+          return $getArr$$inline_121$$($te$$inline_305$$, $arr$$inline_304$$)
         }
       }
     }else {
-      if($ecs$$inline_296_skipFilters$$inline_297$$ && /\{\s*\[native code\]\s*\}/.test(String($ecs$$inline_296_skipFilters$$inline_297$$)) && $query$$inline_290$$.$classes$.length && !$cssCaseBug$$inline_118$$) {
-        var $filterFunc$$inline_294$$ = $getSimpleFilterFunc$$inline_137$$($query$$inline_290$$, {$el$:1, $classes$:1, id:1}), $classesString$$inline_298$$ = $query$$inline_290$$.$classes$.join(" "), $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($root$$inline_302$$, $arr$$inline_303$$) {
-          for(var $ret$$inline_304$$ = $getArr$$inline_117$$(0, $arr$$inline_303$$), $te$$inline_305$$, $x$$inline_306$$ = 0, $tret$$inline_307$$ = $root$$inline_302$$.getElementsByClassName($classesString$$inline_298$$);$te$$inline_305$$ = $tret$$inline_307$$[$x$$inline_306$$++];) {
-            $filterFunc$$inline_294$$($te$$inline_305$$, $root$$inline_302$$) && $ret$$inline_304$$.push($te$$inline_305$$)
+      if($ecs$$inline_300_skipFilters$$inline_301$$ && /\{\s*\[native code\]\s*\}/.test(String($ecs$$inline_300_skipFilters$$inline_301$$)) && $query$$inline_294$$.$classes$.length && !$cssCaseBug$$inline_122$$) {
+        var $filterFunc$$inline_298$$ = $getSimpleFilterFunc$$inline_141$$($query$$inline_294$$, {$el$:1, $classes$:1, id:1}), $classesString$$inline_302$$ = $query$$inline_294$$.$classes$.join(" "), $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($root$$inline_306$$, $arr$$inline_307$$) {
+          for(var $ret$$inline_308$$ = $getArr$$inline_121$$(0, $arr$$inline_307$$), $te$$inline_309$$, $x$$inline_310$$ = 0, $tret$$inline_311$$ = $root$$inline_306$$.getElementsByClassName($classesString$$inline_302$$);$te$$inline_309$$ = $tret$$inline_311$$[$x$$inline_310$$++];) {
+            $filterFunc$$inline_298$$($te$$inline_309$$, $root$$inline_306$$) && $ret$$inline_308$$.push($te$$inline_309$$)
           }
-          return $ret$$inline_304$$
+          return $ret$$inline_308$$
         }
       }else {
-        !$wildcardTag$$inline_295$$ && !$query$$inline_290$$.$loops$ ? $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($root$$inline_308$$, $arr$$inline_309$$) {
-          for(var $ret$$inline_310$$ = $getArr$$inline_117$$(0, $arr$$inline_309$$), $te$$inline_311$$, $x$$inline_312$$ = 0, $tret$$inline_313$$ = $root$$inline_308$$.getElementsByTagName($query$$inline_290$$.$getTag$());$te$$inline_311$$ = $tret$$inline_313$$[$x$$inline_312$$++];) {
-            $ret$$inline_310$$.push($te$$inline_311$$)
+        !$wildcardTag$$inline_299$$ && !$query$$inline_294$$.$loops$ ? $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($root$$inline_312$$, $arr$$inline_313$$) {
+          for(var $ret$$inline_314$$ = $getArr$$inline_121$$(0, $arr$$inline_313$$), $te$$inline_315$$, $x$$inline_316$$ = 0, $tret$$inline_317$$ = $root$$inline_312$$.getElementsByTagName($query$$inline_294$$.$getTag$());$te$$inline_315$$ = $tret$$inline_317$$[$x$$inline_316$$++];) {
+            $ret$$inline_314$$.push($te$$inline_315$$)
           }
-          return $ret$$inline_310$$
-        } : ($filterFunc$$inline_294$$ = $getSimpleFilterFunc$$inline_137$$($query$$inline_290$$, {$el$:1, $tag$:1, id:1}), $retFunc$$inline_291$$ = function $$retFunc$$inline_291$$$($root$$inline_314$$, $arr$$inline_315$$) {
-          for(var $ret$$inline_316$$ = $getArr$$inline_117$$(0, $arr$$inline_315$$), $te$$inline_317$$, $x$$inline_318$$ = 0, $tret$$inline_319$$ = $root$$inline_314$$.getElementsByTagName($query$$inline_290$$.$getTag$());$te$$inline_317$$ = $tret$$inline_319$$[$x$$inline_318$$++];) {
-            $filterFunc$$inline_294$$($te$$inline_317$$, $root$$inline_314$$) && $ret$$inline_316$$.push($te$$inline_317$$)
+          return $ret$$inline_314$$
+        } : ($filterFunc$$inline_298$$ = $getSimpleFilterFunc$$inline_141$$($query$$inline_294$$, {$el$:1, $tag$:1, id:1}), $retFunc$$inline_295$$ = function $$retFunc$$inline_295$$$($root$$inline_318$$, $arr$$inline_319$$) {
+          for(var $ret$$inline_320$$ = $getArr$$inline_121$$(0, $arr$$inline_319$$), $te$$inline_321$$, $x$$inline_322$$ = 0, $tret$$inline_323$$ = $root$$inline_318$$.getElementsByTagName($query$$inline_294$$.$getTag$());$te$$inline_321$$ = $tret$$inline_323$$[$x$$inline_322$$++];) {
+            $filterFunc$$inline_298$$($te$$inline_321$$, $root$$inline_318$$) && $ret$$inline_320$$.push($te$$inline_321$$)
           }
-          return $ret$$inline_316$$
+          return $ret$$inline_320$$
         })
       }
     }
   }
-  return $_getElementsFuncCache$$inline_142$$[$query$$inline_290$$.$query$] = $retFunc$$inline_291$$
+  return $_getElementsFuncCache$$inline_146$$[$query$$inline_294$$.$query$] = $retFunc$$inline_295$$
 }
-var $_queryFuncCacheDOM$$inline_145$$ = {}, $_queryFuncCacheQSA$$inline_146$$ = {};
-function $getStepQueryFunc$$inline_147$$($query$$inline_332$$) {
-  var $qparts$$inline_333$$ = $getQueryParts$$inline_121$$($goog$string$trim$$($query$$inline_332$$));
-  if(1 == $qparts$$inline_333$$.length) {
-    var $tef$$inline_334$$ = $getElementsFunc$$inline_143$$($qparts$$inline_333$$[0]);
-    return function($r$$inline_336_root$$inline_335$$) {
-      if($r$$inline_336_root$$inline_335$$ = $tef$$inline_334$$($r$$inline_336_root$$inline_335$$, [])) {
-        $r$$inline_336_root$$inline_335$$.$nozip$ = $JSCompiler_alias_TRUE$$
+var $_queryFuncCacheDOM$$inline_149$$ = {}, $_queryFuncCacheQSA$$inline_150$$ = {};
+function $getStepQueryFunc$$inline_151$$($query$$inline_336$$) {
+  var $qparts$$inline_337$$ = $getQueryParts$$inline_125$$($goog$string$trim$$($query$$inline_336$$));
+  if(1 == $qparts$$inline_337$$.length) {
+    var $tef$$inline_338$$ = $getElementsFunc$$inline_147$$($qparts$$inline_337$$[0]);
+    return function($r$$inline_340_root$$inline_339$$) {
+      if($r$$inline_340_root$$inline_339$$ = $tef$$inline_338$$($r$$inline_340_root$$inline_339$$, [])) {
+        $r$$inline_340_root$$inline_339$$.$nozip$ = $JSCompiler_alias_TRUE$$
       }
-      return $r$$inline_336_root$$inline_335$$
+      return $r$$inline_340_root$$inline_339$$
     }
   }
-  return function($candidates$$inline_834_root$$inline_337$$) {
-    for(var $candidates$$inline_834_root$$inline_337$$ = $getArr$$inline_117$$($candidates$$inline_834_root$$inline_337$$), $qp$$inline_835_te$$inline_837$$, $gef$$inline_842_x$$inline_836$$, $qpl$$inline_838$$ = $qparts$$inline_333$$.length, $bag$$inline_839$$, $ret$$inline_840$$, $i$$inline_841$$ = 0;$i$$inline_841$$ < $qpl$$inline_838$$;$i$$inline_841$$++) {
-      $ret$$inline_840$$ = [];
-      $qp$$inline_835_te$$inline_837$$ = $qparts$$inline_333$$[$i$$inline_841$$];
-      $gef$$inline_842_x$$inline_836$$ = $candidates$$inline_834_root$$inline_337$$.length - 1;
-      0 < $gef$$inline_842_x$$inline_836$$ && ($bag$$inline_839$$ = {}, $ret$$inline_840$$.$nozip$ = $JSCompiler_alias_TRUE$$);
-      $gef$$inline_842_x$$inline_836$$ = $getElementsFunc$$inline_143$$($qp$$inline_835_te$$inline_837$$);
-      for(var $j$$inline_843$$ = 0;$qp$$inline_835_te$$inline_837$$ = $candidates$$inline_834_root$$inline_337$$[$j$$inline_843$$];$j$$inline_843$$++) {
-        $gef$$inline_842_x$$inline_836$$($qp$$inline_835_te$$inline_837$$, $ret$$inline_840$$, $bag$$inline_839$$)
+  return function($candidates$$inline_841_root$$inline_341$$) {
+    for(var $candidates$$inline_841_root$$inline_341$$ = $getArr$$inline_121$$($candidates$$inline_841_root$$inline_341$$), $qp$$inline_842_te$$inline_844$$, $gef$$inline_849_x$$inline_843$$, $qpl$$inline_845$$ = $qparts$$inline_337$$.length, $bag$$inline_846$$, $ret$$inline_847$$, $i$$inline_848$$ = 0;$i$$inline_848$$ < $qpl$$inline_845$$;$i$$inline_848$$++) {
+      $ret$$inline_847$$ = [];
+      $qp$$inline_842_te$$inline_844$$ = $qparts$$inline_337$$[$i$$inline_848$$];
+      $gef$$inline_849_x$$inline_843$$ = $candidates$$inline_841_root$$inline_341$$.length - 1;
+      0 < $gef$$inline_849_x$$inline_843$$ && ($bag$$inline_846$$ = {}, $ret$$inline_847$$.$nozip$ = $JSCompiler_alias_TRUE$$);
+      $gef$$inline_849_x$$inline_843$$ = $getElementsFunc$$inline_147$$($qp$$inline_842_te$$inline_844$$);
+      for(var $j$$inline_850$$ = 0;$qp$$inline_842_te$$inline_844$$ = $candidates$$inline_841_root$$inline_341$$[$j$$inline_850$$];$j$$inline_850$$++) {
+        $gef$$inline_849_x$$inline_843$$($qp$$inline_842_te$$inline_844$$, $ret$$inline_847$$, $bag$$inline_846$$)
       }
-      if(!$ret$$inline_840$$.length) {
+      if(!$ret$$inline_847$$.length) {
         break
       }
-      $candidates$$inline_834_root$$inline_337$$ = $ret$$inline_840$$
+      $candidates$$inline_841_root$$inline_341$$ = $ret$$inline_847$$
     }
-    return $ret$$inline_840$$
+    return $ret$$inline_847$$
   }
 }
-var $qsaAvail$$inline_148$$ = !!document.querySelectorAll && (!$goog$userAgent$WEBKIT$$ || $goog$userAgent$isVersion$$("526"));
-function $getQueryFunc$$inline_149$$($query$$inline_338$$, $opt_forceDOM$$inline_339$$) {
-  if($qsaAvail$$inline_148$$) {
-    var $domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$ = $_queryFuncCacheQSA$$inline_146$$[$query$$inline_338$$];
-    if($domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$ && !$opt_forceDOM$$inline_339$$) {
-      return $domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$
+var $qsaAvail$$inline_152$$ = !!document.querySelectorAll && (!$goog$userAgent$WEBKIT$$ || $goog$userAgent$isVersion$$("526"));
+function $getQueryFunc$$inline_153$$($query$$inline_342$$, $opt_forceDOM$$inline_343$$) {
+  if($qsaAvail$$inline_152$$) {
+    var $domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$ = $_queryFuncCacheQSA$$inline_150$$[$query$$inline_342$$];
+    if($domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$ && !$opt_forceDOM$$inline_343$$) {
+      return $domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$
     }
   }
-  if($domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$ = $_queryFuncCacheDOM$$inline_145$$[$query$$inline_338$$]) {
-    return $domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$
+  if($domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$ = $_queryFuncCacheDOM$$inline_149$$[$query$$inline_342$$]) {
+    return $domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$
   }
-  var $domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$ = $query$$inline_338$$.charAt(0), $nospace$$inline_343$$ = -1 == $query$$inline_338$$.indexOf(" ");
-  0 <= $query$$inline_338$$.indexOf("#") && $nospace$$inline_343$$ && ($opt_forceDOM$$inline_339$$ = $JSCompiler_alias_TRUE$$);
-  if($qsaAvail$$inline_148$$ && !$opt_forceDOM$$inline_339$$ && -1 == ">~+".indexOf($domCached$$inline_341_qcz$$inline_342_qsaCached$$inline_340$$) && (!$goog$userAgent$IE$$ || -1 == $query$$inline_338$$.indexOf(":")) && !($cssCaseBug$$inline_118$$ && 0 <= $query$$inline_338$$.indexOf(".")) && -1 == $query$$inline_338$$.indexOf(":contains") && -1 == $query$$inline_338$$.indexOf("|=")) {
-    var $tq$$inline_344$$ = 0 <= ">~+".indexOf($query$$inline_338$$.charAt($query$$inline_338$$.length - 1)) ? $query$$inline_338$$ + " *" : $query$$inline_338$$;
-    return $_queryFuncCacheQSA$$inline_146$$[$query$$inline_338$$] = function $$_queryFuncCacheQSA$$inline_146$$$$query$$inline_338$$$($root$$inline_346$$) {
+  var $domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$ = $query$$inline_342$$.charAt(0), $nospace$$inline_347$$ = -1 == $query$$inline_342$$.indexOf(" ");
+  0 <= $query$$inline_342$$.indexOf("#") && $nospace$$inline_347$$ && ($opt_forceDOM$$inline_343$$ = $JSCompiler_alias_TRUE$$);
+  if($qsaAvail$$inline_152$$ && !$opt_forceDOM$$inline_343$$ && -1 == ">~+".indexOf($domCached$$inline_345_qcz$$inline_346_qsaCached$$inline_344$$) && (!$goog$userAgent$IE$$ || -1 == $query$$inline_342$$.indexOf(":")) && !($cssCaseBug$$inline_122$$ && 0 <= $query$$inline_342$$.indexOf(".")) && -1 == $query$$inline_342$$.indexOf(":contains") && -1 == $query$$inline_342$$.indexOf("|=")) {
+    var $tq$$inline_348$$ = 0 <= ">~+".indexOf($query$$inline_342$$.charAt($query$$inline_342$$.length - 1)) ? $query$$inline_342$$ + " *" : $query$$inline_342$$;
+    return $_queryFuncCacheQSA$$inline_150$$[$query$$inline_342$$] = function $$_queryFuncCacheQSA$$inline_150$$$$query$$inline_342$$$($root$$inline_350$$) {
       try {
-        9 == $root$$inline_346$$.nodeType || $nospace$$inline_343$$ || $JSCompiler_alias_THROW$$("");
-        var $r$$inline_347$$ = $root$$inline_346$$.querySelectorAll($tq$$inline_344$$);
-        $goog$userAgent$IE$$ ? $r$$inline_347$$.$commentStrip$ = $JSCompiler_alias_TRUE$$ : $r$$inline_347$$.$nozip$ = $JSCompiler_alias_TRUE$$;
-        return $r$$inline_347$$
-      }catch($e$$inline_348$$) {
-        return $getQueryFunc$$inline_149$$($query$$inline_338$$, $JSCompiler_alias_TRUE$$)($root$$inline_346$$)
+        9 == $root$$inline_350$$.nodeType || $nospace$$inline_347$$ || $JSCompiler_alias_THROW$$("");
+        var $r$$inline_351$$ = $root$$inline_350$$.querySelectorAll($tq$$inline_348$$);
+        $goog$userAgent$IE$$ ? $r$$inline_351$$.$commentStrip$ = $JSCompiler_alias_TRUE$$ : $r$$inline_351$$.$nozip$ = $JSCompiler_alias_TRUE$$;
+        return $r$$inline_351$$
+      }catch($e$$inline_352$$) {
+        return $getQueryFunc$$inline_153$$($query$$inline_342$$, $JSCompiler_alias_TRUE$$)($root$$inline_350$$)
       }
     }
   }
-  var $parts$$inline_345$$ = $query$$inline_338$$.split(/\s*,\s*/);
-  return $_queryFuncCacheDOM$$inline_145$$[$query$$inline_338$$] = 2 > $parts$$inline_345$$.length ? $getStepQueryFunc$$inline_147$$($query$$inline_338$$) : function($root$$inline_349$$) {
-    for(var $pindex$$inline_350$$ = 0, $ret$$inline_351$$ = [], $tp$$inline_352$$;$tp$$inline_352$$ = $parts$$inline_345$$[$pindex$$inline_350$$++];) {
-      $ret$$inline_351$$ = $ret$$inline_351$$.concat($getStepQueryFunc$$inline_147$$($tp$$inline_352$$)($root$$inline_349$$))
+  var $parts$$inline_349$$ = $query$$inline_342$$.split(/\s*,\s*/);
+  return $_queryFuncCacheDOM$$inline_149$$[$query$$inline_342$$] = 2 > $parts$$inline_349$$.length ? $getStepQueryFunc$$inline_151$$($query$$inline_342$$) : function($root$$inline_353$$) {
+    for(var $pindex$$inline_354$$ = 0, $ret$$inline_355$$ = [], $tp$$inline_356$$;$tp$$inline_356$$ = $parts$$inline_349$$[$pindex$$inline_354$$++];) {
+      $ret$$inline_355$$ = $ret$$inline_355$$.concat($getStepQueryFunc$$inline_151$$($tp$$inline_356$$)($root$$inline_353$$))
     }
-    return $ret$$inline_351$$
+    return $ret$$inline_355$$
   }
 }
-var $_zipIdx$$inline_150$$ = 0, $_nodeUID$$inline_151$$ = $goog$userAgent$IE$$ ? function($node$$inline_353$$) {
-  return $caseSensitive$$inline_120$$ ? $node$$inline_353$$.getAttribute("_uid") || $node$$inline_353$$.setAttribute("_uid", ++$_zipIdx$$inline_150$$) || $_zipIdx$$inline_150$$ : $node$$inline_353$$.uniqueID
-} : function($node$$inline_354$$) {
-  return $node$$inline_354$$._uid || ($node$$inline_354$$._uid = ++$_zipIdx$$inline_150$$)
+var $_zipIdx$$inline_154$$ = 0, $_nodeUID$$inline_155$$ = $goog$userAgent$IE$$ ? function($node$$inline_357$$) {
+  return $caseSensitive$$inline_124$$ ? $node$$inline_357$$.getAttribute("_uid") || $node$$inline_357$$.setAttribute("_uid", ++$_zipIdx$$inline_154$$) || $_zipIdx$$inline_154$$ : $node$$inline_357$$.uniqueID
+} : function($node$$inline_358$$) {
+  return $node$$inline_358$$._uid || ($node$$inline_358$$._uid = ++$_zipIdx$$inline_154$$)
 };
-function $_isUnique$$inline_152$$($node$$inline_355$$, $bag$$inline_356$$) {
-  if(!$bag$$inline_356$$) {
+function $_isUnique$$inline_156$$($node$$inline_359$$, $bag$$inline_360$$) {
+  if(!$bag$$inline_360$$) {
     return 1
   }
-  var $id$$inline_357$$ = $_nodeUID$$inline_151$$($node$$inline_355$$);
-  return!$bag$$inline_356$$[$id$$inline_357$$] ? $bag$$inline_356$$[$id$$inline_357$$] = 1 : 0
+  var $id$$inline_361$$ = $_nodeUID$$inline_155$$($node$$inline_359$$);
+  return!$bag$$inline_360$$[$id$$inline_361$$] ? $bag$$inline_360$$[$id$$inline_361$$] = 1 : 0
 }
-function $_zip$$inline_153$$($arr$$inline_358$$) {
-  if($arr$$inline_358$$ && $arr$$inline_358$$.$nozip$) {
-    return $arr$$inline_358$$
+function $_zip$$inline_157$$($arr$$inline_362$$) {
+  if($arr$$inline_362$$ && $arr$$inline_362$$.$nozip$) {
+    return $arr$$inline_362$$
   }
-  var $ret$$inline_359$$ = [];
-  if(!$arr$$inline_358$$ || !$arr$$inline_358$$.length) {
-    return $ret$$inline_359$$
+  var $ret$$inline_363$$ = [];
+  if(!$arr$$inline_362$$ || !$arr$$inline_362$$.length) {
+    return $ret$$inline_363$$
   }
-  $arr$$inline_358$$[0] && $ret$$inline_359$$.push($arr$$inline_358$$[0]);
-  if(2 > $arr$$inline_358$$.length) {
-    return $ret$$inline_359$$
+  $arr$$inline_362$$[0] && $ret$$inline_363$$.push($arr$$inline_362$$[0]);
+  if(2 > $arr$$inline_362$$.length) {
+    return $ret$$inline_363$$
   }
-  $_zipIdx$$inline_150$$++;
-  if($goog$userAgent$IE$$ && $caseSensitive$$inline_120$$) {
-    var $szidx$$inline_360$$ = $_zipIdx$$inline_150$$ + "";
-    $arr$$inline_358$$[0].setAttribute("_zipIdx", $szidx$$inline_360$$);
-    for(var $x$$inline_361$$ = 1, $te$$inline_362$$;$te$$inline_362$$ = $arr$$inline_358$$[$x$$inline_361$$];$x$$inline_361$$++) {
-      $arr$$inline_358$$[$x$$inline_361$$].getAttribute("_zipIdx") != $szidx$$inline_360$$ && $ret$$inline_359$$.push($te$$inline_362$$), $te$$inline_362$$.setAttribute("_zipIdx", $szidx$$inline_360$$)
+  $_zipIdx$$inline_154$$++;
+  if($goog$userAgent$IE$$ && $caseSensitive$$inline_124$$) {
+    var $szidx$$inline_364$$ = $_zipIdx$$inline_154$$ + "";
+    $arr$$inline_362$$[0].setAttribute("_zipIdx", $szidx$$inline_364$$);
+    for(var $x$$inline_365$$ = 1, $te$$inline_366$$;$te$$inline_366$$ = $arr$$inline_362$$[$x$$inline_365$$];$x$$inline_365$$++) {
+      $arr$$inline_362$$[$x$$inline_365$$].getAttribute("_zipIdx") != $szidx$$inline_364$$ && $ret$$inline_363$$.push($te$$inline_366$$), $te$$inline_366$$.setAttribute("_zipIdx", $szidx$$inline_364$$)
     }
   }else {
-    if($goog$userAgent$IE$$ && $arr$$inline_358$$.$commentStrip$) {
+    if($goog$userAgent$IE$$ && $arr$$inline_362$$.$commentStrip$) {
       try {
-        for($x$$inline_361$$ = 1;$te$$inline_362$$ = $arr$$inline_358$$[$x$$inline_361$$];$x$$inline_361$$++) {
-          $isElement$$inline_123$$($te$$inline_362$$) && $ret$$inline_359$$.push($te$$inline_362$$)
+        for($x$$inline_365$$ = 1;$te$$inline_366$$ = $arr$$inline_362$$[$x$$inline_365$$];$x$$inline_365$$++) {
+          $isElement$$inline_127$$($te$$inline_366$$) && $ret$$inline_363$$.push($te$$inline_366$$)
         }
-      }catch($e$$inline_363$$) {
+      }catch($e$$inline_367$$) {
       }
     }else {
-      $arr$$inline_358$$[0] && ($arr$$inline_358$$[0]._zipIdx = $_zipIdx$$inline_150$$);
-      for($x$$inline_361$$ = 1;$te$$inline_362$$ = $arr$$inline_358$$[$x$$inline_361$$];$x$$inline_361$$++) {
-        $arr$$inline_358$$[$x$$inline_361$$]._zipIdx != $_zipIdx$$inline_150$$ && $ret$$inline_359$$.push($te$$inline_362$$), $te$$inline_362$$._zipIdx = $_zipIdx$$inline_150$$
+      $arr$$inline_362$$[0] && ($arr$$inline_362$$[0]._zipIdx = $_zipIdx$$inline_154$$);
+      for($x$$inline_365$$ = 1;$te$$inline_366$$ = $arr$$inline_362$$[$x$$inline_365$$];$x$$inline_365$$++) {
+        $arr$$inline_362$$[$x$$inline_365$$]._zipIdx != $_zipIdx$$inline_154$$ && $ret$$inline_363$$.push($te$$inline_366$$), $te$$inline_366$$._zipIdx = $_zipIdx$$inline_154$$
       }
     }
   }
-  return $ret$$inline_359$$
+  return $ret$$inline_363$$
 }
-function $query$$inline_154$$($query$$inline_364$$, $root$$inline_365$$) {
-  if(!$query$$inline_364$$) {
+function $query$$inline_158$$($query$$inline_368$$, $root$$inline_369$$) {
+  if(!$query$$inline_368$$) {
     return[]
   }
-  if($query$$inline_364$$.constructor == Array) {
-    return $query$$inline_364$$
+  if($query$$inline_368$$.constructor == Array) {
+    return $query$$inline_368$$
   }
-  if(!$goog$isString$$($query$$inline_364$$)) {
-    return[$query$$inline_364$$]
+  if(!$goog$isString$$($query$$inline_368$$)) {
+    return[$query$$inline_368$$]
   }
-  if($goog$isString$$($root$$inline_365$$) && ($root$$inline_365$$ = $goog$isString$$($root$$inline_365$$) ? document.getElementById($root$$inline_365$$) : $root$$inline_365$$, !$root$$inline_365$$)) {
+  if($goog$isString$$($root$$inline_369$$) && ($root$$inline_369$$ = $goog$isString$$($root$$inline_369$$) ? document.getElementById($root$$inline_369$$) : $root$$inline_369$$, !$root$$inline_369$$)) {
     return[]
   }
-  var $root$$inline_365$$ = $root$$inline_365$$ || document, $od$$inline_366_r$$inline_367$$ = $root$$inline_365$$.ownerDocument || $root$$inline_365$$.documentElement;
-  $caseSensitive$$inline_120$$ = $root$$inline_365$$.contentType && "application/xml" == $root$$inline_365$$.contentType || $goog$userAgent$OPERA$$ && ($root$$inline_365$$.doctype || "[object XMLDocument]" == $od$$inline_366_r$$inline_367$$.toString()) || !!$od$$inline_366_r$$inline_367$$ && ($goog$userAgent$IE$$ ? $od$$inline_366_r$$inline_367$$.xml : $root$$inline_365$$.xmlVersion || $od$$inline_366_r$$inline_367$$.xmlVersion);
-  return($od$$inline_366_r$$inline_367$$ = $getQueryFunc$$inline_149$$($query$$inline_364$$)($root$$inline_365$$)) && $od$$inline_366_r$$inline_367$$.$nozip$ ? $od$$inline_366_r$$inline_367$$ : $_zip$$inline_153$$($od$$inline_366_r$$inline_367$$)
+  var $root$$inline_369$$ = $root$$inline_369$$ || document, $od$$inline_370_r$$inline_371$$ = $root$$inline_369$$.ownerDocument || $root$$inline_369$$.documentElement;
+  $caseSensitive$$inline_124$$ = $root$$inline_369$$.contentType && "application/xml" == $root$$inline_369$$.contentType || $goog$userAgent$OPERA$$ && ($root$$inline_369$$.doctype || "[object XMLDocument]" == $od$$inline_370_r$$inline_371$$.toString()) || !!$od$$inline_370_r$$inline_371$$ && ($goog$userAgent$IE$$ ? $od$$inline_370_r$$inline_371$$.xml : $root$$inline_369$$.xmlVersion || $od$$inline_370_r$$inline_371$$.xmlVersion);
+  return($od$$inline_370_r$$inline_371$$ = $getQueryFunc$$inline_153$$($query$$inline_368$$)($root$$inline_369$$)) && $od$$inline_370_r$$inline_371$$.$nozip$ ? $od$$inline_370_r$$inline_371$$ : $_zip$$inline_157$$($od$$inline_370_r$$inline_371$$)
 }
-$query$$inline_154$$.$pseudos$ = $pseudos$$inline_135$$;
-$goog$exportPath_$$("goog.dom.query", $query$$inline_154$$);
-$goog$exportPath_$$("goog.dom.query.pseudos", $query$$inline_154$$.$pseudos$);
+$query$$inline_158$$.$pseudos$ = $pseudos$$inline_139$$;
+$goog$exportPath_$$("goog.dom.query", $query$$inline_158$$);
+$goog$exportPath_$$("goog.dom.query.pseudos", $query$$inline_158$$.$pseudos$);
 var $goog$events$BrowserFeature$HAS_W3C_BUTTON$$ = !$goog$userAgent$IE$$ || $goog$userAgent$isDocumentMode$$(9), $goog$events$BrowserFeature$HAS_W3C_EVENT_SUPPORT$$ = !$goog$userAgent$IE$$ || $goog$userAgent$isDocumentMode$$(9), $goog$events$BrowserFeature$SET_KEY_CODE_TO_PREVENT_DEFAULT$$ = $goog$userAgent$IE$$ && !$goog$userAgent$isVersion$$("9");
 !$goog$userAgent$WEBKIT$$ || $goog$userAgent$isVersion$$("528");
 $goog$userAgent$GECKO$$ && $goog$userAgent$isVersion$$("1.9b") || $goog$userAgent$IE$$ && $goog$userAgent$isVersion$$("8") || $goog$userAgent$OPERA$$ && $goog$userAgent$isVersion$$("9.5") || $goog$userAgent$WEBKIT$$ && $goog$userAgent$isVersion$$("528");
@@ -1030,17 +1030,17 @@ $JSCompiler_prototypeAlias$$.init = function $$JSCompiler_prototypeAlias$$$init$
   var $relatedTarget$$ = $e$$17$$.relatedTarget;
   if($relatedTarget$$) {
     if($goog$userAgent$GECKO$$) {
-      var $JSCompiler_inline_result$$48$$;
+      var $JSCompiler_inline_result$$52$$;
       a: {
         try {
           $goog$reflect$sinkValue$$($relatedTarget$$.nodeName);
-          $JSCompiler_inline_result$$48$$ = $JSCompiler_alias_TRUE$$;
+          $JSCompiler_inline_result$$52$$ = $JSCompiler_alias_TRUE$$;
           break a
-        }catch($e$$inline_379$$) {
+        }catch($e$$inline_383$$) {
         }
-        $JSCompiler_inline_result$$48$$ = $JSCompiler_alias_FALSE$$
+        $JSCompiler_inline_result$$52$$ = $JSCompiler_alias_FALSE$$
       }
-      $JSCompiler_inline_result$$48$$ || ($relatedTarget$$ = $JSCompiler_alias_NULL$$)
+      $JSCompiler_inline_result$$52$$ || ($relatedTarget$$ = $JSCompiler_alias_NULL$$)
     }
   }else {
     "mouseover" == $type$$57$$ ? $relatedTarget$$ = $e$$17$$.fromElement : "mouseout" == $type$$57$$ && ($relatedTarget$$ = $e$$17$$.toElement)
@@ -1139,14 +1139,14 @@ function $goog$events$listen$$($src$$7$$, $type$$59$$, $key$$43_listener$$33$$, 
     }else {
       $listenerArray$$ = $listenerObj_map$$[$srcUid$$] = [], $listenerObj_map$$.$count_$++
     }
-    var $proxyCallbackFunction$$inline_384$$ = $goog$events$handleBrowserEvent_$$, $f$$inline_385$$ = $goog$events$BrowserFeature$HAS_W3C_EVENT_SUPPORT$$ ? function($eventObject$$inline_386$$) {
-      return $proxyCallbackFunction$$inline_384$$.call($f$$inline_385$$.src, $f$$inline_385$$.key, $eventObject$$inline_386$$)
-    } : function($eventObject$$inline_387_v$$inline_388$$) {
-      $eventObject$$inline_387_v$$inline_388$$ = $proxyCallbackFunction$$inline_384$$.call($f$$inline_385$$.src, $f$$inline_385$$.key, $eventObject$$inline_387_v$$inline_388$$);
-      if(!$eventObject$$inline_387_v$$inline_388$$) {
-        return $eventObject$$inline_387_v$$inline_388$$
+    var $proxyCallbackFunction$$inline_388$$ = $goog$events$handleBrowserEvent_$$, $f$$inline_389$$ = $goog$events$BrowserFeature$HAS_W3C_EVENT_SUPPORT$$ ? function($eventObject$$inline_390$$) {
+      return $proxyCallbackFunction$$inline_388$$.call($f$$inline_389$$.src, $f$$inline_389$$.key, $eventObject$$inline_390$$)
+    } : function($eventObject$$inline_391_v$$inline_392$$) {
+      $eventObject$$inline_391_v$$inline_392$$ = $proxyCallbackFunction$$inline_388$$.call($f$$inline_389$$.src, $f$$inline_389$$.key, $eventObject$$inline_391_v$$inline_392$$);
+      if(!$eventObject$$inline_391_v$$inline_392$$) {
+        return $eventObject$$inline_391_v$$inline_392$$
       }
-    }, $i$$67_proxy$$1$$ = $f$$inline_385$$;
+    }, $i$$67_proxy$$1$$ = $f$$inline_389$$;
     $i$$67_proxy$$1$$.src = $src$$7$$;
     $listenerObj_map$$ = new $goog$events$Listener$$;
     $listenerObj_map$$.init($key$$43_listener$$33$$, $i$$67_proxy$$1$$, $src$$7$$, $type$$59$$, $capture$$1_opt_capt$$2$$, $opt_handler$$1$$);
@@ -1239,75 +1239,75 @@ function $goog$events$handleBrowserEvent_$$($key$$47$$, $opt_evt$$) {
   if(!($be$$1_type$$71$$ in $map$$6$$)) {
     return $JSCompiler_alias_TRUE$$
   }
-  var $map$$6$$ = $map$$6$$[$be$$1_type$$71$$], $ieEvent_part$$inline_394_retval$$1$$, $targetsMap$$1$$;
+  var $map$$6$$ = $map$$6$$[$be$$1_type$$71$$], $ieEvent_part$$inline_398_retval$$1$$, $targetsMap$$1$$;
   if(!$goog$events$BrowserFeature$HAS_W3C_EVENT_SUPPORT$$) {
-    var $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$;
-    if(!($JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$ = $opt_evt$$)) {
+    var $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$;
+    if(!($JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$ = $opt_evt$$)) {
       a: {
-        $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$ = ["window", "event"];
-        for(var $cur$$inline_393_hasBubble$$1$$ = $goog$global$$;$ieEvent_part$$inline_394_retval$$1$$ = $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$.shift();) {
-          if($cur$$inline_393_hasBubble$$1$$[$ieEvent_part$$inline_394_retval$$1$$] != $JSCompiler_alias_NULL$$) {
-            $cur$$inline_393_hasBubble$$1$$ = $cur$$inline_393_hasBubble$$1$$[$ieEvent_part$$inline_394_retval$$1$$]
+        $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$ = ["window", "event"];
+        for(var $cur$$inline_397_hasBubble$$1$$ = $goog$global$$;$ieEvent_part$$inline_398_retval$$1$$ = $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$.shift();) {
+          if($cur$$inline_397_hasBubble$$1$$[$ieEvent_part$$inline_398_retval$$1$$] != $JSCompiler_alias_NULL$$) {
+            $cur$$inline_397_hasBubble$$1$$ = $cur$$inline_397_hasBubble$$1$$[$ieEvent_part$$inline_398_retval$$1$$]
           }else {
-            $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$ = $JSCompiler_alias_NULL$$;
+            $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$ = $JSCompiler_alias_NULL$$;
             break a
           }
         }
-        $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$ = $cur$$inline_393_hasBubble$$1$$
+        $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$ = $cur$$inline_397_hasBubble$$1$$
       }
     }
-    $ieEvent_part$$inline_394_retval$$1$$ = $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$;
-    $JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$ = $JSCompiler_alias_TRUE$$ in $map$$6$$;
-    $cur$$inline_393_hasBubble$$1$$ = $JSCompiler_alias_FALSE$$ in $map$$6$$;
-    if($JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$) {
-      if(0 > $ieEvent_part$$inline_394_retval$$1$$.keyCode || $ieEvent_part$$inline_394_retval$$1$$.returnValue != $JSCompiler_alias_VOID$$) {
+    $ieEvent_part$$inline_398_retval$$1$$ = $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$;
+    $JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$ = $JSCompiler_alias_TRUE$$ in $map$$6$$;
+    $cur$$inline_397_hasBubble$$1$$ = $JSCompiler_alias_FALSE$$ in $map$$6$$;
+    if($JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$) {
+      if(0 > $ieEvent_part$$inline_398_retval$$1$$.keyCode || $ieEvent_part$$inline_398_retval$$1$$.returnValue != $JSCompiler_alias_VOID$$) {
         return $JSCompiler_alias_TRUE$$
       }
       a: {
-        var $evt$$15_useReturnValue$$inline_397$$ = $JSCompiler_alias_FALSE$$;
-        if(0 == $ieEvent_part$$inline_394_retval$$1$$.keyCode) {
+        var $evt$$15_useReturnValue$$inline_401$$ = $JSCompiler_alias_FALSE$$;
+        if(0 == $ieEvent_part$$inline_398_retval$$1$$.keyCode) {
           try {
-            $ieEvent_part$$inline_394_retval$$1$$.keyCode = -1;
+            $ieEvent_part$$inline_398_retval$$1$$.keyCode = -1;
             break a
-          }catch($ex$$inline_398$$) {
-            $evt$$15_useReturnValue$$inline_397$$ = $JSCompiler_alias_TRUE$$
+          }catch($ex$$inline_402$$) {
+            $evt$$15_useReturnValue$$inline_401$$ = $JSCompiler_alias_TRUE$$
           }
         }
-        if($evt$$15_useReturnValue$$inline_397$$ || $ieEvent_part$$inline_394_retval$$1$$.returnValue == $JSCompiler_alias_VOID$$) {
-          $ieEvent_part$$inline_394_retval$$1$$.returnValue = $JSCompiler_alias_TRUE$$
+        if($evt$$15_useReturnValue$$inline_401$$ || $ieEvent_part$$inline_398_retval$$1$$.returnValue == $JSCompiler_alias_VOID$$) {
+          $ieEvent_part$$inline_398_retval$$1$$.returnValue = $JSCompiler_alias_TRUE$$
         }
       }
     }
-    $evt$$15_useReturnValue$$inline_397$$ = new $goog$events$BrowserEvent$$;
-    $evt$$15_useReturnValue$$inline_397$$.init($ieEvent_part$$inline_394_retval$$1$$, this);
-    $ieEvent_part$$inline_394_retval$$1$$ = $JSCompiler_alias_TRUE$$;
+    $evt$$15_useReturnValue$$inline_401$$ = new $goog$events$BrowserEvent$$;
+    $evt$$15_useReturnValue$$inline_401$$.init($ieEvent_part$$inline_398_retval$$1$$, this);
+    $ieEvent_part$$inline_398_retval$$1$$ = $JSCompiler_alias_TRUE$$;
     try {
-      if($JSCompiler_temp$$22_hasCapture$$2_parts$$inline_392$$) {
-        for(var $ancestors$$2$$ = [], $parent$$17$$ = $evt$$15_useReturnValue$$inline_397$$.currentTarget;$parent$$17$$;$parent$$17$$ = $parent$$17$$.parentNode) {
+      if($JSCompiler_temp$$26_hasCapture$$2_parts$$inline_396$$) {
+        for(var $ancestors$$2$$ = [], $parent$$17$$ = $evt$$15_useReturnValue$$inline_401$$.currentTarget;$parent$$17$$;$parent$$17$$ = $parent$$17$$.parentNode) {
           $ancestors$$2$$.push($parent$$17$$)
         }
         $targetsMap$$1$$ = $map$$6$$[$JSCompiler_alias_TRUE$$];
         $targetsMap$$1$$.$remaining_$ = $targetsMap$$1$$.$count_$;
-        for(var $i$$75$$ = $ancestors$$2$$.length - 1;!$evt$$15_useReturnValue$$inline_397$$.$propagationStopped_$ && 0 <= $i$$75$$ && $targetsMap$$1$$.$remaining_$;$i$$75$$--) {
-          $evt$$15_useReturnValue$$inline_397$$.currentTarget = $ancestors$$2$$[$i$$75$$], $ieEvent_part$$inline_394_retval$$1$$ &= $goog$events$fireListeners_$$($targetsMap$$1$$, $ancestors$$2$$[$i$$75$$], $be$$1_type$$71$$, $JSCompiler_alias_TRUE$$, $evt$$15_useReturnValue$$inline_397$$)
+        for(var $i$$75$$ = $ancestors$$2$$.length - 1;!$evt$$15_useReturnValue$$inline_401$$.$propagationStopped_$ && 0 <= $i$$75$$ && $targetsMap$$1$$.$remaining_$;$i$$75$$--) {
+          $evt$$15_useReturnValue$$inline_401$$.currentTarget = $ancestors$$2$$[$i$$75$$], $ieEvent_part$$inline_398_retval$$1$$ &= $goog$events$fireListeners_$$($targetsMap$$1$$, $ancestors$$2$$[$i$$75$$], $be$$1_type$$71$$, $JSCompiler_alias_TRUE$$, $evt$$15_useReturnValue$$inline_401$$)
         }
-        if($cur$$inline_393_hasBubble$$1$$) {
+        if($cur$$inline_397_hasBubble$$1$$) {
           $targetsMap$$1$$ = $map$$6$$[$JSCompiler_alias_FALSE$$];
           $targetsMap$$1$$.$remaining_$ = $targetsMap$$1$$.$count_$;
-          for($i$$75$$ = 0;!$evt$$15_useReturnValue$$inline_397$$.$propagationStopped_$ && $i$$75$$ < $ancestors$$2$$.length && $targetsMap$$1$$.$remaining_$;$i$$75$$++) {
-            $evt$$15_useReturnValue$$inline_397$$.currentTarget = $ancestors$$2$$[$i$$75$$], $ieEvent_part$$inline_394_retval$$1$$ &= $goog$events$fireListeners_$$($targetsMap$$1$$, $ancestors$$2$$[$i$$75$$], $be$$1_type$$71$$, $JSCompiler_alias_FALSE$$, $evt$$15_useReturnValue$$inline_397$$)
+          for($i$$75$$ = 0;!$evt$$15_useReturnValue$$inline_401$$.$propagationStopped_$ && $i$$75$$ < $ancestors$$2$$.length && $targetsMap$$1$$.$remaining_$;$i$$75$$++) {
+            $evt$$15_useReturnValue$$inline_401$$.currentTarget = $ancestors$$2$$[$i$$75$$], $ieEvent_part$$inline_398_retval$$1$$ &= $goog$events$fireListeners_$$($targetsMap$$1$$, $ancestors$$2$$[$i$$75$$], $be$$1_type$$71$$, $JSCompiler_alias_FALSE$$, $evt$$15_useReturnValue$$inline_401$$)
           }
         }
       }else {
-        $ieEvent_part$$inline_394_retval$$1$$ = $goog$events$fireListener$$($listener$$45$$, $evt$$15_useReturnValue$$inline_397$$)
+        $ieEvent_part$$inline_398_retval$$1$$ = $goog$events$fireListener$$($listener$$45$$, $evt$$15_useReturnValue$$inline_401$$)
       }
     }finally {
       $ancestors$$2$$ && ($ancestors$$2$$.length = 0)
     }
-    return $ieEvent_part$$inline_394_retval$$1$$
+    return $ieEvent_part$$inline_398_retval$$1$$
   }
   $be$$1_type$$71$$ = new $goog$events$BrowserEvent$$($opt_evt$$, this);
-  return $ieEvent_part$$inline_394_retval$$1$$ = $goog$events$fireListener$$($listener$$45$$, $be$$1_type$$71$$)
+  return $ieEvent_part$$inline_398_retval$$1$$ = $goog$events$fireListener$$($listener$$45$$, $be$$1_type$$71$$)
 }
 ;function $goog$events$EventHandler$$($opt_handler$$7$$) {
   $goog$Disposable$$.call(this);
@@ -1324,27 +1324,27 @@ function $JSCompiler_StaticMethods_listen$$($JSCompiler_StaticMethods_listen$sel
   }
   return $JSCompiler_StaticMethods_listen$self$$
 }
-function $JSCompiler_StaticMethods_unlisten$$($JSCompiler_StaticMethods_unlisten$self$$, $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$, $i$$inline_408_type$$74$$, $listener$$inline_403_opt_fn$$2$$, $capture$$inline_406_opt_capture$$3$$, $opt_handler$$11_opt_handler$$inline_405$$) {
-  if($goog$isArray$$($i$$inline_408_type$$74$$)) {
-    for(var $i$$78$$ = 0;$i$$78$$ < $i$$inline_408_type$$74$$.length;$i$$78$$++) {
-      $JSCompiler_StaticMethods_unlisten$$($JSCompiler_StaticMethods_unlisten$self$$, $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$, $i$$inline_408_type$$74$$[$i$$78$$], $listener$$inline_403_opt_fn$$2$$, $capture$$inline_406_opt_capture$$3$$, $opt_handler$$11_opt_handler$$inline_405$$)
+function $JSCompiler_StaticMethods_unlisten$$($JSCompiler_StaticMethods_unlisten$self$$, $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$, $i$$inline_412_type$$74$$, $listener$$inline_407_opt_fn$$2$$, $capture$$inline_410_opt_capture$$3$$, $opt_handler$$11_opt_handler$$inline_409$$) {
+  if($goog$isArray$$($i$$inline_412_type$$74$$)) {
+    for(var $i$$78$$ = 0;$i$$78$$ < $i$$inline_412_type$$74$$.length;$i$$78$$++) {
+      $JSCompiler_StaticMethods_unlisten$$($JSCompiler_StaticMethods_unlisten$self$$, $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$, $i$$inline_412_type$$74$$[$i$$78$$], $listener$$inline_407_opt_fn$$2$$, $capture$$inline_410_opt_capture$$3$$, $opt_handler$$11_opt_handler$$inline_409$$)
     }
   }else {
     a: {
-      $listener$$inline_403_opt_fn$$2$$ = $listener$$inline_403_opt_fn$$2$$ || $JSCompiler_StaticMethods_unlisten$self$$;
-      $opt_handler$$11_opt_handler$$inline_405$$ = $opt_handler$$11_opt_handler$$inline_405$$ || $JSCompiler_StaticMethods_unlisten$self$$.$handler_$ || $JSCompiler_StaticMethods_unlisten$self$$;
-      $capture$$inline_406_opt_capture$$3$$ = !!$capture$$inline_406_opt_capture$$3$$;
-      if($key$$50_listener$$47_listenerArray$$inline_407_src$$18$$ = $goog$events$getListeners_$$($key$$50_listener$$47_listenerArray$$inline_407_src$$18$$, $i$$inline_408_type$$74$$, $capture$$inline_406_opt_capture$$3$$)) {
-        for($i$$inline_408_type$$74$$ = 0;$i$$inline_408_type$$74$$ < $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$.length;$i$$inline_408_type$$74$$++) {
-          if(!$key$$50_listener$$47_listenerArray$$inline_407_src$$18$$[$i$$inline_408_type$$74$$].$removed$ && $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$[$i$$inline_408_type$$74$$].$listener$ == $listener$$inline_403_opt_fn$$2$$ && $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$[$i$$inline_408_type$$74$$].capture == $capture$$inline_406_opt_capture$$3$$ && $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$[$i$$inline_408_type$$74$$].$handler$ == $opt_handler$$11_opt_handler$$inline_405$$) {
-            $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$ = $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$[$i$$inline_408_type$$74$$];
+      $listener$$inline_407_opt_fn$$2$$ = $listener$$inline_407_opt_fn$$2$$ || $JSCompiler_StaticMethods_unlisten$self$$;
+      $opt_handler$$11_opt_handler$$inline_409$$ = $opt_handler$$11_opt_handler$$inline_409$$ || $JSCompiler_StaticMethods_unlisten$self$$.$handler_$ || $JSCompiler_StaticMethods_unlisten$self$$;
+      $capture$$inline_410_opt_capture$$3$$ = !!$capture$$inline_410_opt_capture$$3$$;
+      if($key$$50_listener$$47_listenerArray$$inline_411_src$$18$$ = $goog$events$getListeners_$$($key$$50_listener$$47_listenerArray$$inline_411_src$$18$$, $i$$inline_412_type$$74$$, $capture$$inline_410_opt_capture$$3$$)) {
+        for($i$$inline_412_type$$74$$ = 0;$i$$inline_412_type$$74$$ < $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$.length;$i$$inline_412_type$$74$$++) {
+          if(!$key$$50_listener$$47_listenerArray$$inline_411_src$$18$$[$i$$inline_412_type$$74$$].$removed$ && $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$[$i$$inline_412_type$$74$$].$listener$ == $listener$$inline_407_opt_fn$$2$$ && $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$[$i$$inline_412_type$$74$$].capture == $capture$$inline_410_opt_capture$$3$$ && $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$[$i$$inline_412_type$$74$$].$handler$ == $opt_handler$$11_opt_handler$$inline_409$$) {
+            $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$ = $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$[$i$$inline_412_type$$74$$];
             break a
           }
         }
       }
-      $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$ = $JSCompiler_alias_NULL$$
+      $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$ = $JSCompiler_alias_NULL$$
     }
-    $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$ && ($key$$50_listener$$47_listenerArray$$inline_407_src$$18$$ = $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$.key, $goog$events$unlistenByKey$$($key$$50_listener$$47_listenerArray$$inline_407_src$$18$$), $goog$array$remove$$($JSCompiler_StaticMethods_unlisten$self$$.$keys_$, $key$$50_listener$$47_listenerArray$$inline_407_src$$18$$))
+    $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$ && ($key$$50_listener$$47_listenerArray$$inline_411_src$$18$$ = $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$.key, $goog$events$unlistenByKey$$($key$$50_listener$$47_listenerArray$$inline_411_src$$18$$), $goog$array$remove$$($JSCompiler_StaticMethods_unlisten$self$$.$keys_$, $key$$50_listener$$47_listenerArray$$inline_411_src$$18$$))
   }
   return $JSCompiler_StaticMethods_unlisten$self$$
 }
@@ -1371,49 +1371,49 @@ $JSCompiler_prototypeAlias$$.addEventListener = function $$JSCompiler_prototypeA
 $JSCompiler_prototypeAlias$$.removeEventListener = function $$JSCompiler_prototypeAlias$$$removeEventListener$($type$$76$$, $handler$$4$$, $opt_capture$$5$$, $opt_handlerScope$$1$$) {
   $goog$events$unlisten$$(this, $type$$76$$, $handler$$4$$, $opt_capture$$5$$, $opt_handlerScope$$1$$)
 };
-$JSCompiler_prototypeAlias$$.dispatchEvent = function $$JSCompiler_prototypeAlias$$$dispatchEvent$($JSCompiler_inline_result$$28_e$$23_e$$inline_411$$) {
-  var $hasCapture$$inline_417_type$$inline_412$$ = $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.type || $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$, $map$$inline_413$$ = $goog$events$listenerTree_$$;
-  if($hasCapture$$inline_417_type$$inline_412$$ in $map$$inline_413$$) {
-    if($goog$isString$$($JSCompiler_inline_result$$28_e$$23_e$$inline_411$$)) {
-      $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$ = new $goog$events$Event$$($JSCompiler_inline_result$$28_e$$23_e$$inline_411$$, this)
+$JSCompiler_prototypeAlias$$.dispatchEvent = function $$JSCompiler_prototypeAlias$$$dispatchEvent$($JSCompiler_inline_result$$32_e$$23_e$$inline_415$$) {
+  var $hasCapture$$inline_421_type$$inline_416$$ = $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.type || $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$, $map$$inline_417$$ = $goog$events$listenerTree_$$;
+  if($hasCapture$$inline_421_type$$inline_416$$ in $map$$inline_417$$) {
+    if($goog$isString$$($JSCompiler_inline_result$$32_e$$23_e$$inline_415$$)) {
+      $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$ = new $goog$events$Event$$($JSCompiler_inline_result$$32_e$$23_e$$inline_415$$, this)
     }else {
-      if($JSCompiler_inline_result$$28_e$$23_e$$inline_411$$ instanceof $goog$events$Event$$) {
-        $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.target = $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.target || this
+      if($JSCompiler_inline_result$$32_e$$23_e$$inline_415$$ instanceof $goog$events$Event$$) {
+        $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.target = $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.target || this
       }else {
-        var $oldEvent$$inline_414_rv$$inline_415$$ = $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$, $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$ = new $goog$events$Event$$($hasCapture$$inline_417_type$$inline_412$$, this);
-        $goog$object$extend$$($JSCompiler_inline_result$$28_e$$23_e$$inline_411$$, $oldEvent$$inline_414_rv$$inline_415$$)
+        var $oldEvent$$inline_418_rv$$inline_419$$ = $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$, $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$ = new $goog$events$Event$$($hasCapture$$inline_421_type$$inline_416$$, this);
+        $goog$object$extend$$($JSCompiler_inline_result$$32_e$$23_e$$inline_415$$, $oldEvent$$inline_418_rv$$inline_419$$)
       }
     }
-    var $oldEvent$$inline_414_rv$$inline_415$$ = 1, $ancestors$$inline_416_current$$inline_421$$, $map$$inline_413$$ = $map$$inline_413$$[$hasCapture$$inline_417_type$$inline_412$$], $hasCapture$$inline_417_type$$inline_412$$ = $JSCompiler_alias_TRUE$$ in $map$$inline_413$$, $parent$$inline_419_targetsMap$$inline_418$$;
-    if($hasCapture$$inline_417_type$$inline_412$$) {
-      $ancestors$$inline_416_current$$inline_421$$ = [];
-      for($parent$$inline_419_targetsMap$$inline_418$$ = this;$parent$$inline_419_targetsMap$$inline_418$$;$parent$$inline_419_targetsMap$$inline_418$$ = $parent$$inline_419_targetsMap$$inline_418$$.$parentEventTarget_$) {
-        $ancestors$$inline_416_current$$inline_421$$.push($parent$$inline_419_targetsMap$$inline_418$$)
+    var $oldEvent$$inline_418_rv$$inline_419$$ = 1, $ancestors$$inline_420_current$$inline_425$$, $map$$inline_417$$ = $map$$inline_417$$[$hasCapture$$inline_421_type$$inline_416$$], $hasCapture$$inline_421_type$$inline_416$$ = $JSCompiler_alias_TRUE$$ in $map$$inline_417$$, $parent$$inline_423_targetsMap$$inline_422$$;
+    if($hasCapture$$inline_421_type$$inline_416$$) {
+      $ancestors$$inline_420_current$$inline_425$$ = [];
+      for($parent$$inline_423_targetsMap$$inline_422$$ = this;$parent$$inline_423_targetsMap$$inline_422$$;$parent$$inline_423_targetsMap$$inline_422$$ = $parent$$inline_423_targetsMap$$inline_422$$.$parentEventTarget_$) {
+        $ancestors$$inline_420_current$$inline_425$$.push($parent$$inline_423_targetsMap$$inline_422$$)
       }
-      $parent$$inline_419_targetsMap$$inline_418$$ = $map$$inline_413$$[$JSCompiler_alias_TRUE$$];
-      $parent$$inline_419_targetsMap$$inline_418$$.$remaining_$ = $parent$$inline_419_targetsMap$$inline_418$$.$count_$;
-      for(var $i$$inline_420$$ = $ancestors$$inline_416_current$$inline_421$$.length - 1;!$JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.$propagationStopped_$ && 0 <= $i$$inline_420$$ && $parent$$inline_419_targetsMap$$inline_418$$.$remaining_$;$i$$inline_420$$--) {
-        $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.currentTarget = $ancestors$$inline_416_current$$inline_421$$[$i$$inline_420$$], $oldEvent$$inline_414_rv$$inline_415$$ &= $goog$events$fireListeners_$$($parent$$inline_419_targetsMap$$inline_418$$, $ancestors$$inline_416_current$$inline_421$$[$i$$inline_420$$], $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.type, $JSCompiler_alias_TRUE$$, $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$) && $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.$returnValue_$ != 
+      $parent$$inline_423_targetsMap$$inline_422$$ = $map$$inline_417$$[$JSCompiler_alias_TRUE$$];
+      $parent$$inline_423_targetsMap$$inline_422$$.$remaining_$ = $parent$$inline_423_targetsMap$$inline_422$$.$count_$;
+      for(var $i$$inline_424$$ = $ancestors$$inline_420_current$$inline_425$$.length - 1;!$JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.$propagationStopped_$ && 0 <= $i$$inline_424$$ && $parent$$inline_423_targetsMap$$inline_422$$.$remaining_$;$i$$inline_424$$--) {
+        $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.currentTarget = $ancestors$$inline_420_current$$inline_425$$[$i$$inline_424$$], $oldEvent$$inline_418_rv$$inline_419$$ &= $goog$events$fireListeners_$$($parent$$inline_423_targetsMap$$inline_422$$, $ancestors$$inline_420_current$$inline_425$$[$i$$inline_424$$], $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.type, $JSCompiler_alias_TRUE$$, $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$) && $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.$returnValue_$ != 
         $JSCompiler_alias_FALSE$$
       }
     }
-    if($JSCompiler_alias_FALSE$$ in $map$$inline_413$$) {
-      if($parent$$inline_419_targetsMap$$inline_418$$ = $map$$inline_413$$[$JSCompiler_alias_FALSE$$], $parent$$inline_419_targetsMap$$inline_418$$.$remaining_$ = $parent$$inline_419_targetsMap$$inline_418$$.$count_$, $hasCapture$$inline_417_type$$inline_412$$) {
-        for($i$$inline_420$$ = 0;!$JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.$propagationStopped_$ && $i$$inline_420$$ < $ancestors$$inline_416_current$$inline_421$$.length && $parent$$inline_419_targetsMap$$inline_418$$.$remaining_$;$i$$inline_420$$++) {
-          $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.currentTarget = $ancestors$$inline_416_current$$inline_421$$[$i$$inline_420$$], $oldEvent$$inline_414_rv$$inline_415$$ &= $goog$events$fireListeners_$$($parent$$inline_419_targetsMap$$inline_418$$, $ancestors$$inline_416_current$$inline_421$$[$i$$inline_420$$], $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.type, $JSCompiler_alias_FALSE$$, $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$) && $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.$returnValue_$ != 
+    if($JSCompiler_alias_FALSE$$ in $map$$inline_417$$) {
+      if($parent$$inline_423_targetsMap$$inline_422$$ = $map$$inline_417$$[$JSCompiler_alias_FALSE$$], $parent$$inline_423_targetsMap$$inline_422$$.$remaining_$ = $parent$$inline_423_targetsMap$$inline_422$$.$count_$, $hasCapture$$inline_421_type$$inline_416$$) {
+        for($i$$inline_424$$ = 0;!$JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.$propagationStopped_$ && $i$$inline_424$$ < $ancestors$$inline_420_current$$inline_425$$.length && $parent$$inline_423_targetsMap$$inline_422$$.$remaining_$;$i$$inline_424$$++) {
+          $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.currentTarget = $ancestors$$inline_420_current$$inline_425$$[$i$$inline_424$$], $oldEvent$$inline_418_rv$$inline_419$$ &= $goog$events$fireListeners_$$($parent$$inline_423_targetsMap$$inline_422$$, $ancestors$$inline_420_current$$inline_425$$[$i$$inline_424$$], $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.type, $JSCompiler_alias_FALSE$$, $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$) && $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.$returnValue_$ != 
           $JSCompiler_alias_FALSE$$
         }
       }else {
-        for($ancestors$$inline_416_current$$inline_421$$ = this;!$JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.$propagationStopped_$ && $ancestors$$inline_416_current$$inline_421$$ && $parent$$inline_419_targetsMap$$inline_418$$.$remaining_$;$ancestors$$inline_416_current$$inline_421$$ = $ancestors$$inline_416_current$$inline_421$$.$parentEventTarget_$) {
-          $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.currentTarget = $ancestors$$inline_416_current$$inline_421$$, $oldEvent$$inline_414_rv$$inline_415$$ &= $goog$events$fireListeners_$$($parent$$inline_419_targetsMap$$inline_418$$, $ancestors$$inline_416_current$$inline_421$$, $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.type, $JSCompiler_alias_FALSE$$, $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$) && $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$.$returnValue_$ != $JSCompiler_alias_FALSE$$
+        for($ancestors$$inline_420_current$$inline_425$$ = this;!$JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.$propagationStopped_$ && $ancestors$$inline_420_current$$inline_425$$ && $parent$$inline_423_targetsMap$$inline_422$$.$remaining_$;$ancestors$$inline_420_current$$inline_425$$ = $ancestors$$inline_420_current$$inline_425$$.$parentEventTarget_$) {
+          $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.currentTarget = $ancestors$$inline_420_current$$inline_425$$, $oldEvent$$inline_418_rv$$inline_419$$ &= $goog$events$fireListeners_$$($parent$$inline_423_targetsMap$$inline_422$$, $ancestors$$inline_420_current$$inline_425$$, $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.type, $JSCompiler_alias_FALSE$$, $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$) && $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$.$returnValue_$ != $JSCompiler_alias_FALSE$$
         }
       }
     }
-    $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$ = Boolean($oldEvent$$inline_414_rv$$inline_415$$)
+    $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$ = Boolean($oldEvent$$inline_418_rv$$inline_419$$)
   }else {
-    $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$ = $JSCompiler_alias_TRUE$$
+    $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$ = $JSCompiler_alias_TRUE$$
   }
-  return $JSCompiler_inline_result$$28_e$$23_e$$inline_411$$
+  return $JSCompiler_inline_result$$32_e$$23_e$$inline_415$$
 };
 function $goog$math$Box$$($top$$3$$, $right$$6$$, $bottom$$2$$, $left$$6$$) {
   this.top = $top$$3$$;
@@ -1473,23 +1473,23 @@ function $goog$style$getOffsetParent$$($element$$43_parent$$19$$) {
   return $JSCompiler_alias_NULL$$
 }
 function $goog$style$getPageOffset$$($el$$8_scrollCoord_vpBox$$) {
-  var $box$$7_doc$$inline_425$$, $doc$$28$$ = $goog$dom$getOwnerDocument$$($el$$8_scrollCoord_vpBox$$), $positionStyle$$1$$ = $goog$style$getStyle_$$($el$$8_scrollCoord_vpBox$$, "position"), $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $goog$userAgent$GECKO$$ && $doc$$28$$.getBoxObjectFor && !$el$$8_scrollCoord_vpBox$$.getBoundingClientRect && "absolute" == $positionStyle$$1$$ && ($box$$7_doc$$inline_425$$ = $doc$$28$$.getBoxObjectFor($el$$8_scrollCoord_vpBox$$)) && (0 > $box$$7_doc$$inline_425$$.screenX || 
-  0 > $box$$7_doc$$inline_425$$.screenY), $pos$$2$$ = new $goog$math$Coordinate$$(0, 0), $JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$;
-  $box$$7_doc$$inline_425$$ = $doc$$28$$ ? $goog$dom$getOwnerDocument$$($doc$$28$$) : document;
-  if($JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$ = $goog$userAgent$IE$$) {
-    if($JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$ = !$goog$userAgent$isDocumentMode$$(9)) {
-      $goog$dom$getDomHelper$$($box$$7_doc$$inline_425$$), $JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$ = $JSCompiler_alias_FALSE$$
+  var $box$$7_doc$$inline_429$$, $doc$$28$$ = $goog$dom$getOwnerDocument$$($el$$8_scrollCoord_vpBox$$), $positionStyle$$1$$ = $goog$style$getStyle_$$($el$$8_scrollCoord_vpBox$$, "position"), $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $goog$userAgent$GECKO$$ && $doc$$28$$.getBoxObjectFor && !$el$$8_scrollCoord_vpBox$$.getBoundingClientRect && "absolute" == $positionStyle$$1$$ && ($box$$7_doc$$inline_429$$ = $doc$$28$$.getBoxObjectFor($el$$8_scrollCoord_vpBox$$)) && (0 > $box$$7_doc$$inline_429$$.screenX || 
+  0 > $box$$7_doc$$inline_429$$.screenY), $pos$$2$$ = new $goog$math$Coordinate$$(0, 0), $JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$;
+  $box$$7_doc$$inline_429$$ = $doc$$28$$ ? $goog$dom$getOwnerDocument$$($doc$$28$$) : document;
+  if($JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$ = $goog$userAgent$IE$$) {
+    if($JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$ = !$goog$userAgent$isDocumentMode$$(9)) {
+      $goog$dom$getDomHelper$$($box$$7_doc$$inline_429$$), $JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$ = $JSCompiler_alias_FALSE$$
     }
   }
-  $JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$ = $JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$ ? $box$$7_doc$$inline_425$$.body : $box$$7_doc$$inline_425$$.documentElement;
-  if($el$$8_scrollCoord_vpBox$$ == $JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$) {
+  $JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$ = $JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$ ? $box$$7_doc$$inline_429$$.body : $box$$7_doc$$inline_429$$.documentElement;
+  if($el$$8_scrollCoord_vpBox$$ == $JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$) {
     return $pos$$2$$
   }
   if($el$$8_scrollCoord_vpBox$$.getBoundingClientRect) {
-    $box$$7_doc$$inline_425$$ = $goog$style$getBoundingClientRect_$$($el$$8_scrollCoord_vpBox$$), $el$$8_scrollCoord_vpBox$$ = $JSCompiler_StaticMethods_getDocumentScroll$$($goog$dom$getDomHelper$$($doc$$28$$)), $pos$$2$$.x = $box$$7_doc$$inline_425$$.left + $el$$8_scrollCoord_vpBox$$.x, $pos$$2$$.y = $box$$7_doc$$inline_425$$.top + $el$$8_scrollCoord_vpBox$$.y
+    $box$$7_doc$$inline_429$$ = $goog$style$getBoundingClientRect_$$($el$$8_scrollCoord_vpBox$$), $el$$8_scrollCoord_vpBox$$ = $JSCompiler_StaticMethods_getDocumentScroll$$($goog$dom$getDomHelper$$($doc$$28$$)), $pos$$2$$.x = $box$$7_doc$$inline_429$$.left + $el$$8_scrollCoord_vpBox$$.x, $pos$$2$$.y = $box$$7_doc$$inline_429$$.top + $el$$8_scrollCoord_vpBox$$.y
   }else {
     if($doc$$28$$.getBoxObjectFor && !$BUGGY_GECKO_BOX_OBJECT_parent$$20$$) {
-      $box$$7_doc$$inline_425$$ = $doc$$28$$.getBoxObjectFor($el$$8_scrollCoord_vpBox$$), $el$$8_scrollCoord_vpBox$$ = $doc$$28$$.getBoxObjectFor($JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$), $pos$$2$$.x = $box$$7_doc$$inline_425$$.screenX - $el$$8_scrollCoord_vpBox$$.screenX, $pos$$2$$.y = $box$$7_doc$$inline_425$$.screenY - $el$$8_scrollCoord_vpBox$$.screenY
+      $box$$7_doc$$inline_429$$ = $doc$$28$$.getBoxObjectFor($el$$8_scrollCoord_vpBox$$), $el$$8_scrollCoord_vpBox$$ = $doc$$28$$.getBoxObjectFor($JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$), $pos$$2$$.x = $box$$7_doc$$inline_429$$.screenX - $el$$8_scrollCoord_vpBox$$.screenX, $pos$$2$$.y = $box$$7_doc$$inline_429$$.screenY - $el$$8_scrollCoord_vpBox$$.screenY
     }else {
       $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $el$$8_scrollCoord_vpBox$$;
       do {
@@ -1506,7 +1506,7 @@ function $goog$style$getPageOffset$$($el$$8_scrollCoord_vpBox$$) {
       if($goog$userAgent$OPERA$$ || $goog$userAgent$WEBKIT$$ && "absolute" == $positionStyle$$1$$) {
         $pos$$2$$.y -= $doc$$28$$.body.offsetTop
       }
-      for($BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $el$$8_scrollCoord_vpBox$$;($BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $goog$style$getOffsetParent$$($BUGGY_GECKO_BOX_OBJECT_parent$$20$$)) && $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ != $doc$$28$$.body && $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ != $JSCompiler_temp$$798_JSCompiler_temp$$799_viewportElement$$;) {
+      for($BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $el$$8_scrollCoord_vpBox$$;($BUGGY_GECKO_BOX_OBJECT_parent$$20$$ = $goog$style$getOffsetParent$$($BUGGY_GECKO_BOX_OBJECT_parent$$20$$)) && $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ != $doc$$28$$.body && $BUGGY_GECKO_BOX_OBJECT_parent$$20$$ != $JSCompiler_temp$$805_JSCompiler_temp$$806_viewportElement$$;) {
         if($pos$$2$$.x -= $BUGGY_GECKO_BOX_OBJECT_parent$$20$$.scrollLeft, !$goog$userAgent$OPERA$$ || "TR" != $BUGGY_GECKO_BOX_OBJECT_parent$$20$$.tagName) {
           $pos$$2$$.y -= $BUGGY_GECKO_BOX_OBJECT_parent$$20$$.scrollTop
         }
@@ -1519,33 +1519,33 @@ function $goog$style$getRelativePosition$$($a$$28$$, $b$$23$$) {
   var $ap$$ = $goog$style$getClientPosition$$($a$$28$$), $bp$$ = $goog$style$getClientPosition$$($b$$23$$);
   return new $goog$math$Coordinate$$($ap$$.x - $bp$$.x, $ap$$.y - $bp$$.y)
 }
-function $goog$style$getClientPosition$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$) {
-  var $JSCompiler_temp_const$$38_pos$$4$$ = new $goog$math$Coordinate$$;
-  if(1 == $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.nodeType) {
-    if($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.getBoundingClientRect) {
-      var $box$$8_scrollCoord$$1$$ = $goog$style$getBoundingClientRect_$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$);
-      $JSCompiler_temp_const$$38_pos$$4$$.x = $box$$8_scrollCoord$$1$$.left;
-      $JSCompiler_temp_const$$38_pos$$4$$.y = $box$$8_scrollCoord$$1$$.top
+function $goog$style$getClientPosition$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$) {
+  var $JSCompiler_temp_const$$42_pos$$4$$ = new $goog$math$Coordinate$$;
+  if(1 == $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.nodeType) {
+    if($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.getBoundingClientRect) {
+      var $box$$8_scrollCoord$$1$$ = $goog$style$getBoundingClientRect_$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$);
+      $JSCompiler_temp_const$$42_pos$$4$$.x = $box$$8_scrollCoord$$1$$.left;
+      $JSCompiler_temp_const$$42_pos$$4$$.y = $box$$8_scrollCoord$$1$$.top
     }else {
-      var $box$$8_scrollCoord$$1$$ = $JSCompiler_StaticMethods_getDocumentScroll$$($goog$dom$getDomHelper$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$)), $pageCoord$$ = $goog$style$getPageOffset$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$);
-      $JSCompiler_temp_const$$38_pos$$4$$.x = $pageCoord$$.x - $box$$8_scrollCoord$$1$$.x;
-      $JSCompiler_temp_const$$38_pos$$4$$.y = $pageCoord$$.y - $box$$8_scrollCoord$$1$$.y
+      var $box$$8_scrollCoord$$1$$ = $JSCompiler_StaticMethods_getDocumentScroll$$($goog$dom$getDomHelper$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$)), $pageCoord$$ = $goog$style$getPageOffset$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$);
+      $JSCompiler_temp_const$$42_pos$$4$$.x = $pageCoord$$.x - $box$$8_scrollCoord$$1$$.x;
+      $JSCompiler_temp_const$$42_pos$$4$$.y = $pageCoord$$.y - $box$$8_scrollCoord$$1$$.y
     }
     if($goog$userAgent$GECKO$$ && !$goog$userAgent$isVersion$$(12)) {
-      var $isAbstractedEvent_property$$inline_428$$;
-      $goog$userAgent$IE$$ ? $isAbstractedEvent_property$$inline_428$$ = "-ms-transform" : $goog$userAgent$WEBKIT$$ ? $isAbstractedEvent_property$$inline_428$$ = "-webkit-transform" : $goog$userAgent$OPERA$$ ? $isAbstractedEvent_property$$inline_428$$ = "-o-transform" : $goog$userAgent$GECKO$$ && ($isAbstractedEvent_property$$inline_428$$ = "-moz-transform");
-      var $targetEvent_transform$$inline_429$$;
-      $isAbstractedEvent_property$$inline_428$$ && ($targetEvent_transform$$inline_429$$ = $goog$style$getStyle_$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$, $isAbstractedEvent_property$$inline_428$$));
-      $targetEvent_transform$$inline_429$$ || ($targetEvent_transform$$inline_429$$ = $goog$style$getStyle_$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$, "transform"));
-      $targetEvent_transform$$inline_429$$ ? ($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$ = $targetEvent_transform$$inline_429$$.match($goog$style$MATRIX_TRANSLATION_REGEX_$$), $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$ = !$JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$ ? new $goog$math$Coordinate$$(0, 0) : new $goog$math$Coordinate$$(parseFloat($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$[1]), parseFloat($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$[2]))) : 
-      $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$ = new $goog$math$Coordinate$$(0, 0);
-      $JSCompiler_temp_const$$38_pos$$4$$ = new $goog$math$Coordinate$$($JSCompiler_temp_const$$38_pos$$4$$.x + $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.x, $JSCompiler_temp_const$$38_pos$$4$$.y + $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.y)
+      var $isAbstractedEvent_property$$inline_432$$;
+      $goog$userAgent$IE$$ ? $isAbstractedEvent_property$$inline_432$$ = "-ms-transform" : $goog$userAgent$WEBKIT$$ ? $isAbstractedEvent_property$$inline_432$$ = "-webkit-transform" : $goog$userAgent$OPERA$$ ? $isAbstractedEvent_property$$inline_432$$ = "-o-transform" : $goog$userAgent$GECKO$$ && ($isAbstractedEvent_property$$inline_432$$ = "-moz-transform");
+      var $targetEvent_transform$$inline_433$$;
+      $isAbstractedEvent_property$$inline_432$$ && ($targetEvent_transform$$inline_433$$ = $goog$style$getStyle_$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$, $isAbstractedEvent_property$$inline_432$$));
+      $targetEvent_transform$$inline_433$$ || ($targetEvent_transform$$inline_433$$ = $goog$style$getStyle_$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$, "transform"));
+      $targetEvent_transform$$inline_433$$ ? ($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$ = $targetEvent_transform$$inline_433$$.match($goog$style$MATRIX_TRANSLATION_REGEX_$$), $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$ = !$JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$ ? new $goog$math$Coordinate$$(0, 0) : new $goog$math$Coordinate$$(parseFloat($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$[1]), parseFloat($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$[2]))) : 
+      $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$ = new $goog$math$Coordinate$$(0, 0);
+      $JSCompiler_temp_const$$42_pos$$4$$ = new $goog$math$Coordinate$$($JSCompiler_temp_const$$42_pos$$4$$.x + $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.x, $JSCompiler_temp_const$$42_pos$$4$$.y + $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.y)
     }
   }else {
-    $isAbstractedEvent_property$$inline_428$$ = $goog$isFunction$$($JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.$getBrowserEvent$), $targetEvent_transform$$inline_429$$ = $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$, $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.targetTouches ? $targetEvent_transform$$inline_429$$ = $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.targetTouches[0] : $isAbstractedEvent_property$$inline_428$$ && $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.$event_$.targetTouches && 
-    ($targetEvent_transform$$inline_429$$ = $JSCompiler_inline_result$$39_el$$12_matches$$inline_430$$.$event_$.targetTouches[0]), $JSCompiler_temp_const$$38_pos$$4$$.x = $targetEvent_transform$$inline_429$$.clientX, $JSCompiler_temp_const$$38_pos$$4$$.y = $targetEvent_transform$$inline_429$$.clientY
+    $isAbstractedEvent_property$$inline_432$$ = $goog$isFunction$$($JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.$getBrowserEvent$), $targetEvent_transform$$inline_433$$ = $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$, $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.targetTouches ? $targetEvent_transform$$inline_433$$ = $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.targetTouches[0] : $isAbstractedEvent_property$$inline_432$$ && $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.$event_$.targetTouches && 
+    ($targetEvent_transform$$inline_433$$ = $JSCompiler_inline_result$$43_el$$12_matches$$inline_434$$.$event_$.targetTouches[0]), $JSCompiler_temp_const$$42_pos$$4$$.x = $targetEvent_transform$$inline_433$$.clientX, $JSCompiler_temp_const$$42_pos$$4$$.y = $targetEvent_transform$$inline_433$$.clientY
   }
-  return $JSCompiler_temp_const$$38_pos$$4$$
+  return $JSCompiler_temp_const$$42_pos$$4$$
 }
 function $goog$style$setSize$$($element$$47$$, $w$$6$$, $h$$5_opt_h$$) {
   $w$$6$$ instanceof $goog$math$Size$$ ? ($h$$5_opt_h$$ = $w$$6$$.height, $w$$6$$ = $w$$6$$.width) : $h$$5_opt_h$$ == $JSCompiler_alias_VOID$$ && $JSCompiler_alias_THROW$$(Error("missing height argument"));
@@ -1664,35 +1664,35 @@ function $JSCompiler_StaticMethods_isRightToLeft_$$($JSCompiler_StaticMethods_is
   $goog$isDef$$($JSCompiler_StaticMethods_isRightToLeft_$self$$.$rightToLeft_$) || ($JSCompiler_StaticMethods_isRightToLeft_$self$$.$rightToLeft_$ = $goog$style$isRightToLeft$$($JSCompiler_StaticMethods_isRightToLeft_$self$$.target));
   return $JSCompiler_StaticMethods_isRightToLeft_$self$$.$rightToLeft_$
 }
-$JSCompiler_prototypeAlias$$.$startDrag$ = function $$JSCompiler_prototypeAlias$$$$startDrag$$($JSCompiler_temp$$51_e$$25_element$$inline_447$$) {
-  var $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ = "mousedown" == $JSCompiler_temp$$51_e$$25_element$$inline_447$$.type;
-  if(this.$enabled_$ && !this.$dragging_$ && (!$doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ || $JSCompiler_StaticMethods_isMouseActionButton$$($JSCompiler_temp$$51_e$$25_element$$inline_447$$))) {
-    $JSCompiler_StaticMethods_maybeReinitTouchEvent_$$($JSCompiler_temp$$51_e$$25_element$$inline_447$$);
+$JSCompiler_prototypeAlias$$.$startDrag$ = function $$JSCompiler_prototypeAlias$$$$startDrag$$($JSCompiler_temp$$55_e$$25_element$$inline_451$$) {
+  var $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ = "mousedown" == $JSCompiler_temp$$55_e$$25_element$$inline_451$$.type;
+  if(this.$enabled_$ && !this.$dragging_$ && (!$doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ || $JSCompiler_StaticMethods_isMouseActionButton$$($JSCompiler_temp$$55_e$$25_element$$inline_451$$))) {
+    $JSCompiler_StaticMethods_maybeReinitTouchEvent_$$($JSCompiler_temp$$55_e$$25_element$$inline_451$$);
     if(0 == this.$hysteresisDistanceSquared_$) {
-      if(this.dispatchEvent(new $goog$fx$DragEvent$$("start", this, $JSCompiler_temp$$51_e$$25_element$$inline_447$$.clientX, $JSCompiler_temp$$51_e$$25_element$$inline_447$$.clientY, $JSCompiler_temp$$51_e$$25_element$$inline_447$$))) {
-        this.$dragging_$ = $JSCompiler_alias_TRUE$$, $JSCompiler_temp$$51_e$$25_element$$inline_447$$.preventDefault()
+      if(this.dispatchEvent(new $goog$fx$DragEvent$$("start", this, $JSCompiler_temp$$55_e$$25_element$$inline_451$$.clientX, $JSCompiler_temp$$55_e$$25_element$$inline_451$$.clientY, $JSCompiler_temp$$55_e$$25_element$$inline_451$$))) {
+        this.$dragging_$ = $JSCompiler_alias_TRUE$$, $JSCompiler_temp$$55_e$$25_element$$inline_451$$.preventDefault()
       }else {
         return
       }
     }else {
-      $JSCompiler_temp$$51_e$$25_element$$inline_447$$.preventDefault()
+      $JSCompiler_temp$$55_e$$25_element$$inline_451$$.preventDefault()
     }
-    var $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ = this.$document_$, $bestParent$$inline_449_docEl$$inline_444$$ = $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$.documentElement, $borderWidths$$inline_450_useCapture$$inline_445$$ = !$goog$fx$Dragger$HAS_SET_CAPTURE_$$;
-    $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$, ["touchmove", "mousemove"], this.$handleMove_$, $borderWidths$$inline_450_useCapture$$inline_445$$);
-    $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$, ["touchend", "mouseup"], this.$endDrag$, $borderWidths$$inline_450_useCapture$$inline_445$$);
-    $goog$fx$Dragger$HAS_SET_CAPTURE_$$ ? ($bestParent$$inline_449_docEl$$inline_444$$.setCapture($JSCompiler_alias_FALSE$$), $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $bestParent$$inline_449_docEl$$inline_444$$, "losecapture", this.$endDrag$)) : $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ ? $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$.parentWindow || $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$.defaultView : 
+    var $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ = this.$document_$, $bestParent$$inline_453_docEl$$inline_448$$ = $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$.documentElement, $borderWidths$$inline_454_useCapture$$inline_449$$ = !$goog$fx$Dragger$HAS_SET_CAPTURE_$$;
+    $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$, ["touchmove", "mousemove"], this.$handleMove_$, $borderWidths$$inline_454_useCapture$$inline_449$$);
+    $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$, ["touchend", "mouseup"], this.$endDrag$, $borderWidths$$inline_454_useCapture$$inline_449$$);
+    $goog$fx$Dragger$HAS_SET_CAPTURE_$$ ? ($bestParent$$inline_453_docEl$$inline_448$$.setCapture($JSCompiler_alias_FALSE$$), $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $bestParent$$inline_453_docEl$$inline_448$$, "losecapture", this.$endDrag$)) : $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ ? $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$.parentWindow || $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$.defaultView : 
     window, "blur", this.$endDrag$);
-    $goog$userAgent$IE$$ && this.$ieDragStartCancellingOn_$ && $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$, "dragstart", $goog$events$Event$preventDefault$$);
-    this.$scrollTarget_$ && $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, this.$scrollTarget_$, "scroll", this.$onScroll_$, $borderWidths$$inline_450_useCapture$$inline_445$$);
-    this.clientX = this.$startX$ = $JSCompiler_temp$$51_e$$25_element$$inline_447$$.clientX;
-    this.clientY = this.$startY$ = $JSCompiler_temp$$51_e$$25_element$$inline_447$$.clientY;
-    this.screenX = $JSCompiler_temp$$51_e$$25_element$$inline_447$$.screenX;
-    this.screenY = $JSCompiler_temp$$51_e$$25_element$$inline_447$$.screenY;
-    this.$useRightPositioningForRtl_$ ? ($JSCompiler_temp$$51_e$$25_element$$inline_447$$ = this.target, $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ = $JSCompiler_temp$$51_e$$25_element$$inline_447$$.offsetLeft, $bestParent$$inline_449_docEl$$inline_444$$ = $JSCompiler_temp$$51_e$$25_element$$inline_447$$.offsetParent, !$bestParent$$inline_449_docEl$$inline_444$$ && "fixed" == $goog$style$getStyle_$$($JSCompiler_temp$$51_e$$25_element$$inline_447$$, "position") && ($bestParent$$inline_449_docEl$$inline_444$$ = 
-    $goog$dom$getOwnerDocument$$($JSCompiler_temp$$51_e$$25_element$$inline_447$$).documentElement), $bestParent$$inline_449_docEl$$inline_444$$ ? ($goog$userAgent$GECKO$$ ? ($borderWidths$$inline_450_useCapture$$inline_445$$ = $goog$style$getBorderBox$$($bestParent$$inline_449_docEl$$inline_444$$), $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ += $borderWidths$$inline_450_useCapture$$inline_445$$.left) : $goog$userAgent$isDocumentMode$$(8) && ($borderWidths$$inline_450_useCapture$$inline_445$$ = 
-    $goog$style$getBorderBox$$($bestParent$$inline_449_docEl$$inline_444$$), $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ -= $borderWidths$$inline_450_useCapture$$inline_445$$.left), $JSCompiler_temp$$51_e$$25_element$$inline_447$$ = $goog$style$isRightToLeft$$($bestParent$$inline_449_docEl$$inline_444$$) ? $bestParent$$inline_449_docEl$$inline_444$$.clientWidth - ($doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$ + $JSCompiler_temp$$51_e$$25_element$$inline_447$$.offsetWidth) : 
-    $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$) : $JSCompiler_temp$$51_e$$25_element$$inline_447$$ = $doc$$inline_443_isMouseDown_offsetLeftForReal$$inline_448$$) : $JSCompiler_temp$$51_e$$25_element$$inline_447$$ = this.target.offsetLeft;
-    this.$deltaX$ = $JSCompiler_temp$$51_e$$25_element$$inline_447$$;
+    $goog$userAgent$IE$$ && this.$ieDragStartCancellingOn_$ && $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$, "dragstart", $goog$events$Event$preventDefault$$);
+    this.$scrollTarget_$ && $JSCompiler_StaticMethods_listen$$(this.$eventHandler_$, this.$scrollTarget_$, "scroll", this.$onScroll_$, $borderWidths$$inline_454_useCapture$$inline_449$$);
+    this.clientX = this.$startX$ = $JSCompiler_temp$$55_e$$25_element$$inline_451$$.clientX;
+    this.clientY = this.$startY$ = $JSCompiler_temp$$55_e$$25_element$$inline_451$$.clientY;
+    this.screenX = $JSCompiler_temp$$55_e$$25_element$$inline_451$$.screenX;
+    this.screenY = $JSCompiler_temp$$55_e$$25_element$$inline_451$$.screenY;
+    this.$useRightPositioningForRtl_$ ? ($JSCompiler_temp$$55_e$$25_element$$inline_451$$ = this.target, $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ = $JSCompiler_temp$$55_e$$25_element$$inline_451$$.offsetLeft, $bestParent$$inline_453_docEl$$inline_448$$ = $JSCompiler_temp$$55_e$$25_element$$inline_451$$.offsetParent, !$bestParent$$inline_453_docEl$$inline_448$$ && "fixed" == $goog$style$getStyle_$$($JSCompiler_temp$$55_e$$25_element$$inline_451$$, "position") && ($bestParent$$inline_453_docEl$$inline_448$$ = 
+    $goog$dom$getOwnerDocument$$($JSCompiler_temp$$55_e$$25_element$$inline_451$$).documentElement), $bestParent$$inline_453_docEl$$inline_448$$ ? ($goog$userAgent$GECKO$$ ? ($borderWidths$$inline_454_useCapture$$inline_449$$ = $goog$style$getBorderBox$$($bestParent$$inline_453_docEl$$inline_448$$), $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ += $borderWidths$$inline_454_useCapture$$inline_449$$.left) : $goog$userAgent$isDocumentMode$$(8) && ($borderWidths$$inline_454_useCapture$$inline_449$$ = 
+    $goog$style$getBorderBox$$($bestParent$$inline_453_docEl$$inline_448$$), $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ -= $borderWidths$$inline_454_useCapture$$inline_449$$.left), $JSCompiler_temp$$55_e$$25_element$$inline_451$$ = $goog$style$isRightToLeft$$($bestParent$$inline_453_docEl$$inline_448$$) ? $bestParent$$inline_453_docEl$$inline_448$$.clientWidth - ($doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$ + $JSCompiler_temp$$55_e$$25_element$$inline_451$$.offsetWidth) : 
+    $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$) : $JSCompiler_temp$$55_e$$25_element$$inline_451$$ = $doc$$inline_447_isMouseDown_offsetLeftForReal$$inline_452$$) : $JSCompiler_temp$$55_e$$25_element$$inline_451$$ = this.target.offsetLeft;
+    this.$deltaX$ = $JSCompiler_temp$$55_e$$25_element$$inline_451$$;
     this.$deltaY$ = this.target.offsetTop;
     this.$pageScroll$ = $JSCompiler_StaticMethods_getDocumentScroll$$($goog$dom$getDomHelper$$(this.$document_$));
     this.$mouseDownTime_$ = $goog$now$$()
@@ -1793,7 +1793,7 @@ function $annotorious$dom$getOffset$$($el$$29$$) {
 ;function $annotorious$events$EventBroker$$() {
   this.$_handlers$ = []
 }
-$annotorious$events$EventBroker$$.prototype.$addHandler$ = function $$annotorious$events$EventBroker$$$$$addHandler$$($type$$79$$, $handler$$5$$) {
+$annotorious$events$EventBroker$$.prototype.addHandler = function $$annotorious$events$EventBroker$$$$addHandler$($type$$79$$, $handler$$5$$) {
   this.$_handlers$[$type$$79$$] || (this.$_handlers$[$type$$79$$] = []);
   this.$_handlers$[$type$$79$$].push($handler$$5$$)
 };
@@ -1801,10 +1801,10 @@ $annotorious$events$EventBroker$$.prototype.$removeHandler$ = function $$annotor
   var $handlers$$ = this.$_handlers$[$type$$80$$];
   $handlers$$ && $goog$array$remove$$($handlers$$, $handler$$6$$)
 };
-$annotorious$events$EventBroker$$.prototype.fireEvent = function $$annotorious$events$EventBroker$$$$fireEvent$($type$$81$$, $opt_event$$) {
-  var $cancelEvent$$ = $JSCompiler_alias_FALSE$$, $handlers$$1$$ = this.$_handlers$[$type$$81$$];
-  $handlers$$1$$ && $goog$array$forEach$$($handlers$$1$$, function($handler$$7_retVal$$1$$) {
-    $handler$$7_retVal$$1$$ = $handler$$7_retVal$$1$$($opt_event$$);
+$annotorious$events$EventBroker$$.prototype.fireEvent = function $$annotorious$events$EventBroker$$$$fireEvent$($handlers$$1_type$$81$$, $opt_event$$, $opt_extra$$) {
+  var $cancelEvent$$ = $JSCompiler_alias_FALSE$$;
+  ($handlers$$1_type$$81$$ = this.$_handlers$[$handlers$$1_type$$81$$]) && $goog$array$forEach$$($handlers$$1_type$$81$$, function($handler$$7_retVal$$1$$) {
+    $handler$$7_retVal$$1$$ = $handler$$7_retVal$$1$$($opt_event$$, $opt_extra$$);
     $goog$isDef$$($handler$$7_retVal$$1$$) && !$handler$$7_retVal$$1$$ && ($cancelEvent$$ = $JSCompiler_alias_TRUE$$)
   });
   return $cancelEvent$$
@@ -1812,32 +1812,32 @@ $annotorious$events$EventBroker$$.prototype.fireEvent = function $$annotorious$e
 function $goog$structs$Map$$($opt_map$$, $var_args$$68$$) {
   this.$map_$ = {};
   this.$keys_$ = [];
-  var $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$ = arguments.length;
-  if(1 < $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$) {
-    $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$ % 2 && $JSCompiler_alias_THROW$$(Error("Uneven number of arguments"));
-    for(var $i$$91_key$$inline_857_values$$inline_460$$ = 0;$i$$91_key$$inline_857_values$$inline_460$$ < $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$;$i$$91_key$$inline_857_values$$inline_460$$ += 2) {
-      this.set(arguments[$i$$91_key$$inline_857_values$$inline_460$$], arguments[$i$$91_key$$inline_857_values$$inline_460$$ + 1])
+  var $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$ = arguments.length;
+  if(1 < $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$) {
+    $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$ % 2 && $JSCompiler_alias_THROW$$(Error("Uneven number of arguments"));
+    for(var $i$$91_key$$inline_864_values$$inline_464$$ = 0;$i$$91_key$$inline_864_values$$inline_464$$ < $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$;$i$$91_key$$inline_864_values$$inline_464$$ += 2) {
+      this.set(arguments[$i$$91_key$$inline_864_values$$inline_464$$], arguments[$i$$91_key$$inline_864_values$$inline_464$$ + 1])
     }
   }else {
     if($opt_map$$) {
-      var $key$$inline_852_keys$$inline_459$$;
+      var $key$$inline_859_keys$$inline_463$$;
       if($opt_map$$ instanceof $goog$structs$Map$$) {
-        $JSCompiler_StaticMethods_cleanupKeysArray_$$($opt_map$$), $key$$inline_852_keys$$inline_459$$ = $opt_map$$.$keys_$.concat(), $i$$91_key$$inline_857_values$$inline_460$$ = $JSCompiler_StaticMethods_getValues$$($opt_map$$)
+        $JSCompiler_StaticMethods_cleanupKeysArray_$$($opt_map$$), $key$$inline_859_keys$$inline_463$$ = $opt_map$$.$keys_$.concat(), $i$$91_key$$inline_864_values$$inline_464$$ = $JSCompiler_StaticMethods_getValues$$($opt_map$$)
       }else {
-        var $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$ = [], $i$$inline_851_i$$inline_856$$ = 0;
-        for($key$$inline_852_keys$$inline_459$$ in $opt_map$$) {
-          $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$[$i$$inline_851_i$$inline_856$$++] = $key$$inline_852_keys$$inline_459$$
+        var $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$ = [], $i$$inline_858_i$$inline_863$$ = 0;
+        for($key$$inline_859_keys$$inline_463$$ in $opt_map$$) {
+          $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$[$i$$inline_858_i$$inline_863$$++] = $key$$inline_859_keys$$inline_463$$
         }
-        $key$$inline_852_keys$$inline_459$$ = $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$;
-        $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$ = [];
-        $i$$inline_851_i$$inline_856$$ = 0;
-        for($i$$91_key$$inline_857_values$$inline_460$$ in $opt_map$$) {
-          $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$[$i$$inline_851_i$$inline_856$$++] = $opt_map$$[$i$$91_key$$inline_857_values$$inline_460$$]
+        $key$$inline_859_keys$$inline_463$$ = $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$;
+        $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$ = [];
+        $i$$inline_858_i$$inline_863$$ = 0;
+        for($i$$91_key$$inline_864_values$$inline_464$$ in $opt_map$$) {
+          $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$[$i$$inline_858_i$$inline_863$$++] = $opt_map$$[$i$$91_key$$inline_864_values$$inline_464$$]
         }
-        $i$$91_key$$inline_857_values$$inline_460$$ = $argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$
+        $i$$91_key$$inline_864_values$$inline_464$$ = $argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$
       }
-      for($argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$ = 0;$argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$ < $key$$inline_852_keys$$inline_459$$.length;$argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$++) {
-        this.set($key$$inline_852_keys$$inline_459$$[$argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$], $i$$91_key$$inline_857_values$$inline_460$$[$argLength$$2_i$$inline_461_res$$inline_850_res$$inline_855$$])
+      for($argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$ = 0;$argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$ < $key$$inline_859_keys$$inline_463$$.length;$argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$++) {
+        this.set($key$$inline_859_keys$$inline_463$$[$argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$], $i$$91_key$$inline_864_values$$inline_464$$[$argLength$$2_i$$inline_465_res$$inline_857_res$$inline_862$$])
       }
     }
   }
@@ -1899,20 +1899,20 @@ function $annotorious$shape$geom$Polygon$computeArea$$($points$$1$$) {
   return $area$$ / 2
 }
 function $annotorious$shape$geom$Polygon$_expandTriangle$$($points$$4$$, $delta$$1$$) {
-  for(var $centroid_x$$inline_464$$, $expanded_y$$inline_465$$ = $centroid_x$$inline_464$$ = 0, $f$$inline_466_i$$101$$, $j$$inline_467_px$$inline_470$$ = $points$$4$$.length - 1, $JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ = 0;$JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ < $points$$4$$.length;$JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$++) {
-    $f$$inline_466_i$$101$$ = $points$$4$$[$JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$].x * $points$$4$$[$j$$inline_467_px$$inline_470$$].y - $points$$4$$[$j$$inline_467_px$$inline_470$$].x * $points$$4$$[$JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$].y, $centroid_x$$inline_464$$ += ($points$$4$$[$JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$].x + $points$$4$$[$j$$inline_467_px$$inline_470$$].x) * $f$$inline_466_i$$101$$, $expanded_y$$inline_465$$ += ($points$$4$$[$JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$].y + 
-    $points$$4$$[$j$$inline_467_px$$inline_470$$].y) * $f$$inline_466_i$$101$$, $j$$inline_467_px$$inline_470$$ = $JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$
+  for(var $centroid_x$$inline_468$$, $expanded_y$$inline_469$$ = $centroid_x$$inline_468$$ = 0, $f$$inline_470_i$$101$$, $j$$inline_471_px$$inline_474$$ = $points$$4$$.length - 1, $JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ = 0;$JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ < $points$$4$$.length;$JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$++) {
+    $f$$inline_470_i$$101$$ = $points$$4$$[$JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$].x * $points$$4$$[$j$$inline_471_px$$inline_474$$].y - $points$$4$$[$j$$inline_471_px$$inline_474$$].x * $points$$4$$[$JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$].y, $centroid_x$$inline_468$$ += ($points$$4$$[$JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$].x + $points$$4$$[$j$$inline_471_px$$inline_474$$].x) * $f$$inline_470_i$$101$$, $expanded_y$$inline_469$$ += ($points$$4$$[$JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$].y + 
+    $points$$4$$[$j$$inline_471_px$$inline_474$$].y) * $f$$inline_470_i$$101$$, $j$$inline_471_px$$inline_474$$ = $JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$
   }
-  $f$$inline_466_i$$101$$ = 6 * $annotorious$shape$geom$Polygon$computeArea$$($points$$4$$);
-  $centroid_x$$inline_464$$ = new $annotorious$shape$geom$Point$$(Math.abs($centroid_x$$inline_464$$ / $f$$inline_466_i$$101$$), Math.abs($expanded_y$$inline_465$$ / $f$$inline_466_i$$101$$));
-  $expanded_y$$inline_465$$ = [];
-  for($f$$inline_466_i$$101$$ = 0;$f$$inline_466_i$$101$$ < $points$$4$$.length;$f$$inline_466_i$$101$$++) {
-    var $j$$inline_467_px$$inline_470$$ = $points$$4$$[$f$$inline_466_i$$101$$], $delta$$inline_472_dy$$inline_476$$ = (0 > $annotorious$shape$geom$Polygon$computeArea$$($points$$4$$) ? -1 : 1) * $delta$$1$$, $JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ = $j$$inline_467_px$$inline_470$$.x - $centroid_x$$inline_464$$.x, $JSCompiler_object_inline_y_1$$inline_474$$ = $j$$inline_467_px$$inline_470$$.y - $centroid_x$$inline_464$$.y, $sign_delta$$inline_475$$ = 0 < $delta$$inline_472_dy$$inline_476$$ ? 
-    1 : 0 > $delta$$inline_472_dy$$inline_476$$ ? -1 : 0, $delta$$inline_472_dy$$inline_476$$ = Math.sqrt(Math.pow($delta$$inline_472_dy$$inline_476$$, 2) / (1 + Math.pow($JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ / $JSCompiler_object_inline_y_1$$inline_474$$, 2)));
-    $expanded_y$$inline_465$$.push({x:$j$$inline_467_px$$inline_470$$.x + Math.abs($JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ / $JSCompiler_object_inline_y_1$$inline_474$$ * $delta$$inline_472_dy$$inline_476$$) * (0 < $JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ ? 1 : 0 > $JSCompiler_object_inline_x_0$$inline_473_i$$inline_468$$ ? -1 : 0) * $sign_delta$$inline_475$$, y:$j$$inline_467_px$$inline_470$$.y + Math.abs($delta$$inline_472_dy$$inline_476$$) * (0 < $JSCompiler_object_inline_y_1$$inline_474$$ ? 
-    1 : 0 > $JSCompiler_object_inline_y_1$$inline_474$$ ? -1 : 0) * $sign_delta$$inline_475$$})
+  $f$$inline_470_i$$101$$ = 6 * $annotorious$shape$geom$Polygon$computeArea$$($points$$4$$);
+  $centroid_x$$inline_468$$ = new $annotorious$shape$geom$Point$$(Math.abs($centroid_x$$inline_468$$ / $f$$inline_470_i$$101$$), Math.abs($expanded_y$$inline_469$$ / $f$$inline_470_i$$101$$));
+  $expanded_y$$inline_469$$ = [];
+  for($f$$inline_470_i$$101$$ = 0;$f$$inline_470_i$$101$$ < $points$$4$$.length;$f$$inline_470_i$$101$$++) {
+    var $j$$inline_471_px$$inline_474$$ = $points$$4$$[$f$$inline_470_i$$101$$], $delta$$inline_476_dy$$inline_480$$ = (0 > $annotorious$shape$geom$Polygon$computeArea$$($points$$4$$) ? -1 : 1) * $delta$$1$$, $JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ = $j$$inline_471_px$$inline_474$$.x - $centroid_x$$inline_468$$.x, $JSCompiler_object_inline_y_1$$inline_478$$ = $j$$inline_471_px$$inline_474$$.y - $centroid_x$$inline_468$$.y, $sign_delta$$inline_479$$ = 0 < $delta$$inline_476_dy$$inline_480$$ ? 
+    1 : 0 > $delta$$inline_476_dy$$inline_480$$ ? -1 : 0, $delta$$inline_476_dy$$inline_480$$ = Math.sqrt(Math.pow($delta$$inline_476_dy$$inline_480$$, 2) / (1 + Math.pow($JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ / $JSCompiler_object_inline_y_1$$inline_478$$, 2)));
+    $expanded_y$$inline_469$$.push({x:$j$$inline_471_px$$inline_474$$.x + Math.abs($JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ / $JSCompiler_object_inline_y_1$$inline_478$$ * $delta$$inline_476_dy$$inline_480$$) * (0 < $JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ ? 1 : 0 > $JSCompiler_object_inline_x_0$$inline_477_i$$inline_472$$ ? -1 : 0) * $sign_delta$$inline_479$$, y:$j$$inline_471_px$$inline_474$$.y + Math.abs($delta$$inline_476_dy$$inline_480$$) * (0 < $JSCompiler_object_inline_y_1$$inline_478$$ ? 
+    1 : 0 > $JSCompiler_object_inline_y_1$$inline_478$$ ? -1 : 0) * $sign_delta$$inline_479$$})
   }
-  return $expanded_y$$inline_465$$
+  return $expanded_y$$inline_469$$
 }
 ;function $annotorious$shape$geom$Rectangle$$($x$$81$$, $y$$48$$, $width$$19$$, $height$$18$$) {
   0 < $width$$19$$ ? (this.x = $x$$81$$, this.width = $width$$19$$) : (this.x = $x$$81$$ + $width$$19$$, this.width = -$width$$19$$);
@@ -1939,24 +1939,24 @@ function $annotorious$shape$getBoundingRect$$($shape$$2$$) {
   }
 }
 function $annotorious$shape$expand$$($shape$$4$$, $delta$$4$$) {
-  var $JSCompiler_inline_result$$36_points$$inline_478$$;
-  $JSCompiler_inline_result$$36_points$$inline_478$$ = $shape$$4$$.geometry.points;
-  var $sign$$inline_480$$ = 0 > $annotorious$shape$geom$Polygon$computeArea$$($JSCompiler_inline_result$$36_points$$inline_478$$) ? -1 : 1;
-  if(4 > $JSCompiler_inline_result$$36_points$$inline_478$$.length) {
-    $JSCompiler_inline_result$$36_points$$inline_478$$ = $annotorious$shape$geom$Polygon$_expandTriangle$$($JSCompiler_inline_result$$36_points$$inline_478$$, $sign$$inline_480$$ * $delta$$4$$)
+  var $JSCompiler_inline_result$$40_points$$inline_482$$;
+  $JSCompiler_inline_result$$40_points$$inline_482$$ = $shape$$4$$.geometry.points;
+  var $sign$$inline_484$$ = 0 > $annotorious$shape$geom$Polygon$computeArea$$($JSCompiler_inline_result$$40_points$$inline_482$$) ? -1 : 1;
+  if(4 > $JSCompiler_inline_result$$40_points$$inline_482$$.length) {
+    $JSCompiler_inline_result$$40_points$$inline_482$$ = $annotorious$shape$geom$Polygon$_expandTriangle$$($JSCompiler_inline_result$$40_points$$inline_482$$, $sign$$inline_484$$ * $delta$$4$$)
   }else {
-    for(var $expTriangle$$inline_485_prev$$inline_481$$ = $JSCompiler_inline_result$$36_points$$inline_478$$.length - 1, $next$$inline_482$$ = 1, $expanded$$inline_483$$ = [], $current$$inline_484$$ = 0;$current$$inline_484$$ < $JSCompiler_inline_result$$36_points$$inline_478$$.length;$current$$inline_484$$++) {
-      $expTriangle$$inline_485_prev$$inline_481$$ = $annotorious$shape$geom$Polygon$_expandTriangle$$([$JSCompiler_inline_result$$36_points$$inline_478$$[$expTriangle$$inline_485_prev$$inline_481$$], $JSCompiler_inline_result$$36_points$$inline_478$$[$current$$inline_484$$], $JSCompiler_inline_result$$36_points$$inline_478$$[$next$$inline_482$$]], $sign$$inline_480$$ * $delta$$4$$), $expanded$$inline_483$$.push($expTriangle$$inline_485_prev$$inline_481$$[1]), $expTriangle$$inline_485_prev$$inline_481$$ = 
-      $current$$inline_484$$, $next$$inline_482$$++, $next$$inline_482$$ > $JSCompiler_inline_result$$36_points$$inline_478$$.length - 1 && ($next$$inline_482$$ = 0)
+    for(var $expTriangle$$inline_489_prev$$inline_485$$ = $JSCompiler_inline_result$$40_points$$inline_482$$.length - 1, $next$$inline_486$$ = 1, $expanded$$inline_487$$ = [], $current$$inline_488$$ = 0;$current$$inline_488$$ < $JSCompiler_inline_result$$40_points$$inline_482$$.length;$current$$inline_488$$++) {
+      $expTriangle$$inline_489_prev$$inline_485$$ = $annotorious$shape$geom$Polygon$_expandTriangle$$([$JSCompiler_inline_result$$40_points$$inline_482$$[$expTriangle$$inline_489_prev$$inline_485$$], $JSCompiler_inline_result$$40_points$$inline_482$$[$current$$inline_488$$], $JSCompiler_inline_result$$40_points$$inline_482$$[$next$$inline_486$$]], $sign$$inline_484$$ * $delta$$4$$), $expanded$$inline_487$$.push($expTriangle$$inline_489_prev$$inline_485$$[1]), $expTriangle$$inline_489_prev$$inline_485$$ = 
+      $current$$inline_488$$, $next$$inline_486$$++, $next$$inline_486$$ > $JSCompiler_inline_result$$40_points$$inline_482$$.length - 1 && ($next$$inline_486$$ = 0)
     }
-    $JSCompiler_inline_result$$36_points$$inline_478$$ = $expanded$$inline_483$$
+    $JSCompiler_inline_result$$40_points$$inline_482$$ = $expanded$$inline_487$$
   }
-  return new $annotorious$shape$Shape$$("polygon", new $annotorious$shape$geom$Polygon$$($JSCompiler_inline_result$$36_points$$inline_478$$), $JSCompiler_alias_FALSE$$, $shape$$4$$.style)
+  return new $annotorious$shape$Shape$$("polygon", new $annotorious$shape$geom$Polygon$$($JSCompiler_inline_result$$40_points$$inline_482$$), $JSCompiler_alias_FALSE$$, $shape$$4$$.style)
 }
 function $annotorious$shape$transform$$($shape$$5$$, $transformationFn$$) {
   if("rect" == $shape$$5$$.type) {
-    var $geom_opposite$$ = $shape$$5$$.geometry, $anchor$$ = $transformationFn$$({x:$geom_opposite$$.x, y:$geom_opposite$$.y}), $geom_opposite$$ = $transformationFn$$({x:$geom_opposite$$.x + $geom_opposite$$.width, y:$geom_opposite$$.y + $geom_opposite$$.height});
-    return new $annotorious$shape$Shape$$("rect", new $annotorious$shape$geom$Rectangle$$($anchor$$.x, $anchor$$.y, $geom_opposite$$.x - $anchor$$.x, $geom_opposite$$.y - $anchor$$.y), $JSCompiler_alias_FALSE$$, $shape$$5$$.style)
+    var $transformed$$ = $transformationFn$$($shape$$5$$.geometry);
+    return new $annotorious$shape$Shape$$("rect", $transformed$$, $JSCompiler_alias_FALSE$$, $shape$$5$$.style)
   }
   if("polygon" == $shape$$5$$.type) {
     var $transformedPoints$$ = [];
@@ -1999,7 +1999,7 @@ function $JSCompiler_StaticMethods__initAnnotator$$($JSCompiler_StaticMethods__i
   if(!$JSCompiler_StaticMethods__initAnnotator$self$$.$_annotators$.get($item_src$$)) {
     var $annotator$$1$$ = $JSCompiler_StaticMethods__initAnnotator$self$$.$newAnnotator$($item$$1$$), $addedAnnotations$$ = [], $removedAnnotations$$ = [];
     $goog$array$forEach$$($JSCompiler_StaticMethods__initAnnotator$self$$.$_eventHandlers$, function($eventHandler$$) {
-      $annotator$$1$$.$addHandler$($eventHandler$$.type, $eventHandler$$.$handler$)
+      $annotator$$1$$.addHandler($eventHandler$$.type, $eventHandler$$.$handler$)
     });
     $goog$array$forEach$$($JSCompiler_StaticMethods__initAnnotator$self$$.$_plugins$, function($plugin$$) {
       if($plugin$$.onInitAnnotator) {
@@ -2029,10 +2029,10 @@ function $JSCompiler_StaticMethods__initAnnotator$$($JSCompiler_StaticMethods__i
 function $JSCompiler_StaticMethods__lazyLoad$$($JSCompiler_StaticMethods__lazyLoad$self$$) {
   var $item$$2$$, $i$$104$$;
   for($i$$104$$ = $JSCompiler_StaticMethods__lazyLoad$self$$.$_itemsToLoad$.length;0 < $i$$104$$;$i$$104$$--) {
-    for(var $el$$inline_490$$ = $item$$2$$ = $JSCompiler_StaticMethods__lazyLoad$self$$.$_itemsToLoad$[$i$$104$$ - 1], $top$$inline_491$$ = $el$$inline_490$$.offsetTop, $left$$inline_492$$ = $el$$inline_490$$.offsetLeft, $width$$inline_493$$ = $el$$inline_490$$.offsetWidth, $height$$inline_494$$ = $el$$inline_490$$.offsetHeight;$el$$inline_490$$.offsetParent;) {
-      $el$$inline_490$$ = $el$$inline_490$$.offsetParent, $top$$inline_491$$ += $el$$inline_490$$.offsetTop, $left$$inline_492$$ += $el$$inline_490$$.offsetLeft
+    for(var $el$$inline_494$$ = $item$$2$$ = $JSCompiler_StaticMethods__lazyLoad$self$$.$_itemsToLoad$[$i$$104$$ - 1], $top$$inline_495$$ = $el$$inline_494$$.offsetTop, $left$$inline_496$$ = $el$$inline_494$$.offsetLeft, $width$$inline_497$$ = $el$$inline_494$$.offsetWidth, $height$$inline_498$$ = $el$$inline_494$$.offsetHeight;$el$$inline_494$$.offsetParent;) {
+      $el$$inline_494$$ = $el$$inline_494$$.offsetParent, $top$$inline_495$$ += $el$$inline_494$$.offsetTop, $left$$inline_496$$ += $el$$inline_494$$.offsetLeft
     }
-    $top$$inline_491$$ < window.pageYOffset + window.innerHeight && ($left$$inline_492$$ < window.pageXOffset + window.innerWidth && $top$$inline_491$$ + $height$$inline_494$$ > window.pageYOffset && $left$$inline_492$$ + $width$$inline_493$$ > window.pageXOffset) && $JSCompiler_StaticMethods__initAnnotator$$($JSCompiler_StaticMethods__lazyLoad$self$$, $item$$2$$)
+    $top$$inline_495$$ < window.pageYOffset + window.innerHeight && ($left$$inline_496$$ < window.pageXOffset + window.innerWidth && $top$$inline_495$$ + $height$$inline_498$$ > window.pageYOffset && $left$$inline_496$$ + $width$$inline_497$$ > window.pageXOffset) && $JSCompiler_StaticMethods__initAnnotator$$($JSCompiler_StaticMethods__lazyLoad$self$$, $item$$2$$)
   }
 }
 function $JSCompiler_StaticMethods__setAnnotationVisibility$$($JSCompiler_StaticMethods__setAnnotationVisibility$self$$, $opt_item_url$$, $visibility$$) {
@@ -2073,9 +2073,9 @@ $JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAl
     $annotator$$9$$ ? $annotator$$9$$.$addAnnotation$($annotation$$4$$, $opt_replace$$1$$) : (this.$_bufferedForAdding$.push($annotation$$4$$), $opt_replace$$1$$ && $goog$array$remove$$(this.$_bufferedForAdding$, $opt_replace$$1$$))
   }
 };
-$JSCompiler_prototypeAlias$$.$addHandler$ = function $$JSCompiler_prototypeAlias$$$$addHandler$$($type$$83$$, $handler$$8$$) {
+$JSCompiler_prototypeAlias$$.addHandler = function $$JSCompiler_prototypeAlias$$$addHandler$($type$$83$$, $handler$$8$$) {
   $goog$array$forEach$$($JSCompiler_StaticMethods_getValues$$(this.$_annotators$), function($annotator$$10$$) {
-    $annotator$$10$$.$addHandler$($type$$83$$, $handler$$8$$)
+    $annotator$$10$$.addHandler($type$$83$$, $handler$$8$$)
   });
   this.$_eventHandlers$.push({type:$type$$83$$, $handler$:$handler$$8$$})
 };
@@ -2092,9 +2092,9 @@ function $JSCompiler_StaticMethods_annotatesItem$$($JSCompiler_StaticMethods_ann
     return $JSCompiler_StaticMethods_annotatesItem$self$$.$getItemURL$($item$$4$$) == $item_url$$2$$
   }) != $JSCompiler_alias_NULL$$
 }
-$JSCompiler_prototypeAlias$$.$destroy$ = function $$JSCompiler_prototypeAlias$$$$destroy$$($annotator$$12_opt_item_url$$2$$) {
-  $annotator$$12_opt_item_url$$2$$ ? ($annotator$$12_opt_item_url$$2$$ = this.$_annotators$.get($annotator$$12_opt_item_url$$2$$)) && $annotator$$12_opt_item_url$$2$$.$destroy$() : ($goog$array$forEach$$($JSCompiler_StaticMethods_getValues$$(this.$_annotators$), function($annotator$$13$$) {
-    $annotator$$13$$.$destroy$()
+$JSCompiler_prototypeAlias$$.destroy = function $$JSCompiler_prototypeAlias$$$destroy$($annotator$$12_opt_item_url$$2$$) {
+  $annotator$$12_opt_item_url$$2$$ ? ($annotator$$12_opt_item_url$$2$$ = this.$_annotators$.get($annotator$$12_opt_item_url$$2$$)) && $annotator$$12_opt_item_url$$2$$.destroy() : ($goog$array$forEach$$($JSCompiler_StaticMethods_getValues$$(this.$_annotators$), function($annotator$$13$$) {
+    $annotator$$13$$.destroy()
   }), this.$_annotators$.clear())
 };
 $JSCompiler_prototypeAlias$$.$getActiveSelector$ = function $$JSCompiler_prototypeAlias$$$$getActiveSelector$$($annotator$$14_item_url$$3$$) {
@@ -2160,7 +2160,7 @@ $JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototyp
 $JSCompiler_prototypeAlias$$.$setActiveSelector$ = function $$JSCompiler_prototypeAlias$$$$setActiveSelector$$($item_url$$5$$, $selector$$3$$) {
   if($JSCompiler_StaticMethods_annotatesItem$$(this, $item_url$$5$$)) {
     var $annotator$$21$$ = this.$_annotators$.get($item_url$$5$$);
-    $annotator$$21$$ && $annotator$$21$$.$setActiveSelector$($selector$$3$$)
+    $annotator$$21$$ && $annotator$$21$$.$setCurrentSelector$($selector$$3$$)
   }
 };
 $JSCompiler_prototypeAlias$$.$setProperties$ = function $$JSCompiler_prototypeAlias$$$$setProperties$$($props$$1$$) {
@@ -2235,7 +2235,7 @@ hr:2, html:49, i:0, iframe:20, img:2, input:2, ins:0, isindex:18, kbd:0, label:0
 /&([^a-z#]|#(?:[^0-9x]|x(?:[^0-9a-f]|$)|$)|$)/gi, $goog$string$html$HtmlParser$LT_RE_$$ = /</g, $goog$string$html$HtmlParser$GT_RE_$$ = />/g, $goog$string$html$HtmlParser$QUOTE_RE_$$ = /\"/g, $goog$string$html$HtmlParser$EQUALS_RE_$$ = /=/g, $goog$string$html$HtmlParser$NULL_RE_$$ = /\0/g, $goog$string$html$HtmlParser$ENTITY_RE_$$ = /&(#\d+|#x[0-9A-Fa-f]+|\w+);/g, $goog$string$html$HtmlParser$DECIMAL_ESCAPE_RE_$$ = /^#(\d+)$/, $goog$string$html$HtmlParser$HEX_ESCAPE_RE_$$ = /^#x([0-9A-Fa-f]+)$/, 
 $goog$string$html$HtmlParser$INSIDE_TAG_TOKEN_$$ = RegExp("^\\s*(?:(?:([a-z][a-z-]*)(\\s*=\\s*(\"[^\"]*\"|'[^']*'|(?=[a-z][a-z-]*\\s*=)|[^>\"'\\s]*))?)|(/?>)|[^a-z\\s>]+)", "i"), $goog$string$html$HtmlParser$OUTSIDE_TAG_TOKEN_$$ = RegExp("^(?:&(\\#[0-9]+|\\#[x][0-9a-f]+|\\w+);|<[!]--[\\s\\S]*?--\>|<!\\w[^>]*>|<\\?[^>*]*>|<(/)?([a-z][a-z0-9]*)|([^<&>]+)|([<&>]))", "i");
 $goog$string$html$HtmlParser$$.prototype.parse = function $$goog$string$html$HtmlParser$$$$parse$($handler$$9$$, $htmlText$$) {
-  var $htmlLower_i$$inline_505$$ = $JSCompiler_alias_NULL$$, $dataEnd_inTag$$1$$ = $JSCompiler_alias_FALSE$$, $attribs$$ = [], $tagName$$6$$, $eflags$$, $openTag$$;
+  var $htmlLower_i$$inline_509$$ = $JSCompiler_alias_NULL$$, $dataEnd_inTag$$1$$ = $JSCompiler_alias_FALSE$$, $attribs$$ = [], $tagName$$6$$, $eflags$$, $openTag$$;
   $handler$$9$$.$stack_$ = [];
   for($handler$$9$$.$ignoring_$ = $JSCompiler_alias_FALSE$$;$htmlText$$;) {
     var $decodedValue_encodedValue_m$$ = $htmlText$$.match($dataEnd_inTag$$1$$ ? $goog$string$html$HtmlParser$INSIDE_TAG_TOKEN_$$ : $goog$string$html$HtmlParser$OUTSIDE_TAG_TOKEN_$$), $htmlText$$ = $htmlText$$.substring($decodedValue_encodedValue_m$$[0].length);
@@ -2256,8 +2256,8 @@ $goog$string$html$HtmlParser$$.prototype.parse = function $$goog$string$html$Htm
         }
         $attribs$$.push($attribName$$, $decodedValue_encodedValue_m$$)
       }else {
-        $decodedValue_encodedValue_m$$[4] && ($eflags$$ !== $JSCompiler_alias_VOID$$ && ($openTag$$ ? $handler$$9$$.$startTag$ && $handler$$9$$.$startTag$($tagName$$6$$, $attribs$$) : $handler$$9$$.$endTag$ && $handler$$9$$.$endTag$($tagName$$6$$)), $openTag$$ && $eflags$$ & 12 && ($htmlLower_i$$inline_505$$ = $htmlLower_i$$inline_505$$ === $JSCompiler_alias_NULL$$ ? $htmlText$$.toLowerCase() : $htmlLower_i$$inline_505$$.substring($htmlLower_i$$inline_505$$.length - $htmlText$$.length), $dataEnd_inTag$$1$$ = 
-        $htmlLower_i$$inline_505$$.indexOf("</" + $tagName$$6$$), 0 > $dataEnd_inTag$$1$$ && ($dataEnd_inTag$$1$$ = $htmlText$$.length), $eflags$$ & 4 ? $handler$$9$$.$cdata$ && $handler$$9$$.$cdata$($htmlText$$.substring(0, $dataEnd_inTag$$1$$)) : $handler$$9$$.$rcdata$ && $handler$$9$$.$rcdata$($htmlText$$.substring(0, $dataEnd_inTag$$1$$).replace($goog$string$html$HtmlParser$LOOSE_AMP_RE_$$, "&amp;$1").replace($goog$string$html$HtmlParser$LT_RE_$$, "&lt;").replace($goog$string$html$HtmlParser$GT_RE_$$, 
+        $decodedValue_encodedValue_m$$[4] && ($eflags$$ !== $JSCompiler_alias_VOID$$ && ($openTag$$ ? $handler$$9$$.$startTag$ && $handler$$9$$.$startTag$($tagName$$6$$, $attribs$$) : $handler$$9$$.$endTag$ && $handler$$9$$.$endTag$($tagName$$6$$)), $openTag$$ && $eflags$$ & 12 && ($htmlLower_i$$inline_509$$ = $htmlLower_i$$inline_509$$ === $JSCompiler_alias_NULL$$ ? $htmlText$$.toLowerCase() : $htmlLower_i$$inline_509$$.substring($htmlLower_i$$inline_509$$.length - $htmlText$$.length), $dataEnd_inTag$$1$$ = 
+        $htmlLower_i$$inline_509$$.indexOf("</" + $tagName$$6$$), 0 > $dataEnd_inTag$$1$$ && ($dataEnd_inTag$$1$$ = $htmlText$$.length), $eflags$$ & 4 ? $handler$$9$$.$cdata$ && $handler$$9$$.$cdata$($htmlText$$.substring(0, $dataEnd_inTag$$1$$)) : $handler$$9$$.$rcdata$ && $handler$$9$$.$rcdata$($htmlText$$.substring(0, $dataEnd_inTag$$1$$).replace($goog$string$html$HtmlParser$LOOSE_AMP_RE_$$, "&amp;$1").replace($goog$string$html$HtmlParser$LT_RE_$$, "&lt;").replace($goog$string$html$HtmlParser$GT_RE_$$, 
         "&gt;")), $htmlText$$ = $htmlText$$.substring($dataEnd_inTag$$1$$)), $tagName$$6$$ = $eflags$$ = $openTag$$ = $JSCompiler_alias_VOID$$, $attribs$$.length = 0, $dataEnd_inTag$$1$$ = $JSCompiler_alias_FALSE$$)
       }
     }else {
@@ -2287,8 +2287,8 @@ $goog$string$html$HtmlParser$$.prototype.parse = function $$goog$string$html$Htm
       }
     }
   }
-  for($htmlLower_i$$inline_505$$ = $handler$$9$$.$stack_$.length;0 <= --$htmlLower_i$$inline_505$$;) {
-    $handler$$9$$.$stringBuffer_$.append("</", $handler$$9$$.$stack_$[$htmlLower_i$$inline_505$$], ">")
+  for($htmlLower_i$$inline_509$$ = $handler$$9$$.$stack_$.length;0 <= --$htmlLower_i$$inline_509$$;) {
+    $handler$$9$$.$stringBuffer_$.append("</", $handler$$9$$.$stack_$[$htmlLower_i$$inline_509$$], ">")
   }
   $handler$$9$$.$stack_$.length = 0
 };
@@ -2345,19 +2345,19 @@ $goog$string$html$HtmlSanitizer$$.prototype.$startTag$ = function $$goog$string$
       if($eflags$$1_i$$106$$ & 16) {
         this.$ignoring_$ = !($eflags$$1_i$$106$$ & 2)
       }else {
-        for(var $attribs$$inline_509_n$$7$$ = $attribs$$1$$, $attribName$$1_i$$inline_510$$ = 0;$attribName$$1_i$$inline_510$$ < $attribs$$inline_509_n$$7$$.length;$attribName$$1_i$$inline_510$$ += 2) {
-          var $attribName$$inline_511_value$$75$$ = $attribs$$inline_509_n$$7$$[$attribName$$1_i$$inline_510$$], $value$$inline_512$$ = $attribs$$inline_509_n$$7$$[$attribName$$1_i$$inline_510$$ + 1], $atype$$inline_513$$ = $JSCompiler_alias_NULL$$, $attribKey$$inline_514$$;
-          if(($attribKey$$inline_514$$ = $tagName$$7$$ + "::" + $attribName$$inline_511_value$$75$$, $goog$string$html$HtmlSanitizer$Attributes$$.hasOwnProperty($attribKey$$inline_514$$)) || ($attribKey$$inline_514$$ = "*::" + $attribName$$inline_511_value$$75$$, $goog$string$html$HtmlSanitizer$Attributes$$.hasOwnProperty($attribKey$$inline_514$$))) {
-            $atype$$inline_513$$ = $goog$string$html$HtmlSanitizer$Attributes$$[$attribKey$$inline_514$$]
+        for(var $attribs$$inline_513_n$$7$$ = $attribs$$1$$, $attribName$$1_i$$inline_514$$ = 0;$attribName$$1_i$$inline_514$$ < $attribs$$inline_513_n$$7$$.length;$attribName$$1_i$$inline_514$$ += 2) {
+          var $attribName$$inline_515_value$$75$$ = $attribs$$inline_513_n$$7$$[$attribName$$1_i$$inline_514$$], $value$$inline_516$$ = $attribs$$inline_513_n$$7$$[$attribName$$1_i$$inline_514$$ + 1], $atype$$inline_517$$ = $JSCompiler_alias_NULL$$, $attribKey$$inline_518$$;
+          if(($attribKey$$inline_518$$ = $tagName$$7$$ + "::" + $attribName$$inline_515_value$$75$$, $goog$string$html$HtmlSanitizer$Attributes$$.hasOwnProperty($attribKey$$inline_518$$)) || ($attribKey$$inline_518$$ = "*::" + $attribName$$inline_515_value$$75$$, $goog$string$html$HtmlSanitizer$Attributes$$.hasOwnProperty($attribKey$$inline_518$$))) {
+            $atype$$inline_517$$ = $goog$string$html$HtmlSanitizer$Attributes$$[$attribKey$$inline_518$$]
           }
-          if($atype$$inline_513$$ !== $JSCompiler_alias_NULL$$) {
-            switch($atype$$inline_513$$) {
+          if($atype$$inline_517$$ !== $JSCompiler_alias_NULL$$) {
+            switch($atype$$inline_517$$) {
               case 0:
                 break;
               case 2:
               ;
               case 3:
-                $value$$inline_512$$ = $JSCompiler_alias_NULL$$;
+                $value$$inline_516$$ = $JSCompiler_alias_NULL$$;
                 break;
               case 4:
               ;
@@ -2370,28 +2370,28 @@ $goog$string$html$HtmlSanitizer$$.prototype.$startTag$ = function $$goog$string$
               case 8:
               ;
               case 9:
-                $value$$inline_512$$ = this.$nmTokenPolicy_$ ? this.$nmTokenPolicy_$($value$$inline_512$$) : $value$$inline_512$$;
+                $value$$inline_516$$ = this.$nmTokenPolicy_$ ? this.$nmTokenPolicy_$($value$$inline_516$$) : $value$$inline_516$$;
                 break;
               case 1:
-                $value$$inline_512$$ = this.$urlPolicy_$ && this.$urlPolicy_$($value$$inline_512$$);
+                $value$$inline_516$$ = this.$urlPolicy_$ && this.$urlPolicy_$($value$$inline_516$$);
                 break;
               case 11:
-                $value$$inline_512$$ && "#" === $value$$inline_512$$.charAt(0) ? ($value$$inline_512$$ = this.$nmTokenPolicy_$ ? this.$nmTokenPolicy_$($value$$inline_512$$) : $value$$inline_512$$) && ($value$$inline_512$$ = "#" + $value$$inline_512$$) : $value$$inline_512$$ = $JSCompiler_alias_NULL$$;
+                $value$$inline_516$$ && "#" === $value$$inline_516$$.charAt(0) ? ($value$$inline_516$$ = this.$nmTokenPolicy_$ ? this.$nmTokenPolicy_$($value$$inline_516$$) : $value$$inline_516$$) && ($value$$inline_516$$ = "#" + $value$$inline_516$$) : $value$$inline_516$$ = $JSCompiler_alias_NULL$$;
                 break;
               default:
-                $value$$inline_512$$ = $JSCompiler_alias_NULL$$
+                $value$$inline_516$$ = $JSCompiler_alias_NULL$$
             }
           }else {
-            $value$$inline_512$$ = $JSCompiler_alias_NULL$$
+            $value$$inline_516$$ = $JSCompiler_alias_NULL$$
           }
-          $attribs$$inline_509_n$$7$$[$attribName$$1_i$$inline_510$$ + 1] = $value$$inline_512$$
+          $attribs$$inline_513_n$$7$$[$attribName$$1_i$$inline_514$$ + 1] = $value$$inline_516$$
         }
-        if($attribs$$1$$ = $attribs$$inline_509_n$$7$$) {
+        if($attribs$$1$$ = $attribs$$inline_513_n$$7$$) {
           $eflags$$1_i$$106$$ & 2 || this.$stack_$.push($tagName$$7$$);
           this.$stringBuffer_$.append("<", $tagName$$7$$);
           $eflags$$1_i$$106$$ = 0;
-          for($attribs$$inline_509_n$$7$$ = $attribs$$1$$.length;$eflags$$1_i$$106$$ < $attribs$$inline_509_n$$7$$;$eflags$$1_i$$106$$ += 2) {
-            $attribName$$1_i$$inline_510$$ = $attribs$$1$$[$eflags$$1_i$$106$$], $attribName$$inline_511_value$$75$$ = $attribs$$1$$[$eflags$$1_i$$106$$ + 1], $attribName$$inline_511_value$$75$$ !== $JSCompiler_alias_NULL$$ && $attribName$$inline_511_value$$75$$ !== $JSCompiler_alias_VOID$$ && this.$stringBuffer_$.append(" ", $attribName$$1_i$$inline_510$$, '="', $attribName$$inline_511_value$$75$$.replace($goog$string$html$HtmlParser$AMP_RE_$$, "&amp;").replace($goog$string$html$HtmlParser$LT_RE_$$, 
+          for($attribs$$inline_513_n$$7$$ = $attribs$$1$$.length;$eflags$$1_i$$106$$ < $attribs$$inline_513_n$$7$$;$eflags$$1_i$$106$$ += 2) {
+            $attribName$$1_i$$inline_514$$ = $attribs$$1$$[$eflags$$1_i$$106$$], $attribName$$inline_515_value$$75$$ = $attribs$$1$$[$eflags$$1_i$$106$$ + 1], $attribName$$inline_515_value$$75$$ !== $JSCompiler_alias_NULL$$ && $attribName$$inline_515_value$$75$$ !== $JSCompiler_alias_VOID$$ && this.$stringBuffer_$.append(" ", $attribName$$1_i$$inline_514$$, '="', $attribName$$inline_515_value$$75$$.replace($goog$string$html$HtmlParser$AMP_RE_$$, "&amp;").replace($goog$string$html$HtmlParser$LT_RE_$$, 
             "&lt;").replace($goog$string$html$HtmlParser$GT_RE_$$, "&gt;").replace($goog$string$html$HtmlParser$QUOTE_RE_$$, "&#34;").replace($goog$string$html$HtmlParser$EQUALS_RE_$$, "&#61;"), '"')
           }
           this.$stringBuffer_$.append(">")
@@ -2647,17 +2647,17 @@ $JSCompiler_prototypeAlias$$.$decorateInternal$ = function $$JSCompiler_prototyp
   this.$element_$ = $element$$75$$
 };
 $JSCompiler_prototypeAlias$$.$enterDocument$ = function $$JSCompiler_prototypeAlias$$$$enterDocument$$() {
-  function $f$$inline_522$$($child$$8$$) {
+  function $f$$inline_526$$($child$$8$$) {
     !$child$$8$$.$inDocument_$ && $child$$8$$.$getElement$() && $child$$8$$.$enterDocument$()
   }
   this.$inDocument_$ = $JSCompiler_alias_TRUE$$;
-  this.$children_$ && $goog$array$forEach$$(this.$children_$, $f$$inline_522$$, $JSCompiler_alias_VOID$$)
+  this.$children_$ && $goog$array$forEach$$(this.$children_$, $f$$inline_526$$, $JSCompiler_alias_VOID$$)
 };
 $JSCompiler_prototypeAlias$$.$exitDocument$ = function $$JSCompiler_prototypeAlias$$$$exitDocument$$() {
-  function $f$$inline_526$$($child$$9$$) {
+  function $f$$inline_530$$($child$$9$$) {
     $child$$9$$.$inDocument_$ && $child$$9$$.$exitDocument$()
   }
-  this.$children_$ && $goog$array$forEach$$(this.$children_$, $f$$inline_526$$, $JSCompiler_alias_VOID$$);
+  this.$children_$ && $goog$array$forEach$$(this.$children_$, $f$$inline_530$$, $JSCompiler_alias_VOID$$);
   this.$googUiComponentHandler_$ && this.$googUiComponentHandler_$.$removeAll$();
   this.$inDocument_$ = $JSCompiler_alias_FALSE$$
 };
@@ -2668,12 +2668,12 @@ $JSCompiler_prototypeAlias$$.$setRightToLeft$ = function $$JSCompiler_prototypeA
 };
 $JSCompiler_prototypeAlias$$.removeChild = function $$JSCompiler_prototypeAlias$$$removeChild$($child$$15$$, $opt_unrender$$) {
   if($child$$15$$) {
-    var $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ = $goog$isString$$($child$$15$$) ? $child$$15$$ : $child$$15$$.$id_$ || ($child$$15$$.$id_$ = ":" + ($child$$15$$.$idGenerator_$.$nextId_$++).toString(36)), $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$;
-    this.$childIndex_$ && $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ ? ($JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$ = this.$childIndex_$, $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$ = ($JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ in $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$ ? $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$[$JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$] : $JSCompiler_alias_VOID$$) || 
-    $JSCompiler_alias_NULL$$) : $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$ = $JSCompiler_alias_NULL$$;
-    $child$$15$$ = $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$;
-    $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ && $child$$15$$ && ($JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$ = this.$childIndex_$, $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ in $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$ && delete $JSCompiler_temp$$inline_861_obj$$inline_862_obj$$inline_865$$[$JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$], $goog$array$remove$$(this.$children_$, $child$$15$$), $opt_unrender$$ && 
-    ($child$$15$$.$exitDocument$(), $child$$15$$.$element_$ && $goog$dom$removeNode$$($child$$15$$.$element_$)), $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ = $child$$15$$, $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$ == $JSCompiler_alias_NULL$$ && $JSCompiler_alias_THROW$$(Error("Unable to set parent component")), $JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$.$parent_$ = $JSCompiler_alias_NULL$$, $goog$ui$Component$$.$superClass_$.$setParentEventTarget$.call($JSCompiler_StaticMethods_setParent$self$$inline_533_id$$6$$, 
+    var $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ = $goog$isString$$($child$$15$$) ? $child$$15$$ : $child$$15$$.$id_$ || ($child$$15$$.$id_$ = ":" + ($child$$15$$.$idGenerator_$.$nextId_$++).toString(36)), $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$;
+    this.$childIndex_$ && $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ ? ($JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$ = this.$childIndex_$, $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$ = ($JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ in $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$ ? $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$[$JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$] : $JSCompiler_alias_VOID$$) || 
+    $JSCompiler_alias_NULL$$) : $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$ = $JSCompiler_alias_NULL$$;
+    $child$$15$$ = $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$;
+    $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ && $child$$15$$ && ($JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$ = this.$childIndex_$, $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ in $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$ && delete $JSCompiler_temp$$inline_868_obj$$inline_869_obj$$inline_872$$[$JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$], $goog$array$remove$$(this.$children_$, $child$$15$$), $opt_unrender$$ && 
+    ($child$$15$$.$exitDocument$(), $child$$15$$.$element_$ && $goog$dom$removeNode$$($child$$15$$.$element_$)), $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ = $child$$15$$, $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$ == $JSCompiler_alias_NULL$$ && $JSCompiler_alias_THROW$$(Error("Unable to set parent component")), $JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$.$parent_$ = $JSCompiler_alias_NULL$$, $goog$ui$Component$$.$superClass_$.$setParentEventTarget$.call($JSCompiler_StaticMethods_setParent$self$$inline_537_id$$6$$, 
     $JSCompiler_alias_NULL$$))
   }
   $child$$15$$ || $JSCompiler_alias_THROW$$(Error("Child is not in parent component"));
@@ -2701,50 +2701,50 @@ $JSCompiler_prototypeAlias$$.$enableClassName$ = function $$JSCompiler_prototype
 $JSCompiler_prototypeAlias$$.$canDecorate$ = $JSCompiler_returnArg$$($JSCompiler_alias_TRUE$$);
 $JSCompiler_prototypeAlias$$.$decorate$ = function $$JSCompiler_prototypeAlias$$$$decorate$$($control$$3$$, $element$$86$$) {
   if($element$$86$$.id) {
-    var $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ = $element$$86$$.id;
+    var $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ = $element$$86$$.id;
     if($control$$3$$.$parent_$ && $control$$3$$.$parent_$.$childIndex_$) {
-      var $classNames$$1_obj$$inline_868_obj$$inline_871$$ = $control$$3$$.$parent_$.$childIndex_$, $extraClassNames_key$$inline_869$$ = $control$$3$$.$id_$;
-      $extraClassNames_key$$inline_869$$ in $classNames$$1_obj$$inline_868_obj$$inline_871$$ && delete $classNames$$1_obj$$inline_868_obj$$inline_871$$[$extraClassNames_key$$inline_869$$];
-      $classNames$$1_obj$$inline_868_obj$$inline_871$$ = $control$$3$$.$parent_$.$childIndex_$;
-      $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ in $classNames$$1_obj$$inline_868_obj$$inline_871$$ && $JSCompiler_alias_THROW$$(Error('The object already contains the key "' + $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ + '"'));
-      $classNames$$1_obj$$inline_868_obj$$inline_871$$[$content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$] = $control$$3$$
+      var $classNames$$1_obj$$inline_875_obj$$inline_878$$ = $control$$3$$.$parent_$.$childIndex_$, $extraClassNames_key$$inline_876$$ = $control$$3$$.$id_$;
+      $extraClassNames_key$$inline_876$$ in $classNames$$1_obj$$inline_875_obj$$inline_878$$ && delete $classNames$$1_obj$$inline_875_obj$$inline_878$$[$extraClassNames_key$$inline_876$$];
+      $classNames$$1_obj$$inline_875_obj$$inline_878$$ = $control$$3$$.$parent_$.$childIndex_$;
+      $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ in $classNames$$1_obj$$inline_875_obj$$inline_878$$ && $JSCompiler_alias_THROW$$(Error('The object already contains the key "' + $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ + '"'));
+      $classNames$$1_obj$$inline_875_obj$$inline_878$$[$content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$] = $control$$3$$
     }
-    $control$$3$$.$id_$ = $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$
+    $control$$3$$.$id_$ = $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$
   }
-  ($content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ = this.$getContentElement$($element$$86$$)) && $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$.firstChild ? ($content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ = $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$.firstChild.nextSibling ? $goog$array$toArray$$($content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$.childNodes) : $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$.firstChild, 
-  $control$$3$$.$content_$ = $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$) : $control$$3$$.$content_$ = $JSCompiler_alias_NULL$$;
-  var $state$$2$$ = 0, $rendererClassName$$ = this.$getCssClass$(), $structuralClassName$$ = this.$getCssClass$(), $hasRendererClassName$$ = $JSCompiler_alias_FALSE$$, $hasStructuralClassName$$ = $JSCompiler_alias_FALSE$$, $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ = $JSCompiler_alias_FALSE$$, $classNames$$1_obj$$inline_868_obj$$inline_871$$ = $goog$dom$classes$get$$($element$$86$$);
-  $goog$array$forEach$$($classNames$$1_obj$$inline_868_obj$$inline_871$$, function($className$$18_state$$inline_551$$) {
-    if(!$hasRendererClassName$$ && $className$$18_state$$inline_551$$ == $rendererClassName$$) {
+  ($content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ = this.$getContentElement$($element$$86$$)) && $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$.firstChild ? ($content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ = $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$.firstChild.nextSibling ? $goog$array$toArray$$($content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$.childNodes) : $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$.firstChild, 
+  $control$$3$$.$content_$ = $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$) : $control$$3$$.$content_$ = $JSCompiler_alias_NULL$$;
+  var $state$$2$$ = 0, $rendererClassName$$ = this.$getCssClass$(), $structuralClassName$$ = this.$getCssClass$(), $hasRendererClassName$$ = $JSCompiler_alias_FALSE$$, $hasStructuralClassName$$ = $JSCompiler_alias_FALSE$$, $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ = $JSCompiler_alias_FALSE$$, $classNames$$1_obj$$inline_875_obj$$inline_878$$ = $goog$dom$classes$get$$($element$$86$$);
+  $goog$array$forEach$$($classNames$$1_obj$$inline_875_obj$$inline_878$$, function($className$$18_state$$inline_555$$) {
+    if(!$hasRendererClassName$$ && $className$$18_state$$inline_555$$ == $rendererClassName$$) {
       $hasRendererClassName$$ = $JSCompiler_alias_TRUE$$, $structuralClassName$$ == $rendererClassName$$ && ($hasStructuralClassName$$ = $JSCompiler_alias_TRUE$$)
     }else {
-      if(!$hasStructuralClassName$$ && $className$$18_state$$inline_551$$ == $structuralClassName$$) {
+      if(!$hasStructuralClassName$$ && $className$$18_state$$inline_555$$ == $structuralClassName$$) {
         $hasStructuralClassName$$ = $JSCompiler_alias_TRUE$$
       }else {
-        var $JSCompiler_temp_const$$31$$ = $state$$2$$;
+        var $JSCompiler_temp_const$$35$$ = $state$$2$$;
         if(!this.$stateByClass_$) {
           this.$classByState_$ || $JSCompiler_StaticMethods_createClassByStateMap_$$(this);
-          var $obj$$inline_908$$ = this.$classByState_$, $transposed$$inline_909$$ = {}, $key$$inline_910$$;
-          for($key$$inline_910$$ in $obj$$inline_908$$) {
-            $transposed$$inline_909$$[$obj$$inline_908$$[$key$$inline_910$$]] = $key$$inline_910$$
+          var $obj$$inline_915$$ = this.$classByState_$, $transposed$$inline_916$$ = {}, $key$$inline_917$$;
+          for($key$$inline_917$$ in $obj$$inline_915$$) {
+            $transposed$$inline_916$$[$obj$$inline_915$$[$key$$inline_917$$]] = $key$$inline_917$$
           }
-          this.$stateByClass_$ = $transposed$$inline_909$$
+          this.$stateByClass_$ = $transposed$$inline_916$$
         }
-        $className$$18_state$$inline_551$$ = parseInt(this.$stateByClass_$[$className$$18_state$$inline_551$$], 10);
-        $state$$2$$ = $JSCompiler_temp_const$$31$$ | (isNaN($className$$18_state$$inline_551$$) ? 0 : $className$$18_state$$inline_551$$)
+        $className$$18_state$$inline_555$$ = parseInt(this.$stateByClass_$[$className$$18_state$$inline_555$$], 10);
+        $state$$2$$ = $JSCompiler_temp_const$$35$$ | (isNaN($className$$18_state$$inline_555$$) ? 0 : $className$$18_state$$inline_555$$)
       }
     }
   }, this);
   $control$$3$$.$state_$ = $state$$2$$;
-  $hasRendererClassName$$ || ($classNames$$1_obj$$inline_868_obj$$inline_871$$.push($rendererClassName$$), $structuralClassName$$ == $rendererClassName$$ && ($hasStructuralClassName$$ = $JSCompiler_alias_TRUE$$));
-  $hasStructuralClassName$$ || $classNames$$1_obj$$inline_868_obj$$inline_871$$.push($structuralClassName$$);
-  ($extraClassNames_key$$inline_869$$ = $control$$3$$.$extraClassNames_$) && $classNames$$1_obj$$inline_868_obj$$inline_871$$.push.apply($classNames$$1_obj$$inline_868_obj$$inline_871$$, $extraClassNames_key$$inline_869$$);
+  $hasRendererClassName$$ || ($classNames$$1_obj$$inline_875_obj$$inline_878$$.push($rendererClassName$$), $structuralClassName$$ == $rendererClassName$$ && ($hasStructuralClassName$$ = $JSCompiler_alias_TRUE$$));
+  $hasStructuralClassName$$ || $classNames$$1_obj$$inline_875_obj$$inline_878$$.push($structuralClassName$$);
+  ($extraClassNames_key$$inline_876$$ = $control$$3$$.$extraClassNames_$) && $classNames$$1_obj$$inline_875_obj$$inline_878$$.push.apply($classNames$$1_obj$$inline_875_obj$$inline_878$$, $extraClassNames_key$$inline_876$$);
   if($goog$userAgent$IE$$ && !$goog$userAgent$isVersion$$("7")) {
-    var $combinedClasses$$1$$ = $JSCompiler_StaticMethods_getAppliedCombinedClassNames_$$($classNames$$1_obj$$inline_868_obj$$inline_871$$);
-    0 < $combinedClasses$$1$$.length && ($classNames$$1_obj$$inline_868_obj$$inline_871$$.push.apply($classNames$$1_obj$$inline_868_obj$$inline_871$$, $combinedClasses$$1$$), $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$ = $JSCompiler_alias_TRUE$$)
+    var $combinedClasses$$1$$ = $JSCompiler_StaticMethods_getAppliedCombinedClassNames_$$($classNames$$1_obj$$inline_875_obj$$inline_878$$);
+    0 < $combinedClasses$$1$$.length && ($classNames$$1_obj$$inline_875_obj$$inline_878$$.push.apply($classNames$$1_obj$$inline_875_obj$$inline_878$$, $combinedClasses$$1$$), $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$ = $JSCompiler_alias_TRUE$$)
   }
-  if(!$hasRendererClassName$$ || !$hasStructuralClassName$$ || $extraClassNames_key$$inline_869$$ || $content$$inline_544_contentElem_hasCombinedClassName_id$$inline_541$$) {
-    $element$$86$$.className = $classNames$$1_obj$$inline_868_obj$$inline_871$$.join(" ")
+  if(!$hasRendererClassName$$ || !$hasStructuralClassName$$ || $extraClassNames_key$$inline_876$$ || $content$$inline_548_contentElem_hasCombinedClassName_id$$inline_545$$) {
+    $element$$86$$.className = $classNames$$1_obj$$inline_875_obj$$inline_878$$.join(" ")
   }
   $control$$3$$.isEnabled() || this.$updateAriaState$($element$$86$$, 1, $JSCompiler_alias_TRUE$$);
   $control$$3$$.$state_$ & 8 && this.$updateAriaState$($element$$86$$, 8, $JSCompiler_alias_TRUE$$);
@@ -2753,18 +2753,18 @@ $JSCompiler_prototypeAlias$$.$decorate$ = function $$JSCompiler_prototypeAlias$$
   return $element$$86$$
 };
 $JSCompiler_prototypeAlias$$.$setAllowTextSelection$ = function $$JSCompiler_prototypeAlias$$$$setAllowTextSelection$$($element$$89$$, $allow$$) {
-  var $unselectable$$inline_564_value$$inline_567$$ = !$allow$$, $descendants$$inline_566$$ = $goog$userAgent$IE$$ || $goog$userAgent$OPERA$$ ? $element$$89$$.getElementsByTagName("*") : $JSCompiler_alias_NULL$$;
+  var $unselectable$$inline_568_value$$inline_571$$ = !$allow$$, $descendants$$inline_570$$ = $goog$userAgent$IE$$ || $goog$userAgent$OPERA$$ ? $element$$89$$.getElementsByTagName("*") : $JSCompiler_alias_NULL$$;
   if($goog$style$unselectableStyle_$$) {
-    if($unselectable$$inline_564_value$$inline_567$$ = $unselectable$$inline_564_value$$inline_567$$ ? "none" : "", $element$$89$$.style[$goog$style$unselectableStyle_$$] = $unselectable$$inline_564_value$$inline_567$$, $descendants$$inline_566$$) {
-      for(var $i$$inline_568$$ = 0, $descendant$$inline_569$$;$descendant$$inline_569$$ = $descendants$$inline_566$$[$i$$inline_568$$];$i$$inline_568$$++) {
-        $descendant$$inline_569$$.style[$goog$style$unselectableStyle_$$] = $unselectable$$inline_564_value$$inline_567$$
+    if($unselectable$$inline_568_value$$inline_571$$ = $unselectable$$inline_568_value$$inline_571$$ ? "none" : "", $element$$89$$.style[$goog$style$unselectableStyle_$$] = $unselectable$$inline_568_value$$inline_571$$, $descendants$$inline_570$$) {
+      for(var $i$$inline_572$$ = 0, $descendant$$inline_573$$;$descendant$$inline_573$$ = $descendants$$inline_570$$[$i$$inline_572$$];$i$$inline_572$$++) {
+        $descendant$$inline_573$$.style[$goog$style$unselectableStyle_$$] = $unselectable$$inline_568_value$$inline_571$$
       }
     }
   }else {
     if($goog$userAgent$IE$$ || $goog$userAgent$OPERA$$) {
-      if($unselectable$$inline_564_value$$inline_567$$ = $unselectable$$inline_564_value$$inline_567$$ ? "on" : "", $element$$89$$.setAttribute("unselectable", $unselectable$$inline_564_value$$inline_567$$), $descendants$$inline_566$$) {
-        for($i$$inline_568$$ = 0;$descendant$$inline_569$$ = $descendants$$inline_566$$[$i$$inline_568$$];$i$$inline_568$$++) {
-          $descendant$$inline_569$$.setAttribute("unselectable", $unselectable$$inline_564_value$$inline_567$$)
+      if($unselectable$$inline_568_value$$inline_571$$ = $unselectable$$inline_568_value$$inline_571$$ ? "on" : "", $element$$89$$.setAttribute("unselectable", $unselectable$$inline_568_value$$inline_571$$), $descendants$$inline_570$$) {
+        for($i$$inline_572$$ = 0;$descendant$$inline_573$$ = $descendants$$inline_570$$[$i$$inline_572$$];$i$$inline_572$$++) {
+          $descendant$$inline_573$$.setAttribute("unselectable", $unselectable$$inline_568_value$$inline_571$$)
         }
       }
     }
@@ -2778,16 +2778,16 @@ $JSCompiler_prototypeAlias$$.$isFocusable$ = function $$JSCompiler_prototypeAlia
   return $control$$6$$.$supportedStates_$ & 32 && ($keyTarget$$ = $control$$6$$.$getKeyEventTarget$()) ? $goog$dom$isFocusableTabIndex$$($keyTarget$$) : $JSCompiler_alias_FALSE$$
 };
 $JSCompiler_prototypeAlias$$.$setFocusable$ = function $$JSCompiler_prototypeAlias$$$$setFocusable$$($control$$7$$, $focusable$$) {
-  var $element$$inline_571_keyTarget$$1$$;
-  if($control$$7$$.$supportedStates_$ & 32 && ($element$$inline_571_keyTarget$$1$$ = $control$$7$$.$getKeyEventTarget$())) {
+  var $element$$inline_575_keyTarget$$1$$;
+  if($control$$7$$.$supportedStates_$ & 32 && ($element$$inline_575_keyTarget$$1$$ = $control$$7$$.$getKeyEventTarget$())) {
     if(!$focusable$$ && $control$$7$$.$state_$ & 32) {
       try {
-        $element$$inline_571_keyTarget$$1$$.blur()
+        $element$$inline_575_keyTarget$$1$$.blur()
       }catch($e$$39$$) {
       }
       $control$$7$$.$state_$ & 32 && $control$$7$$.$handleBlur$()
     }
-    $goog$dom$isFocusableTabIndex$$($element$$inline_571_keyTarget$$1$$) != $focusable$$ && ($focusable$$ ? $element$$inline_571_keyTarget$$1$$.tabIndex = 0 : ($element$$inline_571_keyTarget$$1$$.tabIndex = -1, $element$$inline_571_keyTarget$$1$$.removeAttribute("tabIndex")))
+    $goog$dom$isFocusableTabIndex$$($element$$inline_575_keyTarget$$1$$) != $focusable$$ && ($focusable$$ ? $element$$inline_575_keyTarget$$1$$.tabIndex = 0 : ($element$$inline_575_keyTarget$$1$$.tabIndex = -1, $element$$inline_575_keyTarget$$1$$.removeAttribute("tabIndex")))
   }
 };
 $JSCompiler_prototypeAlias$$.$setState$ = function $$JSCompiler_prototypeAlias$$$$setState$$($control$$8$$, $state$$3$$, $enable$$3$$) {
@@ -2847,19 +2847,19 @@ function $JSCompiler_StaticMethods_createClassByStateMap_$$($JSCompiler_StaticMe
   $JSCompiler_StaticMethods_createClassByStateMap_$self$$.$classByState_$ = {1:$baseClass$$ + "-disabled", 2:$baseClass$$ + "-hover", 4:$baseClass$$ + "-active", 8:$baseClass$$ + "-selected", 16:$baseClass$$ + "-checked", 32:$baseClass$$ + "-focused", 64:$baseClass$$ + "-open"}
 }
 ;var $goog$ui$registry$defaultRenderers_$$ = {};
-function $goog$ui$Control$$($content$$3$$, $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$, $opt_domHelper$$3$$) {
+function $goog$ui$Control$$($content$$3$$, $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$, $opt_domHelper$$3$$) {
   $goog$ui$Component$$.call(this, $opt_domHelper$$3$$);
-  if(!$JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$) {
-    for(var $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$ = this.constructor, $key$$inline_585_rendererCtor$$inline_586$$;$JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$;) {
-      $key$$inline_585_rendererCtor$$inline_586$$ = $goog$getUid$$($JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$);
-      if($key$$inline_585_rendererCtor$$inline_586$$ = $goog$ui$registry$defaultRenderers_$$[$key$$inline_585_rendererCtor$$inline_586$$]) {
+  if(!$JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$) {
+    for(var $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$ = this.constructor, $key$$inline_589_rendererCtor$$inline_590$$;$JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$;) {
+      $key$$inline_589_rendererCtor$$inline_590$$ = $goog$getUid$$($JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$);
+      if($key$$inline_589_rendererCtor$$inline_590$$ = $goog$ui$registry$defaultRenderers_$$[$key$$inline_589_rendererCtor$$inline_590$$]) {
         break
       }
-      $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$ = $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$.$superClass_$ ? $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$.$superClass_$.constructor : $JSCompiler_alias_NULL$$
+      $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$ = $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$.$superClass_$ ? $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$.$superClass_$.constructor : $JSCompiler_alias_NULL$$
     }
-    $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$ = $key$$inline_585_rendererCtor$$inline_586$$ ? $goog$isFunction$$($key$$inline_585_rendererCtor$$inline_586$$.$getInstance$) ? $key$$inline_585_rendererCtor$$inline_586$$.$getInstance$() : new $key$$inline_585_rendererCtor$$inline_586$$ : $JSCompiler_alias_NULL$$
+    $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$ = $key$$inline_589_rendererCtor$$inline_590$$ ? $goog$isFunction$$($key$$inline_589_rendererCtor$$inline_590$$.$getInstance$) ? $key$$inline_589_rendererCtor$$inline_590$$.$getInstance$() : new $key$$inline_589_rendererCtor$$inline_590$$ : $JSCompiler_alias_NULL$$
   }
-  this.$renderer_$ = $JSCompiler_temp$$25_componentCtor$$inline_584_opt_renderer$$;
+  this.$renderer_$ = $JSCompiler_temp$$29_componentCtor$$inline_588_opt_renderer$$;
   this.$content_$ = $content$$3$$
 }
 $goog$inherits$$($goog$ui$Control$$, $goog$ui$Component$$);
@@ -2893,21 +2893,21 @@ $JSCompiler_prototypeAlias$$.$canDecorate$ = function $$JSCompiler_prototypeAlia
 };
 $JSCompiler_prototypeAlias$$.$decorateInternal$ = function $$JSCompiler_prototypeAlias$$$$decorateInternal$$($element$$99$$) {
   this.$element_$ = $element$$99$$ = this.$renderer_$.$decorate$(this, $element$$99$$);
-  var $ariaRole$$inline_612$$ = this.$preferredAriaRole_$ || $JSCompiler_alias_VOID$$;
-  $ariaRole$$inline_612$$ && $element$$99$$.setAttribute("role", $ariaRole$$inline_612$$);
+  var $ariaRole$$inline_616$$ = this.$preferredAriaRole_$ || $JSCompiler_alias_VOID$$;
+  $ariaRole$$inline_616$$ && $element$$99$$.setAttribute("role", $ariaRole$$inline_616$$);
   this.$allowTextSelection_$ || this.$renderer_$.$setAllowTextSelection$($element$$99$$, $JSCompiler_alias_FALSE$$);
   this.$visible_$ = "none" != $element$$99$$.style.display
 };
 $JSCompiler_prototypeAlias$$.$enterDocument$ = function $$JSCompiler_prototypeAlias$$$$enterDocument$$() {
   $goog$ui$Control$$.$superClass_$.$enterDocument$.call(this);
-  var $JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$ = this.$renderer_$;
+  var $JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$ = this.$renderer_$;
   this.$rightToLeft_$ == $JSCompiler_alias_NULL$$ && (this.$rightToLeft_$ = $goog$style$isRightToLeft$$(this.$inDocument_$ ? this.$element_$ : this.$dom_$.$document_$.body));
-  this.$rightToLeft_$ && $JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$.$setRightToLeft$(this.$getElement$(), $JSCompiler_alias_TRUE$$);
-  this.isEnabled() && $JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$.$setFocusable$(this, this.$visible_$);
-  if(this.$supportedStates_$ & -2 && (this.$handleMouseEvents_$ && $JSCompiler_StaticMethods_enableMouseEventHandling_$$(this, $JSCompiler_alias_TRUE$$), this.$supportedStates_$ & 32 && ($JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$ = this.$getKeyEventTarget$()))) {
+  this.$rightToLeft_$ && $JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$.$setRightToLeft$(this.$getElement$(), $JSCompiler_alias_TRUE$$);
+  this.isEnabled() && $JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$.$setFocusable$(this, this.$visible_$);
+  if(this.$supportedStates_$ & -2 && (this.$handleMouseEvents_$ && $JSCompiler_StaticMethods_enableMouseEventHandling_$$(this, $JSCompiler_alias_TRUE$$), this.$supportedStates_$ & 32 && ($JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$ = this.$getKeyEventTarget$()))) {
     var $keyHandler$$ = this.$keyHandler_$ || (this.$keyHandler_$ = new $goog$events$KeyHandler$$);
-    $JSCompiler_StaticMethods_attach$$($keyHandler$$, $JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$);
-    $JSCompiler_StaticMethods_listen$$($JSCompiler_StaticMethods_listen$$($JSCompiler_StaticMethods_listen$$(this.$getHandler$(), $keyHandler$$, "key", this.$handleKeyEvent$), $JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$, "focus", this.$handleFocus$), $JSCompiler_StaticMethods_initializeDom$self$$inline_614_keyTarget$$2$$, "blur", this.$handleBlur$)
+    $JSCompiler_StaticMethods_attach$$($keyHandler$$, $JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$);
+    $JSCompiler_StaticMethods_listen$$($JSCompiler_StaticMethods_listen$$($JSCompiler_StaticMethods_listen$$(this.$getHandler$(), $keyHandler$$, "key", this.$handleKeyEvent$), $JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$, "focus", this.$handleFocus$), $JSCompiler_StaticMethods_initializeDom$self$$inline_618_keyTarget$$2$$, "blur", this.$handleBlur$)
   }
 };
 function $JSCompiler_StaticMethods_enableMouseEventHandling_$$($JSCompiler_StaticMethods_enableMouseEventHandling_$self$$, $enable$$7$$) {
@@ -2975,14 +2975,14 @@ $JSCompiler_prototypeAlias$$.$handleDblClick$ = function $$JSCompiler_prototypeA
 };
 function $JSCompiler_StaticMethods_performActionInternal$$($JSCompiler_StaticMethods_performActionInternal$self$$, $e$$46$$) {
   if($JSCompiler_StaticMethods_isAutoState$$($JSCompiler_StaticMethods_performActionInternal$self$$, 16)) {
-    var $actionEvent_check$$inline_621_open$$inline_627$$ = !($JSCompiler_StaticMethods_performActionInternal$self$$.$state_$ & 16);
-    $JSCompiler_StaticMethods_isTransitionAllowed$$($JSCompiler_StaticMethods_performActionInternal$self$$, 16, $actionEvent_check$$inline_621_open$$inline_627$$) && $JSCompiler_StaticMethods_performActionInternal$self$$.$setState$(16, $actionEvent_check$$inline_621_open$$inline_627$$)
+    var $actionEvent_check$$inline_625_open$$inline_631$$ = !($JSCompiler_StaticMethods_performActionInternal$self$$.$state_$ & 16);
+    $JSCompiler_StaticMethods_isTransitionAllowed$$($JSCompiler_StaticMethods_performActionInternal$self$$, 16, $actionEvent_check$$inline_625_open$$inline_631$$) && $JSCompiler_StaticMethods_performActionInternal$self$$.$setState$(16, $actionEvent_check$$inline_625_open$$inline_631$$)
   }
   $JSCompiler_StaticMethods_isAutoState$$($JSCompiler_StaticMethods_performActionInternal$self$$, 8) && $JSCompiler_StaticMethods_isTransitionAllowed$$($JSCompiler_StaticMethods_performActionInternal$self$$, 8, $JSCompiler_alias_TRUE$$) && $JSCompiler_StaticMethods_performActionInternal$self$$.$setState$(8, $JSCompiler_alias_TRUE$$);
-  $JSCompiler_StaticMethods_isAutoState$$($JSCompiler_StaticMethods_performActionInternal$self$$, 64) && ($actionEvent_check$$inline_621_open$$inline_627$$ = !($JSCompiler_StaticMethods_performActionInternal$self$$.$state_$ & 64), $JSCompiler_StaticMethods_isTransitionAllowed$$($JSCompiler_StaticMethods_performActionInternal$self$$, 64, $actionEvent_check$$inline_621_open$$inline_627$$) && $JSCompiler_StaticMethods_performActionInternal$self$$.$setState$(64, $actionEvent_check$$inline_621_open$$inline_627$$));
-  $actionEvent_check$$inline_621_open$$inline_627$$ = new $goog$events$Event$$("action", $JSCompiler_StaticMethods_performActionInternal$self$$);
-  $e$$46$$ && ($actionEvent_check$$inline_621_open$$inline_627$$.altKey = $e$$46$$.altKey, $actionEvent_check$$inline_621_open$$inline_627$$.ctrlKey = $e$$46$$.ctrlKey, $actionEvent_check$$inline_621_open$$inline_627$$.metaKey = $e$$46$$.metaKey, $actionEvent_check$$inline_621_open$$inline_627$$.shiftKey = $e$$46$$.shiftKey, $actionEvent_check$$inline_621_open$$inline_627$$.$platformModifierKey$ = $e$$46$$.$platformModifierKey$);
-  return $JSCompiler_StaticMethods_performActionInternal$self$$.dispatchEvent($actionEvent_check$$inline_621_open$$inline_627$$)
+  $JSCompiler_StaticMethods_isAutoState$$($JSCompiler_StaticMethods_performActionInternal$self$$, 64) && ($actionEvent_check$$inline_625_open$$inline_631$$ = !($JSCompiler_StaticMethods_performActionInternal$self$$.$state_$ & 64), $JSCompiler_StaticMethods_isTransitionAllowed$$($JSCompiler_StaticMethods_performActionInternal$self$$, 64, $actionEvent_check$$inline_625_open$$inline_631$$) && $JSCompiler_StaticMethods_performActionInternal$self$$.$setState$(64, $actionEvent_check$$inline_625_open$$inline_631$$));
+  $actionEvent_check$$inline_625_open$$inline_631$$ = new $goog$events$Event$$("action", $JSCompiler_StaticMethods_performActionInternal$self$$);
+  $e$$46$$ && ($actionEvent_check$$inline_625_open$$inline_631$$.altKey = $e$$46$$.altKey, $actionEvent_check$$inline_625_open$$inline_631$$.ctrlKey = $e$$46$$.ctrlKey, $actionEvent_check$$inline_625_open$$inline_631$$.metaKey = $e$$46$$.metaKey, $actionEvent_check$$inline_625_open$$inline_631$$.shiftKey = $e$$46$$.shiftKey, $actionEvent_check$$inline_625_open$$inline_631$$.$platformModifierKey$ = $e$$46$$.$platformModifierKey$);
+  return $JSCompiler_StaticMethods_performActionInternal$self$$.dispatchEvent($actionEvent_check$$inline_625_open$$inline_631$$)
 }
 $JSCompiler_prototypeAlias$$.$handleFocus$ = function $$JSCompiler_prototypeAlias$$$$handleFocus$$() {
   $JSCompiler_StaticMethods_isAutoState$$(this, 32) && $JSCompiler_StaticMethods_isTransitionAllowed$$(this, 32, $JSCompiler_alias_TRUE$$) && this.$setState$(32, $JSCompiler_alias_TRUE$$)
@@ -2996,12 +2996,12 @@ $JSCompiler_prototypeAlias$$.$handleKeyEvent$ = function $$JSCompiler_prototypeA
 };
 $goog$isFunction$$($goog$ui$Control$$) || $JSCompiler_alias_THROW$$(Error("Invalid component class " + $goog$ui$Control$$));
 $goog$isFunction$$($goog$ui$ControlRenderer$$) || $JSCompiler_alias_THROW$$(Error("Invalid renderer class " + $goog$ui$ControlRenderer$$));
-var $key$$inline_637$$ = $goog$getUid$$($goog$ui$Control$$);
-$goog$ui$registry$defaultRenderers_$$[$key$$inline_637$$] = $goog$ui$ControlRenderer$$;
-function $decoratorFn$$inline_639$$() {
+var $key$$inline_641$$ = $goog$getUid$$($goog$ui$Control$$);
+$goog$ui$registry$defaultRenderers_$$[$key$$inline_641$$] = $goog$ui$ControlRenderer$$;
+function $decoratorFn$$inline_643$$() {
   return new $goog$ui$Control$$($JSCompiler_alias_NULL$$)
 }
-$goog$isFunction$$($decoratorFn$$inline_639$$) || $JSCompiler_alias_THROW$$(Error("Invalid decorator function " + $decoratorFn$$inline_639$$));
+$goog$isFunction$$($decoratorFn$$inline_643$$) || $JSCompiler_alias_THROW$$(Error("Invalid decorator function " + $decoratorFn$$inline_643$$));
 function $goog$ui$TextareaRenderer$$() {
 }
 $goog$inherits$$($goog$ui$TextareaRenderer$$, $goog$ui$ControlRenderer$$);
@@ -3081,31 +3081,31 @@ $JSCompiler_prototypeAlias$$.$enterDocument$ = function $$JSCompiler_prototypeAl
 };
 function $JSCompiler_StaticMethods_getHeight_$$($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$) {
   if(!$JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$hasDiscoveredTextareaCharacteristics_$) {
-    var $textarea$$7_textarea$$inline_654$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$().cloneNode($JSCompiler_alias_FALSE$$);
-    $goog$style$setStyle$$($textarea$$7_textarea$$inline_654$$, {position:"absolute", height:"auto", top:"-9999px", margin:"0", padding:"1px", border:"1px solid #000", overflow:"hidden"});
-    $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getDomHelper$().$document_$.body.appendChild($textarea$$7_textarea$$inline_654$$);
-    var $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$ = $textarea$$7_textarea$$inline_654$$.scrollHeight;
-    $textarea$$7_textarea$$inline_654$$.style.padding = "10px";
-    var $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ = $textarea$$7_textarea$$inline_654$$.scrollHeight;
-    $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesPadding_$ = $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ > $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$;
-    $textarea$$7_textarea$$inline_654$$.style.borderWidth = "10px";
-    $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesBorder_$ = $textarea$$7_textarea$$inline_654$$.scrollHeight > $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$;
-    $textarea$$7_textarea$$inline_654$$.style.height = "100px";
-    100 != $textarea$$7_textarea$$inline_654$$.offsetHeight && ($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$needsPaddingBorderFix_$ = $JSCompiler_alias_TRUE$$);
-    $goog$dom$removeNode$$($textarea$$7_textarea$$inline_654$$);
+    var $textarea$$7_textarea$$inline_658$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$().cloneNode($JSCompiler_alias_FALSE$$);
+    $goog$style$setStyle$$($textarea$$7_textarea$$inline_658$$, {position:"absolute", height:"auto", top:"-9999px", margin:"0", padding:"1px", border:"1px solid #000", overflow:"hidden"});
+    $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getDomHelper$().$document_$.body.appendChild($textarea$$7_textarea$$inline_658$$);
+    var $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$ = $textarea$$7_textarea$$inline_658$$.scrollHeight;
+    $textarea$$7_textarea$$inline_658$$.style.padding = "10px";
+    var $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ = $textarea$$7_textarea$$inline_658$$.scrollHeight;
+    $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesPadding_$ = $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ > $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$;
+    $textarea$$7_textarea$$inline_658$$.style.borderWidth = "10px";
+    $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesBorder_$ = $textarea$$7_textarea$$inline_658$$.scrollHeight > $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$;
+    $textarea$$7_textarea$$inline_658$$.style.height = "100px";
+    100 != $textarea$$7_textarea$$inline_658$$.offsetHeight && ($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$needsPaddingBorderFix_$ = $JSCompiler_alias_TRUE$$);
+    $goog$dom$removeNode$$($textarea$$7_textarea$$inline_658$$);
     $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$hasDiscoveredTextareaCharacteristics_$ = $JSCompiler_alias_TRUE$$
   }
-  var $textarea$$7_textarea$$inline_654$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$(), $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$().scrollHeight, $borderBox$$inline_662_textarea$$inline_659$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$(), $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ = $borderBox$$inline_662_textarea$$inline_659$$.offsetHeight - 
-  $borderBox$$inline_662_textarea$$inline_659$$.clientHeight;
+  var $textarea$$7_textarea$$inline_658$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$(), $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$().scrollHeight, $borderBox$$inline_666_textarea$$inline_663$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$getElement$(), $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ = $borderBox$$inline_666_textarea$$inline_663$$.offsetHeight - 
+  $borderBox$$inline_666_textarea$$inline_663$$.clientHeight;
   if(!$JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesPadding_$) {
-    var $paddingBox$$inline_661$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$paddingBox_$, $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ = $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ - ($paddingBox$$inline_661$$.top + $paddingBox$$inline_661$$.bottom)
+    var $paddingBox$$inline_665$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$paddingBox_$, $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ = $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ - ($paddingBox$$inline_665$$.top + $paddingBox$$inline_665$$.bottom)
   }
-  $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesBorder_$ || ($borderBox$$inline_662_textarea$$inline_659$$ = $goog$style$getBorderBox$$($borderBox$$inline_662_textarea$$inline_659$$), $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ -= $borderBox$$inline_662_textarea$$inline_659$$.top + $borderBox$$inline_662_textarea$$inline_659$$.bottom);
-  $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$ += 0 < $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ ? $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ : 0;
-  $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$needsPaddingBorderFix_$ ? $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$ -= $JSCompiler_StaticMethods_getPaddingBorderBoxHeight_$$($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$) : ($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesPadding_$ || ($height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$paddingBox_$, 
-  $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$ += $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$.top + $height$$inline_660_paddingBox$$3_paddingScrollHeight$$inline_656$$.bottom), $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesBorder_$ || ($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$ = $goog$style$getBorderBox$$($textarea$$7_textarea$$inline_654$$), $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$ += 
+  $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesBorder_$ || ($borderBox$$inline_666_textarea$$inline_663$$ = $goog$style$getBorderBox$$($borderBox$$inline_666_textarea$$inline_663$$), $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ -= $borderBox$$inline_666_textarea$$inline_663$$.top + $borderBox$$inline_666_textarea$$inline_663$$.bottom);
+  $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$ += 0 < $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ ? $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ : 0;
+  $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$needsPaddingBorderFix_$ ? $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$ -= $JSCompiler_StaticMethods_getPaddingBorderBoxHeight_$$($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$) : ($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesPadding_$ || ($height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$ = $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$paddingBox_$, 
+  $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$ += $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$.top + $height$$inline_664_paddingBox$$3_paddingScrollHeight$$inline_660$$.bottom), $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.$scrollHeightIncludesBorder_$ || ($JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$ = $goog$style$getBorderBox$$($textarea$$7_textarea$$inline_658$$), $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$ += 
   $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.top + $JSCompiler_StaticMethods_getHeight_$self_borderBox$$3$$.bottom));
-  return $JSCompiler_temp_const$$12_height$$21_initialScrollHeight$$inline_655$$
+  return $JSCompiler_temp_const$$16_height$$21_initialScrollHeight$$inline_659$$
 }
 function $JSCompiler_StaticMethods_setHeight_$$($JSCompiler_StaticMethods_setHeight_$self$$, $height$$22$$) {
   $JSCompiler_StaticMethods_setHeight_$self$$.$height_$ != $height$$22$$ && ($JSCompiler_StaticMethods_setHeight_$self$$.$height_$ = $height$$22$$, $JSCompiler_StaticMethods_setHeight_$self$$.$getElement$().style.height = $height$$22$$ + "px")
@@ -3118,23 +3118,23 @@ function $JSCompiler_StaticMethods_setHeightToEstimate_$$($JSCompiler_StaticMeth
 }
 $JSCompiler_prototypeAlias$$.$grow_$ = function $$JSCompiler_prototypeAlias$$$$grow_$$() {
   if(!this.$isResizing_$) {
-    var $shouldCallShrink_textarea$$inline_668$$ = $JSCompiler_alias_FALSE$$;
+    var $shouldCallShrink_textarea$$inline_672$$ = $JSCompiler_alias_FALSE$$;
     this.$isResizing_$ = $JSCompiler_alias_TRUE$$;
-    var $isEmpty$$inline_669_textarea$$11$$ = this.$getElement$(), $oldHeight$$ = this.$height_$;
-    if($isEmpty$$inline_669_textarea$$11$$.scrollHeight) {
-      var $minHeight$$inline_672_setMinHeight$$ = $JSCompiler_alias_FALSE$$, $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ = $JSCompiler_alias_FALSE$$, $currentHeight$$inline_671_newHeight$$ = $JSCompiler_StaticMethods_getHeight_$$(this), $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$ = $isEmpty$$inline_669_textarea$$11$$.offsetHeight, $minHeight$$1$$ = $JSCompiler_StaticMethods_getMinHeight_$$(this), $maxHeight$$1$$ = $JSCompiler_StaticMethods_getMaxHeight_$$(this);
-      $minHeight$$1$$ && $currentHeight$$inline_671_newHeight$$ < $minHeight$$1$$ ? ($JSCompiler_StaticMethods_setHeight_$$(this, $minHeight$$1$$), $minHeight$$inline_672_setMinHeight$$ = $JSCompiler_alias_TRUE$$) : $maxHeight$$1$$ && $currentHeight$$inline_671_newHeight$$ > $maxHeight$$1$$ ? ($JSCompiler_StaticMethods_setHeight_$$(this, $maxHeight$$1$$), $isEmpty$$inline_669_textarea$$11$$.style.overflowY = "", $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ = $JSCompiler_alias_TRUE$$) : 
-      $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$ != $currentHeight$$inline_671_newHeight$$ ? $JSCompiler_StaticMethods_setHeight_$$(this, $currentHeight$$inline_671_newHeight$$) : this.$height_$ || (this.$height_$ = $currentHeight$$inline_671_newHeight$$);
-      !$minHeight$$inline_672_setMinHeight$$ && (!$scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ && $goog$ui$Textarea$NEEDS_HELP_SHRINKING_$$) && ($shouldCallShrink_textarea$$inline_668$$ = $JSCompiler_alias_TRUE$$)
+    var $isEmpty$$inline_673_textarea$$11$$ = this.$getElement$(), $oldHeight$$ = this.$height_$;
+    if($isEmpty$$inline_673_textarea$$11$$.scrollHeight) {
+      var $minHeight$$inline_676_setMinHeight$$ = $JSCompiler_alias_FALSE$$, $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ = $JSCompiler_alias_FALSE$$, $currentHeight$$inline_675_newHeight$$ = $JSCompiler_StaticMethods_getHeight_$$(this), $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$ = $isEmpty$$inline_673_textarea$$11$$.offsetHeight, $minHeight$$1$$ = $JSCompiler_StaticMethods_getMinHeight_$$(this), $maxHeight$$1$$ = $JSCompiler_StaticMethods_getMaxHeight_$$(this);
+      $minHeight$$1$$ && $currentHeight$$inline_675_newHeight$$ < $minHeight$$1$$ ? ($JSCompiler_StaticMethods_setHeight_$$(this, $minHeight$$1$$), $minHeight$$inline_676_setMinHeight$$ = $JSCompiler_alias_TRUE$$) : $maxHeight$$1$$ && $currentHeight$$inline_675_newHeight$$ > $maxHeight$$1$$ ? ($JSCompiler_StaticMethods_setHeight_$$(this, $maxHeight$$1$$), $isEmpty$$inline_673_textarea$$11$$.style.overflowY = "", $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ = $JSCompiler_alias_TRUE$$) : 
+      $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$ != $currentHeight$$inline_675_newHeight$$ ? $JSCompiler_StaticMethods_setHeight_$$(this, $currentHeight$$inline_675_newHeight$$) : this.$height_$ || (this.$height_$ = $currentHeight$$inline_675_newHeight$$);
+      !$minHeight$$inline_676_setMinHeight$$ && (!$scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ && $goog$ui$Textarea$NEEDS_HELP_SHRINKING_$$) && ($shouldCallShrink_textarea$$inline_672$$ = $JSCompiler_alias_TRUE$$)
     }else {
       $JSCompiler_StaticMethods_setHeightToEstimate_$$(this)
     }
     this.$isResizing_$ = $JSCompiler_alias_FALSE$$;
-    $shouldCallShrink_textarea$$inline_668$$ && ($shouldCallShrink_textarea$$inline_668$$ = this.$getElement$(), this.$isResizing_$ || (this.$isResizing_$ = $JSCompiler_alias_TRUE$$, $isEmpty$$inline_669_textarea$$11$$ = $JSCompiler_alias_FALSE$$, $shouldCallShrink_textarea$$inline_668$$.value || ($shouldCallShrink_textarea$$inline_668$$.value = " ", $isEmpty$$inline_669_textarea$$11$$ = $JSCompiler_alias_TRUE$$), ($scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ = $shouldCallShrink_textarea$$inline_668$$.scrollHeight) ? 
-    ($currentHeight$$inline_671_newHeight$$ = $JSCompiler_StaticMethods_getHeight_$$(this), $minHeight$$inline_672_setMinHeight$$ = $JSCompiler_StaticMethods_getMinHeight_$$(this), $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$ = $JSCompiler_StaticMethods_getMaxHeight_$$(this), !($minHeight$$inline_672_setMinHeight$$ && $currentHeight$$inline_671_newHeight$$ <= $minHeight$$inline_672_setMinHeight$$) && !($currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$ && $currentHeight$$inline_671_newHeight$$ >= 
-    $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$) && ($currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$ = this.$paddingBox_$, $shouldCallShrink_textarea$$inline_668$$.style.paddingBottom = $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$.bottom + 1 + "px", $JSCompiler_StaticMethods_getHeight_$$(this) == $currentHeight$$inline_671_newHeight$$ && ($shouldCallShrink_textarea$$inline_668$$.style.paddingBottom = $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$.bottom + 
-    $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ + "px", $shouldCallShrink_textarea$$inline_668$$.scrollTop = 0, $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ = $JSCompiler_StaticMethods_getHeight_$$(this) - $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$, $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$ >= $minHeight$$inline_672_setMinHeight$$ ? $JSCompiler_StaticMethods_setHeight_$$(this, $scrollHeight$$inline_670_setMaxHeight_shrinkToHeight$$inline_675$$) : 
-    $JSCompiler_StaticMethods_setHeight_$$(this, $minHeight$$inline_672_setMinHeight$$)), $shouldCallShrink_textarea$$inline_668$$.style.paddingBottom = $currentHeight_maxHeight$$inline_673_paddingBox$$inline_674$$.bottom + "px")) : $JSCompiler_StaticMethods_setHeightToEstimate_$$(this), $isEmpty$$inline_669_textarea$$11$$ && ($shouldCallShrink_textarea$$inline_668$$.value = ""), this.$isResizing_$ = $JSCompiler_alias_FALSE$$));
+    $shouldCallShrink_textarea$$inline_672$$ && ($shouldCallShrink_textarea$$inline_672$$ = this.$getElement$(), this.$isResizing_$ || (this.$isResizing_$ = $JSCompiler_alias_TRUE$$, $isEmpty$$inline_673_textarea$$11$$ = $JSCompiler_alias_FALSE$$, $shouldCallShrink_textarea$$inline_672$$.value || ($shouldCallShrink_textarea$$inline_672$$.value = " ", $isEmpty$$inline_673_textarea$$11$$ = $JSCompiler_alias_TRUE$$), ($scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ = $shouldCallShrink_textarea$$inline_672$$.scrollHeight) ? 
+    ($currentHeight$$inline_675_newHeight$$ = $JSCompiler_StaticMethods_getHeight_$$(this), $minHeight$$inline_676_setMinHeight$$ = $JSCompiler_StaticMethods_getMinHeight_$$(this), $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$ = $JSCompiler_StaticMethods_getMaxHeight_$$(this), !($minHeight$$inline_676_setMinHeight$$ && $currentHeight$$inline_675_newHeight$$ <= $minHeight$$inline_676_setMinHeight$$) && !($currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$ && $currentHeight$$inline_675_newHeight$$ >= 
+    $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$) && ($currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$ = this.$paddingBox_$, $shouldCallShrink_textarea$$inline_672$$.style.paddingBottom = $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$.bottom + 1 + "px", $JSCompiler_StaticMethods_getHeight_$$(this) == $currentHeight$$inline_675_newHeight$$ && ($shouldCallShrink_textarea$$inline_672$$.style.paddingBottom = $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$.bottom + 
+    $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ + "px", $shouldCallShrink_textarea$$inline_672$$.scrollTop = 0, $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ = $JSCompiler_StaticMethods_getHeight_$$(this) - $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$, $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$ >= $minHeight$$inline_676_setMinHeight$$ ? $JSCompiler_StaticMethods_setHeight_$$(this, $scrollHeight$$inline_674_setMaxHeight_shrinkToHeight$$inline_679$$) : 
+    $JSCompiler_StaticMethods_setHeight_$$(this, $minHeight$$inline_676_setMinHeight$$)), $shouldCallShrink_textarea$$inline_672$$.style.paddingBottom = $currentHeight_maxHeight$$inline_677_paddingBox$$inline_678$$.bottom + "px")) : $JSCompiler_StaticMethods_setHeightToEstimate_$$(this), $isEmpty$$inline_673_textarea$$11$$ && ($shouldCallShrink_textarea$$inline_672$$.value = ""), this.$isResizing_$ = $JSCompiler_alias_FALSE$$));
     $oldHeight$$ != this.$height_$ && this.dispatchEvent("resize")
   }
 };
@@ -3159,21 +3159,21 @@ function $annotorious$templates$editform$$() {
   return'<div class="annotorious-editor" style="position:absolute;z-index:1"><form><textarea class="annotorious-editor-text" placeholder="Add a Comment..." tabindex="1"></textarea><div class="annotorious-editor-button-container"><a class="annotorious-editor-button annotorious-editor-button-cancel" href="javascript:void(0);" tabindex="3">Cancel</a><a class="annotorious-editor-button annotorious-editor-button-save" href="javascript:void(0);" tabindex="2">Save</a></div></form></div>'
 }
 ;function $annotorious$Editor$$($annotator$$23$$) {
-  function $opt_callback$$inline_686$$() {
-    var $JSCompiler_StaticMethods_resize$self$$inline_683$$ = $self$$5$$.$_textarea$;
-    $JSCompiler_StaticMethods_resize$self$$inline_683$$.$getElement$() && $JSCompiler_StaticMethods_resize$self$$inline_683$$.$grow_$()
+  function $opt_callback$$inline_690$$() {
+    var $JSCompiler_StaticMethods_resize$self$$inline_687$$ = $self$$5$$.$_textarea$;
+    $JSCompiler_StaticMethods_resize$self$$inline_687$$.$getElement$() && $JSCompiler_StaticMethods_resize$self$$inline_687$$.$grow_$()
   }
   this.element = $goog$soy$renderAsElement$$($annotorious$templates$editform$$);
   this.$_annotator$ = $annotator$$23$$;
   this.$_item$ = $annotator$$23$$.getItem();
   this.$_textarea$ = new $goog$ui$Textarea$$("");
-  this.$_btnCancel$ = $query$$inline_154$$(".annotorious-editor-button-cancel", this.element)[0];
-  this.$_btnSave$ = $query$$inline_154$$(".annotorious-editor-button-save", this.element)[0];
-  var $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$;
-  $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ = this.$_btnSave$;
-  $goog$dom$BrowserFeature$CAN_USE_PARENT_ELEMENT_PROPERTY$$ ? $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ = $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$.parentElement : ($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ = $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$.parentNode, 
-  $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ = $goog$dom$isElement$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$) ? $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ : $JSCompiler_alias_NULL$$);
-  this.$_btnContainer$ = $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$;
+  this.$_btnCancel$ = $query$$inline_158$$(".annotorious-editor-button-cancel", this.element)[0];
+  this.$_btnSave$ = $query$$inline_158$$(".annotorious-editor-button-save", this.element)[0];
+  var $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$;
+  $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ = this.$_btnSave$;
+  $goog$dom$BrowserFeature$CAN_USE_PARENT_ELEMENT_PROPERTY$$ ? $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ = $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$.parentElement : ($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ = $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$.parentNode, 
+  $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ = $goog$dom$isElement$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$) ? $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ : $JSCompiler_alias_NULL$$);
+  this.$_btnContainer$ = $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$;
   this.$_extraFields$ = [];
   var $self$$5$$ = this;
   $goog$events$listen$$(this.$_btnCancel$, "click", function($event$$4$$) {
@@ -3186,35 +3186,35 @@ function $annotorious$templates$editform$$() {
     $annotation$$8_event$$5$$ = $self$$5$$.$getAnnotation$();
     $annotator$$23$$.$addAnnotation$($annotation$$8_event$$5$$);
     $annotator$$23$$.stopSelection();
-    $self$$5$$.$_original_annotation$ ? $annotator$$23$$.fireEvent("onAnnotationUpdated", $annotation$$8_event$$5$$) : $annotator$$23$$.fireEvent("onAnnotationCreated", $annotation$$8_event$$5$$);
+    $self$$5$$.$_original_annotation$ ? $annotator$$23$$.fireEvent("onAnnotationUpdated", $annotation$$8_event$$5$$, $annotator$$23$$.getItem()) : $annotator$$23$$.fireEvent("onAnnotationCreated", $annotation$$8_event$$5$$, $annotator$$23$$.getItem());
     $self$$5$$.close()
   });
   $goog$style$showElement$$(this.element, $JSCompiler_alias_FALSE$$);
   $annotator$$23$$.element.appendChild(this.element);
-  this.$_textarea$.$decorate$($query$$inline_154$$(".annotorious-editor-text", this.element)[0]);
-  var $div$$inline_685$$ = this.element;
-  $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ = document.createElement("div");
-  $goog$style$setStyle$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$, "position", "absolute");
-  $goog$style$setStyle$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$, "top", "0px");
-  $goog$style$setStyle$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$, "right", "0px");
-  $goog$style$setStyle$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$, "width", "5px");
-  $goog$style$setStyle$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$, "height", "100%");
-  $goog$style$setStyle$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$, "cursor", "e-resize");
-  $div$$inline_685$$.appendChild($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$);
-  var $div_border$$inline_688_width_limit$$inline_689$$ = $goog$style$getBorderBox$$($div$$inline_685$$), $div_border$$inline_688_width_limit$$inline_689$$ = $goog$style$getBounds$$($div$$inline_685$$).width - $div_border$$inline_688_width_limit$$inline_689$$.right - $div_border$$inline_688_width_limit$$inline_689$$.left;
-  $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$ = new $goog$fx$Dragger$$($JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$);
-  $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$.$limits$ = new $goog$math$Rect$$($div_border$$inline_688_width_limit$$inline_689$$, 0, 800, 0) || new $goog$math$Rect$$(NaN, NaN, NaN, NaN);
-  $JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$.$defaultAction$ = function $$JSCompiler_inline_result$$26_dragger$$inline_690_element$$inline_677_handle$$inline_687_parent$$inline_678$$$$defaultAction$$($x$$inline_691$$) {
-    $goog$style$setStyle$$($div$$inline_685$$, "width", $x$$inline_691$$ + "px");
-    $opt_callback$$inline_686$$ && $opt_callback$$inline_686$$()
+  this.$_textarea$.$decorate$($query$$inline_158$$(".annotorious-editor-text", this.element)[0]);
+  var $div$$inline_689$$ = this.element;
+  $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ = document.createElement("div");
+  $goog$style$setStyle$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$, "position", "absolute");
+  $goog$style$setStyle$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$, "top", "0px");
+  $goog$style$setStyle$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$, "right", "0px");
+  $goog$style$setStyle$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$, "width", "5px");
+  $goog$style$setStyle$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$, "height", "100%");
+  $goog$style$setStyle$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$, "cursor", "e-resize");
+  $div$$inline_689$$.appendChild($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$);
+  var $div_border$$inline_692_width_limit$$inline_693$$ = $goog$style$getBorderBox$$($div$$inline_689$$), $div_border$$inline_692_width_limit$$inline_693$$ = $goog$style$getBounds$$($div$$inline_689$$).width - $div_border$$inline_692_width_limit$$inline_693$$.right - $div_border$$inline_692_width_limit$$inline_693$$.left;
+  $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$ = new $goog$fx$Dragger$$($JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$);
+  $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$.$limits$ = new $goog$math$Rect$$($div_border$$inline_692_width_limit$$inline_693$$, 0, 800, 0) || new $goog$math$Rect$$(NaN, NaN, NaN, NaN);
+  $JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$.$defaultAction$ = function $$JSCompiler_inline_result$$30_dragger$$inline_694_element$$inline_681_handle$$inline_691_parent$$inline_682$$$$defaultAction$$($x$$inline_695$$) {
+    $goog$style$setStyle$$($div$$inline_689$$, "width", $x$$inline_695$$ + "px");
+    $opt_callback$$inline_690$$ && $opt_callback$$inline_690$$()
   }
 }
 $JSCompiler_prototypeAlias$$ = $annotorious$Editor$$.prototype;
-$JSCompiler_prototypeAlias$$.$addField$ = function $$JSCompiler_prototypeAlias$$$$addField$$($field_refNode$$inline_697$$) {
+$JSCompiler_prototypeAlias$$.$addField$ = function $$JSCompiler_prototypeAlias$$$$addField$$($field_refNode$$inline_701$$) {
   var $fieldEl$$ = $goog$dom$createDom$$("div", "annotorious-editor-field");
-  $goog$isString$$($field_refNode$$inline_697$$) ? $fieldEl$$.innerHTML = $field_refNode$$inline_697$$ : $goog$isFunction$$($field_refNode$$inline_697$$) ? this.$_extraFields$.push({$el$:$fieldEl$$, $fn$:$field_refNode$$inline_697$$}) : $goog$dom$isElement$$($field_refNode$$inline_697$$) && $fieldEl$$.appendChild($field_refNode$$inline_697$$);
-  $field_refNode$$inline_697$$ = this.$_btnContainer$;
-  $field_refNode$$inline_697$$.parentNode && $field_refNode$$inline_697$$.parentNode.insertBefore($fieldEl$$, $field_refNode$$inline_697$$)
+  $goog$isString$$($field_refNode$$inline_701$$) ? $fieldEl$$.innerHTML = $field_refNode$$inline_701$$ : $goog$isFunction$$($field_refNode$$inline_701$$) ? this.$_extraFields$.push({$el$:$fieldEl$$, $fn$:$field_refNode$$inline_701$$}) : $goog$dom$isElement$$($field_refNode$$inline_701$$) && $fieldEl$$.appendChild($field_refNode$$inline_701$$);
+  $field_refNode$$inline_701$$ = this.$_btnContainer$;
+  $field_refNode$$inline_701$$.parentNode && $field_refNode$$inline_701$$.parentNode.insertBefore($fieldEl$$, $field_refNode$$inline_701$$)
 };
 $JSCompiler_prototypeAlias$$.open = function $$JSCompiler_prototypeAlias$$$open$($opt_annotation$$) {
   (this.$_current_annotation$ = this.$_original_annotation$ = $opt_annotation$$) && this.$_textarea$.$setContent$(String($opt_annotation$$.text));
@@ -3223,7 +3223,8 @@ $JSCompiler_prototypeAlias$$.open = function $$JSCompiler_prototypeAlias$$$open$
   $goog$array$forEach$$(this.$_extraFields$, function($field$$1$$) {
     var $f$$45$$ = $field$$1$$.$fn$($opt_annotation$$);
     $goog$isString$$($f$$45$$) ? $field$$1$$.$el$.innerHTML = $f$$45$$ : $goog$dom$isElement$$($f$$45$$) && ($goog$dom$removeChildren$$($field$$1$$.$el$), $field$$1$$.$el$.appendChild($f$$45$$))
-  })
+  });
+  this.$_annotator$.fireEvent("onEditorShown", $opt_annotation$$)
 };
 $JSCompiler_prototypeAlias$$.close = function $$JSCompiler_prototypeAlias$$$close$() {
   $goog$style$showElement$$(this.element, $JSCompiler_alias_FALSE$$);
@@ -3233,14 +3234,14 @@ $JSCompiler_prototypeAlias$$.setPosition = function $$JSCompiler_prototypeAlias$
   $goog$style$setPosition$$(this.element, $xy$$.x, $xy$$.y)
 };
 $JSCompiler_prototypeAlias$$.$getAnnotation$ = function $$JSCompiler_prototypeAlias$$$$getAnnotation$$() {
-  var $htmlText$$inline_708_sanitized$$;
-  $htmlText$$inline_708_sanitized$$ = this.$_textarea$.$getElement$().value;
-  var $stringBuffer$$inline_711$$ = new $goog$string$StringBuffer$$;
-  (new $goog$string$html$HtmlParser$$).parse(new $goog$string$html$HtmlSanitizer$$($stringBuffer$$inline_711$$, function($url$$22$$) {
+  var $htmlText$$inline_712_sanitized$$;
+  $htmlText$$inline_712_sanitized$$ = this.$_textarea$.$getElement$().value;
+  var $stringBuffer$$inline_715$$ = new $goog$string$StringBuffer$$;
+  (new $goog$string$html$HtmlParser$$).parse(new $goog$string$html$HtmlSanitizer$$($stringBuffer$$inline_715$$, function($url$$22$$) {
     return $url$$22$$
-  }, $JSCompiler_alias_VOID$$), $htmlText$$inline_708_sanitized$$);
-  $htmlText$$inline_708_sanitized$$ = $stringBuffer$$inline_711$$.toString();
-  this.$_current_annotation$ ? this.$_current_annotation$.text = $htmlText$$inline_708_sanitized$$ : this.$_current_annotation$ = new $annotorious$Annotation$$(this.$_item$.src, $htmlText$$inline_708_sanitized$$, this.$_annotator$.$getActiveSelector$().getShape());
+  }, $JSCompiler_alias_VOID$$), $htmlText$$inline_712_sanitized$$);
+  $htmlText$$inline_712_sanitized$$ = $stringBuffer$$inline_715$$.toString();
+  this.$_current_annotation$ ? this.$_current_annotation$.text = $htmlText$$inline_712_sanitized$$ : this.$_current_annotation$ = new $annotorious$Annotation$$(this.$_item$.src, $htmlText$$inline_712_sanitized$$, this.$_annotator$.$getActiveSelector$().getShape());
   return this.$_current_annotation$
 };
 $annotorious$Editor$$.prototype.addField = $annotorious$Editor$$.prototype.$addField$;
@@ -3250,8 +3251,8 @@ function $annotorious$Hint$$($annotator$$24$$, $parent$$24$$, $opt_msg$$1$$) {
   $opt_msg$$1$$ || ($opt_msg$$1$$ = "Click and Drag to Annotate");
   this.element = $goog$soy$renderAsElement$$($annotorious$templates$image$hint$$, {$msg$:$opt_msg$$1$$});
   this.$_annotator$ = $annotator$$24$$;
-  this.$_message$ = $query$$inline_154$$(".annotorious-hint-msg", this.element)[0];
-  this.$_icon$ = $query$$inline_154$$(".annotorious-hint-icon", this.element)[0];
+  this.$_message$ = $query$$inline_158$$(".annotorious-hint-msg", this.element)[0];
+  this.$_icon$ = $query$$inline_158$$(".annotorious-hint-icon", this.element)[0];
   this.$_overItemHandler$ = function $this$$_overItemHandler$$() {
     $self$$6$$.show()
   };
@@ -3271,8 +3272,8 @@ $annotorious$Hint$$.prototype.$_attachListeners$ = function $$annotorious$Hint$$
   this.$_mouseOutListener$ = $goog$events$listen$$(this.$_icon$, "mouseout", function() {
     $JSCompiler_StaticMethods_hide$$($self$$7$$)
   });
-  this.$_annotator$.$addHandler$("onMouseOverItem", this.$_overItemHandler$);
-  this.$_annotator$.$addHandler$("onMouseOutOfItem", this.$_outOfItemHandler$)
+  this.$_annotator$.addHandler("onMouseOverItem", this.$_overItemHandler$);
+  this.$_annotator$.addHandler("onMouseOutOfItem", this.$_outOfItemHandler$)
 };
 $annotorious$Hint$$.prototype.$_detachListeners$ = function $$annotorious$Hint$$$$$_detachListeners$$() {
   $goog$events$unlistenByKey$$(this.$_mouseOverListener$);
@@ -3292,7 +3293,7 @@ function $JSCompiler_StaticMethods_hide$$($JSCompiler_StaticMethods_hide$self$$)
   window.clearTimeout($JSCompiler_StaticMethods_hide$self$$.$_hideTimer$);
   $goog$style$setOpacity$$($JSCompiler_StaticMethods_hide$self$$.$_message$, 0)
 }
-$annotorious$Hint$$.prototype.$destroy$ = function $$annotorious$Hint$$$$$destroy$$() {
+$annotorious$Hint$$.prototype.destroy = function $$annotorious$Hint$$$$destroy$() {
   this.$_detachListeners$();
   delete this.$_mouseOverListener$;
   delete this.$_mouseOutListener$;
@@ -3303,11 +3304,11 @@ $annotorious$Hint$$.prototype.$destroy$ = function $$annotorious$Hint$$$$$destro
 function $annotorious$Popup$$($annotator$$25$$) {
   this.element = $goog$soy$renderAsElement$$($annotorious$templates$popup$$);
   this.$_annotator$ = $annotator$$25$$;
-  this.$_text$ = $query$$inline_154$$(".annotorious-popup-text", this.element)[0];
-  this.$_buttons$ = $query$$inline_154$$(".annotorious-popup-buttons", this.element)[0];
+  this.$_text$ = $query$$inline_158$$(".annotorious-popup-text", this.element)[0];
+  this.$_buttons$ = $query$$inline_158$$(".annotorious-popup-buttons", this.element)[0];
   this.$_cancelHide$ = $JSCompiler_alias_FALSE$$;
   this.$_extraFields$ = [];
-  var $btnEdit$$ = $query$$inline_154$$(".annotorious-popup-button-edit", this.$_buttons$)[0], $btnDelete$$ = $query$$inline_154$$(".annotorious-popup-button-delete", this.$_buttons$)[0], $self$$9$$ = this;
+  var $btnEdit$$ = $query$$inline_158$$(".annotorious-popup-button-edit", this.$_buttons$)[0], $btnDelete$$ = $query$$inline_158$$(".annotorious-popup-button-delete", this.$_buttons$)[0], $self$$9$$ = this;
   $goog$events$listen$$($btnEdit$$, "mouseover", function() {
     $goog$dom$classes$add$$($btnEdit$$, "annotorious-popup-button-active")
   });
@@ -3335,7 +3336,7 @@ function $annotorious$Popup$$($annotator$$25$$) {
   }), $goog$events$listen$$(this.element, "mouseout", function() {
     $goog$style$setOpacity$$($self$$9$$.$_buttons$, 0);
     $self$$9$$.startHideTimer()
-  }), $annotator$$25$$.$addHandler$("onMouseOutOfItem", function() {
+  }), $annotator$$25$$.addHandler("onMouseOutOfItem", function() {
     $self$$9$$.startHideTimer()
   }));
   $goog$style$setOpacity$$(this.$_buttons$, 0);
@@ -3376,7 +3377,8 @@ $JSCompiler_prototypeAlias$$.show = function $$JSCompiler_prototypeAlias$$$show$
     }, 1E3)
   }
   $goog$style$setOpacity$$(this.element, 0.9);
-  $goog$style$setStyle$$(this.element, "pointer-events", "auto")
+  $goog$style$setStyle$$(this.element, "pointer-events", "auto");
+  this.$_annotator$.fireEvent("onPopupShown", $annotation$$9$$)
 };
 $JSCompiler_prototypeAlias$$.setPosition = function $$JSCompiler_prototypeAlias$$$setPosition$($xy$$2$$) {
   $goog$style$setPosition$$(this.element, new $goog$math$Coordinate$$($xy$$2$$.x, $xy$$2$$.y))
@@ -3391,6 +3393,34 @@ $JSCompiler_prototypeAlias$$.setAnnotation = function $$JSCompiler_prototypeAlia
   })
 };
 $annotorious$Popup$$.prototype.addField = $annotorious$Popup$$.prototype.$addField$;
+function $annotorious$mediatypes$Annotator$$() {
+}
+$JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$Annotator$$.prototype;
+$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$11$$) {
+  this.$_viewer$.$addAnnotation$($annotation$$11$$)
+};
+$JSCompiler_prototypeAlias$$.addHandler = function $$JSCompiler_prototypeAlias$$$addHandler$($type$$84$$, $handler$$12$$) {
+  this.$_eventBroker$.addHandler($type$$84$$, $handler$$12$$)
+};
+$JSCompiler_prototypeAlias$$.fireEvent = function $$JSCompiler_prototypeAlias$$$fireEvent$($type$$85$$, $event$$15$$, $opt_extra$$1$$) {
+  return this.$_eventBroker$.fireEvent($type$$85$$, $event$$15$$, $opt_extra$$1$$)
+};
+$JSCompiler_prototypeAlias$$.$getActiveSelector$ = $JSCompiler_get$$("$_selector$");
+$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = function $$JSCompiler_prototypeAlias$$$$highlightAnnotation$$($annotation$$12$$) {
+  this.$_viewer$.$highlightAnnotation$($annotation$$12$$)
+};
+$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$13$$) {
+  this.$_viewer$.$removeAnnotation$($annotation$$13$$)
+};
+$JSCompiler_prototypeAlias$$.$removeHandler$ = function $$JSCompiler_prototypeAlias$$$$removeHandler$$($type$$86$$, $handler$$13$$) {
+  this.$_eventBroker$.$removeHandler$($type$$86$$, $handler$$13$$)
+};
+$JSCompiler_prototypeAlias$$.stopSelection = function $$JSCompiler_prototypeAlias$$$stopSelection$($original_annotation$$) {
+  $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_FALSE$$);
+  this.$_stop_selection_callback$ && (this.$_stop_selection_callback$(), delete this.$_stop_selection_callback$);
+  this.$_selector$.stopSelection();
+  $original_annotation$$ && this.$_viewer$.$addAnnotation$($original_annotation$$)
+};
 function $annotorious$mediatypes$image$Viewer$$($canvas$$, $annotator$$26$$) {
   this.$_canvas$ = $canvas$$;
   this.$_annotator$ = $annotator$$26$$;
@@ -3400,20 +3430,20 @@ function $annotorious$mediatypes$image$Viewer$$($canvas$$, $annotator$$26$$) {
   this.$_eventsEnabled$ = $JSCompiler_alias_TRUE$$;
   this.$_keepHighlighted$ = $JSCompiler_alias_FALSE$$;
   var $self$$12$$ = this;
-  $goog$events$listen$$(this.$_canvas$, $annotorious$events$ui$EventType$MOVE$$, function($event$$15$$) {
+  $goog$events$listen$$(this.$_canvas$, $annotorious$events$ui$EventType$MOVE$$, function($event$$16$$) {
     if($self$$12$$.$_eventsEnabled$) {
-      var $topAnnotation$$inline_730$$ = $JSCompiler_StaticMethods_topAnnotationAt$$($self$$12$$, $event$$15$$.offsetX, $event$$15$$.offsetY);
-      $topAnnotation$$inline_730$$ ? ($self$$12$$.$_keepHighlighted$ = $self$$12$$.$_keepHighlighted$ && $topAnnotation$$inline_730$$ == $self$$12$$.$_currentAnnotation$, $self$$12$$.$_currentAnnotation$ ? $self$$12$$.$_currentAnnotation$ != $topAnnotation$$inline_730$$ && ($self$$12$$.$_eventsEnabled$ = $JSCompiler_alias_FALSE$$, $self$$12$$.$_annotator$.popup.startHideTimer()) : ($self$$12$$.$_currentAnnotation$ = $topAnnotation$$inline_730$$, $JSCompiler_StaticMethods_redraw$$($self$$12$$), $self$$12$$.$_annotator$.fireEvent("onMouseOverAnnotation", 
-      {$annotation$:$self$$12$$.$_currentAnnotation$, mouseEvent:$event$$15$$}))) : !$self$$12$$.$_keepHighlighted$ && $self$$12$$.$_currentAnnotation$ && ($self$$12$$.$_eventsEnabled$ = $JSCompiler_alias_FALSE$$, $self$$12$$.$_annotator$.popup.startHideTimer())
+      var $topAnnotation$$inline_734$$ = $JSCompiler_StaticMethods_topAnnotationAt$$($self$$12$$, $event$$16$$.offsetX, $event$$16$$.offsetY);
+      $topAnnotation$$inline_734$$ ? ($self$$12$$.$_keepHighlighted$ = $self$$12$$.$_keepHighlighted$ && $topAnnotation$$inline_734$$ == $self$$12$$.$_currentAnnotation$, $self$$12$$.$_currentAnnotation$ ? $self$$12$$.$_currentAnnotation$ != $topAnnotation$$inline_734$$ && ($self$$12$$.$_eventsEnabled$ = $JSCompiler_alias_FALSE$$, $self$$12$$.$_annotator$.popup.startHideTimer()) : ($self$$12$$.$_currentAnnotation$ = $topAnnotation$$inline_734$$, $JSCompiler_StaticMethods_redraw$$($self$$12$$), $self$$12$$.$_annotator$.fireEvent("onMouseOverAnnotation", 
+      {$annotation$:$self$$12$$.$_currentAnnotation$, mouseEvent:$event$$16$$}))) : !$self$$12$$.$_keepHighlighted$ && $self$$12$$.$_currentAnnotation$ && ($self$$12$$.$_eventsEnabled$ = $JSCompiler_alias_FALSE$$, $self$$12$$.$_annotator$.popup.startHideTimer())
     }else {
-      $self$$12$$.$_cachedMouseEvent$ = $event$$15$$
+      $self$$12$$.$_cachedMouseEvent$ = $event$$16$$
     }
   });
-  $annotator$$26$$.$addHandler$("onMouseOutOfItem", function() {
+  $annotator$$26$$.addHandler("onMouseOutOfItem", function() {
     delete $self$$12$$.$_currentAnnotation$;
     $self$$12$$.$_eventsEnabled$ = $JSCompiler_alias_TRUE$$
   });
-  $annotator$$26$$.$addHandler$("beforePopupHide", function() {
+  $annotator$$26$$.addHandler("beforePopupHide", function() {
     if(!$self$$12$$.$_eventsEnabled$ && $self$$12$$.$_cachedMouseEvent$) {
       var $previousAnnotation$$ = $self$$12$$.$_currentAnnotation$;
       $self$$12$$.$_currentAnnotation$ = $JSCompiler_StaticMethods_topAnnotationAt$$($self$$12$$, $self$$12$$.$_cachedMouseEvent$.offsetX, $self$$12$$.$_cachedMouseEvent$.offsetY);
@@ -3425,22 +3455,22 @@ function $annotorious$mediatypes$image$Viewer$$($canvas$$, $annotator$$26$$) {
   })
 }
 $JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$image$Viewer$$.prototype;
-$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$11$$, $opt_replace$$2$$) {
+$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$14$$, $opt_replace$$2$$) {
   $opt_replace$$2$$ && ($opt_replace$$2$$ == this.$_currentAnnotation$ && delete this.$_currentAnnotation$, $goog$array$remove$$(this.$_annotations$, $opt_replace$$2$$), delete this.$_shapes$[$annotorious$shape$hashCode$$($opt_replace$$2$$.shapes[0])]);
-  this.$_annotations$.push($annotation$$11$$);
-  var $shape$$8_viewportShape$$ = $annotation$$11$$.shapes[0];
+  this.$_annotations$.push($annotation$$14$$);
+  var $shape$$8_viewportShape$$ = $annotation$$14$$.shapes[0];
   if("pixel" != $shape$$8_viewportShape$$.units) {
     var $self$$13$$ = this, $shape$$8_viewportShape$$ = $annotorious$shape$transform$$($shape$$8_viewportShape$$, function($xy$$3$$) {
       return $self$$13$$.$_annotator$.$fromItemCoordinates$($xy$$3$$)
     })
   }
-  this.$_shapes$[$annotorious$shape$hashCode$$($annotation$$11$$.shapes[0])] = $shape$$8_viewportShape$$;
+  this.$_shapes$[$annotorious$shape$hashCode$$($annotation$$14$$.shapes[0])] = $shape$$8_viewportShape$$;
   $JSCompiler_StaticMethods_redraw$$(this)
 };
-$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$12$$) {
-  $annotation$$12$$ == this.$_currentAnnotation$ && delete this.$_currentAnnotation$;
-  $goog$array$remove$$(this.$_annotations$, $annotation$$12$$);
-  delete this.$_shapes$[$annotorious$shape$hashCode$$($annotation$$12$$.shapes[0])];
+$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$15$$) {
+  $annotation$$15$$ == this.$_currentAnnotation$ && delete this.$_currentAnnotation$;
+  $goog$array$remove$$(this.$_annotations$, $annotation$$15$$);
+  delete this.$_shapes$[$annotorious$shape$hashCode$$($annotation$$15$$.shapes[0])];
   $JSCompiler_StaticMethods_redraw$$(this)
 };
 $JSCompiler_prototypeAlias$$.$getAnnotations$ = function $$JSCompiler_prototypeAlias$$$$getAnnotations$$() {
@@ -3459,25 +3489,25 @@ function $JSCompiler_StaticMethods_topAnnotationAt$$($JSCompiler_StaticMethods_t
 }
 $JSCompiler_prototypeAlias$$.$getAnnotationsAt$ = function $$JSCompiler_prototypeAlias$$$$getAnnotationsAt$$($px$$3$$, $py$$2$$) {
   var $intersectedAnnotations$$ = [], $self$$14$$ = this;
-  $goog$array$forEach$$(this.$_annotations$, function($annotation$$13$$) {
-    var $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$;
-    $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$ = $self$$14$$.$_shapes$[$annotorious$shape$hashCode$$($annotation$$13$$.shapes[0])];
-    if("rect" == $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.type) {
-      $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$ = $px$$3$$ < $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.x || $py$$2$$ < $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.y || $px$$3$$ > $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.x + $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.width || $py$$2$$ > $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.y + 
-      $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.height ? $JSCompiler_alias_FALSE$$ : $JSCompiler_alias_TRUE$$
+  $goog$array$forEach$$(this.$_annotations$, function($annotation$$16$$) {
+    var $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$;
+    $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$ = $self$$14$$.$_shapes$[$annotorious$shape$hashCode$$($annotation$$16$$.shapes[0])];
+    if("rect" == $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.type) {
+      $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$ = $px$$3$$ < $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.x || $py$$2$$ < $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.y || $px$$3$$ > $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.x + $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.width || $py$$2$$ > $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.y + 
+      $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.height ? $JSCompiler_alias_FALSE$$ : $JSCompiler_alias_TRUE$$
     }else {
-      if("polygon" == $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.type) {
-        $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$ = $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.geometry.points;
-        for(var $inside$$inline_736$$ = $JSCompiler_alias_FALSE$$, $j$$inline_737$$ = $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.length - 1, $i$$inline_738$$ = 0;$i$$inline_738$$ < $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$.length;$i$$inline_738$$++) {
-          $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$i$$inline_738$$].y > $py$$2$$ != $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$j$$inline_737$$].y > $py$$2$$ && $px$$3$$ < ($JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$j$$inline_737$$].x - $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$i$$inline_738$$].x) * ($py$$2$$ - $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$i$$inline_738$$].y) / 
-          ($JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$j$$inline_737$$].y - $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$i$$inline_738$$].y) + $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$[$i$$inline_738$$].x && ($inside$$inline_736$$ = !$inside$$inline_736$$), $j$$inline_737$$ = $i$$inline_738$$
+      if("polygon" == $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.type) {
+        $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$ = $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.geometry.points;
+        for(var $inside$$inline_740$$ = $JSCompiler_alias_FALSE$$, $j$$inline_741$$ = $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.length - 1, $i$$inline_742$$ = 0;$i$$inline_742$$ < $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$.length;$i$$inline_742$$++) {
+          $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$i$$inline_742$$].y > $py$$2$$ != $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$j$$inline_741$$].y > $py$$2$$ && $px$$3$$ < ($JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$j$$inline_741$$].x - $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$i$$inline_742$$].x) * ($py$$2$$ - $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$i$$inline_742$$].y) / 
+          ($JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$j$$inline_741$$].y - $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$i$$inline_742$$].y) + $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$[$i$$inline_742$$].x && ($inside$$inline_740$$ = !$inside$$inline_740$$), $j$$inline_741$$ = $i$$inline_742$$
         }
-        $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$ = $inside$$inline_736$$
+        $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$ = $inside$$inline_740$$
       }else {
-        $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$ = $JSCompiler_alias_FALSE$$
+        $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$ = $JSCompiler_alias_FALSE$$
       }
     }
-    $JSCompiler_inline_result$$9_points$$inline_735_shape$$inline_732$$ && $intersectedAnnotations$$.push($annotation$$13$$)
+    $JSCompiler_inline_result$$13_points$$inline_739_shape$$inline_736$$ && $intersectedAnnotations$$.push($annotation$$16$$)
   });
   $goog$array$ARRAY_PROTOTYPE_$$.sort.call($intersectedAnnotations$$, function($a$$31$$, $b$$26$$) {
     var $shape_a$$ = $self$$14$$.$_shapes$[$annotorious$shape$hashCode$$($a$$31$$.shapes[0])], $shape_b$$ = $self$$14$$.$_shapes$[$annotorious$shape$hashCode$$($b$$26$$.shapes[0])];
@@ -3493,8 +3523,8 @@ function $JSCompiler_StaticMethods__draw$$($JSCompiler_StaticMethods__draw$self$
 }
 function $JSCompiler_StaticMethods_redraw$$($JSCompiler_StaticMethods_redraw$self$$) {
   $JSCompiler_StaticMethods_redraw$self$$.$_g2d$.clearRect(0, 0, $JSCompiler_StaticMethods_redraw$self$$.$_canvas$.width, $JSCompiler_StaticMethods_redraw$self$$.$_canvas$.height);
-  $goog$array$forEach$$($JSCompiler_StaticMethods_redraw$self$$.$_annotations$, function($annotation$$14$$) {
-    $annotation$$14$$ != $JSCompiler_StaticMethods_redraw$self$$.$_currentAnnotation$ && $JSCompiler_StaticMethods__draw$$($JSCompiler_StaticMethods_redraw$self$$, $JSCompiler_StaticMethods_redraw$self$$.$_shapes$[$annotorious$shape$hashCode$$($annotation$$14$$.shapes[0])])
+  $goog$array$forEach$$($JSCompiler_StaticMethods_redraw$self$$.$_annotations$, function($annotation$$17$$) {
+    $annotation$$17$$ != $JSCompiler_StaticMethods_redraw$self$$.$_currentAnnotation$ && $JSCompiler_StaticMethods__draw$$($JSCompiler_StaticMethods_redraw$self$$, $JSCompiler_StaticMethods_redraw$self$$.$_shapes$[$annotorious$shape$hashCode$$($annotation$$17$$.shapes[0])])
   });
   if($JSCompiler_StaticMethods_redraw$self$$.$_currentAnnotation$) {
     var $bbox_shape$$10$$ = $JSCompiler_StaticMethods_redraw$self$$.$_shapes$[$annotorious$shape$hashCode$$($JSCompiler_StaticMethods_redraw$self$$.$_currentAnnotation$.shapes[0])];
@@ -3505,11 +3535,11 @@ function $JSCompiler_StaticMethods_redraw$$($JSCompiler_StaticMethods_redraw$sel
 }
 ;var $annotorious$events$ui$hasTouch$$ = "ontouchstart" in window, $annotorious$events$ui$hasMouse$$ = !$annotorious$events$ui$hasTouch$$, $annotorious$events$ui$EventType$DOWN$$ = $annotorious$events$ui$hasTouch$$ ? "touchstart" : "mousedown", $annotorious$events$ui$EventType$OVER$$ = $annotorious$events$ui$hasTouch$$ ? "touchenter" : "mouseover", $annotorious$events$ui$EventType$MOVE$$ = $annotorious$events$ui$hasTouch$$ ? "touchmove" : "mousemove", $annotorious$events$ui$EventType$UP$$ = $annotorious$events$ui$hasTouch$$ ? 
 "touchend" : "mouseup", $annotorious$events$ui$EventType$OUT$$ = $annotorious$events$ui$hasTouch$$ ? "touchleave" : "mouseout";
-function $annotorious$events$ui$sanitizeCoordinates$$($event$$18$$, $parent$$25$$) {
+function $annotorious$events$ui$sanitizeCoordinates$$($event$$19$$, $parent$$25$$) {
   var $points$$8$$ = $JSCompiler_alias_FALSE$$;
-  $event$$18$$.offsetX = $event$$18$$.offsetX ? $event$$18$$.offsetX : $JSCompiler_alias_FALSE$$;
-  $event$$18$$.offsetY = $event$$18$$.offsetY ? $event$$18$$.offsetY : $JSCompiler_alias_FALSE$$;
-  return $points$$8$$ = !$event$$18$$.offsetX || !$event$$18$$.offsetY && $event$$18$$.$event_$.changedTouches ? {x:$event$$18$$.$event_$.changedTouches[0].clientX - $annotorious$dom$getOffset$$($parent$$25$$).left, y:$event$$18$$.$event_$.changedTouches[0].clientY - $annotorious$dom$getOffset$$($parent$$25$$).top} : {x:$event$$18$$.offsetX, y:$event$$18$$.offsetY}
+  $event$$19$$.offsetX = $event$$19$$.offsetX ? $event$$19$$.offsetX : $JSCompiler_alias_FALSE$$;
+  $event$$19$$.offsetY = $event$$19$$.offsetY ? $event$$19$$.offsetY : $JSCompiler_alias_FALSE$$;
+  return $points$$8$$ = (!$event$$19$$.offsetX || !$event$$19$$.offsetY) && $event$$19$$.$event_$.changedTouches ? {x:$event$$19$$.$event_$.changedTouches[0].clientX - $annotorious$dom$getOffset$$($parent$$25$$).left, y:$event$$19$$.$event_$.changedTouches[0].clientY - $annotorious$dom$getOffset$$($parent$$25$$).top} : {x:$event$$19$$.offsetX, y:$event$$19$$.offsetY}
 }
 ;function $annotorious$plugins$selection$RectDragSelector$$() {
 }
@@ -3518,8 +3548,11 @@ $JSCompiler_prototypeAlias$$.init = function $$JSCompiler_prototypeAlias$$$init$
   this.$_OUTLINE$ = "#000000";
   this.$_STROKE$ = "#ffffff";
   this.$_FILL$ = $JSCompiler_alias_FALSE$$;
+  this.$_HI_OUTLINE$ = "#000000";
   this.$_HI_STROKE$ = "#fff000";
   this.$_HI_FILL$ = $JSCompiler_alias_FALSE$$;
+  this.$_HI_OUTLINE_WIDTH$ = this.$_STROKE_WIDTH$ = this.$_OUTLINE_WIDTH$ = 1;
+  this.$_HI_STROKE_WIDTH$ = 1.2;
   this.$_canvas$ = $canvas$$1$$;
   this.$_annotator$ = $annotator$$27$$;
   this.$_g2d$ = $canvas$$1$$.getContext("2d");
@@ -3528,23 +3561,19 @@ $JSCompiler_prototypeAlias$$.init = function $$JSCompiler_prototypeAlias$$$init$
 };
 $JSCompiler_prototypeAlias$$.$_attachListeners$ = function $$JSCompiler_prototypeAlias$$$$_attachListeners$$() {
   var $self$$17$$ = this, $canvas$$2$$ = this.$_canvas$;
-  this.$_mouseMoveListener$ = $goog$events$listen$$(this.$_canvas$, $annotorious$events$ui$EventType$MOVE$$, function($event$$19_points$$9_width$$20$$) {
-    $event$$19_points$$9_width$$20$$ = $annotorious$events$ui$sanitizeCoordinates$$($event$$19_points$$9_width$$20$$, $canvas$$2$$);
+  this.$_mouseMoveListener$ = $goog$events$listen$$(this.$_canvas$, $annotorious$events$ui$EventType$MOVE$$, function($event$$20_points$$9_width$$20$$) {
+    $event$$20_points$$9_width$$20$$ = $annotorious$events$ui$sanitizeCoordinates$$($event$$20_points$$9_width$$20$$, $canvas$$2$$);
     if($self$$17$$.$_enabled$) {
-      $self$$17$$.$_opposite$ = {x:$event$$19_points$$9_width$$20$$.x, y:$event$$19_points$$9_width$$20$$.y};
+      $self$$17$$.$_opposite$ = {x:$event$$20_points$$9_width$$20$$.x, y:$event$$20_points$$9_width$$20$$.y};
       $self$$17$$.$_g2d$.clearRect(0, 0, $canvas$$2$$.width, $canvas$$2$$.height);
-      var $event$$19_points$$9_width$$20$$ = $self$$17$$.$_opposite$.x - $self$$17$$.$_anchor$.x, $height$$25$$ = $self$$17$$.$_opposite$.y - $self$$17$$.$_anchor$.y;
-      $self$$17$$.$_g2d$.strokeStyle = $self$$17$$.$_OUTLINE$;
-      $self$$17$$.$_g2d$.strokeRect($self$$17$$.$_anchor$.x + 0.5, $self$$17$$.$_anchor$.y + 0.5, $event$$19_points$$9_width$$20$$, $height$$25$$);
-      $self$$17$$.$_g2d$.strokeStyle = $self$$17$$.$_STROKE$;
-      0 < $event$$19_points$$9_width$$20$$ && 0 < $height$$25$$ ? $self$$17$$.$_g2d$.strokeRect($self$$17$$.$_anchor$.x + 1.5, $self$$17$$.$_anchor$.y + 1.5, $event$$19_points$$9_width$$20$$ - 2, $height$$25$$ - 2) : 0 < $event$$19_points$$9_width$$20$$ && 0 > $height$$25$$ ? $self$$17$$.$_g2d$.strokeRect($self$$17$$.$_anchor$.x + 1.5, $self$$17$$.$_anchor$.y - 0.5, $event$$19_points$$9_width$$20$$ - 2, $height$$25$$ + 2) : 0 > $event$$19_points$$9_width$$20$$ && 0 > $height$$25$$ ? $self$$17$$.$_g2d$.strokeRect($self$$17$$.$_anchor$.x - 
-      0.5, $self$$17$$.$_anchor$.y - 0.5, $event$$19_points$$9_width$$20$$ + 2, $height$$25$$ + 2) : $self$$17$$.$_g2d$.strokeRect($self$$17$$.$_anchor$.x - 0.5, $self$$17$$.$_anchor$.y + 1.5, $event$$19_points$$9_width$$20$$ + 2, $height$$25$$ - 2)
+      var $event$$20_points$$9_width$$20$$ = $self$$17$$.$_opposite$.x - $self$$17$$.$_anchor$.x, $height$$25$$ = $self$$17$$.$_opposite$.y - $self$$17$$.$_anchor$.y;
+      $self$$17$$.drawShape($self$$17$$.$_g2d$, {type:"rect", geometry:{x:0 < $event$$20_points$$9_width$$20$$ ? $self$$17$$.$_anchor$.x : $self$$17$$.$_opposite$.x, y:0 < $height$$25$$ ? $self$$17$$.$_anchor$.y : $self$$17$$.$_opposite$.y, width:Math.abs($event$$20_points$$9_width$$20$$), height:Math.abs($height$$25$$)}})
     }
   });
-  this.$_mouseUpListener$ = $goog$events$listen$$($canvas$$2$$, $annotorious$events$ui$EventType$UP$$, function($annotations$$2_event$$20$$) {
-    var $points$$10$$ = $annotorious$events$ui$sanitizeCoordinates$$($annotations$$2_event$$20$$, $canvas$$2$$), $shape$$11$$ = $self$$17$$.getShape(), $annotations$$2_event$$20$$ = $annotations$$2_event$$20$$.$event_$ ? $annotations$$2_event$$20$$.$event_$ : $annotations$$2_event$$20$$;
+  this.$_mouseUpListener$ = $goog$events$listen$$($canvas$$2$$, $annotorious$events$ui$EventType$UP$$, function($annotations$$2_event$$21$$) {
+    var $points$$10$$ = $annotorious$events$ui$sanitizeCoordinates$$($annotations$$2_event$$21$$, $canvas$$2$$), $shape$$11$$ = $self$$17$$.getShape(), $annotations$$2_event$$21$$ = $annotations$$2_event$$21$$.$event_$ ? $annotations$$2_event$$21$$.$event_$ : $annotations$$2_event$$21$$;
     $self$$17$$.$_enabled$ = $JSCompiler_alias_FALSE$$;
-    $shape$$11$$ ? ($self$$17$$.$_detachListeners$(), $self$$17$$.$_annotator$.fireEvent("onSelectionCompleted", {mouseEvent:$annotations$$2_event$$20$$, shape:$shape$$11$$, viewportBounds:$self$$17$$.getViewportBounds()})) : ($self$$17$$.$_annotator$.fireEvent("onSelectionCanceled"), $annotations$$2_event$$20$$ = $self$$17$$.$_annotator$.$getAnnotationsAt$($points$$10$$.x, $points$$10$$.y), 0 < $annotations$$2_event$$20$$.length && $self$$17$$.$_annotator$.$highlightAnnotation$($annotations$$2_event$$20$$[0]))
+    $shape$$11$$ ? ($self$$17$$.$_detachListeners$(), $self$$17$$.$_annotator$.fireEvent("onSelectionCompleted", {mouseEvent:$annotations$$2_event$$21$$, shape:$shape$$11$$, viewportBounds:$self$$17$$.getViewportBounds()})) : ($self$$17$$.$_annotator$.fireEvent("onSelectionCanceled"), $annotations$$2_event$$21$$ = $self$$17$$.$_annotator$.$getAnnotationsAt$($points$$10$$.x, $points$$10$$.y), 0 < $annotations$$2_event$$21$$.length && $self$$17$$.$_annotator$.$highlightAnnotation$($annotations$$2_event$$21$$[0]))
   })
 };
 $JSCompiler_prototypeAlias$$.$_detachListeners$ = function $$JSCompiler_prototypeAlias$$$$_detachListeners$$() {
@@ -3554,11 +3583,16 @@ $JSCompiler_prototypeAlias$$.$_detachListeners$ = function $$JSCompiler_prototyp
 $JSCompiler_prototypeAlias$$.getName = $JSCompiler_returnArg$$("rect_drag");
 $JSCompiler_prototypeAlias$$.getSupportedShapeType = $JSCompiler_returnArg$$("rect");
 $JSCompiler_prototypeAlias$$.$setProperties$ = function $$JSCompiler_prototypeAlias$$$$setProperties$$($props$$2$$) {
-  $props$$2$$.outline && (this.$_OUTLINE$ = $props$$2$$.outline);
-  $props$$2$$.stroke && (this.$_STROKE$ = $props$$2$$.stroke);
-  $props$$2$$.fill && (this.$_FILL$ = $props$$2$$.fill);
-  $props$$2$$.hi_stroke && (this.$_HI_STROKE$ = $props$$2$$.hi_stroke);
-  $props$$2$$.hi_fill && (this.$_HI_FILL$ = $props$$2$$.hi_fill)
+  $props$$2$$.hasOwnProperty("outline") && (this.$_OUTLINE$ = $props$$2$$.outline);
+  $props$$2$$.hasOwnProperty("stroke") && (this.$_STROKE$ = $props$$2$$.stroke);
+  $props$$2$$.hasOwnProperty("fill") && (this.$_FILL$ = $props$$2$$.fill);
+  $props$$2$$.hasOwnProperty("hi_outline") && (this.$_HI_OUTLINE$ = $props$$2$$.hi_outline);
+  $props$$2$$.hasOwnProperty("hi_stroke") && (this.$_HI_STROKE$ = $props$$2$$.hi_stroke);
+  $props$$2$$.hasOwnProperty("hi_fill") && (this.$_HI_FILL$ = $props$$2$$.hi_fill);
+  $props$$2$$.hasOwnProperty("outline_width") && (this.$_OUTLINE_WIDTH$ = $props$$2$$.outline_width);
+  $props$$2$$.hasOwnProperty("stroke_width") && (this.$_STROKE_WIDTH$ = $props$$2$$.stroke_width);
+  $props$$2$$.hasOwnProperty("hi_outline_width") && (this.$_HI_OUTLINE_WIDTH$ = $props$$2$$.hi_outline_width);
+  $props$$2$$.hasOwnProperty("hi_stroke_width") && (this.$_HI_STROKE_WIDTH$ = $props$$2$$.hi_stroke_width)
 };
 $JSCompiler_prototypeAlias$$.startSelection = function $$JSCompiler_prototypeAlias$$$startSelection$($x$$82$$, $y$$49$$) {
   var $startPoint$$2$$ = {x:$x$$82$$, y:$y$$49$$};
@@ -3576,8 +3610,8 @@ $JSCompiler_prototypeAlias$$.stopSelection = function $$JSCompiler_prototypeAlia
 };
 $JSCompiler_prototypeAlias$$.getShape = function $$JSCompiler_prototypeAlias$$$getShape$() {
   if(this.$_opposite$ && 3 < Math.abs(this.$_opposite$.x - this.$_anchor$.x) && 3 < Math.abs(this.$_opposite$.y - this.$_anchor$.y)) {
-    var $item_opposite_viewportBounds$$ = this.getViewportBounds(), $item_anchor$$ = this.$_annotator$.$toItemCoordinates$({x:$item_opposite_viewportBounds$$.left, y:$item_opposite_viewportBounds$$.top}), $item_opposite_viewportBounds$$ = this.$_annotator$.$toItemCoordinates$({x:$item_opposite_viewportBounds$$.right - 1, y:$item_opposite_viewportBounds$$.bottom - 1});
-    return new $annotorious$shape$Shape$$("rect", new $annotorious$shape$geom$Rectangle$$($item_anchor$$.x, $item_anchor$$.y, $item_opposite_viewportBounds$$.x - $item_anchor$$.x, $item_opposite_viewportBounds$$.y - $item_anchor$$.y))
+    var $rect$$9_viewportBounds$$ = this.getViewportBounds(), $rect$$9_viewportBounds$$ = this.$_annotator$.$toItemCoordinates$({x:$rect$$9_viewportBounds$$.left, y:$rect$$9_viewportBounds$$.top, width:$rect$$9_viewportBounds$$.right - $rect$$9_viewportBounds$$.left, height:$rect$$9_viewportBounds$$.bottom - $rect$$9_viewportBounds$$.top});
+    return new $annotorious$shape$Shape$$("rect", $rect$$9_viewportBounds$$)
   }
 };
 $JSCompiler_prototypeAlias$$.getViewportBounds = function $$JSCompiler_prototypeAlias$$$getViewportBounds$() {
@@ -3587,11 +3621,13 @@ $JSCompiler_prototypeAlias$$.getViewportBounds = function $$JSCompiler_prototype
   this.$_opposite$.y > this.$_anchor$.y ? ($top$$12$$ = this.$_anchor$.y, $bottom$$8$$ = this.$_opposite$.y) : ($top$$12$$ = this.$_opposite$.y, $bottom$$8$$ = this.$_anchor$.y);
   return{top:$top$$12$$, right:$right$$12$$, bottom:$bottom$$8$$, left:$left$$14$$}
 };
-$JSCompiler_prototypeAlias$$.drawShape = function $$JSCompiler_prototypeAlias$$$drawShape$($g2d$$, $geom$$1_shape$$12$$, $highlight$$2$$) {
-  var $stroke$$, $fill$$, $outline$$;
-  "rect" == $geom$$1_shape$$12$$.type && ("style" in $geom$$1_shape$$12$$ ? $highlight$$2$$ ? ($fill$$ = $geom$$1_shape$$12$$.style.hi_fill, $stroke$$ = $geom$$1_shape$$12$$.style.hi_stroke, $outline$$ = $geom$$1_shape$$12$$.style.hi_outline) : ($fill$$ = $geom$$1_shape$$12$$.style.fill, $stroke$$ = $geom$$1_shape$$12$$.style.stroke, $outline$$ = $geom$$1_shape$$12$$.style.outline) : ($highlight$$2$$ ? ($fill$$ = this.$_HI_FILL$, $stroke$$ = this.$_HI_STROKE$) : ($fill$$ = this.$_FILL$, $stroke$$ = 
-  this.$_STROKE$), $outline$$ = this.$_OUTLINE$), $g2d$$.lineWidth = $highlight$$2$$ ? 1.2 : 1, $geom$$1_shape$$12$$ = $geom$$1_shape$$12$$.geometry, $outline$$ && ($g2d$$.strokeStyle = $outline$$, $g2d$$.strokeRect($geom$$1_shape$$12$$.x + 0.5, $geom$$1_shape$$12$$.y + 0.5, $geom$$1_shape$$12$$.width + 1, $geom$$1_shape$$12$$.height + 1)), $stroke$$ && ($g2d$$.strokeStyle = $stroke$$, $g2d$$.strokeRect($geom$$1_shape$$12$$.x + 1.5, $geom$$1_shape$$12$$.y + 1.5, $geom$$1_shape$$12$$.width - 1, $geom$$1_shape$$12$$.height - 
-  1)), $fill$$ && ($g2d$$.fillStyle = $fill$$, $g2d$$.fillRect($geom$$1_shape$$12$$.x + 1.5, $geom$$1_shape$$12$$.y + 1.5, $geom$$1_shape$$12$$.width - 1, $geom$$1_shape$$12$$.height - 1)))
+$JSCompiler_prototypeAlias$$.drawShape = function $$JSCompiler_prototypeAlias$$$drawShape$($g2d$$, $geom$$1_shape$$12$$, $highlight$$2_stroke$$) {
+  var $fill$$, $outline$$, $outline_width$$, $stroke_width$$;
+  "rect" == $geom$$1_shape$$12$$.type && ("style" in $geom$$1_shape$$12$$ ? $highlight$$2_stroke$$ ? ($fill$$ = $geom$$1_shape$$12$$.style.hi_fill, $highlight$$2_stroke$$ = $geom$$1_shape$$12$$.style.hi_stroke, $outline$$ = $geom$$1_shape$$12$$.style.hi_outline, $outline_width$$ = $geom$$1_shape$$12$$.style.$hi_outline_width$, $stroke_width$$ = $geom$$1_shape$$12$$.style.$hi_stroke_width$) : ($fill$$ = $geom$$1_shape$$12$$.style.fill, $highlight$$2_stroke$$ = $geom$$1_shape$$12$$.style.stroke, $outline$$ = 
+  $geom$$1_shape$$12$$.style.outline, $outline_width$$ = $geom$$1_shape$$12$$.style.$outline_width$, $stroke_width$$ = $geom$$1_shape$$12$$.style.$stroke_width$) : $highlight$$2_stroke$$ ? ($fill$$ = this.$_HI_FILL$, $highlight$$2_stroke$$ = this.$_HI_STROKE$, $outline$$ = this.$_HI_OUTLINE$, $outline_width$$ = this.$_HI_OUTLINE_WIDTH$, $stroke_width$$ = this.$_HI_STROKE_WIDTH$) : ($fill$$ = this.$_FILL$, $highlight$$2_stroke$$ = this.$_STROKE$, $outline$$ = this.$_OUTLINE$, $outline_width$$ = this.$_OUTLINE_WIDTH$, 
+  $stroke_width$$ = this.$_STROKE_WIDTH$), $geom$$1_shape$$12$$ = $geom$$1_shape$$12$$.geometry, $outline$$ && ($g2d$$.lineJoin = "round", $g2d$$.lineWidth = $outline_width$$, $g2d$$.strokeStyle = $outline$$, $g2d$$.strokeRect($geom$$1_shape$$12$$.x + $outline_width$$ / 2, $geom$$1_shape$$12$$.y + $outline_width$$ / 2, $geom$$1_shape$$12$$.width - $outline_width$$, $geom$$1_shape$$12$$.height - $outline_width$$)), $highlight$$2_stroke$$ && ($g2d$$.lineJoin = "miter", $g2d$$.lineWidth = $stroke_width$$, 
+  $g2d$$.strokeStyle = $highlight$$2_stroke$$, $g2d$$.strokeRect($geom$$1_shape$$12$$.x + $outline_width$$ + $stroke_width$$ / 2, $geom$$1_shape$$12$$.y + $outline_width$$ + $stroke_width$$ / 2, $geom$$1_shape$$12$$.width - 2 * $outline_width$$ - $stroke_width$$, $geom$$1_shape$$12$$.height - 2 * $outline_width$$ - $stroke_width$$)), $fill$$ && ($g2d$$.lineJoin = "miter", $g2d$$.lineWidth = $stroke_width$$, $g2d$$.fillStyle = $fill$$, $g2d$$.fillRect($geom$$1_shape$$12$$.x + $outline_width$$ + $stroke_width$$ / 
+  2, $geom$$1_shape$$12$$.y + $outline_width$$ + $stroke_width$$ / 2, $geom$$1_shape$$12$$.width - 2 * $outline_width$$ - $stroke_width$$, $geom$$1_shape$$12$$.height - 2 * $outline_width$$ - $stroke_width$$)))
 };
 function $annotorious$templates$image$canvas$$($opt_data$$5$$) {
   return'<canvas class="annotorious-item annotorious-opacity-fade" style="position:absolute; top:0px; left:0px; width:' + $soy$$0$0escapeHtml$$($opt_data$$5$$.width) + "px; height:" + $soy$$0$0escapeHtml$$($opt_data$$5$$.height) + 'px; z-index:0" width="' + $soy$$0$0escapeHtml$$($opt_data$$5$$.width) + '" height="' + $soy$$0$0escapeHtml$$($opt_data$$5$$.height) + '"></canvas>'
@@ -3600,10 +3636,10 @@ function $annotorious$templates$image$hint$$($opt_data$$6$$) {
   return'<div class="annotorious-hint" style="white-space:nowrap; position:absolute; top:0px; left:0px; pointer-events:none;"><div class="annotorious-hint-msg annotorious-opacity-fade">' + $soy$$0$0escapeHtml$$($opt_data$$6$$.$msg$) + '</div><div class="annotorious-hint-icon" style="pointer-events:auto"></div></div>'
 }
 ;function $annotorious$mediatypes$image$ImageAnnotator$$($item$$6$$, $opt_popup$$) {
-  function $transferMargin$$inline_745$$($direction$$inline_748$$, $value$$inline_749$$) {
-    $goog$style$setStyle$$($annotationLayer$$inline_744$$, "margin-" + $direction$$inline_748$$, $value$$inline_749$$ + "px");
-    $goog$style$setStyle$$($item$$6$$, "margin-" + $direction$$inline_748$$, 0);
-    $goog$style$setStyle$$($item$$6$$, "padding-" + $direction$$inline_748$$, 0)
+  function $transferMargin$$inline_746$$($direction$$inline_749$$, $value$$inline_750$$) {
+    $goog$style$setStyle$$($annotationLayer$$inline_745$$, "margin-" + $direction$$inline_749$$, $value$$inline_750$$ + "px");
+    $goog$style$setStyle$$($item$$6$$, "margin-" + $direction$$inline_749$$, 0);
+    $goog$style$setStyle$$($item$$6$$, "padding-" + $direction$$inline_749$$, 0)
   }
   this.$_image$ = $item$$6$$;
   this.$_original_bufferspace$ = {padding:$item$$6$$.style.padding, margin:$item$$6$$.style.margin};
@@ -3613,99 +3649,91 @@ function $annotorious$templates$image$hint$$($opt_data$$6$$) {
   this.element = $goog$dom$createDom$$("div", "annotorious-annotationlayer");
   $goog$style$setStyle$$(this.element, "position", "relative");
   $goog$style$setStyle$$(this.element, "display", "inline-block");
-  var $annotationLayer$$inline_744$$ = this.element, $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$ = $goog$style$getBox_$$($item$$6$$, "margin"), $padding$$inline_747$$ = $goog$style$getBox_$$($item$$6$$, "padding");
-  (0 != $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.top || 0 != $padding$$inline_747$$.top) && $transferMargin$$inline_745$$("top", $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.top + $padding$$inline_747$$.top);
-  (0 != $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.right || 0 != $padding$$inline_747$$.right) && $transferMargin$$inline_745$$("right", $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.right + $padding$$inline_747$$.right);
-  (0 != $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.bottom || 0 != $padding$$inline_747$$.bottom) && $transferMargin$$inline_745$$("bottom", $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.bottom + $padding$$inline_747$$.bottom);
-  (0 != $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.left || 0 != $padding$$inline_747$$.left) && $transferMargin$$inline_745$$("left", $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.left + $padding$$inline_747$$.left);
-  ($default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$ = $item$$6$$.parentNode) && $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.replaceChild(this.element, $item$$6$$);
+  var $annotationLayer$$inline_745$$ = this.element, $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$ = $goog$style$getBox_$$($item$$6$$, "margin"), $padding$$inline_748$$ = $goog$style$getBox_$$($item$$6$$, "padding");
+  (0 != $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.top || 0 != $padding$$inline_748$$.top) && $transferMargin$$inline_746$$("top", $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.top + $padding$$inline_748$$.top);
+  (0 != $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.right || 0 != $padding$$inline_748$$.right) && $transferMargin$$inline_746$$("right", $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.right + $padding$$inline_748$$.right);
+  (0 != $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.bottom || 0 != $padding$$inline_748$$.bottom) && $transferMargin$$inline_746$$("bottom", $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.bottom + $padding$$inline_748$$.bottom);
+  (0 != $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.left || 0 != $padding$$inline_748$$.left) && $transferMargin$$inline_746$$("left", $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.left + $padding$$inline_748$$.left);
+  ($default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$ = $item$$6$$.parentNode) && $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.replaceChild(this.element, $item$$6$$);
   this.element.appendChild($item$$6$$);
-  $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$ = $goog$style$getBounds$$($item$$6$$);
-  this.$_viewCanvas$ = $goog$soy$renderAsElement$$($annotorious$templates$image$canvas$$, {width:$default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.width, height:$default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.height});
+  $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$ = $goog$style$getBounds$$($item$$6$$);
+  this.$_viewCanvas$ = $goog$soy$renderAsElement$$($annotorious$templates$image$canvas$$, {width:$default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.width, height:$default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.height});
   $annotorious$events$ui$hasMouse$$ && $goog$dom$classes$add$$(this.$_viewCanvas$, "annotorious-item-unfocus");
   this.element.appendChild(this.$_viewCanvas$);
-  this.$_editCanvas$ = $goog$soy$renderAsElement$$($annotorious$templates$image$canvas$$, {width:$default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.width, height:$default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.height});
+  this.$_editCanvas$ = $goog$soy$renderAsElement$$($annotorious$templates$image$canvas$$, {width:$default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.width, height:$default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.height});
   $annotorious$events$ui$hasMouse$$ && $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_FALSE$$);
   this.element.appendChild(this.$_editCanvas$);
   this.popup = $opt_popup$$ ? $opt_popup$$ : new $annotorious$Popup$$(this);
-  $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$ = new $annotorious$plugins$selection$RectDragSelector$$;
-  $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$.init(this, this.$_editCanvas$);
-  this.$_selectors$.push($default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$);
-  this.$_currentSelector$ = $default_selector_img_bounds_margin$$inline_746_parent$$inline_753$$;
+  $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$ = new $annotorious$plugins$selection$RectDragSelector$$;
+  $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$.init(this, this.$_editCanvas$);
+  this.$_selectors$.push($default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$);
+  this.$_currentSelector$ = $default_selector_img_bounds_margin$$inline_747_parent$$inline_754$$;
   this.editor = new $annotorious$Editor$$(this);
   this.$_viewer$ = new $annotorious$mediatypes$image$Viewer$$(this.$_viewCanvas$, this);
   this.$_hint$ = new $annotorious$Hint$$(this, this.element);
   var $self$$18$$ = this;
-  $annotorious$events$ui$hasMouse$$ && ($goog$events$listen$$(this.element, $annotorious$events$ui$EventType$OVER$$, function($event$$21_relatedTarget$$1$$) {
-    $event$$21_relatedTarget$$1$$ = $event$$21_relatedTarget$$1$$.relatedTarget;
-    if(!$event$$21_relatedTarget$$1$$ || !$goog$dom$contains$$($self$$18$$.element, $event$$21_relatedTarget$$1$$)) {
+  $annotorious$events$ui$hasMouse$$ && ($goog$events$listen$$(this.element, $annotorious$events$ui$EventType$OVER$$, function($event$$22_relatedTarget$$1$$) {
+    $event$$22_relatedTarget$$1$$ = $event$$22_relatedTarget$$1$$.relatedTarget;
+    if(!$event$$22_relatedTarget$$1$$ || !$goog$dom$contains$$($self$$18$$.element, $event$$22_relatedTarget$$1$$)) {
       $self$$18$$.$_eventBroker$.fireEvent("onMouseOverItem"), $goog$dom$classes$addRemove$$($self$$18$$.$_viewCanvas$, "annotorious-item-unfocus", "annotorious-item-focus")
     }
-  }), $goog$events$listen$$(this.element, $annotorious$events$ui$EventType$OUT$$, function($event$$22_relatedTarget$$2$$) {
-    $event$$22_relatedTarget$$2$$ = $event$$22_relatedTarget$$2$$.relatedTarget;
-    if(!$event$$22_relatedTarget$$2$$ || !$goog$dom$contains$$($self$$18$$.element, $event$$22_relatedTarget$$2$$)) {
+  }), $goog$events$listen$$(this.element, $annotorious$events$ui$EventType$OUT$$, function($event$$23_relatedTarget$$2$$) {
+    $event$$23_relatedTarget$$2$$ = $event$$23_relatedTarget$$2$$.relatedTarget;
+    if(!$event$$23_relatedTarget$$2$$ || !$goog$dom$contains$$($self$$18$$.element, $event$$23_relatedTarget$$2$$)) {
       $self$$18$$.$_eventBroker$.fireEvent("onMouseOutOfItem"), $goog$dom$classes$addRemove$$($self$$18$$.$_viewCanvas$, "annotorious-item-focus", "annotorious-item-unfocus")
     }
   }));
   var $activeCanvas$$ = $annotorious$events$ui$hasTouch$$ ? this.$_editCanvas$ : this.$_viewCanvas$;
-  $goog$events$listen$$($activeCanvas$$, $annotorious$events$ui$EventType$DOWN$$, function($annotations$$3_coords_event$$23$$) {
-    $annotations$$3_coords_event$$23$$ = $annotorious$events$ui$sanitizeCoordinates$$($annotations$$3_coords_event$$23$$, $activeCanvas$$);
+  $goog$events$listen$$($activeCanvas$$, $annotorious$events$ui$EventType$DOWN$$, function($annotations$$3_coords_event$$24$$) {
+    $annotations$$3_coords_event$$24$$ = $annotorious$events$ui$sanitizeCoordinates$$($annotations$$3_coords_event$$24$$, $activeCanvas$$);
     $self$$18$$.$_viewer$.$highlightAnnotation$($JSCompiler_alias_FALSE$$);
-    $self$$18$$.$_selectionEnabled$ ? ($goog$style$showElement$$($self$$18$$.$_editCanvas$, $JSCompiler_alias_TRUE$$), $self$$18$$.$_currentSelector$.startSelection($annotations$$3_coords_event$$23$$.x, $annotations$$3_coords_event$$23$$.y)) : ($annotations$$3_coords_event$$23$$ = $self$$18$$.$_viewer$.$getAnnotationsAt$($annotations$$3_coords_event$$23$$.x, $annotations$$3_coords_event$$23$$.y), 0 < $annotations$$3_coords_event$$23$$.length && $self$$18$$.$_viewer$.$highlightAnnotation$($annotations$$3_coords_event$$23$$[0]))
+    $self$$18$$.$_selectionEnabled$ ? ($goog$style$showElement$$($self$$18$$.$_editCanvas$, $JSCompiler_alias_TRUE$$), $self$$18$$.$_currentSelector$.startSelection($annotations$$3_coords_event$$24$$.x, $annotations$$3_coords_event$$24$$.y)) : ($annotations$$3_coords_event$$24$$ = $self$$18$$.$_viewer$.$getAnnotationsAt$($annotations$$3_coords_event$$24$$.x, $annotations$$3_coords_event$$24$$.y), 0 < $annotations$$3_coords_event$$24$$.length && $self$$18$$.$_viewer$.$highlightAnnotation$($annotations$$3_coords_event$$24$$[0]))
   });
-  this.$_eventBroker$.$addHandler$("onSelectionCompleted", function($event$$24$$) {
-    var $bounds$$ = $event$$24$$.viewportBounds;
+  this.$_eventBroker$.addHandler("onSelectionCompleted", function($event$$25$$) {
+    var $bounds$$ = $event$$25$$.viewportBounds;
     $self$$18$$.editor.setPosition(new $annotorious$shape$geom$Point$$($bounds$$.left + $self$$18$$.$_image$.offsetLeft, $bounds$$.bottom + 4 + $self$$18$$.$_image$.offsetTop));
-    $self$$18$$.editor.open($JSCompiler_alias_FALSE$$, $event$$24$$)
+    $self$$18$$.editor.open($JSCompiler_alias_FALSE$$, $event$$25$$)
   });
-  this.$_eventBroker$.$addHandler$("onSelectionCanceled", function() {
+  this.$_eventBroker$.addHandler("onSelectionCanceled", function() {
     $annotorious$events$ui$hasMouse$$ && $goog$style$showElement$$($self$$18$$.$_editCanvas$, $JSCompiler_alias_FALSE$$);
     $self$$18$$.$_currentSelector$.stopSelection()
   })
 }
+$goog$inherits$$($annotorious$mediatypes$image$ImageAnnotator$$, $annotorious$mediatypes$Annotator$$);
 $JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$image$ImageAnnotator$$.prototype;
 $JSCompiler_prototypeAlias$$.$activateSelector$ = $JSCompiler_emptyFn$$();
-$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$15$$, $opt_replace$$3$$) {
-  this.$_viewer$.$addAnnotation$($annotation$$15$$, $opt_replace$$3$$)
-};
-$JSCompiler_prototypeAlias$$.$addHandler$ = function $$JSCompiler_prototypeAlias$$$$addHandler$$($type$$84$$, $handler$$12$$) {
-  this.$_eventBroker$.$addHandler$($type$$84$$, $handler$$12$$)
-};
 $JSCompiler_prototypeAlias$$.$addSelector$ = function $$JSCompiler_prototypeAlias$$$$addSelector$$($selector$$6$$) {
   $selector$$6$$.init(this, this.$_editCanvas$);
   this.$_selectors$.push($selector$$6$$)
 };
-$JSCompiler_prototypeAlias$$.$destroy$ = function $$JSCompiler_prototypeAlias$$$$destroy$$() {
+$JSCompiler_prototypeAlias$$.destroy = function $$JSCompiler_prototypeAlias$$$destroy$() {
   var $img$$2$$ = this.$_image$;
   $img$$2$$.style.margin = this.$_original_bufferspace$.margin;
   $img$$2$$.style.padding = this.$_original_bufferspace$.padding;
-  var $oldNode$$inline_765$$ = this.element, $parent$$inline_766$$ = $oldNode$$inline_765$$.parentNode;
-  $parent$$inline_766$$ && $parent$$inline_766$$.replaceChild($img$$2$$, $oldNode$$inline_765$$)
+  var $oldNode$$inline_766$$ = this.element, $parent$$inline_767$$ = $oldNode$$inline_766$$.parentNode;
+  $parent$$inline_767$$ && $parent$$inline_767$$.replaceChild($img$$2$$, $oldNode$$inline_766$$)
 };
-$JSCompiler_prototypeAlias$$.$editAnnotation$ = function $$JSCompiler_prototypeAlias$$$$editAnnotation$$($annotation$$16$$) {
-  this.$_viewer$.$removeAnnotation$($annotation$$16$$);
-  var $anchor$$1_bounds$$1_selector$$7$$ = $goog$array$find$$(this.$_selectors$, function($selector$$8$$) {
-    return $selector$$8$$.getSupportedShapeType() == $annotation$$16$$.shapes[0].type
+$JSCompiler_prototypeAlias$$.$editAnnotation$ = function $$JSCompiler_prototypeAlias$$$$editAnnotation$$($annotation$$18$$) {
+  this.$_viewer$.$removeAnnotation$($annotation$$18$$);
+  var $anchor_bounds$$1_selector$$7$$ = $goog$array$find$$(this.$_selectors$, function($selector$$8$$) {
+    return $selector$$8$$.getSupportedShapeType() == $annotation$$18$$.shapes[0].type
   });
-  if($anchor$$1_bounds$$1_selector$$7$$) {
+  if($anchor_bounds$$1_selector$$7$$) {
     $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_TRUE$$);
     this.$_viewer$.$highlightAnnotation$($JSCompiler_alias_FALSE$$);
-    var $g2d$$1$$ = this.$_editCanvas$.getContext("2d"), $shape$$13_viewportShape$$1$$ = $annotation$$16$$.shapes[0], $self$$19$$ = this, $shape$$13_viewportShape$$1$$ = "pixel" == $shape$$13_viewportShape$$1$$.units ? $shape$$13_viewportShape$$1$$ : $annotorious$shape$transform$$($shape$$13_viewportShape$$1$$, function($xy$$4$$) {
+    var $g2d$$1$$ = this.$_editCanvas$.getContext("2d"), $shape$$13_viewportShape$$1$$ = $annotation$$18$$.shapes[0], $self$$19$$ = this, $shape$$13_viewportShape$$1$$ = "pixel" == $shape$$13_viewportShape$$1$$.units ? $shape$$13_viewportShape$$1$$ : $annotorious$shape$transform$$($shape$$13_viewportShape$$1$$, function($xy$$4$$) {
       return $self$$19$$.$fromItemCoordinates$($xy$$4$$)
     });
-    $anchor$$1_bounds$$1_selector$$7$$.drawShape($g2d$$1$$, $shape$$13_viewportShape$$1$$)
+    $anchor_bounds$$1_selector$$7$$.drawShape($g2d$$1$$, $shape$$13_viewportShape$$1$$)
   }
-  $anchor$$1_bounds$$1_selector$$7$$ = $annotorious$shape$getBoundingRect$$($annotation$$16$$.shapes[0]).geometry;
-  $anchor$$1_bounds$$1_selector$$7$$ = "pixel" == $annotation$$16$$.shapes[0].units ? new $annotorious$shape$geom$Point$$($anchor$$1_bounds$$1_selector$$7$$.x, $anchor$$1_bounds$$1_selector$$7$$.y + $anchor$$1_bounds$$1_selector$$7$$.height) : this.$fromItemCoordinates$(new $annotorious$shape$geom$Point$$($anchor$$1_bounds$$1_selector$$7$$.x, $anchor$$1_bounds$$1_selector$$7$$.y + $anchor$$1_bounds$$1_selector$$7$$.height));
-  this.editor.setPosition(new $annotorious$shape$geom$Point$$($anchor$$1_bounds$$1_selector$$7$$.x + this.$_image$.offsetLeft, $anchor$$1_bounds$$1_selector$$7$$.y + 4 + this.$_image$.offsetTop));
-  this.editor.open($annotation$$16$$)
+  $anchor_bounds$$1_selector$$7$$ = $annotorious$shape$getBoundingRect$$($annotation$$18$$.shapes[0]).geometry;
+  $anchor_bounds$$1_selector$$7$$ = "pixel" == $annotation$$18$$.shapes[0].units ? new $annotorious$shape$geom$Point$$($anchor_bounds$$1_selector$$7$$.x, $anchor_bounds$$1_selector$$7$$.y + $anchor_bounds$$1_selector$$7$$.height) : this.$fromItemCoordinates$(new $annotorious$shape$geom$Point$$($anchor_bounds$$1_selector$$7$$.x, $anchor_bounds$$1_selector$$7$$.y + $anchor_bounds$$1_selector$$7$$.height));
+  this.editor.setPosition(new $annotorious$shape$geom$Point$$($anchor_bounds$$1_selector$$7$$.x + this.$_image$.offsetLeft, $anchor_bounds$$1_selector$$7$$.y + 4 + this.$_image$.offsetTop));
+  this.editor.open($annotation$$18$$)
 };
-$JSCompiler_prototypeAlias$$.fireEvent = function $$JSCompiler_prototypeAlias$$$fireEvent$($type$$85$$, $event$$25$$) {
-  return this.$_eventBroker$.fireEvent($type$$85$$, $event$$25$$)
-};
-$JSCompiler_prototypeAlias$$.$fromItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$fromItemCoordinates$$($xy$$5$$) {
+$JSCompiler_prototypeAlias$$.$fromItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$fromItemCoordinates$$($xy_wh$$) {
   var $imgSize$$ = $goog$style$getSize$$(this.$_image$);
-  return{x:$xy$$5$$.x * $imgSize$$.width, y:$xy$$5$$.y * $imgSize$$.height}
+  return $xy_wh$$.width ? {x:$xy_wh$$.x * $imgSize$$.width, y:$xy_wh$$.y * $imgSize$$.height, width:$xy_wh$$.width * $imgSize$$.width, height:$xy_wh$$.height * $imgSize$$.height} : {x:$xy_wh$$.x * $imgSize$$.width, y:$xy_wh$$.y * $imgSize$$.height}
 };
 $JSCompiler_prototypeAlias$$.$getActiveSelector$ = $JSCompiler_get$$("$_currentSelector$");
 $JSCompiler_prototypeAlias$$.$getAnnotations$ = function $$JSCompiler_prototypeAlias$$$$getAnnotations$$() {
@@ -3716,7 +3744,7 @@ $JSCompiler_prototypeAlias$$.$getAnnotationsAt$ = function $$JSCompiler_prototyp
 };
 $JSCompiler_prototypeAlias$$.$getAvailableSelectors$ = $JSCompiler_get$$("$_selectors$");
 $JSCompiler_prototypeAlias$$.getItem = function $$JSCompiler_prototypeAlias$$$getItem$() {
-  return{src:$annotorious$mediatypes$image$ImageAnnotator$getItemURL$$(this.$_image$)}
+  return{src:$annotorious$mediatypes$image$ImageAnnotator$getItemURL$$(this.$_image$), element:this.$_image$}
 };
 function $annotorious$mediatypes$image$ImageAnnotator$getItemURL$$($item$$7$$) {
   var $src$$22$$ = $item$$7$$.getAttribute("data-original");
@@ -3727,16 +3755,7 @@ $JSCompiler_prototypeAlias$$.$hideAnnotations$ = function $$JSCompiler_prototype
 };
 $JSCompiler_prototypeAlias$$.$hideSelectionWidget$ = function $$JSCompiler_prototypeAlias$$$$hideSelectionWidget$$() {
   this.$_selectionEnabled$ = $JSCompiler_alias_FALSE$$;
-  this.$_hint$ && (this.$_hint$.$destroy$(), delete this.$_hint$)
-};
-$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = function $$JSCompiler_prototypeAlias$$$$highlightAnnotation$$($annotation$$17$$) {
-  this.$_viewer$.$highlightAnnotation$($annotation$$17$$)
-};
-$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$18$$) {
-  this.$_viewer$.$removeAnnotation$($annotation$$18$$)
-};
-$JSCompiler_prototypeAlias$$.$removeHandler$ = function $$JSCompiler_prototypeAlias$$$$removeHandler$$($type$$86$$, $handler$$13$$) {
-  this.$_eventBroker$.$removeHandler$($type$$86$$, $handler$$13$$)
+  this.$_hint$ && (this.$_hint$.destroy(), delete this.$_hint$)
 };
 $JSCompiler_prototypeAlias$$.$setCurrentSelector$ = function $$JSCompiler_prototypeAlias$$$$setCurrentSelector$$($selector$$9$$) {
   (this.$_currentSelector$ = $goog$array$find$$(this.$_selectors$, function($sel$$) {
@@ -3761,9 +3780,9 @@ $JSCompiler_prototypeAlias$$.stopSelection = function $$JSCompiler_prototypeAlia
   this.$_currentSelector$.stopSelection();
   $opt_original_annotation$$ && this.$_viewer$.$addAnnotation$($opt_original_annotation$$)
 };
-$JSCompiler_prototypeAlias$$.$toItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$toItemCoordinates$$($xy$$6$$) {
+$JSCompiler_prototypeAlias$$.$toItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$toItemCoordinates$$($xy_wh$$1$$) {
   var $imgSize$$1$$ = $goog$style$getSize$$(this.$_image$);
-  return{x:$xy$$6$$.x / $imgSize$$1$$.width, y:$xy$$6$$.y / $imgSize$$1$$.height}
+  return $xy_wh$$1$$.width ? {x:$xy_wh$$1$$.x / $imgSize$$1$$.width, y:$xy_wh$$1$$.y / $imgSize$$1$$.height, width:$xy_wh$$1$$.width / $imgSize$$1$$.width, height:$xy_wh$$1$$.height / $imgSize$$1$$.height} : {x:$xy_wh$$1$$.x / $imgSize$$1$$.width, y:$xy_wh$$1$$.y / $imgSize$$1$$.height}
 };
 $annotorious$mediatypes$image$ImageAnnotator$$.prototype.addSelector = $annotorious$mediatypes$image$ImageAnnotator$$.prototype.$addSelector$;
 $annotorious$mediatypes$image$ImageAnnotator$$.prototype.fireEvent = $annotorious$mediatypes$image$ImageAnnotator$$.prototype.fireEvent;
@@ -3771,7 +3790,7 @@ $annotorious$mediatypes$image$ImageAnnotator$$.prototype.setCurrentSelector = $a
 $annotorious$mediatypes$image$ImageAnnotator$$.prototype.toItemCoordinates = $annotorious$mediatypes$image$ImageAnnotator$$.prototype.$toItemCoordinates$;
 function $annotorious$mediatypes$image$ImageModule$$() {
   $JSCompiler_StaticMethods__initFields$$(this, function() {
-    return $query$$inline_154$$("img.annotatable", document)
+    return $query$$inline_158$$("img.annotatable", document)
   })
 }
 $goog$inherits$$($annotorious$mediatypes$image$ImageModule$$, $annotorious$mediatypes$Module$$);
@@ -3797,29 +3816,37 @@ function $annotorious$templates$openlayers$secondaryHint$$($opt_data$$7$$) {
   this.$_map$.addLayer(this.$_boxesLayer$);
   var $self$$20$$ = this;
   this.$_map$.events.register("move", this.$_map$, function() {
-    $self$$20$$.$_currentlyHighlightedOverlay$ && $JSCompiler_StaticMethods__place_popup$$($self$$20$$)
+    $self$$20$$.$_currentlyHighlightedOverlay$ && $self$$20$$.$_place_popup$()
   });
-  $annotator$$28$$.$addHandler$("beforePopupHide", function() {
-    $self$$20$$.$_lastHoveredOverlay$ == $self$$20$$.$_currentlyHighlightedOverlay$ ? $self$$20$$.$_popup$.clearHideTimer() : $JSCompiler_StaticMethods__updateHighlight$$($self$$20$$, $self$$20$$.$_lastHoveredOverlay$, $self$$20$$.$_currentlyHighlightedOverlay$)
+  $annotator$$28$$.addHandler("beforePopupHide", function() {
+    $self$$20$$.$_lastHoveredOverlay$ == $self$$20$$.$_currentlyHighlightedOverlay$ ? $self$$20$$.$_popup$.clearHideTimer() : $self$$20$$.$_updateHighlight$($self$$20$$.$_lastHoveredOverlay$, $self$$20$$.$_currentlyHighlightedOverlay$)
   })
 }
-function $JSCompiler_StaticMethods__place_popup$$($JSCompiler_StaticMethods__place_popup$self$$) {
-  var $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ = $JSCompiler_StaticMethods__place_popup$self$$.$_currentlyHighlightedOverlay$.$marker$.div, $annotation_dim_popup_bounds$$ = $goog$style$getBounds$$($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$), $JSCompiler_object_inline_left_3_annotation_pos$$ = $goog$style$getRelativePosition$$($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$, $JSCompiler_StaticMethods__place_popup$self$$.$_map$.div), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ = 
-  $JSCompiler_object_inline_left_3_annotation_pos$$.y, $JSCompiler_object_inline_left_3_annotation_pos$$ = $JSCompiler_object_inline_left_3_annotation_pos$$.x, $JSCompiler_object_inline_width_4$$ = $annotation_dim_popup_bounds$$.width, $JSCompiler_object_inline_height_5$$ = $annotation_dim_popup_bounds$$.height, $annotation_dim_popup_bounds$$ = $goog$style$getBounds$$($JSCompiler_StaticMethods__place_popup$self$$.$_popup$.element), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ = {y:$JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ + 
-  $JSCompiler_object_inline_height_5$$ + 5};
-  $JSCompiler_object_inline_left_3_annotation_pos$$ + $annotation_dim_popup_bounds$$.width > $JSCompiler_StaticMethods__place_popup$self$$.$_map_bounds$.width ? ($goog$dom$classes$addRemove$$($JSCompiler_StaticMethods__place_popup$self$$.$_popup$.element, "top-left", "top-right"), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = $JSCompiler_object_inline_left_3_annotation_pos$$ + $JSCompiler_object_inline_width_4$$ - $annotation_dim_popup_bounds$$.width) : ($goog$dom$classes$addRemove$$($JSCompiler_StaticMethods__place_popup$self$$.$_popup$.element, 
-  "top-right", "top-left"), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = $JSCompiler_object_inline_left_3_annotation_pos$$);
+$JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$openlayers$Viewer$$.prototype;
+$JSCompiler_prototypeAlias$$.destroy = function $$JSCompiler_prototypeAlias$$$destroy$() {
+  this.$_boxesLayer$.destroy()
+};
+$JSCompiler_prototypeAlias$$.$_place_popup$ = function $$JSCompiler_prototypeAlias$$$$_place_popup$$() {
+  var $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ = this.$_currentlyHighlightedOverlay$.$marker$.div, $annotation_dim_popup_bounds$$ = $goog$style$getBounds$$($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$), $JSCompiler_object_inline_left_3_annotation_pos$$ = $goog$style$getRelativePosition$$($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$, this.$_map$.div), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ = $JSCompiler_object_inline_left_3_annotation_pos$$.y, 
+  $JSCompiler_object_inline_left_3_annotation_pos$$ = $JSCompiler_object_inline_left_3_annotation_pos$$.x, $JSCompiler_object_inline_width_4$$ = $annotation_dim_popup_bounds$$.width, $JSCompiler_object_inline_height_5$$ = $annotation_dim_popup_bounds$$.height, $annotation_dim_popup_bounds$$ = $goog$style$getBounds$$(this.$_popup$.element), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ = {y:$JSCompiler_object_inline_top_2_annotation_div_popup_pos$$ + $JSCompiler_object_inline_height_5$$ + 
+  5};
+  $JSCompiler_object_inline_left_3_annotation_pos$$ + $annotation_dim_popup_bounds$$.width > this.$_map_bounds$.width ? ($goog$dom$classes$addRemove$$(this.$_popup$.element, "top-left", "top-right"), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = $JSCompiler_object_inline_left_3_annotation_pos$$ + $JSCompiler_object_inline_width_4$$ - $annotation_dim_popup_bounds$$.width) : ($goog$dom$classes$addRemove$$(this.$_popup$.element, "top-right", "top-left"), $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = 
+  $JSCompiler_object_inline_left_3_annotation_pos$$);
   0 > $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x && ($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = 0);
-  $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x + $annotation_dim_popup_bounds$$.width > $JSCompiler_StaticMethods__place_popup$self$$.$_map_bounds$.width && ($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = $JSCompiler_StaticMethods__place_popup$self$$.$_map_bounds$.width - $annotation_dim_popup_bounds$$.width);
-  $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.y + $annotation_dim_popup_bounds$$.height > $JSCompiler_StaticMethods__place_popup$self$$.$_map_bounds$.height && ($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.y = $JSCompiler_StaticMethods__place_popup$self$$.$_map_bounds$.height - $annotation_dim_popup_bounds$$.height);
-  $JSCompiler_StaticMethods__place_popup$self$$.$_popup$.setPosition($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$)
-}
-function $JSCompiler_StaticMethods__updateHighlight$$($JSCompiler_StaticMethods__updateHighlight$self$$, $new_highlight$$, $previous_highlight$$) {
-  $new_highlight$$ ? ($goog$style$getRelativePosition$$($new_highlight$$.$marker$.div, $JSCompiler_StaticMethods__updateHighlight$self$$.$_map$.div), $goog$string$toCamelCase$$("height"), $goog$style$setStyle$$($new_highlight$$.$inner$, "border-color", "#fff000"), $JSCompiler_StaticMethods__updateHighlight$self$$.$_currentlyHighlightedOverlay$ = $new_highlight$$, $JSCompiler_StaticMethods__updateHighlight$self$$.$_popup$.setAnnotation($new_highlight$$.$annotation$), $JSCompiler_StaticMethods__place_popup$$($JSCompiler_StaticMethods__updateHighlight$self$$), 
-  $JSCompiler_StaticMethods__updateHighlight$self$$.$_popup$.show()) : delete $JSCompiler_StaticMethods__updateHighlight$self$$.$_currentlyHighlightedOverlay$;
+  $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x + $annotation_dim_popup_bounds$$.width > this.$_map_bounds$.width && ($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.x = this.$_map_bounds$.width - $annotation_dim_popup_bounds$$.width);
+  $JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.y + $annotation_dim_popup_bounds$$.height > this.$_map_bounds$.height && ($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$.y = this.$_map_bounds$.height - $annotation_dim_popup_bounds$$.height);
+  this.$_popup$.setPosition($JSCompiler_object_inline_top_2_annotation_div_popup_pos$$)
+};
+$JSCompiler_prototypeAlias$$.$_show_popup$ = function $$JSCompiler_prototypeAlias$$$$_show_popup$$($annotation$$19$$) {
+  this.$_popup$.setAnnotation($annotation$$19$$);
+  this.$_place_popup$();
+  this.$_popup$.show()
+};
+$JSCompiler_prototypeAlias$$.$_updateHighlight$ = function $$JSCompiler_prototypeAlias$$$$_updateHighlight$$($new_highlight$$, $previous_highlight$$) {
+  $new_highlight$$ ? ($goog$style$getRelativePosition$$($new_highlight$$.$marker$.div, this.$_map$.div), $goog$string$toCamelCase$$("height"), $goog$style$setStyle$$($new_highlight$$.$inner$, "border-color", "#fff000"), this.$_currentlyHighlightedOverlay$ = $new_highlight$$, this.$_show_popup$($new_highlight$$.$annotation$)) : delete this.$_currentlyHighlightedOverlay$;
   $previous_highlight$$ && $goog$style$setStyle$$($previous_highlight$$.$inner$, "border-color", "#fff")
-}
-$annotorious$mediatypes$openlayers$Viewer$$.prototype.$addAnnotation$ = function $$annotorious$mediatypes$openlayers$Viewer$$$$$addAnnotation$$($annotation$$20$$) {
+};
+$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$20$$) {
   var $geometry$$1_marker$$ = $annotation$$20$$.shapes[0].geometry, $geometry$$1_marker$$ = new OpenLayers.Marker.Box(new OpenLayers.Bounds($geometry$$1_marker$$.x, $geometry$$1_marker$$.y, $geometry$$1_marker$$.x + $geometry$$1_marker$$.width, $geometry$$1_marker$$.y + $geometry$$1_marker$$.height));
   $goog$dom$classes$add$$($geometry$$1_marker$$.div, "annotorious-ol-boxmarker-outer");
   $goog$style$setStyle$$($geometry$$1_marker$$.div, "border", $JSCompiler_alias_NULL$$);
@@ -3828,7 +3855,7 @@ $annotorious$mediatypes$openlayers$Viewer$$.prototype.$addAnnotation$ = function
   $geometry$$1_marker$$.div.appendChild($inner$$);
   var $overlay$$ = {$annotation$:$annotation$$20$$, $marker$:$geometry$$1_marker$$, $inner$:$inner$$}, $self$$21$$ = this;
   $goog$events$listen$$($inner$$, "mouseover", function() {
-    $self$$21$$.$_currentlyHighlightedOverlay$ || $JSCompiler_StaticMethods__updateHighlight$$($self$$21$$, $overlay$$);
+    $self$$21$$.$_currentlyHighlightedOverlay$ || $self$$21$$.$_updateHighlight$($overlay$$);
     $self$$21$$.$_lastHoveredOverlay$ = $overlay$$
   });
   $goog$events$listen$$($inner$$, "mouseout", function() {
@@ -3846,14 +3873,14 @@ $annotorious$mediatypes$openlayers$Viewer$$.prototype.$addAnnotation$ = function
   });
   this.$_boxesLayer$.addMarker($geometry$$1_marker$$)
 };
-$annotorious$mediatypes$openlayers$Viewer$$.prototype.$removeAnnotation$ = function $$annotorious$mediatypes$openlayers$Viewer$$$$$removeAnnotation$$($annotation$$21$$) {
+$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$21$$) {
   var $overlay$$2$$ = $goog$array$find$$(this.$_overlays$, function($overlay$$3$$) {
     return $overlay$$3$$.$annotation$ == $annotation$$21$$
   });
   $overlay$$2$$ && ($goog$array$remove$$(this.$_overlays$, $overlay$$2$$), this.$_boxesLayer$.removeMarker($overlay$$2$$.$marker$))
 };
-$annotorious$mediatypes$openlayers$Viewer$$.prototype.$getAnnotations$ = $JSCompiler_emptyFn$$();
-$annotorious$mediatypes$openlayers$Viewer$$.prototype.$highlightAnnotation$ = function $$annotorious$mediatypes$openlayers$Viewer$$$$$highlightAnnotation$$($opt_annotation$$2$$) {
+$JSCompiler_prototypeAlias$$.$getAnnotations$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = function $$JSCompiler_prototypeAlias$$$$highlightAnnotation$$($opt_annotation$$2$$) {
   $opt_annotation$$2$$ || this.$_popup$.startHideTimer()
 };
 function $annotorious$mediatypes$openlayers$OpenLayersAnnotator$$($map$$11$$) {
@@ -3900,16 +3927,17 @@ function $annotorious$mediatypes$openlayers$OpenLayersAnnotator$$($map$$11$$) {
     var $offset$$18$$ = $goog$style$getClientPosition$$($self$$22$$.element);
     $self$$22$$.$_selector$.startSelection($event$$30$$.clientX - $offset$$18$$.x, $event$$30$$.clientY - $offset$$18$$.y)
   });
-  this.$_eventBroker$.$addHandler$("onSelectionCompleted", function($bounds$$2_event$$31$$) {
+  this.$_eventBroker$.addHandler("onSelectionCompleted", function($bounds$$2_event$$31$$) {
     $goog$style$setStyle$$($self$$22$$.$_editCanvas$, "pointer-events", "none");
     $bounds$$2_event$$31$$ = $bounds$$2_event$$31$$.viewportBounds;
     $self$$22$$.editor.setPosition(new $annotorious$shape$geom$Point$$($bounds$$2_event$$31$$.left, $bounds$$2_event$$31$$.bottom + 4));
     $self$$22$$.editor.open()
   });
-  this.$_eventBroker$.$addHandler$("onSelectionCanceled", function() {
+  this.$_eventBroker$.addHandler("onSelectionCanceled", function() {
     $self$$22$$.stopSelection()
   })
 }
+$goog$inherits$$($annotorious$mediatypes$openlayers$OpenLayersAnnotator$$, $annotorious$mediatypes$Annotator$$);
 $JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$openlayers$OpenLayersAnnotator$$.prototype;
 $JSCompiler_prototypeAlias$$.$showSelectionWidget$ = $JSCompiler_emptyFn$$();
 $JSCompiler_prototypeAlias$$.$hideSelectionWidget$ = $JSCompiler_emptyFn$$();
@@ -3923,60 +3951,42 @@ $JSCompiler_prototypeAlias$$.$activateSelector$ = function $$JSCompiler_prototyp
   }, 2E3);
   $callback$$36$$ && (this.$_stop_selection_callback$ = $callback$$36$$)
 };
+$JSCompiler_prototypeAlias$$.destroy = function $$JSCompiler_prototypeAlias$$$destroy$() {
+  this.$_viewer$.destroy();
+  $goog$dom$removeNode$$(this.$_secondaryHint$);
+  $goog$dom$removeNode$$(this.$_editCanvas$)
+};
+$JSCompiler_prototypeAlias$$.$addSelector$ = $JSCompiler_emptyFn$$();
 $JSCompiler_prototypeAlias$$.$editAnnotation$ = function $$JSCompiler_prototypeAlias$$$$editAnnotation$$($annotation$$22$$) {
   this.$_viewer$.$removeAnnotation$($annotation$$22$$);
-  var $selector$$11_viewportBounds$$1$$ = this.$_selector$, $self$$24$$ = this;
-  if($selector$$11_viewportBounds$$1$$) {
+  var $selector$$12_viewportBounds$$1$$ = this.$_selector$, $self$$24$$ = this;
+  if($selector$$12_viewportBounds$$1$$) {
     $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_TRUE$$);
     this.$_viewer$.$highlightAnnotation$($JSCompiler_alias_VOID$$);
-    var $g2d$$2$$ = this.$_editCanvas$.getContext("2d"), $viewportShape$$2$$ = $annotorious$shape$transform$$($annotation$$22$$.shapes[0], function($xy$$7$$) {
-      return $self$$24$$.$fromItemCoordinates$($xy$$7$$)
+    var $g2d$$2$$ = this.$_editCanvas$.getContext("2d"), $viewportShape$$2$$ = $annotorious$shape$transform$$($annotation$$22$$.shapes[0], function($xy$$5$$) {
+      return $self$$24$$.$fromItemCoordinates$($xy$$5$$)
     });
-    $selector$$11_viewportBounds$$1$$.drawShape($g2d$$2$$, $viewportShape$$2$$);
-    $selector$$11_viewportBounds$$1$$ = $annotorious$shape$getBoundingRect$$($viewportShape$$2$$).geometry;
-    this.editor.setPosition(new $annotorious$shape$geom$Point$$($selector$$11_viewportBounds$$1$$.x + this.element.offsetLeft, $selector$$11_viewportBounds$$1$$.y + $selector$$11_viewportBounds$$1$$.height + 4 + this.element.offsetTop));
+    console.log($viewportShape$$2$$);
+    $selector$$12_viewportBounds$$1$$.drawShape($g2d$$2$$, $viewportShape$$2$$);
+    $selector$$12_viewportBounds$$1$$ = $annotorious$shape$getBoundingRect$$($viewportShape$$2$$).geometry;
+    this.editor.setPosition(new $annotorious$shape$geom$Point$$($selector$$12_viewportBounds$$1$$.x, $selector$$12_viewportBounds$$1$$.y + $selector$$12_viewportBounds$$1$$.height));
     this.editor.open($annotation$$22$$)
   }
 };
-$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$23$$) {
-  this.$_viewer$.$addAnnotation$($annotation$$23$$)
+$JSCompiler_prototypeAlias$$.$fromItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$fromItemCoordinates$$($itemCoords_pxOpposite$$) {
+  var $pxCoords$$ = this.$_map$.getViewPortPxFromLonLat(new OpenLayers.LonLat($itemCoords_pxOpposite$$.x, $itemCoords_pxOpposite$$.y));
+  return($itemCoords_pxOpposite$$ = $itemCoords_pxOpposite$$.width ? this.$_map$.getViewPortPxFromLonLat(new OpenLayers.LonLat($itemCoords_pxOpposite$$.x + $itemCoords_pxOpposite$$.width, $itemCoords_pxOpposite$$.y + $itemCoords_pxOpposite$$.height)) : $JSCompiler_alias_FALSE$$) ? {x:$pxCoords$$.x, y:$itemCoords_pxOpposite$$.y, width:$itemCoords_pxOpposite$$.x - $pxCoords$$.x + 2, height:$pxCoords$$.y - $itemCoords_pxOpposite$$.y + 2} : {x:$pxCoords$$.x, y:$pxCoords$$.y}
 };
-$JSCompiler_prototypeAlias$$.$addHandler$ = function $$JSCompiler_prototypeAlias$$$$addHandler$$($type$$88$$, $handler$$14$$) {
-  this.$_eventBroker$.$addHandler$($type$$88$$, $handler$$14$$)
-};
-$JSCompiler_prototypeAlias$$.$addSelector$ = $JSCompiler_emptyFn$$();
-$JSCompiler_prototypeAlias$$.fireEvent = function $$JSCompiler_prototypeAlias$$$fireEvent$($type$$89$$, $event$$33$$) {
-  return this.$_eventBroker$.fireEvent($type$$89$$, $event$$33$$)
-};
-$JSCompiler_prototypeAlias$$.$fromItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$fromItemCoordinates$$($itemCoords_pxCoords$$) {
-  $itemCoords_pxCoords$$ = this.$_map$.getViewPortPxFromLonLat(new OpenLayers.LonLat($itemCoords_pxCoords$$.x, $itemCoords_pxCoords$$.y));
-  return{x:$itemCoords_pxCoords$$.x, y:$itemCoords_pxCoords$$.y}
-};
-$JSCompiler_prototypeAlias$$.$getActiveSelector$ = $JSCompiler_get$$("$_selector$");
 $JSCompiler_prototypeAlias$$.$getAnnotations$ = $JSCompiler_emptyFn$$();
 $JSCompiler_prototypeAlias$$.$getAvailableSelectors$ = $JSCompiler_emptyFn$$();
 $JSCompiler_prototypeAlias$$.getItem = function $$JSCompiler_prototypeAlias$$$getItem$() {
   return{src:"map://openlayers/something"}
 };
-$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = function $$JSCompiler_prototypeAlias$$$$highlightAnnotation$$($annotation$$24$$) {
-  this.$_viewer$.$highlightAnnotation$($annotation$$24$$)
-};
-$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$25$$) {
-  this.$_viewer$.$removeAnnotation$($annotation$$25$$)
-};
-$JSCompiler_prototypeAlias$$.$removeHandler$ = function $$JSCompiler_prototypeAlias$$$$removeHandler$$($type$$90$$, $handler$$15$$) {
-  this.$_eventBroker$.$removeHandler$($type$$90$$, $handler$$15$$)
-};
 $JSCompiler_prototypeAlias$$.$setActiveSelector$ = $JSCompiler_emptyFn$$();
-$JSCompiler_prototypeAlias$$.stopSelection = function $$JSCompiler_prototypeAlias$$$stopSelection$($original_annotation$$) {
-  $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_FALSE$$);
-  this.$_stop_selection_callback$ && (this.$_stop_selection_callback$(), delete this.$_stop_selection_callback$);
-  this.$_selector$.stopSelection();
-  $original_annotation$$ && this.$_viewer$.$addAnnotation$($original_annotation$$)
-};
-$JSCompiler_prototypeAlias$$.$toItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$toItemCoordinates$$($itemCoords$$1_xy$$8$$) {
-  $itemCoords$$1_xy$$8$$ = this.$_map$.getLonLatFromPixel(new OpenLayers.Pixel($itemCoords$$1_xy$$8$$.x, $itemCoords$$1_xy$$8$$.y));
-  return{x:$itemCoords$$1_xy$$8$$.lon, y:$itemCoords$$1_xy$$8$$.lat}
+$JSCompiler_prototypeAlias$$.$toItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$toItemCoordinates$$($itemOpposite_opposite_xy$$6$$) {
+  var $foo_itemCoords$$1$$ = this.$_map$.getLonLatFromPixel(new OpenLayers.Pixel($itemOpposite_opposite_xy$$6$$.x, $itemOpposite_opposite_xy$$6$$.y));
+  return($itemOpposite_opposite_xy$$6$$ = $itemOpposite_opposite_xy$$6$$.width ? new OpenLayers.Pixel($itemOpposite_opposite_xy$$6$$.x + $itemOpposite_opposite_xy$$6$$.width - 2, $itemOpposite_opposite_xy$$6$$.y + $itemOpposite_opposite_xy$$6$$.height - 2) : $JSCompiler_alias_FALSE$$) ? ($itemOpposite_opposite_xy$$6$$ = this.$_map$.getLonLatFromPixel($itemOpposite_opposite_xy$$6$$), $foo_itemCoords$$1$$ = {x:$foo_itemCoords$$1$$.lon, y:$itemOpposite_opposite_xy$$6$$.lat, width:$itemOpposite_opposite_xy$$6$$.lon - 
+  $foo_itemCoords$$1$$.lon, height:$foo_itemCoords$$1$$.lat - $itemOpposite_opposite_xy$$6$$.lat}, console.log($foo_itemCoords$$1$$), $foo_itemCoords$$1$$) : {x:$foo_itemCoords$$1$$.lon, y:$foo_itemCoords$$1$$.lat}
 };
 function $annotorious$mediatypes$openlayers$OpenLayersModule$$() {
   $JSCompiler_StaticMethods__initFields$$(this)
@@ -3989,23 +3999,197 @@ $annotorious$mediatypes$openlayers$OpenLayersModule$$.prototype.$newAnnotator$ =
 $annotorious$mediatypes$openlayers$OpenLayersModule$$.prototype.$supports$ = function $$annotorious$mediatypes$openlayers$OpenLayersModule$$$$$supports$$($item$$13$$) {
   return $item$$13$$ instanceof OpenLayers.Map
 };
-function $annotorious$Annotorious$$() {
-  function $fn$$inline_783$$() {
-    $goog$array$forEach$$($self$$25$$.$_modules$, function($module$$) {
-      $module$$.init()
+function $annotorious$mediatypes$openseadragon$Viewer$$($osdViewer$$, $annotator$$29$$) {
+  this.$_osdViewer$ = $osdViewer$$;
+  this.$_map_bounds$ = $goog$style$getBounds$$($osdViewer$$.element);
+  this.$_popup$ = $annotator$$29$$.popup;
+  $goog$style$setStyle$$(this.$_popup$.element, "z-index", 99E3);
+  this.$_overlays$ = [];
+  var $self$$25$$ = this;
+  this.$_osdViewer$.addHandler("animation", function() {
+    $self$$25$$.$_currentlyHighlightedOverlay$ && $self$$25$$.$_place_popup$()
+  });
+  $annotator$$29$$.addHandler("beforePopupHide", function() {
+    $self$$25$$.$_lastHoveredOverlay$ == $self$$25$$.$_currentlyHighlightedOverlay$ ? $self$$25$$.$_popup$.clearHideTimer() : $self$$25$$.$_updateHighlight$($self$$25$$.$_lastHoveredOverlay$, $self$$25$$.$_currentlyHighlightedOverlay$)
+  })
+}
+$JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$openseadragon$Viewer$$.prototype;
+$JSCompiler_prototypeAlias$$.$_place_popup$ = function $$JSCompiler_prototypeAlias$$$$_place_popup$$() {
+  var $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$ = this.$_osdViewer$.element, $JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$ = this.$_currentlyHighlightedOverlay$.$outer$, $annotation_dim$$1_popup_bounds$$1$$ = $goog$style$getBounds$$($JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$), $JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$ = $goog$style$getRelativePosition$$($JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$, 
+  $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$), $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$ = $JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$.y, $JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$ = $JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$.x, $JSCompiler_object_inline_width_8$$ = $annotation_dim$$1_popup_bounds$$1$$.width, $JSCompiler_object_inline_height_9$$ = $annotation_dim$$1_popup_bounds$$1$$.height, 
+  $annotation_dim$$1_popup_bounds$$1$$ = $goog$style$getBounds$$(this.$_popup$.element), $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$ = {x:$JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$, y:$JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$ + $JSCompiler_object_inline_height_9$$ + 12};
+  $goog$dom$classes$addRemove$$(this.$_popup$.element, "top-right", "top-left");
+  this.$_osdViewer$.isFullPage() || ($JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$ + $annotation_dim$$1_popup_bounds$$1$$.width > this.$_map_bounds$.width && ($goog$dom$classes$addRemove$$(this.$_popup$.element, "top-left", "top-right"), $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.x = $JSCompiler_object_inline_left_7_annotation_div$$1_annotation_pos$$1$$ + $JSCompiler_object_inline_width_8$$ - $annotation_dim$$1_popup_bounds$$1$$.width), 0 > $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.x && 
+  ($JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.x = 0), $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.x + $annotation_dim$$1_popup_bounds$$1$$.width > this.$_map_bounds$.width && ($JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.x = this.$_map_bounds$.width - $annotation_dim$$1_popup_bounds$$1$$.width), $JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.y + $annotation_dim$$1_popup_bounds$$1$$.height > this.$_map_bounds$.height && ($JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$.y = 
+  this.$_map_bounds$.height - $annotation_dim$$1_popup_bounds$$1$$.height));
+  this.$_popup$.setPosition($JSCompiler_object_inline_top_6_popup_pos$$1_viewportEl$$)
+};
+$JSCompiler_prototypeAlias$$.$_show_popup$ = function $$JSCompiler_prototypeAlias$$$$_show_popup$$($annotation$$23$$) {
+  this.$_popup$.setAnnotation($annotation$$23$$);
+  this.$_place_popup$();
+  this.$_popup$.show()
+};
+$JSCompiler_prototypeAlias$$.$_updateHighlight$ = function $$JSCompiler_prototypeAlias$$$$_updateHighlight$$($new_highlight$$1$$, $previous_highlight$$1$$) {
+  $new_highlight$$1$$ ? ($goog$style$setStyle$$($new_highlight$$1$$.$inner$, "border-color", "#fff000"), this.$_currentlyHighlightedOverlay$ = $new_highlight$$1$$, this.$_show_popup$($new_highlight$$1$$.$annotation$)) : delete this.$_currentlyHighlightedOverlay$;
+  $previous_highlight$$1$$ && $goog$style$setStyle$$($previous_highlight$$1$$.$inner$, "border-color", "#fff")
+};
+$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$24$$) {
+  var $geometry$$2_rect$$10$$ = $annotation$$24$$.shapes[0].geometry, $outer$$ = $goog$dom$createDom$$("div", "annotorious-ol-boxmarker-outer"), $inner$$1$$ = $goog$dom$createDom$$("div", "annotorious-ol-boxmarker-inner");
+  $goog$style$setSize$$($inner$$1$$, "100%", "100%");
+  $outer$$.appendChild($inner$$1$$);
+  var $geometry$$2_rect$$10$$ = new OpenSeadragon.Rect($geometry$$2_rect$$10$$.x, $geometry$$2_rect$$10$$.y, $geometry$$2_rect$$10$$.width, $geometry$$2_rect$$10$$.height), $overlay$$4$$ = {$annotation$:$annotation$$24$$, $outer$:$outer$$, $inner$:$inner$$1$$}, $self$$26$$ = this;
+  $goog$events$listen$$($inner$$1$$, "mouseover", function() {
+    $self$$26$$.$_currentlyHighlightedOverlay$ || $self$$26$$.$_updateHighlight$($overlay$$4$$);
+    $self$$26$$.$_lastHoveredOverlay$ = $overlay$$4$$
+  });
+  $goog$events$listen$$($inner$$1$$, "mouseout", function() {
+    delete $self$$26$$.$_lastHoveredOverlay$;
+    $self$$26$$.$_popup$.startHideTimer()
+  });
+  this.$_overlays$.push($overlay$$4$$);
+  $goog$array$ARRAY_PROTOTYPE_$$.sort.call(this.$_overlays$, function($a$$33$$, $b$$28$$) {
+    return $annotorious$shape$getSize$$($b$$28$$.$annotation$.shapes[0]) - $annotorious$shape$getSize$$($a$$33$$.$annotation$.shapes[0])
+  } || $goog$array$defaultCompare$$);
+  var $zIndex$$1$$ = 1E4;
+  $goog$array$forEach$$(this.$_overlays$, function($overlay$$5$$) {
+    $goog$style$setStyle$$($overlay$$5$$.$outer$, "z-index", $zIndex$$1$$);
+    $zIndex$$1$$++
+  });
+  this.$_osdViewer$.drawer.addOverlay($outer$$, $geometry$$2_rect$$10$$)
+};
+$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$25$$) {
+  var $overlay$$6$$ = $goog$array$find$$(this.$_overlays$, function($overlay$$7$$) {
+    return $overlay$$7$$.$annotation$ == $annotation$$25$$
+  });
+  $overlay$$6$$ && ($goog$array$remove$$(this.$_overlays$, $overlay$$6$$), this.$_osdViewer$.drawer.removeOverlay($overlay$$6$$.$outer$))
+};
+$JSCompiler_prototypeAlias$$.$getAnnotations$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = $JSCompiler_emptyFn$$();
+function $annotorious$mediatypes$openseadragon$OpenSeadragonAnnotator$$($osdViewer$$1_width$$inline_787$$) {
+  this.element = $osdViewer$$1_width$$inline_787$$.element;
+  this.$_osdViewer$ = $osdViewer$$1_width$$inline_787$$;
+  this.$_eventBroker$ = new $annotorious$events$EventBroker$$;
+  this.$_secondaryHint$ = $goog$soy$renderAsElement$$($annotorious$templates$openlayers$secondaryHint$$, {$msg$:"Click and Drag"});
+  $goog$style$setStyle$$(this.$_secondaryHint$, "z-index", 9998);
+  $goog$style$setOpacity$$(this.$_secondaryHint$, 0);
+  this.element.appendChild(this.$_secondaryHint$);
+  this.popup = new $annotorious$Popup$$(this);
+  this.$_viewer$ = new $annotorious$mediatypes$openseadragon$Viewer$$($osdViewer$$1_width$$inline_787$$, this);
+  this.$_editCanvas$ = $goog$soy$renderAsElement$$($annotorious$templates$image$canvas$$, {width:"0", height:"0"});
+  $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_FALSE$$);
+  $goog$style$setStyle$$(this.$_editCanvas$, "position", "absolute");
+  $goog$style$setStyle$$(this.$_editCanvas$, "top", "0px");
+  $goog$style$setStyle$$(this.$_editCanvas$, "z-index", 9999);
+  this.element.appendChild(this.$_editCanvas$);
+  var $self$$27$$ = this;
+  this.$_selector$ = new $annotorious$plugins$selection$RectDragSelector$$;
+  this.$_selector$.init(this, this.$_editCanvas$);
+  var $osdViewer$$1_width$$inline_787$$ = parseInt($goog$style$getComputedStyle$$($self$$27$$.element, "width"), 10), $height$$inline_788$$ = parseInt($goog$style$getComputedStyle$$($self$$27$$.element, "height"), 10);
+  $goog$style$setSize$$($self$$27$$.$_editCanvas$, $osdViewer$$1_width$$inline_787$$, $height$$inline_788$$);
+  $self$$27$$.$_editCanvas$.width = $osdViewer$$1_width$$inline_787$$;
+  $self$$27$$.$_editCanvas$.height = $height$$inline_788$$;
+  this.$_selector$ = new $annotorious$plugins$selection$RectDragSelector$$;
+  this.$_selector$.init(this, this.$_editCanvas$);
+  this.editor = new $annotorious$Editor$$(this);
+  $goog$events$listen$$(this.$_editCanvas$, "mousedown", function($event$$35$$) {
+    var $offset$$19$$ = $goog$style$getClientPosition$$($self$$27$$.element);
+    $self$$27$$.$_selector$.startSelection($event$$35$$.clientX - $offset$$19$$.x, $event$$35$$.clientY - $offset$$19$$.y)
+  });
+  this.$_eventBroker$.addHandler("onSelectionCompleted", function($bounds$$3_event$$36$$) {
+    $goog$style$setStyle$$($self$$27$$.$_editCanvas$, "pointer-events", "none");
+    $bounds$$3_event$$36$$ = $bounds$$3_event$$36$$.viewportBounds;
+    $self$$27$$.editor.setPosition(new $annotorious$shape$geom$Point$$($bounds$$3_event$$36$$.left, $bounds$$3_event$$36$$.bottom + 4));
+    $self$$27$$.editor.open()
+  });
+  this.$_eventBroker$.addHandler("onSelectionCanceled", function() {
+    $self$$27$$.stopSelection()
+  })
+}
+$goog$inherits$$($annotorious$mediatypes$openseadragon$OpenSeadragonAnnotator$$, $annotorious$mediatypes$Annotator$$);
+$JSCompiler_prototypeAlias$$ = $annotorious$mediatypes$openseadragon$OpenSeadragonAnnotator$$.prototype;
+$JSCompiler_prototypeAlias$$.$showSelectionWidget$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.$hideSelectionWidget$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.$activateSelector$ = function $$JSCompiler_prototypeAlias$$$$activateSelector$$($callback$$37$$) {
+  $goog$style$setStyle$$(this.$_editCanvas$, "pointer-events", "auto");
+  var $self$$28$$ = this;
+  $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_TRUE$$);
+  $goog$style$setOpacity$$(this.$_secondaryHint$, 0.8);
+  window.setTimeout(function() {
+    $goog$style$setOpacity$$($self$$28$$.$_secondaryHint$, 0)
+  }, 2E3);
+  $callback$$37$$ && (this.$_stop_selection_callback$ = $callback$$37$$)
+};
+$JSCompiler_prototypeAlias$$.$editAnnotation$ = function $$JSCompiler_prototypeAlias$$$$editAnnotation$$($annotation$$26$$) {
+  this.$_viewer$.$removeAnnotation$($annotation$$26$$);
+  var $selector$$14_viewportBounds$$2$$ = this.$_selector$, $self$$29$$ = this;
+  if($selector$$14_viewportBounds$$2$$) {
+    $goog$style$showElement$$(this.$_editCanvas$, $JSCompiler_alias_TRUE$$);
+    this.$_viewer$.$highlightAnnotation$($JSCompiler_alias_VOID$$);
+    var $g2d$$3$$ = this.$_editCanvas$.getContext("2d"), $viewportShape$$3$$ = $annotorious$shape$transform$$($annotation$$26$$.shapes[0], function($xy$$7$$) {
+      return $self$$29$$.$fromItemCoordinates$($xy$$7$$)
     });
-    $goog$array$forEach$$($self$$25$$.$_plugins$, function($plugin$$3$$) {
-      $plugin$$3$$.initPlugin && $plugin$$3$$.initPlugin($self$$25$$);
-      $goog$array$forEach$$($self$$25$$.$_modules$, function($module$$1$$) {
-        $module$$1$$.$addPlugin$($plugin$$3$$)
-      })
-    })
+    $selector$$14_viewportBounds$$2$$.drawShape($g2d$$3$$, $viewportShape$$3$$);
+    $selector$$14_viewportBounds$$2$$ = $annotorious$shape$getBoundingRect$$($viewportShape$$3$$).geometry;
+    this.editor.setPosition(new $annotorious$shape$geom$Point$$($selector$$14_viewportBounds$$2$$.x, $selector$$14_viewportBounds$$2$$.y + $selector$$14_viewportBounds$$2$$.height + 4));
+    this.editor.open($annotation$$26$$)
   }
+};
+$JSCompiler_prototypeAlias$$.$fromItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$fromItemCoordinates$$($itemCoords$$2_viewportOpposite_windowOpposite$$) {
+  var $offset$$20$$ = $annotorious$dom$getOffset$$(this.element);
+  $offset$$20$$.top += window.pageYOffset;
+  $offset$$20$$.left += window.pageXOffset;
+  var $viewportPoint_windowPoint$$ = new OpenSeadragon.Point($itemCoords$$2_viewportOpposite_windowOpposite$$.x, $itemCoords$$2_viewportOpposite_windowOpposite$$.y), $itemCoords$$2_viewportOpposite_windowOpposite$$ = $itemCoords$$2_viewportOpposite_windowOpposite$$.width ? new OpenSeadragon.Point($itemCoords$$2_viewportOpposite_windowOpposite$$.x + $itemCoords$$2_viewportOpposite_windowOpposite$$.width, $itemCoords$$2_viewportOpposite_windowOpposite$$.y + $itemCoords$$2_viewportOpposite_windowOpposite$$.height) : 
+  $JSCompiler_alias_FALSE$$, $viewportPoint_windowPoint$$ = this.$_osdViewer$.viewport.viewportToWindowCoordinates($viewportPoint_windowPoint$$);
+  return $itemCoords$$2_viewportOpposite_windowOpposite$$ ? ($itemCoords$$2_viewportOpposite_windowOpposite$$ = this.$_osdViewer$.viewport.viewportToWindowCoordinates($itemCoords$$2_viewportOpposite_windowOpposite$$), {x:$viewportPoint_windowPoint$$.x - $offset$$20$$.left, y:$viewportPoint_windowPoint$$.y - $offset$$20$$.top, width:$itemCoords$$2_viewportOpposite_windowOpposite$$.x - $viewportPoint_windowPoint$$.x + 2, height:$itemCoords$$2_viewportOpposite_windowOpposite$$.y - $viewportPoint_windowPoint$$.y + 
+  2}) : $viewportPoint_windowPoint$$
+};
+$JSCompiler_prototypeAlias$$.$getAnnotations$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.$getAvailableSelectors$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.getItem = function $$JSCompiler_prototypeAlias$$$getItem$() {
+  return{src:"dzi://openseadragon/something"}
+};
+$JSCompiler_prototypeAlias$$.$setActiveSelector$ = $JSCompiler_emptyFn$$();
+$JSCompiler_prototypeAlias$$.$toItemCoordinates$ = function $$JSCompiler_prototypeAlias$$$$toItemCoordinates$$($viewElementOpposite_viewportOpposite$$1_xy$$8$$) {
+  var $offset$$21$$ = $annotorious$dom$getOffset$$(this.element);
+  $offset$$21$$.top += window.pageYOffset;
+  $offset$$21$$.left += window.pageXOffset;
+  var $viewElementPoint_viewportPoint$$1$$ = new OpenSeadragon.Point($viewElementOpposite_viewportOpposite$$1_xy$$8$$.x + $offset$$21$$.left, $viewElementOpposite_viewportOpposite$$1_xy$$8$$.y + $offset$$21$$.top), $viewElementOpposite_viewportOpposite$$1_xy$$8$$ = $viewElementOpposite_viewportOpposite$$1_xy$$8$$.width ? new OpenSeadragon.Point($viewElementOpposite_viewportOpposite$$1_xy$$8$$.x + $offset$$21$$.left + $viewElementOpposite_viewportOpposite$$1_xy$$8$$.width - 2, $viewElementOpposite_viewportOpposite$$1_xy$$8$$.y + 
+  $offset$$21$$.top + $viewElementOpposite_viewportOpposite$$1_xy$$8$$.height - 2) : $JSCompiler_alias_FALSE$$, $viewElementPoint_viewportPoint$$1$$ = this.$_osdViewer$.viewport.windowToViewportCoordinates($viewElementPoint_viewportPoint$$1$$);
+  return $viewElementOpposite_viewportOpposite$$1_xy$$8$$ ? ($viewElementOpposite_viewportOpposite$$1_xy$$8$$ = this.$_osdViewer$.viewport.windowToViewportCoordinates($viewElementOpposite_viewportOpposite$$1_xy$$8$$), {x:$viewElementPoint_viewportPoint$$1$$.x, y:$viewElementPoint_viewportPoint$$1$$.y, width:$viewElementOpposite_viewportOpposite$$1_xy$$8$$.x - $viewElementPoint_viewportPoint$$1$$.x, height:$viewElementOpposite_viewportOpposite$$1_xy$$8$$.y - $viewElementPoint_viewportPoint$$1$$.y}) : 
+  $viewElementPoint_viewportPoint$$1$$
+};
+function $annotorious$mediatypes$openseadragon$OpenSeadragonModule$$() {
+  $JSCompiler_StaticMethods__initFields$$(this)
+}
+$goog$inherits$$($annotorious$mediatypes$openseadragon$OpenSeadragonModule$$, $annotorious$mediatypes$Module$$);
+$annotorious$mediatypes$openseadragon$OpenSeadragonModule$$.prototype.$getItemURL$ = $JSCompiler_returnArg$$("dzi://openseadragon/something");
+$annotorious$mediatypes$openseadragon$OpenSeadragonModule$$.prototype.$newAnnotator$ = function $$annotorious$mediatypes$openseadragon$OpenSeadragonModule$$$$$newAnnotator$$($item$$15$$) {
+  return new $annotorious$mediatypes$openseadragon$OpenSeadragonAnnotator$$($item$$15$$)
+};
+$annotorious$mediatypes$openseadragon$OpenSeadragonModule$$.prototype.$supports$ = function $$annotorious$mediatypes$openseadragon$OpenSeadragonModule$$$$$supports$$($item$$16$$) {
+  return!$item$$16$$.id || 0 != $item$$16$$.id.indexOf("openseadragon") || !$item$$16$$.hasOwnProperty("drawer") ? $JSCompiler_alias_FALSE$$ : $JSCompiler_alias_TRUE$$
+};
+function $annotorious$Annotorious$$() {
+  function $fn$$inline_790$$() {
+    $JSCompiler_StaticMethods__init$$($self$$30$$)
+  }
+  this.$_isInitialized$ = $JSCompiler_alias_FALSE$$;
   this.$_modules$ = [new $annotorious$mediatypes$image$ImageModule$$];
   window.OpenLayers && this.$_modules$.push(new $annotorious$mediatypes$openlayers$OpenLayersModule$$);
+  window.OpenSeadragon && this.$_modules$.push(new $annotorious$mediatypes$openseadragon$OpenSeadragonModule$$);
   this.$_plugins$ = [];
-  var $self$$25$$ = this;
-  window.addEventListener ? window.addEventListener("load", $fn$$inline_783$$, $JSCompiler_alias_FALSE$$) : window.attachEvent && window.attachEvent("onload", $fn$$inline_783$$)
+  var $self$$30$$ = this;
+  window.addEventListener ? window.addEventListener("load", $fn$$inline_790$$, $JSCompiler_alias_FALSE$$) : window.attachEvent && window.attachEvent("onload", $fn$$inline_790$$)
+}
+function $JSCompiler_StaticMethods__init$$($JSCompiler_StaticMethods__init$self$$) {
+  $JSCompiler_StaticMethods__init$self$$.$_isInitialized$ || ($goog$array$forEach$$($JSCompiler_StaticMethods__init$self$$.$_modules$, function($module$$) {
+    $module$$.init()
+  }), $goog$array$forEach$$($JSCompiler_StaticMethods__init$self$$.$_plugins$, function($plugin$$3$$) {
+    $plugin$$3$$.initPlugin && $plugin$$3$$.initPlugin($JSCompiler_StaticMethods__init$self$$);
+    $goog$array$forEach$$($JSCompiler_StaticMethods__init$self$$.$_modules$, function($module$$1$$) {
+      $module$$1$$.$addPlugin$($plugin$$3$$)
+    })
+  }), $JSCompiler_StaticMethods__init$self$$.$_isInitialized$ = $JSCompiler_alias_TRUE$$)
 }
 function $JSCompiler_StaticMethods__getModuleForItemSrc$$($JSCompiler_StaticMethods__getModuleForItemSrc$self$$, $item_src$$1$$) {
   return $goog$array$find$$($JSCompiler_StaticMethods__getModuleForItemSrc$self$$.$_modules$, function($module$$2$$) {
@@ -4014,31 +4198,31 @@ function $JSCompiler_StaticMethods__getModuleForItemSrc$$($JSCompiler_StaticMeth
 }
 $JSCompiler_prototypeAlias$$ = $annotorious$Annotorious$$.prototype;
 $JSCompiler_prototypeAlias$$.$activateSelector$ = function $$JSCompiler_prototypeAlias$$$$activateSelector$$($opt_item_url_or_callback$$1$$, $opt_callback$$6$$) {
-  var $item_url$$6$$ = $JSCompiler_alias_VOID$$, $callback$$37$$ = $JSCompiler_alias_VOID$$;
-  $goog$isString$$($opt_item_url_or_callback$$1$$) ? ($item_url$$6$$ = $opt_item_url_or_callback$$1$$, $callback$$37$$ = $opt_callback$$6$$) : $goog$isFunction$$($opt_item_url_or_callback$$1$$) && ($callback$$37$$ = $opt_item_url_or_callback$$1$$);
+  var $item_url$$6$$ = $JSCompiler_alias_VOID$$, $callback$$38$$ = $JSCompiler_alias_VOID$$;
+  $goog$isString$$($opt_item_url_or_callback$$1$$) ? ($item_url$$6$$ = $opt_item_url_or_callback$$1$$, $callback$$38$$ = $opt_callback$$6$$) : $goog$isFunction$$($opt_item_url_or_callback$$1$$) && ($callback$$38$$ = $opt_item_url_or_callback$$1$$);
   if($item_url$$6$$) {
     var $module$$3$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $item_url$$6$$);
-    $module$$3$$ && $module$$3$$.$activateSelector$($item_url$$6$$, $callback$$37$$)
+    $module$$3$$ && $module$$3$$.$activateSelector$($item_url$$6$$, $callback$$38$$)
   }else {
     $goog$array$forEach$$(this.$_modules$, function($module$$4$$) {
-      $module$$4$$.$activateSelector$($callback$$37$$)
+      $module$$4$$.$activateSelector$($callback$$38$$)
     })
   }
 };
-$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$26$$, $opt_replace$$4$$) {
-  var $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$;
-  $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$ = $annotation$$26$$.src;
-  if(!(0 < $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$.indexOf("://"))) {
-    var $link$$inline_786$$ = document.createElement("a");
-    $link$$inline_786$$.href = $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$;
-    $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$ = $link$$inline_786$$.protocol + "//" + $link$$inline_786$$.host + $link$$inline_786$$.pathname
+$JSCompiler_prototypeAlias$$.$addAnnotation$ = function $$JSCompiler_prototypeAlias$$$$addAnnotation$$($annotation$$27$$, $opt_replace$$3$$) {
+  var $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$;
+  $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$ = $annotation$$27$$.src;
+  if(!(0 < $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$.indexOf("://"))) {
+    var $link$$inline_793$$ = document.createElement("a");
+    $link$$inline_793$$.href = $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$;
+    $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$ = $link$$inline_793$$.protocol + "//" + $link$$inline_793$$.host + $link$$inline_793$$.pathname
   }
-  $annotation$$26$$.src = $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$;
-  ($JSCompiler_inline_result$$24_module$$5_url$$inline_785$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $annotation$$26$$.src)) && $JSCompiler_inline_result$$24_module$$5_url$$inline_785$$.$addAnnotation$($annotation$$26$$, $opt_replace$$4$$)
+  $annotation$$27$$.src = $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$;
+  ($JSCompiler_inline_result$$28_module$$5_url$$inline_792$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $annotation$$27$$.src)) && $JSCompiler_inline_result$$28_module$$5_url$$inline_792$$.$addAnnotation$($annotation$$27$$, $opt_replace$$3$$)
 };
-$JSCompiler_prototypeAlias$$.$addHandler$ = function $$JSCompiler_prototypeAlias$$$$addHandler$$($type$$91$$, $handler$$16$$) {
+$JSCompiler_prototypeAlias$$.addHandler = function $$JSCompiler_prototypeAlias$$$addHandler$($type$$88$$, $handler$$14$$) {
   $goog$array$forEach$$(this.$_modules$, function($module$$6$$) {
-    $module$$6$$.$addHandler$($type$$91$$, $handler$$16$$)
+    $module$$6$$.addHandler($type$$88$$, $handler$$14$$)
   })
 };
 $JSCompiler_prototypeAlias$$.$addPlugin$ = function $$JSCompiler_prototypeAlias$$$$addPlugin$$($plugin_name$$, $opt_config_options$$) {
@@ -4051,13 +4235,13 @@ $JSCompiler_prototypeAlias$$.$addPlugin$ = function $$JSCompiler_prototypeAlias$
     console.log("Could not load plugin: " + $plugin_name$$)
   }
 };
-$JSCompiler_prototypeAlias$$.$destroy$ = function $$JSCompiler_prototypeAlias$$$$destroy$$($opt_item_url$$8$$) {
+$JSCompiler_prototypeAlias$$.destroy = function $$JSCompiler_prototypeAlias$$$destroy$($opt_item_url$$8$$) {
   if($opt_item_url$$8$$) {
     var $module$$8$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $opt_item_url$$8$$);
-    $module$$8$$ && $module$$8$$.$destroy$($opt_item_url$$8$$)
+    $module$$8$$ && $module$$8$$.destroy($opt_item_url$$8$$)
   }else {
     $goog$array$forEach$$(this.$_modules$, function($module$$9$$) {
-      $module$$9$$.$destroy$()
+      $module$$9$$.destroy()
     })
   }
 };
@@ -4102,41 +4286,42 @@ $JSCompiler_prototypeAlias$$.$hideSelectionWidget$ = function $$JSCompiler_proto
     })
   }
 };
-$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = function $$JSCompiler_prototypeAlias$$$$highlightAnnotation$$($annotation$$27$$) {
-  if($annotation$$27$$) {
-    var $module$$18$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $annotation$$27$$.src);
-    $module$$18$$ && $module$$18$$.$highlightAnnotation$($annotation$$27$$)
+$JSCompiler_prototypeAlias$$.$highlightAnnotation$ = function $$JSCompiler_prototypeAlias$$$$highlightAnnotation$$($annotation$$28$$) {
+  if($annotation$$28$$) {
+    var $module$$18$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $annotation$$28$$.src);
+    $module$$18$$ && $module$$18$$.$highlightAnnotation$($annotation$$28$$)
   }else {
     $goog$array$forEach$$(this.$_modules$, function($module$$19$$) {
       $module$$19$$.$highlightAnnotation$()
     })
   }
 };
-$JSCompiler_prototypeAlias$$.$makeAnnotatable$ = function $$JSCompiler_prototypeAlias$$$$makeAnnotatable$$($item$$14$$) {
+$JSCompiler_prototypeAlias$$.$makeAnnotatable$ = function $$JSCompiler_prototypeAlias$$$$makeAnnotatable$$($item$$17$$) {
+  $JSCompiler_StaticMethods__init$$(this);
   var $module$$20$$ = $goog$array$find$$(this.$_modules$, function($module$$21$$) {
-    return $module$$21$$.$supports$($item$$14$$)
+    return $module$$21$$.$supports$($item$$17$$)
   });
-  $module$$20$$ ? $module$$20$$.$makeAnnotatable$($item$$14$$) : $JSCompiler_alias_THROW$$("Error: Annotorious does not support this media type in the current version or build configuration.")
+  $module$$20$$ ? $module$$20$$.$makeAnnotatable$($item$$17$$) : $JSCompiler_alias_THROW$$("Error: Annotorious does not support this media type in the current version or build configuration.")
 };
 $JSCompiler_prototypeAlias$$.$removeAll$ = function $$JSCompiler_prototypeAlias$$$$removeAll$$($opt_item_url$$12$$) {
-  var $self$$26$$ = this;
-  $goog$array$forEach$$(this.$getAnnotations$($opt_item_url$$12$$), function($annotation$$28$$) {
-    $self$$26$$.$removeAnnotation$($annotation$$28$$)
+  var $self$$32$$ = this;
+  $goog$array$forEach$$(this.$getAnnotations$($opt_item_url$$12$$), function($annotation$$29$$) {
+    $self$$32$$.$removeAnnotation$($annotation$$29$$)
   })
 };
-$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$29$$) {
-  var $module$$22$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $annotation$$29$$.src);
-  $module$$22$$ && $module$$22$$.$removeAnnotation$($annotation$$29$$)
+$JSCompiler_prototypeAlias$$.$removeAnnotation$ = function $$JSCompiler_prototypeAlias$$$$removeAnnotation$$($annotation$$30$$) {
+  var $module$$22$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $annotation$$30$$.src);
+  $module$$22$$ && $module$$22$$.$removeAnnotation$($annotation$$30$$)
 };
 $JSCompiler_prototypeAlias$$.reset = function $$JSCompiler_prototypeAlias$$$reset$() {
   $goog$array$forEach$$(this.$_modules$, function($module$$23$$) {
-    $module$$23$$.$destroy$();
+    $module$$23$$.destroy();
     $module$$23$$.init()
   })
 };
-$JSCompiler_prototypeAlias$$.$setActiveSelector$ = function $$JSCompiler_prototypeAlias$$$$setActiveSelector$$($item_url$$9$$, $selector$$14$$) {
+$JSCompiler_prototypeAlias$$.$setActiveSelector$ = function $$JSCompiler_prototypeAlias$$$$setActiveSelector$$($item_url$$9$$, $selector$$16$$) {
   var $module$$24$$ = $JSCompiler_StaticMethods__getModuleForItemSrc$$(this, $item_url$$9$$);
-  $module$$24$$ && $module$$24$$.$setActiveSelector$($item_url$$9$$, $selector$$14$$)
+  $module$$24$$ && $module$$24$$.$setActiveSelector$($item_url$$9$$, $selector$$16$$)
 };
 $JSCompiler_prototypeAlias$$.$setProperties$ = function $$JSCompiler_prototypeAlias$$$$setProperties$$($props$$4$$) {
   $goog$array$forEach$$(this.$_modules$, function($module$$25$$) {
@@ -4169,9 +4354,9 @@ $JSCompiler_prototypeAlias$$.$showSelectionWidget$ = function $$JSCompiler_proto
 window.anno = new $annotorious$Annotorious$$;
 $annotorious$Annotorious$$.prototype.activateSelector = $annotorious$Annotorious$$.prototype.$activateSelector$;
 $annotorious$Annotorious$$.prototype.addAnnotation = $annotorious$Annotorious$$.prototype.$addAnnotation$;
-$annotorious$Annotorious$$.prototype.addHandler = $annotorious$Annotorious$$.prototype.$addHandler$;
+$annotorious$Annotorious$$.prototype.addHandler = $annotorious$Annotorious$$.prototype.addHandler;
 $annotorious$Annotorious$$.prototype.addPlugin = $annotorious$Annotorious$$.prototype.$addPlugin$;
-$annotorious$Annotorious$$.prototype.destroy = $annotorious$Annotorious$$.prototype.$destroy$;
+$annotorious$Annotorious$$.prototype.destroy = $annotorious$Annotorious$$.prototype.destroy;
 $annotorious$Annotorious$$.prototype.getActiveSelector = $annotorious$Annotorious$$.prototype.$getActiveSelector$;
 $annotorious$Annotorious$$.prototype.getAnnotations = $annotorious$Annotorious$$.prototype.$getAnnotations$;
 $annotorious$Annotorious$$.prototype.getAvailableSelectors = $annotorious$Annotorious$$.prototype.$getAvailableSelectors$;
