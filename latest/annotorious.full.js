@@ -33575,13 +33575,16 @@ annotorious.mediatypes.Annotator.prototype.stopSelection = function(original_ann
 }
 
 annotorious.mediatypes.Annotator.prototype._attachListener = function(activeCanvas) {
-	var self = this;
-	goog.events.listen(activeCanvas, annotorious.events.ui.EventType.DOWN, function(event) {
-		var coords = annotorious.events.ui.sanitizeCoordinates(event, activeCanvas);
-		self._viewer.highlightAnnotation(false);
+  console.log('attaching draw handler code to the active canvas');
+  var self = this;
+  goog.events.listen(activeCanvas, annotorious.events.ui.EventType.DOWN, function(event) {
+    var coords = annotorious.events.ui.sanitizeCoordinates(event, activeCanvas);
+    self._viewer.highlightAnnotation(false);
 		if (self._selectionEnabled) {
-			goog.style.showElement(self._editCanvas, true);      
-			self._currentSelector.startSelection(coords.x, coords.y);
+      console.log('un-hiding the edit canvas');
+      goog.style.showElement(self._editCanvas, true);      
+      console.log('starting selection');
+      self._currentSelector.startSelection(coords.x, coords.y);
 		} else {
 			var annotations = self._viewer.getAnnotationsAt(coords.x, coords.y);
 			if (annotations.length > 0)
@@ -34429,7 +34432,6 @@ annotorious.mediatypes.image.ImageAnnotator = function(item, opt_popup) {
   }
 
   var activeCanvas = (annotorious.events.ui.hasTouch) ? this._editCanvas : this._viewCanvas;
-  
   this._attachListener(activeCanvas);
 
   this._eventBroker.addHandler(annotorious.events.EventType.SELECTION_COMPLETED, function(event) {
