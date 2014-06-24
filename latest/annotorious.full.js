@@ -33575,15 +33575,14 @@ annotorious.mediatypes.Annotator.prototype.stopSelection = function(original_ann
 }
 
 annotorious.mediatypes.Annotator.prototype._attachListener = function(activeCanvas) {
-  console.log('attaching draw handler code to the active canvas');
   var self = this;
   goog.events.listen(activeCanvas, annotorious.events.ui.EventType.DOWN, function(event) {
+    console.log('start selection event');
+    console.log(event);
     var coords = annotorious.events.ui.sanitizeCoordinates(event, activeCanvas);
     self._viewer.highlightAnnotation(false);
 		if (self._selectionEnabled) {
-      console.log('un-hiding the edit canvas');
       goog.style.showElement(self._editCanvas, true);      
-      console.log('starting selection');
       self._currentSelector.startSelection(coords.x, coords.y);
 		} else {
 			var annotations = self._viewer.getAnnotationsAt(coords.x, coords.y);
@@ -34002,6 +34001,7 @@ annotorious.plugins.selection.RectDragSelector.prototype._attachListeners = func
   var canvas = this._canvas;
   
   this._mouseMoveListener = goog.events.listen(this._canvas, annotorious.events.ui.EventType.MOVE, function(event) {
+    console.log(event);
     var points = annotorious.events.ui.sanitizeCoordinates(event, canvas);
     if (self._enabled) {
       self._opposite = { x: points.x, y: points.y };
@@ -34432,19 +34432,7 @@ annotorious.mediatypes.image.ImageAnnotator = function(item, opt_popup) {
   }
 
   var activeCanvas = (annotorious.events.ui.hasTouch) ? this._editCanvas : this._viewCanvas;
-  // this._attachListener(activeCanvas);
-  goog.events.listen(activeCanvas, annotorious.events.ui.EventType.DOWN, function(event) {
-    var coords = annotorious.events.ui.sanitizeCoordinates(event, activeCanvas);
-    self._viewer.highlightAnnotation(false);
-    if (self._selectionEnabled) {
-      goog.style.showElement(self._editCanvas, true);      
-      self._currentSelector.startSelection(coords.x, coords.y);
-    } else {
-      var annotations = self._viewer.getAnnotationsAt(coords.x, coords.y);
-      if (annotations.length > 0)
-        self._viewer.highlightAnnotation(annotations[0]);
-    }
-  });
+  this._attachListener(activeCanvas);
 
   this._eventBroker.addHandler(annotorious.events.EventType.SELECTION_COMPLETED, function(event) {
     var bounds = event.viewportBounds;
