@@ -21,33 +21,33 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="header">
       <div class="header-inner">
         <div class="download-link">
           Get the Latest Release
-          <a class="download-button" href="http://github.com/annotorious/annotorious/releases/tag/v0.6.3">Download Annotorious v0.6.3</a>
-        </div> 
+          <a class="download-button" href="http://github.com/annotorious/annotorious/releases/tag/v0.6.4">Download Annotorious v0.6.4</a>
+        </div>
         <h1><img src="img/h1-logo.png">Annotorious</h1>
       </div>
     </div>
-    
+
     <div class="content">
-      <div class="content-inner">     
+      <div class="content-inner">
         <div class="content-two-column">
           <h2>Getting Started with Annotorious</h2>
           <p>
-            To set up Annotorious on a Web page, add this code to your page head: 
+            To set up Annotorious on a Web page, add this code to your page head:
           </p>
-        
+
 <pre class="code" lang="html">
 &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/annotorious.css&quot; /&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;annotorious.min.js&quot;&gt;&lt;/script&gt;</pre>
-        
+
           <p>
             Specify which images should be annotatable. There are two ways to do this:
-          </p>  
-        
+          </p>
+
           <h3>Option 1: the <code>annotatable</code> CSS class</h3>
           <p>
             Add a CSS class called <code>annotatable</code>. On page load, Annotorious will
@@ -56,7 +56,7 @@
             the page has loaded.
             <strong>Example:</strong>
           </p>
-        
+
           <pre class="code" lang="html">&lt;img src="example.jpg" class="annotatable" /&gt;</pre>
 
           <h3>Option 2: Using JavaScript</h3>
@@ -71,43 +71,43 @@
     anno.makeAnnotatable(document.getElementById('myImage'));
   }
 &lt;/script&gt;
-...        
+...
 &lt;body onload=&quot;init();&quot;&gt;
   &lt;img src=&quot;example.jpg&quot; id=&quot;myImage&quot; /&gt;
 &lt;/body&gt;</pre>
 
           <p/>
-          
+
           <h2>A Note to jQuery Users</h2>
           <p>
 		    Some versions of Annotorious conflict with jQuery. When using Annotorious and
 		    jQuery on the same page, you should put jQuery into
-            <a href="http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/">no-conflict 
+            <a href="http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/">no-conflict
             mode</a>, and either assign a new variable
 		    name to jQuery's <code>$</code> alias or, alternatively, wrap your jQuery code into a function
 		    where you can use the <code>$</code> alias in the local scope, like so:
 		  </p>
-		  
+
 		  <pre class="code" lang="javascript">
 jQuery.noConflict();
- 
+
 jQuery(document).ready(function($) {
     // You can use the locally-scoped $ in here as an alias to jQuery.
     $('div').hide();
-});</pre>	
+});</pre>
 
           <p/>
 
           <h2>And Next?</h2>
           <p>
-            Once you got Annotorious working, you will likely want to integrate it 
+            Once you got Annotorious working, you will likely want to integrate it
             more deeply with your Website: control it through your own JavaScript,
             listen to annotation create/update/delete events, store annotations on
             a server, etc. <a href="http://github.com/annotorious/annotorious/wiki">Visit
             the Wiki</a> to learn more about Annotorious' JavaScript
             API,  how to use plugins, or program your own extensions.
           </p>
-          
+
           <hr/>
 
           <h3>Hot-Linking to the Latest Annotorious Build</h3>
@@ -119,11 +119,11 @@ jQuery(document).ready(function($) {
             <a href="http://annotorious.github.com/latest/annotorious.min.js">http://annotorious.github.com/latest/annotorious.min.js</a><br/>
             <a href="http://annotorious.github.com/latest/annotorious.css">http://annotorious.github.com/latest/annotorious.css</a>
           </p>
-          
+
         </div>
       </div>
     </div>
-    
+
     <footer>
       <div class="footer-inner">
         <p>Annotorious is licensed under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
@@ -137,7 +137,7 @@ jQuery(document).ready(function($) {
         $('pre.code').highlight({source:0, zebra:1, indent:'space', list:'ol'});
       });
     </script>
-    
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-38067134-1']);
@@ -151,5 +151,3 @@ jQuery(document).ready(function($) {
     </script>
   </body>
 </html>
-
-

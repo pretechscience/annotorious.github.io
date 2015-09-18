@@ -38,7 +38,7 @@
         });
       }
 
-      function init() {           	
+      function init() {
         var options = {
           maxExtent: new OpenLayers.Bounds(0, 0, 1475, 1184),
           maxResolution: 8,
@@ -51,7 +51,7 @@
 		            { layername: ".", serviceVersion: ".", transitionEffect: "resize", type:"jpg" });
         map.addLayer(baseLayer);
         map.zoomToMaxExtent();
-	
+
 	anno.makeAnnotatable(map);
       }
     </script>
@@ -70,13 +70,13 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="header">
       <div class="header-inner">
         <div class="download-link">
           Get the Latest Release
-          <a class="download-button" href="http://github.com/annotorious/annotorious/releases/tag/v0.6.3">Download Annotorious v0.6.3</a>
-        </div> 
+          <a class="download-button" href="http://github.com/annotorious/annotorious/releases/tag/v0.6.4">Download Annotorious v0.6.4</a>
+        </div>
         <h1><img src="../img/h1-logo.png">Annotorious</h1>
       </div>
     </div>
@@ -86,7 +86,7 @@
         <a href="../demos.html">Demos</a> &gt; Openlayers Annotation
       </div>
     </div>
-    
+
     <div class="content">
       <div class="content-inner">
         <p>
@@ -99,7 +99,7 @@
         </div>
         <p class="attribution">
           Meerwunder vnd seltzame Thier / wie die in den Mitn&auml;chtigen L&auml;ndern / im Meer vnd auff dem
-          Landt gefunden werden (from the vignettes on Olaus Magnus's Carta marina), Basel c. 1544. Public Domain. 
+          Landt gefunden werden (from the vignettes on Olaus Magnus's Carta marina), Basel c. 1544. Public Domain.
           Sebastian M&uuml;nster (1488-1552). <a href="http://commons.wikimedia.org/wiki/File:M%C3%BCnster_Thier_2.jpg">Wikimedia
           Commons</a>.
         </p>
@@ -110,7 +110,7 @@
         </p>
 
         <pre class="code" lang="javascript">
-var options = 
+var options =
   { maxExtent: new OpenLayers.Bounds(0, 0, 1475, 1184),
     maxResolution: 8,
     numZoomLevels: 4,
@@ -118,16 +118,16 @@ var options =
 
 var map = new OpenLayers.Map('map', options);
 var baseLayer = new OpenLayers.Layer.TMS("Baselayer", "map_muenster/",
-  { layername: ".", 
-    serviceVersion: ".", 
-    transitionEffect: "resize", 
+  { layername: ".",
+    serviceVersion: ".",
+    transitionEffect: "resize",
     type:"jpg" });
 
 map.addLayer(baseLayer);
 map.zoomToMaxExtent();</pre>
 
         <p>
-          Make your map annotatable using the Annotorious JavaScript API.  
+          Make your map annotatable using the Annotorious JavaScript API.
         </p>
 
         <pre class="code" lang="javascript">anno.makeAnnotatable(map);</pre>
@@ -146,14 +146,14 @@ map.zoomToMaxExtent();</pre>
 
         <p>
           Once the selector is activated, Annotorious takes over the map, and dragging the mouse will create
-          an annotation rather than move the map. Once the annotation has been created, normal map navigation 
+          an annotation rather than move the map. Once the annotation has been created, normal map navigation
           is resumed automatically. Full documentation of the <em>activateSelector</em> function is
           <a href="https://github.com/annotorious/annotorious/wiki/JavaScript-API#annoactivateselectoropt_item_url_or_callback-opt_callback">on
           the Wiki</a>.
         </p>
       </div>
     </div>
-    
+
     <footer>
       <div class="footer-inner">
         <p>Annotorious is licensed under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
@@ -161,13 +161,13 @@ map.zoomToMaxExtent();</pre>
         <p><a href="http://github.com/annotorious/annotorious">github.com/annotorious/annotorious</a></p>
       </div>
     </footer>
-    
+
     <script type="text/javascript">
       jQuery(document).ready(function(){
         jQuery('pre.code').highlight({source:0, zebra:1, indent:'space', list:'ol'});
       });
     </script>
-	
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-38067134-1']);
@@ -181,4 +181,3 @@ map.zoomToMaxExtent();</pre>
     </script>
   </body>
 </html>
-
