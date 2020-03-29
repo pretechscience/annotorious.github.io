@@ -207,6 +207,46 @@ body, html {
   border-bottom-color:#ff9900;
 }
 
+.recogito {
+  padding:35px;
+  color:#323232;
+  font-size:16px;
+  width: 640px;
+  margin: 0 auto;
+  line-height:160%;
+}
+
+.recogito .sticker {
+  display:inline-block;
+  cursor:pointer;
+  text-decoration:none;
+  margin:40px auto;
+  padding:10px 30px;
+  font-weight:bold;
+  color:white;
+  font-size:17px;
+  border: solid 1px #2a5c8d;
+  background: #3874b1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4482c0), to(#346ca3));
+  background: -moz-linear-gradient(top, #4482c0, #346ca3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4482c0', endColorstr='#346ca3');
+  
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -khtml-border-radius:5px;
+  border-radius:5px;
+}
+
+.recogito .tagline {
+  padding:30px 0 0 0;
+}
+
+.or {
+  font-style:italic;
+  font-size:16px;
+  color:#6b6b6b;
+}
+
 .download-button {
   width:250px;
   display:block;
