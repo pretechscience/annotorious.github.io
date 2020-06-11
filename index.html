@@ -3,9 +3,9 @@
   <head>
     <title>Annotorious - Image Annotation for the Web</title>
     <link href="css/splash.css" rel="stylesheet" type="text/css" />
-    <link href="latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="latest/annotorious.min.js"></script>
-    <script type="text/javascript" src="js/splash-screen.js"></script>
+    <!-- link href="latest/themes/dark/annotorious-dark.css" rel="stylesheet" type="text/css" / -->
+    <!-- cript type="text/javascript" src="latest/annotorious.min.js"></script -->
+    <!-- script type="text/javascript" src="js/splash-screen.js"></script -->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
 
@@ -14,7 +14,19 @@
       <div id="logo">
         <img src="img/h1-logo.png"> Annotorious
       </div>
-      <div id="splash-screen">
+
+      <div class="annotorious-has-moved">
+        <h2>
+          This version of Annotorious is discontinued.
+        </h2>
+        <p>
+          Please visit 
+          <a href="https://recogito.github.io/site/annotorious">recogito.github.io/site/annotorious</a> 
+          for the official successor project.
+        </p>
+      </div>
+
+      <!-- div id="splash-screen">
         <div id="splash-screen-inner">
           <div class="splash-frame">
             <img id="splash-image-1" src="img/splash-image-1.jpg">
@@ -42,24 +54,24 @@
               <p>MIT licensed. Use Annotorious for free in commercial and non-commercial projects.</p>
             </div>
           </div>
-        </div>
+        </div -->
 
-        <div id="splash-scroll-container">
+        <!-- div id="splash-scroll-container">
           <div class="splash-scroll splash-scroll-prev"><a href="#" onclick="shiftBy(-1);">PREV</a></div>
           <div class="splash-scroll splash-scroll-next"><a href="#" onclick="shiftBy(1);">NEXT</a></div>
-        </div>
+        </div -->
 
-        <div id="splash-progress-bar">
+        <!-- div id="splash-progress-bar">
           <a href="#" onclick="shiftTo(0);" class="splash-progress-bullet" id="splash-progress-field-0" style="background-color:#ff9900;">Image 1</a>
           <a href="#" onclick="shiftTo(1);" class="splash-progress-bullet" id="splash-progress-field-1">Image 2</a>
           <a href="#" onclick="shiftTo(2);" class="splash-progress-bullet" id="splash-progress-field-2">Image 3</a>
           <a href="#" onclick="shiftTo(3);" class="splash-progress-bullet" id="splash-progress-field-3">Image 4</a>
-        </div>
+        </div -->
       </div>
     </div>
 
     <div id="bottom-half">
-      <div id="navbar-container">
+      <!-- div id="navbar-container">
         <div id="navbar">
           <ul>
             <li><a href="demos.html">Demos</a></li>
@@ -69,9 +81,9 @@
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
-      </div>
+      </div -->
 
-      <div class="recogito">
+      <!-- div class="recogito">
         <div>
           <strong>Looking for a ready-to-use solution?</strong> <br/> 
         </div>
@@ -93,9 +105,9 @@
         Get the Latest Release
         <a class="download-button" href="http://github.com/annotorious/annotorious/releases/tag/v0.6.4">Download Annotorious v0.6.4</a>
       </div>
-    </div>
+    </div -->
 
-    <script type="text/javascript">
+    <!-- script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-38067134-1']);
       _gaq.push(['_trackPageview']);
@@ -105,6 +117,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
+    </script -->
   </body>
 </html>

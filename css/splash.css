@@ -30,10 +30,28 @@ body, html {
   width:680px;
   height:124px;
   margin:0px auto;
-  padding:15px 10px 0px 0px;
+  padding:80px 10px 10px 0px;
   color:#fff;
   font-family:Yellowtail;
   font-size:64px;
+}
+
+.annotorious-has-moved {
+  text-align:center;
+}
+
+.annotorious-has-moved h2 {
+  font-size:20px;
+}
+
+.annotorious-has-moved p {
+  padding-top:5px;
+  font-size:17px;
+}
+
+.annotorious-has-moved p a {
+  color:#fff;
+  font-weight:bold;
 }
 
 #logo img {
